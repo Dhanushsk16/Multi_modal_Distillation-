@@ -1,0 +1,27 @@
+{
+ "name": "s320x10",
+ "params_M": 10.53,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.13,
+ "all": {
+  "loss": 0.3543,
+  "acc": 0.8682,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.585,
+  "acc": 0.8223,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.2863,
+  "acc": 0.884,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 1.2289,
+  "acc": 0.6641,
+  "masked_tokens": 54596
+ }
+}

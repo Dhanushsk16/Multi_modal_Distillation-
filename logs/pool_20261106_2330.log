@@ -1,0 +1,31 @@
+canonical strata (source, residues): available -> taken
+  pclm_esmatlas   20-24     932,382 ->    276,553
+  pclm_esmatlas   25-30     802,225 ->    276,553
+  pclm_pubchem    2-4         2,633 ->      2,633
+  pclm_pubchem    5-9        18,436 ->     18,436
+  pclm_pubchem    10-14       5,757 ->      5,757
+  pclm_pubchem    15-19       3,246 ->      3,246
+  pclm_pubchem    20-24       2,162 ->      2,162
+  pclm_pubchem    25-30         806 ->        806
+  pepland_stage1  2-4        31,094 ->     31,094
+  pepland_stage1  5-9     2,176,068 ->    276,552
+  pepland_stage1  10-14   1,846,020 ->    276,552
+  pepland_stage1  15-19   1,290,675 ->    276,552
+  pepland_stage1  20-24     847,770 ->    276,552
+  pepland_stage1  25-30     880,879 ->    276,552
+{
+ "rows": 2640418,
+ "noncanonical": 640418,
+ "canonical": 2000000,
+ "noncanonical_share": 0.2425,
+ "cap": 30,
+ "shard_rows": 100000,
+ "shards": 27,
+ "seed": 0,
+ "by_source_kind": {
+  "pclm_esmatlas/canonical": 553106,
+  "pclm_pubchem/canonical": 33040,
+  "pclm_pubchem/noncanonical": 640418,
+  "pepland_stage1/canonical": 1413854
+ }
+}

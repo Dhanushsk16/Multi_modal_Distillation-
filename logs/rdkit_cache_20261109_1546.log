@@ -1,0 +1,23 @@
+== Monday 09 November 2026 03:46:49 PM IST | stage cache | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/rdkit_cache_20261109_1546.log
+== rdkit cache: 24 workers, stopping at 06:45 (898 min from now)
+rdkit: 27 shards for this process, 13 to do
+check: rdkit cache code vs the benchmark features on 96 molecules | cosine median 1.00000, min 1.00000 | failed 0 | 1 s | PASS
+  too slow (> 30 s), counted as failed: molecule 67162 of this shard, 626 characters: CC(C)[C@@H]1NC(=O)CC[C@@H](C)[C@H]2CC[C@H]3[C@@H]4CC[C@@H]5C[C@@H](CC[C@]5(C)[C@H]4C[C@H](O)[C@]23C)NC(=O)[C@H](C(C)C)NC
+rdkit shard  14 | 100,000 molecules | failed 1 | 4.1 min (run total 4.1 min, 1 shards done)
+rdkit shard  15 | 100,000 molecules | failed 0 | 2.0 min (run total 6.1 min, 2 shards done)
+rdkit shard  16 | 100,000 molecules | failed 0 | 2.0 min (run total 8.1 min, 3 shards done)
+rdkit shard  17 | 100,000 molecules | failed 0 | 2.0 min (run total 10.2 min, 4 shards done)
+rdkit shard  18 | 100,000 molecules | failed 0 | 2.0 min (run total 12.2 min, 5 shards done)
+rdkit shard  19 | 100,000 molecules | failed 0 | 2.0 min (run total 14.2 min, 6 shards done)
+rdkit shard  20 | 100,000 molecules | failed 0 | 2.0 min (run total 16.3 min, 7 shards done)
+rdkit shard  21 | 100,000 molecules | failed 0 | 2.0 min (run total 18.3 min, 8 shards done)
+rdkit shard  22 | 100,000 molecules | failed 0 | 2.0 min (run total 20.3 min, 9 shards done)
+rdkit shard  23 | 100,000 molecules | failed 0 | 2.0 min (run total 22.4 min, 10 shards done)
+rdkit shard  24 | 100,000 molecules | failed 0 | 2.0 min (run total 24.4 min, 11 shards done)
+rdkit shard  25 | 100,000 molecules | failed 0 | 2.0 min (run total 26.4 min, 12 shards done)
+rdkit shard  26 | 40,418 molecules | failed 0 | 0.8 min (run total 27.3 min, 13 shards done)
+rdkit: 13 shards written, 1 molecules failed, 27.3 min
+ecfp      27 / 27 shards finished | 2,640,418 of 2,640,418 molecules (100%)
+pclm      27 / 27 shards finished | 2,640,418 of 2,640,418 molecules (100%)
+pepland   15 / 27 shards finished + 12 in progress | 2,324,834 of 2,640,418 molecules (88%)
+rdkit     27 / 27 shards finished | 2,640,418 of 2,640,418 molecules (100%)

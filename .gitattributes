@@ -1,0 +1,7 @@
+# Text files are LF in the repository and in archives (the lab server runs Linux), whatever core.autocrlf says on the machine that exports them
+* text=auto eol=lf
+# Shell scripts run on Linux: keep LF endings even when checked out on Windows
+*.sh text eol=lf
+*.py text eol=lf
+*.png binary
+*.pdf binary

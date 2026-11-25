@@ -1,0 +1,66 @@
+== Thursday 19 November 2026 09:57:31 AM IST | PepMSND + KAN | teacher v3_base | KAN: ours | seeds 3 | results/pepmsnd_kan_ours | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/pepmsnd_kan_ours_20261119_0957.log
+PepMSND: 640 of 640 molecules usable in every input, 10 folds | descriptors 140 + one-hot 4 | KAN ours (grid 5, order 3, hidden 32, branch 16) | modes ['kan', 'emb', 'fuse', 'desc_gbt'] | inputs ['H', 'L', 'P', 'P+L+H', 'PCA', 'teacher_v3_base'] | seeds 3 | device cuda
+kan       -                      seed 0 | MCC 0.551 (fold mean 0.548) AUROC 0.856 | epochs 48 | 29s
+kan       -                      seed 1 | MCC 0.549 (fold mean 0.549) AUROC 0.853 | epochs 52 | 30s
+kan       -                      seed 2 | MCC 0.540 (fold mean 0.541) AUROC 0.863 | epochs 46 | 26s
+desc_gbt  -                      seed 0 | MCC 0.608 (fold mean 0.607) AUROC 0.889 | epochs 0 | 8s
+desc_gbt  -                      seed 1 | MCC 0.608 (fold mean 0.607) AUROC 0.889 | epochs 0 | 8s
+desc_gbt  -                      seed 2 | MCC 0.608 (fold mean 0.607) AUROC 0.889 | epochs 0 | 8s
+emb       H                      seed 0 | MCC 0.440 (fold mean 0.451) AUROC 0.814 | epochs 27 | 13s
+emb       H                      seed 1 | MCC 0.553 (fold mean 0.552) AUROC 0.843 | epochs 29 | 14s
+emb       H                      seed 2 | MCC 0.515 (fold mean 0.525) AUROC 0.834 | epochs 29 | 14s
+fuse      H                      seed 0 | MCC 0.417 (fold mean 0.430) AUROC 0.807 | epochs 27 | 25s
+fuse      H                      seed 1 | MCC 0.539 (fold mean 0.539) AUROC 0.819 | epochs 29 | 28s
+fuse      H                      seed 2 | MCC 0.489 (fold mean 0.498) AUROC 0.828 | epochs 27 | 26s
+emb       L                      seed 0 | MCC 0.516 (fold mean 0.517) AUROC 0.825 | epochs 33 | 15s
+emb       L                      seed 1 | MCC 0.503 (fold mean 0.500) AUROC 0.830 | epochs 36 | 17s
+emb       L                      seed 2 | MCC 0.469 (fold mean 0.468) AUROC 0.830 | epochs 32 | 15s
+fuse      L                      seed 0 | MCC 0.553 (fold mean 0.555) AUROC 0.836 | epochs 31 | 24s
+fuse      L                      seed 1 | MCC 0.543 (fold mean 0.539) AUROC 0.844 | epochs 37 | 29s
+fuse      L                      seed 2 | MCC 0.491 (fold mean 0.497) AUROC 0.828 | epochs 33 | 27s
+emb       P                      seed 0 | MCC 0.444 (fold mean 0.440) AUROC 0.801 | epochs 46 | 21s
+emb       P                      seed 1 | MCC 0.507 (fold mean 0.507) AUROC 0.814 | epochs 56 | 26s
+emb       P                      seed 2 | MCC 0.501 (fold mean 0.500) AUROC 0.806 | epochs 43 | 20s
+fuse      P                      seed 0 | MCC 0.579 (fold mean 0.577) AUROC 0.865 | epochs 43 | 39s
+fuse      P                      seed 1 | MCC 0.527 (fold mean 0.525) AUROC 0.840 | epochs 47 | 43s
+fuse      P                      seed 2 | MCC 0.555 (fold mean 0.552) AUROC 0.849 | epochs 40 | 37s
+emb       P+L+H                  seed 0 | MCC 0.489 (fold mean 0.489) AUROC 0.821 | epochs 27 | 13s
+emb       P+L+H                  seed 1 | MCC 0.509 (fold mean 0.509) AUROC 0.834 | epochs 30 | 15s
+emb       P+L+H                  seed 2 | MCC 0.547 (fold mean 0.552) AUROC 0.832 | epochs 29 | 14s
+fuse      P+L+H                  seed 0 | MCC 0.500 (fold mean 0.509) AUROC 0.830 | epochs 28 | 26s
+fuse      P+L+H                  seed 1 | MCC 0.546 (fold mean 0.545) AUROC 0.847 | epochs 31 | 29s
+fuse      P+L+H                  seed 2 | MCC 0.498 (fold mean 0.499) AUROC 0.826 | epochs 29 | 27s
+emb       PCA                    seed 0 | MCC 0.490 (fold mean 0.496) AUROC 0.792 | epochs 27 | 13s
+emb       PCA                    seed 1 | MCC 0.478 (fold mean 0.479) AUROC 0.812 | epochs 28 | 13s
+emb       PCA                    seed 2 | MCC 0.483 (fold mean 0.495) AUROC 0.815 | epochs 27 | 13s
+fuse      PCA                    seed 0 | MCC 0.444 (fold mean 0.452) AUROC 0.803 | epochs 26 | 24s
+fuse      PCA                    seed 1 | MCC 0.508 (fold mean 0.511) AUROC 0.819 | epochs 30 | 28s
+fuse      PCA                    seed 2 | MCC 0.496 (fold mean 0.518) AUROC 0.804 | epochs 27 | 20s
+emb       teacher_v3_base        seed 0 | MCC 0.481 (fold mean 0.487) AUROC 0.818 | epochs 26 | 12s
+emb       teacher_v3_base        seed 1 | MCC 0.508 (fold mean 0.512) AUROC 0.844 | epochs 28 | 13s
+emb       teacher_v3_base        seed 2 | MCC 0.513 (fold mean 0.513) AUROC 0.838 | epochs 27 | 13s
+fuse      teacher_v3_base        seed 0 | MCC 0.498 (fold mean 0.500) AUROC 0.820 | epochs 26 | 18s
+fuse      teacher_v3_base        seed 1 | MCC 0.548 (fold mean 0.549) AUROC 0.854 | epochs 29 | 19s
+fuse      teacher_v3_base        seed 2 | MCC 0.522 (fold mean 0.529) AUROC 0.835 | epochs 27 | 18s
+
+=== PepMSND, 10-fold cluster CV, MCC pooled over the folds, mean +- sd over 3 seeds ===
+                      embedding only (no KAN) embedding + KAN (fuse) KAN gain (fuse - emb)
+ECFP counts                    0.503 +- 0.057         0.481 +- 0.061                -0.021
+PeptideCLM-2 (frozen)          0.496 +- 0.024         0.529 +- 0.033                +0.033
+PepLand (frozen)               0.484 +- 0.035         0.554 +- 0.026                +0.070
+the three joined               0.515 +- 0.029         0.514 +- 0.027                -0.001
+PCA of the three               0.484 +- 0.006         0.483 +- 0.034                -0.001
+v3_base (frozen)               0.501 +- 0.017         0.523 +- 0.025                +0.022
+descriptors + species / environment, KAN alone                 0.547 +- 0.006
+descriptors + species / environment, gradient-boosted trees    0.608 +- 0.000
+
+published, for comparison (their protocols; the first is the PepMSND paper's own 10-fold average):
+  PepMSND paper, its full model with KAN (its own protocol)      0.726
+  PepMSND paper, without its KAN module                          0.537
+  PeptideCLM-2 MLM + KAN (journal paper)                         0.729
+  PeptideCLM-2 Hybrid + KAN                                      0.741
+  PeptideCLM-2 MTR + KAN                                         0.749
+  PeptideCLM-2 without KAN (read off its Fig. 5B, about)         0.600
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_kan_ours
+== done 10:12 (exit status 0)

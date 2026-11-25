@@ -1,0 +1,3 @@
+teacher,learner,mean_diff_vs_REF,mean_diff_vs_PCA,mean_diff_vs_H,clearly_worse_benchmarks_99.5,PASS,vs_REF_wo,vs_PCA_wo,worse_wo,PASS_wo,checked
+teacher_v3_base,kernel,0.022541307218060525,,0.011775444590869821,,yes,0.022541307218060525,,,yes,REF
+teacher_v3_base,ALL,0.022541307218060525,,0.011775444590869821,,yes,0.022541307218060525,,,yes,REF

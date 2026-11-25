@@ -1,0 +1,2 @@
+benchmark,subset,H,L,P,P+L+H,PCA,teacher_abl_base_s1
+THPep,standard,0.754,0.742,0.63,0.77,0.688,0.821

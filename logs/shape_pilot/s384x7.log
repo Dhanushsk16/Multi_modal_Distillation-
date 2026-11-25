@@ -1,0 +1,84 @@
+  warnings.warn(
+/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/students/student-s384x7: d=384 heads=6 ffn=768 blocks=7 -> 10,658,325 params (10.66M)
+   verified: reload OK, logits (2, 18, 405), mean_pool (2, 384), finite
+  warnings.warn(
+rotary buffers refreshed and verified: teacher 0, student 7 modules
+no teacher (MLM-only) | student 10.66M (trainable, fp32)
+train 2,003,640 molecules | val 20,000
+steps/epoch 9821 | total 9821
+
+MLM-only: loss = cross-entropy at masked positions | amp bf16
+
+[mlm] ep0 step    200/9821 | loss 1.6432 acc 0.579 | gn 2.78 lr 2.00e-04 | 0.5 min
+[mlm] ep0 step    400/9821 | loss 0.3994 acc 0.848 | gn 0.63 lr 4.00e-04 | 1.0 min
+[mlm] ep0 step    600/9821 | loss 0.3884 acc 0.852 | gn 0.34 lr 6.00e-04 | 1.5 min
+[mlm] ep0 step    800/9821 | loss 0.3488 acc 0.863 | gn 0.22 lr 8.00e-04 | 2.0 min
+[mlm] ep0 step   1000/9821 | loss 0.3624 acc 0.860 | gn 0.30 lr 1.00e-03 | 2.5 min
+[mlm] ep0 step   1200/9821 | loss 3.0808 acc 0.279 | gn 2.06 lr 9.99e-04 | 2.9 min
+[mlm] ep0 step   1400/9821 | loss 0.3806 acc 0.861 | gn 0.21 lr 9.95e-04 | 3.4 min
+[mlm] ep0 step   1600/9821 | loss 0.3468 acc 0.867 | gn 0.19 lr 9.90e-04 | 3.9 min
+[mlm] ep0 step   1800/9821 | loss 0.3330 acc 0.869 | gn 0.17 lr 9.82e-04 | 4.4 min
+[mlm] ep0 step   2000/9821 | loss 2.2931 acc 0.446 | gn 1.10 lr 9.72e-04 | 4.9 min
+   [val] loss 0.4810 hard 0.4810 soft nan agree nan acc_s 0.830
+[mlm] ep0 step   2200/9821 | loss 0.3503 acc 0.855 | gn 0.14 lr 9.60e-04 | 5.4 min
+[mlm] ep0 step   2400/9821 | loss 2.2719 acc 0.421 | gn 1.25 lr 9.45e-04 | 5.9 min
+[mlm] ep0 step   2600/9821 | loss 0.3212 acc 0.877 | gn 0.18 lr 9.29e-04 | 6.4 min
+[mlm] ep0 step   2800/9821 | loss 0.3318 acc 0.862 | gn 0.16 lr 9.11e-04 | 6.9 min
+[mlm] ep0 step   3000/9821 | loss 2.2038 acc 0.448 | gn 0.98 lr 8.91e-04 | 7.4 min
+[mlm] ep0 step   3200/9821 | loss 0.3286 acc 0.864 | gn 0.14 lr 8.69e-04 | 7.9 min
+[mlm] ep0 step   3400/9821 | loss 0.3411 acc 0.859 | gn 0.13 lr 8.46e-04 | 8.4 min
+[mlm] ep0 step   3600/9821 | loss 0.3015 acc 0.883 | gn 0.12 lr 8.21e-04 | 8.8 min
+[mlm] ep0 step   3800/9821 | loss 0.2832 acc 0.887 | gn 0.12 lr 7.94e-04 | 9.3 min
+[mlm] ep0 step   4000/9821 | loss 1.7656 acc 0.500 | gn 0.69 lr 7.67e-04 | 9.8 min
+   [val] loss 0.4296 hard 0.4296 soft nan agree nan acc_s 0.843
+[mlm] ep0 step   4200/9821 | loss 0.3438 acc 0.854 | gn 0.14 lr 7.38e-04 | 10.4 min
+[mlm] ep0 step   4400/9821 | loss 0.3250 acc 0.872 | gn 0.18 lr 7.09e-04 | 10.9 min
+[mlm] ep0 step   4600/9821 | loss 0.3340 acc 0.867 | gn 0.17 lr 6.78e-04 | 11.3 min
+[mlm] ep0 step   4800/9821 | loss 0.3298 acc 0.866 | gn 0.16 lr 6.47e-04 | 11.8 min
+[mlm] ep0 step   5000/9821 | loss 0.2989 acc 0.873 | gn 0.13 lr 6.16e-04 | 12.3 min
+[mlm] ep0 step   5200/9821 | loss 0.3063 acc 0.870 | gn 0.22 lr 5.84e-04 | 12.8 min
+[mlm] ep0 step   5400/9821 | loss 0.3209 acc 0.865 | gn 0.16 lr 5.52e-04 | 13.3 min
+[mlm] ep0 step   5600/9821 | loss 0.2919 acc 0.880 | gn 0.13 lr 5.20e-04 | 13.8 min
+[mlm] ep0 step   5800/9821 | loss 0.3078 acc 0.874 | gn 0.11 lr 4.88e-04 | 14.3 min
+[mlm] ep0 step   6000/9821 | loss 0.3169 acc 0.869 | gn 0.13 lr 4.56e-04 | 14.8 min
+   [val] loss 0.3974 hard 0.3974 soft nan agree nan acc_s 0.854
+[mlm] ep0 step   6200/9821 | loss 0.3278 acc 0.867 | gn 0.18 lr 4.25e-04 | 15.3 min
+[mlm] ep0 step   6400/9821 | loss 0.3098 acc 0.873 | gn 0.11 lr 3.95e-04 | 15.8 min
+[mlm] ep0 step   6600/9821 | loss 1.8353 acc 0.526 | gn 0.34 lr 3.65e-04 | 16.3 min
+[mlm] ep0 step   6800/9821 | loss 0.3131 acc 0.869 | gn 0.14 lr 3.36e-04 | 16.8 min
+[mlm] ep0 step   7000/9821 | loss 0.2838 acc 0.892 | gn 0.16 lr 3.09e-04 | 17.3 min
+[mlm] ep0 step   7200/9821 | loss 0.3084 acc 0.872 | gn 0.15 lr 2.82e-04 | 17.8 min
+[mlm] ep0 step   7400/9821 | loss 1.4716 acc 0.609 | gn 0.65 lr 2.57e-04 | 18.3 min
+[mlm] ep0 step   7600/9821 | loss 0.2952 acc 0.886 | gn 0.24 lr 2.34e-04 | 18.7 min
+[mlm] ep0 step   7800/9821 | loss 1.3122 acc 0.637 | gn 0.29 lr 2.12e-04 | 19.2 min
+[mlm] ep0 step   8000/9821 | loss 0.3318 acc 0.869 | gn 0.12 lr 1.91e-04 | 19.7 min
+   [val] loss 0.3752 hard 0.3752 soft nan agree nan acc_s 0.861
+[mlm] ep0 step   8200/9821 | loss 0.2877 acc 0.884 | gn 0.21 lr 1.73e-04 | 20.3 min
+[mlm] ep0 step   8400/9821 | loss 0.2915 acc 0.888 | gn 0.26 lr 1.56e-04 | 20.8 min
+[mlm] ep0 step   8600/9821 | loss 0.2947 acc 0.888 | gn 0.20 lr 1.42e-04 | 21.3 min
+[mlm] ep0 step   8800/9821 | loss 0.3221 acc 0.871 | gn 0.22 lr 1.29e-04 | 21.7 min
+[mlm] ep0 step   9000/9821 | loss 0.3178 acc 0.872 | gn 0.26 lr 1.19e-04 | 22.2 min
+[mlm] ep0 step   9200/9821 | loss 0.2707 acc 0.890 | gn 0.27 lr 1.11e-04 | 22.7 min
+[mlm] ep0 step   9400/9821 | loss 0.2930 acc 0.880 | gn 0.13 lr 1.05e-04 | 23.2 min
+[mlm] ep0 step   9600/9821 | loss 0.3093 acc 0.869 | gn 0.12 lr 1.01e-04 | 23.7 min
+[mlm] ep0 step   9800/9821 | loss 0.3316 acc 0.863 | gn 0.16 lr 1.00e-04 | 24.2 min
+
+final val: {'total': 0.36453, 'hard': 0.36453, 'soft': nan, 'agree_teacher': nan, 'acc_student': 0.8654}
+done: 9821 steps in 24.3 min
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+{
+  "model": "s384x7",
+  "device": "cuda",
+  "dtype": "bf16",
+  "batch": 16,
+  "params_M": 10.7,
+  "n_molecules": 300,
+  "n_real_tokens": 28464,
+  "sweep_s_mean": 0.1446,
+  "sweep_s_sd": 0.0007,
+  "ms_per_molecule": 0.482,
+  "molecules_per_s": 2074.7,
+  "tokens_per_s": 196848.4,
+  "peak_mem_MB": 77.5
+}

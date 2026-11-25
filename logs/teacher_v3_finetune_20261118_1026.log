@@ -1,0 +1,2 @@
+== Wednesday 18 November 2026 10:26:20 AM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261118_1026.log
+usage: run_teacher_v3.sh prep|harness|train NAME [args]|seeds|abl

@@ -1,0 +1,14 @@
+== Sunday 15 November 2026 03:23:01 PM IST | stage pl-features | teacher t9 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_pl-features_20261115_1523.log
+GPU in use by:
+shivanhu    01:21:13 python deform_fullb0/train_deform.py --variant pq_pca-e2 --phi 0 --seed 99 --out-root /mnt/wwn-0x5000c500e64c5cc0/shivanhu/tinyh2gnet_replication/deform_fullb0/outputs --aug --inner-patients 2
+not starting (FORCE=1 to override)
+
+== stage pl-features finished, exit code 2 (15:23)
+== Sunday 15 November 2026 03:23:46 PM IST | stage pl-features | teacher t9 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_pl-features_20261115_1523.log
+== /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/esm.npz exists: skipped
+
+== teacher t9 embeds PepLand's suite (15:23)
+benchmark molecules with a esm view: 2699 of 12567 (21.5%); the others use the mask token
+benchmark embeddings: 12567 molecules, 1024-d, usable 12567 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_t9.npz
+
+== stage pl-features finished, exit code 0 (15:23)

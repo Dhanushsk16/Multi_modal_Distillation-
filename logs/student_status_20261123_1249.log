@@ -1,0 +1,19 @@
+12:49:07 == stage status | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_status_20261123_1249.log
+12:49:07 -- what the student needs, on this server
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/pool.parquet (322M)
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/pool_norm.parquet (318M)
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/corpus/views_v3_stats.npz (52K)
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_base/best.pt (135M)
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_base/latent_stats.npz (16K)
+  yes  features/corpus/pepland: 51 shards (2.0G)
+  yes  features/corpus/pclm: 51 shards (6.5G)
+  yes  features/corpus/ecfp: 51 shards (553M)
+  yes  features/corpus/esm: 51 shards (17G)
+  yes  features/corpus/pclm_mtr: 51 shards (6.5G)
+  yes  features/corpus/teacher_v3_base: 51 shards (6.5G)
+  yes  token ids student_atombpe_v1024: 51 shards
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_tokenizer: atombpe_v1024 atombpe_v2048 atombpe_v4096 
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_tokenizer_norm: atombpe_v1024 
+  trained students: st1 st2 st3 st4 st5 st6 st7 stc stca 
+  free VRAM: 48394 MiB | RAM available: 308 GB of 314 GB | cores 64, load 2.25 7.03 9.19
+12:49:07 == done (exit status 0)

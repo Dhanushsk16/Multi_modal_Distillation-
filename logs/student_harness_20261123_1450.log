@@ -1,0 +1,499 @@
+14:50:33 == stage harness | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_harness_20261123_1450.log
+representations: ['P', 'L', 'H', 'teacher_v3_base', 'teacher_st6f_e02', 'teacher_st6f_e02_pre'] | learners ['linear', 'kernel', 'gbt', 'mlp'] | seeds 2 | select val
+workers: 4 processes x 2 threads = 8 threads (cap 8)
+   PL_ncCPP     all    P            linear seed 0 | Spearman 0.655 (1s)
+   PAMPA        all    P            linear seed 0 | R2 -0.290 (1s)
+   PL_cCPP      all    P            linear seed 0 | AUROC 0.886 (7s)
+   AmpHGT       all    P            linear seed 0 | MCC 0.801 (6s)
+   PL_ncCPP     all    L            linear seed 0 | Spearman 0.696 (13s)
+   PL_cCPP      all    L            linear seed 0 | AUROC 0.915 (8s)
+   PAMPA        all    L            linear seed 0 | R2 -0.635 (17s)
+   PL_cCPP      all    H            linear seed 0 | AUROC 0.885 (10s)
+   PL_cCPP      all    teacher_v3_base linear seed 0 | AUROC 0.925 (3s)
+   PL_cCPP      all    teacher_st6f_e02 linear seed 0 | AUROC 0.919 (6s)
+   PL_cCPP      all    teacher_st6f_e02_pre linear seed 0 | AUROC 0.918 (8s)
+   PL_cCPP      all    P            kernel seed 0 | AUROC 0.923 (4s)
+   PL_cCPP      all    L            kernel seed 0 | AUROC 0.938 (4s)
+   PL_cCPP      all    H            kernel seed 0 | AUROC 0.941 (5s)
+   PL_cCPP      all    teacher_v3_base kernel seed 0 | AUROC 0.954 (4s)
+   AmpHGT       all    L            linear seed 0 | MCC 0.766 (52s)
+   PL_cCPP      all    teacher_st6f_e02 kernel seed 0 | AUROC 0.959 (4s)
+   PL_cCPP      all    teacher_st6f_e02_pre kernel seed 0 | AUROC 0.958 (5s)
+   PL_ncCPP     all    H            linear seed 0 | Spearman 0.668 (61s)
+   PL_cCPP      all    P            gbt    seed 0 | AUROC 0.928 (18s)
+   PL_ncCPP     all    teacher_v3_base linear seed 0 | Spearman 0.702 (14s)
+   PAMPA        all    H            linear seed 0 | R2 0.244 (72s)
+   PL_ncCPP     all    teacher_st6f_e02 linear seed 0 | Spearman 0.684 (15s)
+   PAMPA        all    teacher_v3_base linear seed 0 | R2 0.072 (17s)
+   AmpHGT       all    H            linear seed 0 | MCC 0.662 (49s)
+   PL_ncCPP     all    teacher_st6f_e02_pre linear seed 0 | Spearman 0.689 (21s)
+   PAMPA        all    teacher_st6f_e02 linear seed 0 | R2 0.069 (17s)
+   AmpHGT       all    teacher_v3_base linear seed 0 | MCC 0.630 (21s)
+   PAMPA        all    teacher_st6f_e02_pre linear seed 0 | R2 0.078 (27s)
+   AmpHGT       all    teacher_st6f_e02 linear seed 0 | MCC 0.710 (36s)
+   PL_cCPP      all    L            gbt    seed 0 | AUROC 0.939 (88s)
+   AmpHGT       all    teacher_st6f_e02_pre linear seed 0 | MCC 0.679 (42s)
+   AmpHGT       all    P            kernel seed 0 | MCC 0.829 (8s)
+   AmpHGT       all    L            kernel seed 0 | MCC 0.838 (10s)
+   AmpHGT       all    H            kernel seed 0 | MCC 0.358 (13s)
+   PL_ncCPP     all    P            kernel seed 0 | Spearman 0.749 (123s)
+   AmpHGT       all    teacher_v3_base kernel seed 0 | MCC 0.904 (10s)
+   AmpHGT       all    teacher_st6f_e02 kernel seed 0 | MCC 0.770 (9s)
+   AmpHGT       all    teacher_st6f_e02_pre kernel seed 0 | MCC 0.775 (10s)
+   AmpHGT       all    P            gbt    seed 0 | MCC 0.841 (5s)
+   PL_cCPP      all    H            gbt    seed 0 | AUROC 0.952 (120s)
+   PAMPA        all    P            kernel seed 0 | R2 0.059 (142s)
+   AmpHGT       all    L            gbt    seed 0 | MCC 0.800 (24s)
+   AmpHGT       all    H            gbt    seed 0 | MCC 0.884 (49s)
+   PL_ncCPP     all    L            kernel seed 0 | Spearman 0.756 (110s)
+   AmpHGT       all    teacher_v3_base gbt    seed 0 | MCC 0.826 (24s)
+   PL_cCPP      all    teacher_v3_base gbt    seed 0 | AUROC 0.944 (82s)
+   AmpHGT       all    teacher_st6f_e02 gbt    seed 0 | MCC 0.841 (16s)
+   AmpHGT       all    teacher_st6f_e02_pre gbt    seed 0 | MCC 0.881 (32s)
+   PAMPA        all    L            kernel seed 0 | R2 0.127 (129s)
+   AmpHGT       all    P            gbt    seed 1 | MCC 0.837 (5s)
+   AmpHGT       all    L            gbt    seed 1 | MCC 0.791 (22s)
+   PL_ncCPP     all    H            kernel seed 0 | Spearman 0.744 (95s)
+   PL_cCPP      all    teacher_st6f_e02 gbt    seed 0 | AUROC 0.951 (77s)
+   AmpHGT       all    H            gbt    seed 1 | MCC 0.867 (34s)
+   AmpHGT       all    teacher_v3_base gbt    seed 1 | MCC 0.818 (23s)
+   AmpHGT       all    teacher_st6f_e02 gbt    seed 1 | MCC 0.843 (20s)
+   PAMPA        all    H            kernel seed 0 | R2 0.314 (117s)
+   AmpHGT       all    teacher_st6f_e02_pre gbt    seed 1 | MCC 0.875 (26s)
+   PL_ncCPP     all    teacher_v3_base kernel seed 0 | Spearman 0.757 (102s)
+   PL_cCPP      all    teacher_st6f_e02_pre gbt    seed 0 | AUROC 0.949 (101s)
+   AmpHGT       all    P            mlp    seed 0 | MCC 0.833 (5s)
+   AmpHGT       all    L            mlp    seed 0 | MCC 0.805 (6s)
+   PL_cCPP      all    P            gbt    seed 1 | AUROC 0.928 (18s)
+   AmpHGT       all    H            mlp    seed 0 | MCC 0.631 (19s)
+   AmpHGT       all    teacher_v3_base mlp    seed 0 | MCC 0.667 (7s)
+   AmpHGT       all    teacher_st6f_e02 mlp    seed 0 | MCC 0.758 (8s)
+   AmpHGT       all    teacher_st6f_e02_pre mlp    seed 0 | MCC 0.661 (11s)
+   AmpHGT       all    P            mlp    seed 1 | MCC 0.805 (4s)
+   AmpHGT       all    L            mlp    seed 1 | MCC 0.812 (14s)
+   PL_ncCPP     all    teacher_st6f_e02 kernel seed 0 | Spearman 0.736 (81s)
+   PL_cCPP      all    L            gbt    seed 1 | AUROC 0.939 (67s)
+   PAMPA        all    teacher_v3_base kernel seed 0 | R2 0.185 (99s)
+   AmpHGT       all    H            mlp    seed 1 | MCC 0.637 (20s)
+   AmpHGT       all    teacher_v3_base mlp    seed 1 | MCC 0.685 (7s)
+   AmpHGT       all    teacher_st6f_e02 mlp    seed 1 | MCC 0.654 (6s)
+   AmpHGT       all    teacher_st6f_e02_pre mlp    seed 1 | MCC 0.652 (8s)
+   PL_ncCPP     all    teacher_st6f_e02_pre kernel seed 0 | Spearman 0.736 (121s)
+   PL_cCPP      all    H            gbt    seed 1 | AUROC 0.952 (141s)
+   PL_ncCPP     all    P            gbt    seed 0 | Spearman 0.723 (38s)
+   PAMPA        all    teacher_st6f_e02 kernel seed 0 | R2 0.132 (157s)
+   PL_cCPP      all    teacher_v3_base gbt    seed 1 | AUROC 0.944 (83s)
+   PL_ncCPP     all    L            gbt    seed 0 | Spearman 0.736 (74s)
+   PAMPA        all    teacher_st6f_e02_pre kernel seed 0 | R2 0.132 (99s)
+== AmpHGT done (906 s)
+   PL_cBinding  all    P            linear seed 0 | Spearman 0.322 (0s)
+   PL_cBinding  all    L            linear seed 0 | Spearman 0.415 (5s)
+   PL_cBinding  all    H            linear seed 0 | Spearman 0.382 (2s)
+   PL_cBinding  all    teacher_v3_base linear seed 0 | Spearman 0.416 (5s)
+   PAMPA        all    P            gbt    seed 0 | R2 0.323 (21s)
+   PL_cBinding  all    teacher_st6f_e02 linear seed 0 | Spearman 0.412 (5s)
+   PL_cCPP      all    teacher_st6f_e02 gbt    seed 1 | AUROC 0.951 (65s)
+   PL_cBinding  all    teacher_st6f_e02_pre linear seed 0 | Spearman 0.410 (7s)
+   PL_cBinding  all    P            kernel seed 0 | Spearman 0.378 (4s)
+   PL_cBinding  all    L            kernel seed 0 | Spearman 0.436 (5s)
+   PL_cBinding  all    H            kernel seed 0 | Spearman 0.432 (6s)
+   PL_cBinding  all    teacher_v3_base kernel seed 0 | Spearman 0.460 (5s)
+   PL_cBinding  all    teacher_st6f_e02 kernel seed 0 | Spearman 0.481 (5s)
+   PL_cBinding  all    teacher_st6f_e02_pre kernel seed 0 | Spearman 0.484 (5s)
+   PL_cBinding  all    P            gbt    seed 0 | Spearman 0.362 (16s)
+   PL_ncCPP     all    H            gbt    seed 0 | Spearman 0.752 (111s)
+   PAMPA        all    L            gbt    seed 0 | R2 0.106 (76s)
+   PL_cCPP      all    teacher_st6f_e02_pre gbt    seed 1 | AUROC 0.949 (86s)
+   PL_cCPP      all    P            mlp    seed 0 | AUROC 0.901 (3s)
+   PL_cCPP      all    L            mlp    seed 0 | AUROC 0.923 (8s)
+   PL_cBinding  all    L            gbt    seed 0 | Spearman 0.426 (56s)
+   PL_cCPP      all    H            mlp    seed 0 | AUROC 0.922 (11s)
+   PL_cCPP      all    teacher_v3_base mlp    seed 0 | AUROC 0.939 (4s)
+   PL_cCPP      all    teacher_st6f_e02 mlp    seed 0 | AUROC 0.940 (5s)
+   PL_ncCPP     all    teacher_v3_base gbt    seed 0 | Spearman 0.727 (66s)
+   PL_cCPP      all    teacher_st6f_e02_pre mlp    seed 0 | AUROC 0.944 (6s)
+   PL_cCPP      all    P            mlp    seed 1 | AUROC 0.907 (4s)
+   PL_cCPP      all    L            mlp    seed 1 | AUROC 0.924 (8s)
+   PL_cCPP      all    H            mlp    seed 1 | AUROC 0.918 (12s)
+   PL_cCPP      all    teacher_v3_base mlp    seed 1 | AUROC 0.939 (4s)
+   PL_cCPP      all    teacher_st6f_e02 mlp    seed 1 | AUROC 0.941 (5s)
+   PL_cBinding  all    H            gbt    seed 0 | Spearman 0.408 (58s)
+   PL_cCPP      all    teacher_st6f_e02_pre mlp    seed 1 | AUROC 0.940 (6s)
+   PL_ncCPP     all    teacher_st6f_e02 gbt    seed 0 | Spearman 0.735 (60s)
+   PAMPA        all    H            gbt    seed 0 | R2 0.364 (128s)
+   PL_cBinding  all    teacher_v3_base gbt    seed 0 | Spearman 0.445 (61s)
+   PL_ncCPP     all    teacher_st6f_e02_pre gbt    seed 0 | Spearman 0.728 (82s)
+   PAMPA        all    teacher_v3_base gbt    seed 0 | R2 0.298 (78s)
+   PL_ncCPP     all    P            gbt    seed 1 | Spearman 0.723 (19s)
+   PL_cBinding  all    teacher_st6f_e02 gbt    seed 0 | Spearman 0.430 (61s)
+   PAMPA        all    teacher_st6f_e02 gbt    seed 0 | R2 0.290 (69s)
+   PL_ncCPP     all    L            gbt    seed 1 | Spearman 0.736 (65s)
+   PL_cBinding  all    teacher_st6f_e02_pre gbt    seed 0 | Spearman 0.452 (74s)
+== PL_cCPP done (1298 s)
+   CellPPD      all    P            linear seed 0 | MCC 0.820 (1s)
+   PL_cBinding  all    P            gbt    seed 1 | Spearman 0.362 (17s)
+   CellPPD      all    L            linear seed 0 | MCC 0.821 (1s)
+   CellPPD      all    H            linear seed 0 | MCC 0.841 (1s)
+   CellPPD      all    teacher_v3_base linear seed 0 | MCC 0.920 (0s)
+   CellPPD      all    teacher_st6f_e02 linear seed 0 | MCC 0.887 (1s)
+   CellPPD      all    teacher_st6f_e02_pre linear seed 0 | MCC 0.860 (1s)
+   CellPPD      all    P            kernel seed 0 | MCC 0.814 (0s)
+   CellPPD      all    L            kernel seed 0 | MCC 0.880 (0s)
+   CellPPD      all    H            kernel seed 0 | MCC 0.880 (0s)
+   CellPPD      all    teacher_v3_base kernel seed 0 | MCC 0.914 (0s)
+   CellPPD      all    teacher_st6f_e02 kernel seed 0 | MCC 0.901 (0s)
+   CellPPD      all    teacher_st6f_e02_pre kernel seed 0 | MCC 0.894 (0s)
+   CellPPD      all    P            gbt    seed 0 | MCC 0.801 (3s)
+   CellPPD      all    L            gbt    seed 0 | MCC 0.881 (8s)
+   CellPPD      all    H            gbt    seed 0 | MCC 0.927 (13s)
+   CellPPD      all    teacher_v3_base gbt    seed 0 | MCC 0.894 (7s)
+   CellPPD      all    teacher_st6f_e02 gbt    seed 0 | MCC 0.847 (8s)
+   CellPPD      all    teacher_st6f_e02_pre gbt    seed 0 | MCC 0.887 (12s)
+   CellPPD      all    P            gbt    seed 1 | MCC 0.801 (3s)
+   PL_cBinding  all    L            gbt    seed 1 | Spearman 0.426 (59s)
+   PAMPA        all    teacher_st6f_e02_pre gbt    seed 0 | R2 0.305 (91s)
+   CellPPD      all    L            gbt    seed 1 | MCC 0.881 (8s)
+   CellPPD      all    H            gbt    seed 1 | MCC 0.927 (13s)
+   PAMPA        all    P            gbt    seed 1 | R2 0.323 (22s)
+   PL_ncCPP     all    H            gbt    seed 1 | Spearman 0.752 (114s)
+   CellPPD      all    teacher_v3_base gbt    seed 1 | MCC 0.894 (7s)
+   CellPPD      all    teacher_st6f_e02 gbt    seed 1 | MCC 0.847 (8s)
+   CellPPD      all    teacher_st6f_e02_pre gbt    seed 1 | MCC 0.887 (13s)
+   CellPPD      all    P            mlp    seed 0 | MCC 0.788 (1s)
+   CellPPD      all    L            mlp    seed 0 | MCC 0.881 (1s)
+   CellPPD      all    H            mlp    seed 0 | MCC 0.820 (1s)
+   CellPPD      all    teacher_v3_base mlp    seed 0 | MCC 0.834 (0s)
+   CellPPD      all    teacher_st6f_e02 mlp    seed 0 | MCC 0.907 (1s)
+   CellPPD      all    teacher_st6f_e02_pre mlp    seed 0 | MCC 0.907 (1s)
+   CellPPD      all    P            mlp    seed 1 | MCC 0.733 (0s)
+   CellPPD      all    L            mlp    seed 1 | MCC 0.880 (1s)
+   CellPPD      all    H            mlp    seed 1 | MCC 0.820 (1s)
+   CellPPD      all    teacher_v3_base mlp    seed 1 | MCC 0.900 (1s)
+   CellPPD      all    teacher_st6f_e02 mlp    seed 1 | MCC 0.920 (1s)
+   CellPPD      all    teacher_st6f_e02_pre mlp    seed 1 | MCC 0.887 (1s)
+   PL_cBinding  all    H            gbt    seed 1 | Spearman 0.408 (61s)
+== CellPPD done (152 s)
+   PL_ncCPP     all    teacher_v3_base gbt    seed 1 | Spearman 0.727 (68s)
+   PL_cSol      all    P            linear seed 0 | AUROC 0.639 (4s)
+   PAMPA        all    L            gbt    seed 1 | R2 0.106 (75s)
+   PL_cSol      all    L            linear seed 0 | AUROC 0.677 (7s)
+   PL_cSol      all    H            linear seed 0 | AUROC 0.704 (5s)
+   PL_cSol      all    teacher_v3_base linear seed 0 | AUROC 0.700 (3s)
+   PL_cSol      all    teacher_st6f_e02 linear seed 0 | AUROC 0.683 (6s)
+   PL_cBinding  all    teacher_v3_base gbt    seed 1 | Spearman 0.445 (60s)
+   PL_cSol      all    teacher_st6f_e02_pre linear seed 0 | AUROC 0.688 (7s)
+   PL_cSol      all    P            kernel seed 0 | AUROC 0.654 (2s)
+   PL_cSol      all    L            kernel seed 0 | AUROC 0.676 (2s)
+   PL_cSol      all    H            kernel seed 0 | AUROC 0.711 (2s)
+   PL_cSol      all    teacher_v3_base kernel seed 0 | AUROC 0.697 (2s)
+   PL_cSol      all    teacher_st6f_e02 kernel seed 0 | AUROC 0.693 (2s)
+   PL_cSol      all    teacher_st6f_e02_pre kernel seed 0 | AUROC 0.689 (2s)
+   PL_cSol      all    P            gbt    seed 0 | AUROC 0.626 (15s)
+   PL_ncCPP     all    teacher_st6f_e02 gbt    seed 1 | Spearman 0.735 (64s)
+   PL_cBinding  all    teacher_st6f_e02 gbt    seed 1 | Spearman 0.430 (59s)
+   PL_cSol      all    L            gbt    seed 0 | AUROC 0.680 (50s)
+   PAMPA        all    H            gbt    seed 1 | R2 0.364 (132s)
+   PL_ncCPP     all    teacher_st6f_e02_pre gbt    seed 1 | Spearman 0.728 (78s)
+   PL_ncCPP     all    P            mlp    seed 0 | Spearman 0.710 (14s)
+   PL_cBinding  all    teacher_st6f_e02_pre gbt    seed 1 | Spearman 0.452 (74s)
+   PL_cBinding  all    P            mlp    seed 0 | Spearman 0.332 (4s)
+   PL_cBinding  all    L            mlp    seed 0 | Spearman 0.371 (10s)
+   PL_cSol      all    H            gbt    seed 0 | AUROC 0.713 (74s)
+   PL_ncCPP     all    L            mlp    seed 0 | Spearman 0.692 (35s)
+   PL_cBinding  all    H            mlp    seed 0 | Spearman 0.290 (18s)
+   PL_cBinding  all    teacher_v3_base mlp    seed 0 | Spearman 0.364 (8s)
+   PL_cBinding  all    teacher_st6f_e02 mlp    seed 0 | Spearman 0.356 (11s)
+   PAMPA        all    teacher_v3_base gbt    seed 1 | R2 0.298 (77s)
+   PL_cBinding  all    teacher_st6f_e02_pre mlp    seed 0 | Spearman 0.376 (11s)
+   PL_cBinding  all    P            mlp    seed 1 | Spearman 0.347 (5s)
+   PL_cSol      all    teacher_v3_base gbt    seed 0 | AUROC 0.691 (54s)
+   PL_cBinding  all    L            mlp    seed 1 | Spearman 0.350 (9s)
+   PL_cBinding  all    H            mlp    seed 1 | Spearman 0.336 (25s)
+   PL_ncCPP     all    H            mlp    seed 0 | Spearman 0.694 (75s)
+   PL_cBinding  all    teacher_v3_base mlp    seed 1 | Spearman 0.339 (10s)
+   PL_cBinding  all    teacher_st6f_e02 mlp    seed 1 | Spearman 0.368 (9s)
+   PAMPA        all    teacher_st6f_e02 gbt    seed 1 | R2 0.290 (70s)
+   PL_cSol      all    teacher_st6f_e02 gbt    seed 0 | AUROC 0.693 (55s)
+   PL_cBinding  all    teacher_st6f_e02_pre mlp    seed 1 | Spearman 0.397 (11s)
+   PL_ncCPP     all    teacher_v3_base mlp    seed 0 | Spearman 0.707 (50s)
+   PL_cSol      all    teacher_st6f_e02_pre gbt    seed 0 | AUROC 0.689 (70s)
+   PAMPA        all    teacher_st6f_e02_pre gbt    seed 1 | R2 0.305 (87s)
+   PL_ncCPP     all    teacher_st6f_e02 mlp    seed 0 | Spearman 0.691 (55s)
+   PL_cSol      all    P            gbt    seed 1 | AUROC 0.626 (14s)
+   PAMPA        all    P            mlp    seed 0 | R2 0.195 (22s)
+   PL_ncCPP     all    teacher_st6f_e02_pre mlp    seed 0 | Spearman 0.659 (39s)
+   PL_ncCPP     all    P            mlp    seed 1 | Spearman 0.711 (15s)
+   PL_cSol      all    L            gbt    seed 1 | AUROC 0.680 (53s)
+   PAMPA        all    L            mlp    seed 0 | R2 0.040 (42s)
+   PL_ncCPP     all    L            mlp    seed 1 | Spearman 0.680 (31s)
+== PL_cBinding done (1024 s)
+   PepMSND      all    P            linear seed 0 | MCC 0.447 (6s)
+   PepMSND      all    L            linear seed 0 | MCC 0.501 (7s)
+   PepMSND      all    H            linear seed 0 | MCC 0.480 (7s)
+   PepMSND      all    teacher_v3_base linear seed 0 | MCC 0.530 (4s)
+   PL_cSol      all    H            gbt    seed 1 | AUROC 0.713 (82s)
+   PL_ncCPP     all    H            mlp    seed 1 | Spearman 0.639 (51s)
+   PepMSND      all    teacher_st6f_e02 linear seed 0 | MCC 0.471 (5s)
+   PAMPA        all    H            mlp    seed 0 | R2 0.012 (77s)
+   PepMSND      all    teacher_st6f_e02_pre linear seed 0 | MCC 0.464 (5s)
+   PepMSND      all    P            kernel seed 0 | MCC 0.531 (1s)
+   PepMSND      all    L            kernel seed 0 | MCC 0.538 (2s)
+   PepMSND      all    H            kernel seed 0 | MCC 0.512 (2s)
+   PepMSND      all    teacher_v3_base kernel seed 0 | MCC 0.543 (2s)
+   PepMSND      all    teacher_st6f_e02 kernel seed 0 | MCC 0.520 (2s)
+   PepMSND      all    teacher_st6f_e02_pre kernel seed 0 | MCC 0.516 (2s)
+   PepMSND      all    P            gbt    seed 0 | MCC 0.514 (17s)
+   PL_ncCPP     all    teacher_v3_base mlp    seed 1 | Spearman 0.706 (42s)
+   PAMPA        all    teacher_v3_base mlp    seed 0 | R2 0.120 (40s)
+   PL_cSol      all    teacher_v3_base gbt    seed 1 | AUROC 0.691 (50s)
+   PL_ncCPP     all    teacher_st6f_e02 mlp    seed 1 | Spearman 0.682 (37s)
+   PepMSND      all    L            gbt    seed 0 | MCC 0.550 (54s)
+   PAMPA        all    teacher_st6f_e02 mlp    seed 0 | R2 0.107 (57s)
+   PL_cSol      all    teacher_st6f_e02 gbt    seed 1 | AUROC 0.693 (55s)
+   PL_ncCPP     all    teacher_st6f_e02_pre mlp    seed 1 | Spearman 0.664 (38s)
+   PAMPA        all    teacher_st6f_e02_pre mlp    seed 0 | R2 0.137 (61s)
+   PepMSND      all    H            gbt    seed 0 | MCC 0.574 (81s)
+   PL_cSol      all    teacher_st6f_e02_pre gbt    seed 1 | AUROC 0.689 (74s)
+   PL_cSol      all    P            mlp    seed 0 | AUROC 0.624 (1s)
+   PAMPA        all    P            mlp    seed 1 | R2 0.048 (19s)
+   PL_cSol      all    L            mlp    seed 0 | AUROC 0.669 (3s)
+   PL_cSol      all    H            mlp    seed 0 | AUROC 0.716 (5s)
+   PL_cSol      all    teacher_v3_base mlp    seed 0 | AUROC 0.700 (2s)
+   PL_cSol      all    teacher_st6f_e02 mlp    seed 0 | AUROC 0.701 (2s)
+   PL_cSol      all    teacher_st6f_e02_pre mlp    seed 0 | AUROC 0.694 (3s)
+   PL_cSol      all    P            mlp    seed 1 | AUROC 0.634 (1s)
+   PL_cSol      all    L            mlp    seed 1 | AUROC 0.674 (3s)
+   PL_cSol      all    H            mlp    seed 1 | AUROC 0.725 (4s)
+   PL_cSol      all    teacher_v3_base mlp    seed 1 | AUROC 0.706 (2s)
+   PL_cSol      all    teacher_st6f_e02 mlp    seed 1 | AUROC 0.682 (2s)
+   PL_cSol      all    teacher_st6f_e02_pre mlp    seed 1 | AUROC 0.687 (3s)
+   PepMSND      all    teacher_v3_base gbt    seed 0 | MCC 0.503 (55s)
+   PAMPA        all    L            mlp    seed 1 | R2 0.026 (48s)
+   PepMSND      all    teacher_st6f_e02 gbt    seed 0 | MCC 0.505 (56s)
+   PAMPA        all    H            mlp    seed 1 | R2 -0.333 (82s)
+   PepMSND      all    teacher_st6f_e02_pre gbt    seed 0 | MCC 0.546 (80s)
+   PAMPA        all    teacher_v3_base mlp    seed 1 | R2 -0.390 (64s)
+== PL_cSol done (892 s)
+   PepMSND      all    P            gbt    seed 1 | MCC 0.514 (17s)
+   THPep        all    P            linear seed 0 | MCC 0.630 (0s)
+   THPep        all    L            linear seed 0 | MCC 0.742 (0s)
+   THPep        all    H            linear seed 0 | MCC 0.754 (1s)
+   THPep        all    teacher_v3_base linear seed 0 | MCC 0.840 (0s)
+   THPep        all    teacher_st6f_e02 linear seed 0 | MCC 0.861 (0s)
+   THPep        all    teacher_st6f_e02_pre linear seed 0 | MCC 0.840 (0s)
+   THPep        all    P            kernel seed 0 | MCC 0.511 (0s)
+   THPep        all    L            kernel seed 0 | MCC 0.710 (0s)
+   THPep        all    H            kernel seed 0 | MCC 0.671 (0s)
+   THPep        all    teacher_v3_base kernel seed 0 | MCC 0.710 (0s)
+   THPep        all    teacher_st6f_e02 kernel seed 0 | MCC 0.840 (0s)
+   THPep        all    teacher_st6f_e02_pre kernel seed 0 | MCC 0.731 (0s)
+   THPep        all    P            gbt    seed 0 | MCC 0.522 (1s)
+   THPep        all    L            gbt    seed 0 | MCC 0.693 (4s)
+   THPep        all    H            gbt    seed 0 | MCC 0.792 (5s)
+   THPep        all    teacher_v3_base gbt    seed 0 | MCC 0.679 (4s)
+   THPep        all    teacher_st6f_e02 gbt    seed 0 | MCC 0.731 (4s)
+   THPep        all    teacher_st6f_e02_pre gbt    seed 0 | MCC 0.760 (5s)
+   THPep        all    P            gbt    seed 1 | MCC 0.522 (1s)
+   PAMPA        all    teacher_st6f_e02 mlp    seed 1 | R2 0.096 (41s)
+   THPep        all    L            gbt    seed 1 | MCC 0.693 (4s)
+   THPep        all    H            gbt    seed 1 | MCC 0.792 (5s)
+   THPep        all    teacher_v3_base gbt    seed 1 | MCC 0.679 (4s)
+   PepMSND      all    L            gbt    seed 1 | MCC 0.550 (51s)
+   THPep        all    teacher_st6f_e02 gbt    seed 1 | MCC 0.731 (4s)
+   THPep        all    teacher_st6f_e02_pre gbt    seed 1 | MCC 0.760 (5s)
+   THPep        all    P            mlp    seed 0 | MCC 0.593 (0s)
+   THPep        all    L            mlp    seed 0 | MCC 0.754 (0s)
+   THPep        all    H            mlp    seed 0 | MCC 0.734 (1s)
+   THPep        all    teacher_v3_base mlp    seed 0 | MCC 0.838 (0s)
+   THPep        all    teacher_st6f_e02 mlp    seed 0 | MCC 0.731 (0s)
+   THPep        all    teacher_st6f_e02_pre mlp    seed 0 | MCC 0.737 (0s)
+   THPep        all    P            mlp    seed 1 | MCC 0.495 (0s)
+   THPep        all    L            mlp    seed 1 | MCC 0.731 (0s)
+   THPep        all    H            mlp    seed 1 | MCC 0.756 (0s)
+   THPep        all    teacher_v3_base mlp    seed 1 | MCC 0.685 (0s)
+   THPep        all    teacher_st6f_e02 mlp    seed 1 | MCC 0.809 (0s)
+   THPep        all    teacher_st6f_e02_pre mlp    seed 1 | MCC 0.840 (0s)
+== THPep done (73 s)
+   PL_ncBinding all    P            linear seed 0 | Spearman 0.175 (0s)
+   PL_ncBinding all    L            linear seed 0 | Spearman 0.368 (0s)
+   PL_ncBinding all    H            linear seed 0 | Spearman 0.406 (0s)
+   PL_ncBinding all    teacher_v3_base linear seed 0 | Spearman 0.417 (0s)
+   PL_ncBinding all    teacher_st6f_e02 linear seed 0 | Spearman 0.340 (0s)
+   PL_ncBinding all    teacher_st6f_e02_pre linear seed 0 | Spearman 0.355 (0s)
+   PL_ncBinding all    P            kernel seed 0 | Spearman 0.396 (0s)
+   PL_ncBinding all    L            kernel seed 0 | Spearman 0.413 (0s)
+   PL_ncBinding all    H            kernel seed 0 | Spearman 0.398 (0s)
+   PL_ncBinding all    teacher_v3_base kernel seed 0 | Spearman 0.383 (0s)
+   PL_ncBinding all    teacher_st6f_e02 kernel seed 0 | Spearman 0.394 (0s)
+   PL_ncBinding all    teacher_st6f_e02_pre kernel seed 0 | Spearman 0.414 (0s)
+   PL_ncBinding all    P            gbt    seed 0 | Spearman 0.495 (4s)
+   PAMPA        all    teacher_st6f_e02_pre mlp    seed 1 | R2 0.234 (51s)
+   PL_ncBinding all    L            gbt    seed 0 | Spearman 0.347 (12s)
+   PL_ncBinding all    H            gbt    seed 0 | Spearman 0.384 (13s)
+   PepMSND      all    H            gbt    seed 1 | MCC 0.574 (64s)
+   PL_ncBinding all    teacher_v3_base gbt    seed 0 | Spearman 0.432 (11s)
+   PL_ncBinding all    teacher_st6f_e02 gbt    seed 0 | Spearman 0.464 (11s)
+   PL_ncBinding all    teacher_st6f_e02_pre gbt    seed 0 | Spearman 0.433 (14s)
+   PL_ncBinding all    P            gbt    seed 1 | Spearman 0.495 (4s)
+   PL_ncBinding all    L            gbt    seed 1 | Spearman 0.347 (12s)
+   PepMSND      all    teacher_v3_base gbt    seed 1 | MCC 0.503 (51s)
+   PL_ncBinding all    H            gbt    seed 1 | Spearman 0.384 (13s)
+   PL_ncBinding all    teacher_v3_base gbt    seed 1 | Spearman 0.432 (11s)
+   PL_ncBinding all    teacher_st6f_e02 gbt    seed 1 | Spearman 0.464 (11s)
+   PL_ncBinding all    teacher_st6f_e02_pre gbt    seed 1 | Spearman 0.433 (14s)
+   PL_ncBinding all    P            mlp    seed 0 | Spearman 0.249 (1s)
+   PL_ncBinding all    L            mlp    seed 0 | Spearman 0.184 (1s)
+   PL_ncBinding all    H            mlp    seed 0 | Spearman 0.332 (3s)
+   PL_ncBinding all    teacher_v3_base mlp    seed 0 | Spearman 0.244 (2s)
+   PL_ncBinding all    teacher_st6f_e02 mlp    seed 0 | Spearman 0.337 (2s)
+   PepMSND      all    teacher_st6f_e02 gbt    seed 1 | MCC 0.505 (52s)
+   PL_ncBinding all    teacher_st6f_e02_pre mlp    seed 0 | Spearman 0.281 (3s)
+   PL_ncBinding all    P            mlp    seed 1 | Spearman 0.287 (1s)
+   PL_ncBinding all    L            mlp    seed 1 | Spearman 0.369 (3s)
+   PL_ncBinding all    H            mlp    seed 1 | Spearman 0.268 (3s)
+   PL_ncBinding all    teacher_v3_base mlp    seed 1 | Spearman 0.264 (2s)
+   PL_ncBinding all    teacher_st6f_e02 mlp    seed 1 | Spearman 0.317 (3s)
+   PL_ncBinding all    teacher_st6f_e02_pre mlp    seed 1 | Spearman 0.347 (3s)
+== PL_ncBinding done (188 s)
+   PepMSND      all    teacher_st6f_e02_pre gbt    seed 1 | MCC 0.546 (64s)
+   PepMSND      all    P            mlp    seed 0 | MCC 0.468 (2s)
+   PepMSND      all    L            mlp    seed 0 | MCC 0.518 (3s)
+   PepMSND      all    H            mlp    seed 0 | MCC 0.510 (7s)
+   PepMSND      all    teacher_v3_base mlp    seed 0 | MCC 0.491 (3s)
+   PepMSND      all    teacher_st6f_e02 mlp    seed 0 | MCC 0.495 (3s)
+== PL_ncCPP done (2645 s)
+   PepMSND      all    teacher_st6f_e02_pre mlp    seed 0 | MCC 0.508 (4s)
+   PepMSND      all    P            mlp    seed 1 | MCC 0.424 (2s)
+   PepMSND      all    L            mlp    seed 1 | MCC 0.540 (4s)
+   PepMSND      all    H            mlp    seed 1 | MCC 0.503 (6s)
+   PepMSND      all    teacher_v3_base mlp    seed 1 | MCC 0.531 (3s)
+   PepMSND      all    teacher_st6f_e02 mlp    seed 1 | MCC 0.511 (3s)
+   PepMSND      all    teacher_st6f_e02_pre mlp    seed 1 | MCC 0.533 (4s)
+== PepMSND done (875 s)
+== PAMPA done (3053 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            CellPPD  THPep  PepMSND  PAMPA  AmpHGT  AVERAGE
+H                             0.867  0.741    0.518  0.190   0.632    0.605
+L                             0.866  0.722    0.530 -0.092   0.802    0.591
+P                             0.799  0.552    0.485  0.053   0.822    0.565
+st6f_e02                      0.887  0.800    0.500  0.148   0.757    0.624
+st6f_e02_pre                  0.884  0.780    0.512  0.175   0.747    0.624
+v3_base                       0.899  0.748    0.522  0.105   0.758    0.618
+REF (chosen on validation)    0.867  0.741    0.520 -0.069   0.658    0.582
+BEST single (on test)         0.867  0.741    0.530  0.190   0.822    0.629
+
+                            PL_cCPP  PL_cSol  PL_ncCPP  PL_cBinding  PL_ncBinding  AVERAGE
+H                             0.924    0.712     0.708        0.384         0.372    0.605
+L                             0.929    0.676     0.718        0.409         0.351    0.591
+P                             0.910    0.637     0.709        0.350         0.333    0.565
+st6f_e02                      0.942    0.690     0.710        0.421         0.381    0.624
+st6f_e02_pre                  0.942    0.689     0.704        0.433         0.379    0.624
+v3_base                       0.941    0.698     0.723        0.418         0.371    0.618
+REF (chosen on validation)    0.932    0.701     0.729        0.400         0.346    0.582
+BEST single (on test)         0.929    0.712     0.718        0.409         0.372    0.629
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_noPAMPA = the same average without PAMPA; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner          rep  n   diff     95% interval  diff_noPAMPA interval_noPAMPA W/L/T worse99.5
+   REF  linear      v3_base 10  0.088   [0.068, 0.108]         0.019   [0.000, 0.039] 4/1/5         1
+   REF  linear     st6f_e02 10  0.076   [0.056, 0.096]         0.006  [-0.014, 0.025] 1/2/7         1
+   REF  linear st6f_e02_pre 10  0.071   [0.052, 0.089]        -0.000  [-0.019, 0.017] 1/1/8         1
+   REF  kernel      v3_base 10  0.075   [0.059, 0.092]         0.076   [0.059, 0.095] 4/0/6         0
+   REF  kernel     st6f_e02 10  0.066   [0.046, 0.086]         0.073   [0.052, 0.094] 4/1/5         1
+   REF  kernel st6f_e02_pre 10  0.057   [0.041, 0.073]         0.062   [0.045, 0.081] 3/1/6         1
+   REF     gbt      v3_base 10 -0.023 [-0.043, -0.005]        -0.024 [-0.046, -0.005] 0/2/8         2
+   REF     gbt     st6f_e02 10 -0.018  [-0.039, 0.002]        -0.018  [-0.042, 0.005] 1/3/6         3
+   REF     gbt st6f_e02_pre 10 -0.004  [-0.022, 0.012]        -0.004  [-0.024, 0.013] 0/1/9         1
+   REF     mlp      v3_base 10  0.004   [0.008, 0.057]         0.011  [-0.002, 0.051] 3/0/7         0
+   REF     mlp     st6f_e02 10  0.041   [0.021, 0.068]         0.026   [0.013, 0.064] 5/1/4         1
+   REF     mlp st6f_e02_pre 10  0.045   [0.009, 0.055]         0.021  [-0.004, 0.047] 4/1/5         1
+   REF     ALL      v3_base 10  0.036                          0.021                                 
+   REF     ALL     st6f_e02 10  0.041                          0.022                                 
+   REF     ALL st6f_e02_pre 10  0.042                          0.020                                 
+     H  linear      v3_base 10  0.013  [-0.008, 0.030]         0.033   [0.011, 0.053] 4/2/4         1
+     H  linear     st6f_e02 10  0.001  [-0.018, 0.020]         0.020  [-0.001, 0.039] 3/2/5         2
+     H  linear st6f_e02_pre 10 -0.004  [-0.022, 0.013]         0.014  [-0.006, 0.032] 2/2/6         1
+     H  kernel      v3_base 10  0.055   [0.039, 0.071]         0.075   [0.058, 0.092] 4/1/5         1
+     H  kernel     st6f_e02 10  0.046   [0.027, 0.064]         0.072   [0.050, 0.091] 4/1/5         1
+     H  kernel st6f_e02_pre 10  0.037   [0.020, 0.053]         0.061   [0.042, 0.078] 3/2/5         1
+     H     gbt      v3_base 10 -0.031 [-0.049, -0.012]        -0.027 [-0.048, -0.006] 1/5/4         3
+     H     gbt     st6f_e02 10 -0.025 [-0.046, -0.006]        -0.020  [-0.043, 0.002] 0/5/5         4
+     H     gbt st6f_e02_pre 10 -0.012  [-0.028, 0.004]        -0.006  [-0.026, 0.011] 1/2/7         2
+     H     mlp      v3_base 10  0.017  [-0.000, 0.049]         0.016  [-0.011, 0.041] 5/0/5         0
+     H     mlp     st6f_e02 10  0.054   [0.011, 0.061]         0.031   [0.004, 0.053] 5/0/5         0
+     H     mlp st6f_e02_pre 10  0.058  [-0.002, 0.051]         0.026  [-0.014, 0.038] 5/1/4         1
+     H     ALL      v3_base 10  0.013                          0.024                                 
+     H     ALL     st6f_e02 10  0.019                          0.026                                 
+     H     ALL st6f_e02_pre 10  0.020                          0.024                                 
+  BEST  linear      v3_base 10 -0.012                          0.005                                 
+  BEST  linear     st6f_e02 10 -0.024                         -0.007                                 
+  BEST  linear st6f_e02_pre 10 -0.029                         -0.014                                 
+  BEST  kernel      v3_base 10 -0.003                          0.011                                 
+  BEST  kernel     st6f_e02 10 -0.011                          0.008                                 
+  BEST  kernel st6f_e02_pre 10 -0.021                         -0.003                                 
+  BEST     gbt      v3_base 10 -0.043                         -0.041                                 
+  BEST     gbt     st6f_e02 10 -0.038                         -0.034                                 
+  BEST     gbt st6f_e02_pre 10 -0.024                         -0.021                                 
+  BEST     mlp      v3_base 10 -0.048                         -0.024                                 
+  BEST     mlp     st6f_e02 10 -0.011                         -0.010                                 
+  BEST     mlp st6f_e02_pre 10 -0.007                         -0.015                                 
+  BEST     ALL      v3_base 10 -0.027                         -0.012                                 
+  BEST     ALL     st6f_e02 10 -0.021                         -0.011                                 
+  BEST     ALL st6f_e02_pre 10 -0.020                         -0.013                                 
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 6 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+              avg_rank  avg_rank_noPAMPA
+st6f_e02           2.5               2.4
+v3_base            2.6               2.4
+st6f_e02_pre       3.1               3.2
+H                  3.7               4.0
+L                  3.9               3.7
+P                  5.2               5.2
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+     teacher learner  vs_REF  vs_PCA   vs_H  worse99.5 PASS  vs_REF_noPAMPA  vs_PCA_noPAMPA  worse_noPAMPA PASS_noPAMPA
+    st6f_e02  linear   0.076     NaN  0.001        1.0   no           0.006             NaN            1.0           no
+    st6f_e02  kernel   0.066     NaN  0.046        1.0   no           0.073             NaN            1.0           no
+    st6f_e02     gbt  -0.018     NaN -0.025        3.0   no          -0.018             NaN            3.0           no
+    st6f_e02     mlp   0.041     NaN  0.054        1.0   no           0.026             NaN            1.0           no
+    st6f_e02     ALL   0.041     NaN  0.019        6.0   no           0.022             NaN            6.0           no
+st6f_e02_pre  linear   0.071     NaN -0.004        1.0   no          -0.000             NaN            1.0           no
+st6f_e02_pre  kernel   0.057     NaN  0.037        1.0   no           0.062             NaN            1.0           no
+st6f_e02_pre     gbt  -0.004     NaN -0.012        1.0   no          -0.004             NaN            1.0           no
+st6f_e02_pre     mlp   0.045     NaN  0.058        1.0   no           0.021             NaN            1.0           no
+st6f_e02_pre     ALL   0.042     NaN  0.020        4.0   no           0.020             NaN            4.0           no
+     v3_base  linear   0.088     NaN  0.013        1.0   no           0.019             NaN            1.0           no
+     v3_base  kernel   0.075     NaN  0.055        0.0  yes           0.076             NaN            0.0          yes
+     v3_base     gbt  -0.023     NaN -0.031        2.0   no          -0.024             NaN            2.0           no
+     v3_base     mlp   0.004     NaN  0.017        0.0  yes           0.011             NaN            0.0          yes
+     v3_base     ALL   0.036     NaN  0.013        3.0   no           0.021             NaN            3.0           no
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, 99.5% intervals)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                           H      L      P  st6f_e02  st6f_e02_pre  v3_base
+benchmark    subset                                                        
+AmpHGT       modified  0.675  0.804  0.827     0.766         0.757    0.758
+             standard  0.000  0.000  0.000     0.000         0.000    0.000
+CellPPD      modified  0.909  0.900  0.861     0.900         0.873    0.909
+             standard  0.824  0.834  0.720     0.859         0.881    0.868
+PAMPA        modified  0.161 -0.038  0.110     0.164         0.198    0.097
+PL_cBinding  modified  0.378  0.422  0.373     0.425         0.440    0.425
+             standard  0.363  0.329  0.291     0.359         0.374    0.355
+PL_cCPP      standard  0.929  0.930  0.913     0.944         0.943    0.941
+PL_cSol      modified  0.711  0.675  0.633     0.688         0.687    0.696
+PL_ncBinding modified  0.290  0.277  0.294     0.310         0.305    0.288
+             standard  0.714  0.683  0.637     0.663         0.681    0.719
+PL_ncCPP     modified  0.708  0.716  0.712     0.711         0.701    0.721
+PepMSND      modified  0.596  0.580  0.543     0.557         0.572    0.550
+             standard  0.418  0.449  0.391     0.408         0.426    0.436
+THPep        standard  0.750  0.720  0.545     0.784         0.778    0.739
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/harness_st6f_e02_all
+15:53:03 == done (exit status 0)

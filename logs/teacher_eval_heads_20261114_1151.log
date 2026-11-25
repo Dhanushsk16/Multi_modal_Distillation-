@@ -1,0 +1,105 @@
+== Saturday 14 November 2026 11:51:16 AM IST | stage heads | teacher t8 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_heads_20261114_1151.log
+
+== PepLand's head on teacher_t8, PeptideCLM-2's suite (11:51)
+CellPPD       teacher_t8 done (15s) | MCC 0.867
+THPep         teacher_t8 done (4s) | MCC 0.708
+PepMSND       teacher_t8 done (49s) | MCC 0.486
+PAMPA         teacher_t8 done (267s) | R2 0.069
+AmpHGT        teacher_t8 done (95s) | MCC 0.741
+
+=== PepLand-style head: MCC (classification) / R2 (regression), mean over seeds ===
+rep        teacher_t8
+benchmark            
+AmpHGT          0.742
+CellPPD         0.838
+PAMPA           0.038
+PepMSND         0.490
+THPep           0.703
+
+=== AUROC ===
+rep        teacher_t8
+benchmark            
+AmpHGT          0.937
+CellPPD         0.963
+PepMSND         0.813
+THPep           0.955
+
+=== accuracy ===
+rep        teacher_t8
+benchmark            
+AmpHGT          0.871
+CellPPD         0.919
+PepMSND         0.752
+THPep           0.877
+
+=== F1 ===
+rep        teacher_t8
+benchmark            
+AmpHGT          0.878
+CellPPD         0.920
+PepMSND         0.703
+THPep           0.789
+
+=== Pearson r ===
+rep        teacher_t8
+benchmark            
+PAMPA           0.436
+
+=== Spearman ===
+rep        teacher_t8
+benchmark            
+PAMPA           0.425
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/head_main_teacher_t8
+
+== PepLand's head on teacher_t8, PepLand's suite (11:58)
+PL_cCPP       teacher_t8 done (115s) | MCC 0.721
+PL_cSol       teacher_t8 done (69s) | MCC 0.242
+PL_ncCPP      teacher_t8 done (267s) | R2 0.434
+PL_cBinding   teacher_t8 done (117s) | R2 0.116
+PL_ncBinding  teacher_t8 done (21s) | R2 -0.056
+
+=== PepLand-style head: MCC (classification) / R2 (regression), mean over seeds ===
+rep           teacher_t8
+benchmark               
+PL_cBinding        0.115
+PL_cCPP            0.720
+PL_cSol            0.238
+PL_ncBinding      -0.060
+PL_ncCPP           0.432
+
+=== AUROC ===
+rep        teacher_t8
+benchmark            
+PL_cCPP         0.929
+PL_cSol         0.663
+
+=== accuracy ===
+rep        teacher_t8
+benchmark            
+PL_cCPP         0.860
+PL_cSol         0.645
+
+=== F1 ===
+rep        teacher_t8
+benchmark            
+PL_cCPP         0.859
+PL_cSol         0.733
+
+=== Pearson r ===
+rep           teacher_t8
+benchmark               
+PL_cBinding        0.413
+PL_ncBinding       0.400
+PL_ncCPP           0.658
+
+=== Spearman ===
+rep           teacher_t8
+benchmark               
+PL_cBinding        0.374
+PL_ncBinding       0.370
+PL_ncCPP           0.729
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/head_pepland_teacher_t8
+
+== stage heads finished, exit code 0 (12:08)

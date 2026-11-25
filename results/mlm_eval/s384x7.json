@@ -1,0 +1,27 @@
+{
+ "name": "s384x7",
+ "params_M": 10.66,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.11,
+ "all": {
+  "loss": 0.37,
+  "acc": 0.8629,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.6394,
+  "acc": 0.8034,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.2975,
+  "acc": 0.8798,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 1.3001,
+  "acc": 0.6459,
+  "masked_tokens": 54596
+ }
+}

@@ -1,0 +1,70 @@
+CellPPD  frozen   done (3s) | MCC 0.867 | epochs run 13, best at 7, hit the 40-epoch cap in 0 of 1 fits
+CellPPD  ft       done (3s) | MCC 0.861 | epochs run 10, best at 4, hit the 40-epoch cap in 0 of 1 fits
+CellPPD  scratch  done (4s) | MCC 0.894 | epochs run 15, best at 9, hit the 40-epoch cap in 0 of 1 fits
+CellPPD  ecfp     done (1s) | MCC 0.860 | epochs run 10, best at 4, hit the 40-epoch cap in 0 of 1 fits
+THPep    frozen   done (2s) | MCC 0.738 | epochs run 15, best at 9, hit the 40-epoch cap in 0 of 1 fits
+THPep    ft       done (3s) | MCC 0.746 | epochs run 8, best at 2, hit the 40-epoch cap in 0 of 1 fits
+THPep    scratch  done (2s) | MCC 0.742 | epochs run 8, best at 2, hit the 40-epoch cap in 0 of 1 fits
+THPep    ecfp     done (0s) | MCC 0.731 | epochs run 11, best at 5, hit the 40-epoch cap in 0 of 1 fits
+PepMSND  frozen   done (16s) | MCC 0.540 | epochs run 16, best at 10, hit the 40-epoch cap in 0 of 10 fits
+PepMSND  ft       done (23s) | MCC 0.507 | epochs run 12, best at 6, hit the 40-epoch cap in 0 of 10 fits
+PepMSND  scratch  done (21s) | MCC 0.496 | epochs run 10, best at 4, hit the 40-epoch cap in 0 of 10 fits
+PepMSND  ecfp     done (4s) | MCC 0.487 | epochs run 10, best at 4, hit the 40-epoch cap in 0 of 10 fits
+PAMPA    frozen   done (31s) | R2 0.226 | epochs run 21, best at 15, hit the 40-epoch cap in 0 of 6 fits
+PAMPA    ft       done (102s) | R2 0.345 | epochs run 22, best at 16, hit the 40-epoch cap in 0 of 6 fits
+PAMPA    scratch  done (101s) | R2 0.230 | epochs run 23, best at 17, hit the 40-epoch cap in 0 of 6 fits
+PAMPA    ecfp     done (34s) | R2 0.309 | epochs run 20, best at 14, hit the 40-epoch cap in 0 of 6 fits
+AmpHGT   frozen   done (20s) | MCC 0.727 | epochs run 21, best at 15, hit the 40-epoch cap in 0 of 1 fits
+AmpHGT   ft       done (36s) | MCC 0.827 | epochs run 12, best at 6, hit the 40-epoch cap in 0 of 1 fits
+AmpHGT   scratch  done (30s) | MCC 0.656 | epochs run 12, best at 6, hit the 40-epoch cap in 0 of 1 fits
+AmpHGT   ecfp     done (18s) | MCC 0.709 | epochs run 9, best at 3, hit the 40-epoch cap in 0 of 1 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+mode       frozen     ft  scratch   ecfp
+benchmark                               
+AmpHGT      0.772  0.819    0.713  0.705
+CellPPD     0.849  0.839    0.865  0.850
+PAMPA       0.229  0.288    0.243  0.268
+PepMSND     0.513  0.484    0.454  0.447
+THPep       0.747  0.762    0.757  0.725
+
+=== AUROC (classification) ===
+mode       frozen     ft  scratch   ecfp
+benchmark                               
+AmpHGT      0.954  0.957    0.930  0.911
+CellPPD     0.986  0.982    0.979  0.981
+PepMSND     0.838  0.827    0.816  0.803
+THPep       0.957  0.955    0.941  0.949
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                    run  best  capped  fits
+benchmark mode                             
+AmpHGT    ecfp     10.3   4.3       0     3
+          frozen   17.7  11.7       0     3
+          ft       14.3   8.3       0     3
+          scratch  10.7   4.7       0     3
+CellPPD   ecfp     12.0   6.0       0     3
+          frozen   11.7   5.7       0     3
+          ft        9.7   3.7       0     3
+          scratch  13.0   7.0       0     3
+PAMPA     ecfp     20.4  14.4       0    18
+          frozen   21.4  15.4       0    18
+          ft       19.7  13.7       0    18
+          scratch  20.5  14.5       0    18
+PepMSND   ecfp      8.8   2.8       0    30
+          frozen   13.7   7.7       0    30
+          ft       10.6   4.6       0    30
+          scratch   9.3   3.3       0    30
+THPep     ecfp      9.7   3.7       0     3
+          frozen   16.0  10.0       0     3
+          ft       11.3   5.3       0     3
+          scratch   8.7   2.7       0     3
+
+AmpHGT test restricted to <=30 residues (MCC):
+mode
+ecfp       0.373
+frozen     0.487
+ft         0.547
+scratch    0.389
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_t3

@@ -1,0 +1,79 @@
+== Thursday 19 November 2026 09:29:27 AM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261119_0929.log
+representations: ['P', 'L', 'H', 'P+L+H', 'PCA', 'teacher_v3_base'] | learners ['linear'] | seeds 3 | select val
+workers: 3 processes x 2 threads = 6 threads (cap 8)
+   THPep_cv0    all    P            linear seed 0 | MCC 0.626 (3s)
+   THPep_cv1    all    P            linear seed 0 | MCC 0.638 (4s)
+   THPep_cv2    all    P            linear seed 0 | MCC 0.636 (4s)
+   THPep_cv0    all    L            linear seed 0 | MCC 0.640 (2s)
+   THPep_cv1    all    L            linear seed 0 | MCC 0.627 (2s)
+   THPep_cv2    all    L            linear seed 0 | MCC 0.616 (3s)
+   THPep_cv1    all    H            linear seed 0 | MCC 0.642 (3s)
+   THPep_cv0    all    H            linear seed 0 | MCC 0.666 (3s)
+   THPep_cv2    all    H            linear seed 0 | MCC 0.628 (3s)
+   THPep_cv1    all    P+L+H        linear seed 0 | MCC 0.663 (5s)
+   THPep_cv0    all    P+L+H        linear seed 0 | MCC 0.642 (5s)
+   THPep_cv2    all    P+L+H        linear seed 0 | MCC 0.629 (5s)
+   THPep_cv1    all    PCA          linear seed 0 | MCC 0.631 (2s)
+   THPep_cv0    all    PCA          linear seed 0 | MCC 0.635 (2s)
+   THPep_cv1    all    teacher_v3_base linear seed 0 | MCC 0.736 (1s)
+   THPep_cv2    all    PCA          linear seed 0 | MCC 0.630 (2s)
+   THPep_cv0    all    teacher_v3_base linear seed 0 | MCC 0.727 (2s)
+   THPep_cv2    all    teacher_v3_base linear seed 0 | MCC 0.695 (2s)
+== THPep_cv1 done (29 s)
+== THPep_cv0 done (31 s)
+== THPep_cv2 done (31 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            THPep_cv0  THPep_cv1  THPep_cv2  AVERAGE
+H                               0.666      0.642      0.628    0.645
+L                               0.640      0.627      0.616    0.628
+P                               0.626      0.638      0.636    0.633
+P+L+H                           0.642      0.663      0.629    0.644
+PCA                             0.635      0.631      0.630    0.632
+v3_base                         0.727      0.736      0.695    0.719
+REF (chosen on validation)      0.660      0.652      0.605    0.639
+BEST single (on test)           0.666      0.642      0.636    0.648
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_wo = the same average without nothing; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff 95% interval  diff_wo interval_wo W/L/T worse99.5
+   REF  linear   P+L+H  3  0.005                 0.005                            
+   REF  linear     PCA  3 -0.007                -0.007                            
+   REF  linear v3_base  3  0.080                 0.080                            
+     H  linear   P+L+H  3 -0.001                -0.001                            
+     H  linear     PCA  3 -0.013                -0.013                            
+     H  linear v3_base  3  0.074                 0.074                            
+  BEST  linear   P+L+H  3 -0.004                -0.004                            
+  BEST  linear     PCA  3 -0.016                -0.016                            
+  BEST  linear v3_base  3  0.071                 0.071                            
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 6 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank
+v3_base       1.0
+P+L+H         3.0
+H             3.3
+P             4.0
+PCA           4.3
+L             5.3
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA  vs_H  worse99.5 PASS  vs_REF_wo  vs_PCA_wo  worse_wo PASS_wo
+v3_base  linear    0.08   0.087 0.074        NaN  yes       0.08      0.087       NaN     yes
+v3_base     ALL    0.08   0.087 0.074        NaN  yes       0.08      0.087       NaN     yes
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, PCA)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                        H      L      P  P+L+H    PCA  v3_base
+benchmark subset                                              
+THPep_cv0 standard  0.666  0.640  0.626  0.642  0.635    0.727
+THPep_cv1 standard  0.642  0.627  0.638  0.663  0.631    0.736
+THPep_cv2 standard  0.628  0.616  0.636  0.629  0.630    0.695
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_cv_linear
+== done 09:35 (exit status 0)

@@ -1,0 +1,36 @@
+# data, models and caches are large and belong to their authors
+/data/*
+!/data/README.md
+!/data/SHA256SUMS.txt
+/checkpoints/
+/features/
+/cache/
+/papers/
+
+# python / OS / editors
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+
+# large binary artefacts
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.npz
+*.parquet
+*.tar
+*.tgz
+*.tar.gz
+*.zip
+
+# third-party code is copied into external/ (its model.pth weights are 26 MB each, below GitHub's limits)
+!/external/pepland/**/*.pth
+
+# weights: the .pt files are attached to releases instead (the teacher is above GitHub's 100 MB limit); small files stay
+!/weights/**/*.npz
+

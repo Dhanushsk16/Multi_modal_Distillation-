@@ -1,0 +1,526 @@
+14:31:43 == reproductions: binding pepmsnd | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/reproduce_20261120_1431.log
+14:31:43 === BINDING: PepLand c-binding / nc-binding, ESM2-t12 protein vectors, random splits ===
+14:31:43 step 1: ESM2-t12 vectors of the 1,227 protein partners (35M parameters, CPU, a few minutes)
+proteins: 1227 distinct sequences | length min 51, median 180, max 1287 | longer than 1022 (cut): 1 | characters other than the 20 amino acids: 2 sequences (X = unknown residue, ESM-2 has a token for it)
+esm: loading /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/esm2_t12_35M_UR50D on cpu (the 3B .bin shards are 11 GB: reading them takes minutes) ...
+esm: loaded in 0 s | weights on cpu, float32
+esm: 1227 proteins, 480-d, usable 1227 | model load 3 s, encoding 74 s | per-dimension sd of the vectors: mean 0.091 -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/protein_esm_t12.npz
+14:33:01 step 2: PepLand node vectors of the binding peptides (pepland env, CPU)
+2026/11/20 14:33:04 WARNING mlflow.pytorch: Stored model version '1.11.0' does not match installed PyTorch version '2.2.2+cpu'
+loading model from : /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/pepland_model
+     0/1552  0.0 min
+nothing to cut, not a peptide CC(C)(C)c1ccc(S(=O)(=O)O)cc1
+nothing to cut, not a peptide CC(C)(C)c1ccc(S(=O)(=O)O)cc1
+nothing to cut, not a peptide CC(N)c1ccccc1
+nothing to cut, not a peptide CC(N)c1ccccc1
+Warning Unfound fragments CCC[Se]C
+Warning Unfound fragments CCC[Se]C
+Warning Unfound fragments NCCS(=O)(=O)O
+Warning Unfound fragments CCC[Se]C
+nothing to cut, not a peptide NC(CCc1ccccc1)P(=O)(O)O
+nothing to cut, not a peptide NC(CCc1ccccc1)P(=O)(O)O
+nothing to cut, not a peptide NC(N)=NCc1cccc(CC=O)c1
+nothing to cut, not a peptide NC(N)=NCc1cccc(CC=O)c1
+nothing to cut, not a peptide NCCCCN=C(N)N
+nothing to cut, not a peptide NCCCCN=C(N)N
+nothing to cut, not a peptide Nc1nc2c(ncn2C2OC(COP(=O)(O)O)C(O)C2O)c(=O)[nH]1
+nothing to cut, not a peptide Nc1nc2c(ncn2C2OC(COP(=O)(O)O)C(O)C2O)c(=O)[nH]1
+Warning Unfound fragments Nc1nc2c(ncn2C2OC(COP(=O)(O)O)C(O)C2O)c(=O)[nH]1
+nothing to cut, not a peptide O=C(Cl)OCc1ccccc1
+nothing to cut, not a peptide O=C(Cl)OCc1ccccc1
+nothing to cut, not a peptide O=C(O)[C@@H]1CCCN1
+nothing to cut, not a peptide O=C(O)[C@@H]1CCCN1
+nothing to cut, not a peptide O=CCc1ccccc1
+nothing to cut, not a peptide O=CCc1ccccc1
+nothing to cut, not a peptide OCCOC1OC(CO)C(O)C(O)C1O
+nothing to cut, not a peptide OCCOC1OC(CO)C(O)C(O)C1O
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2[nH]cnc2n1
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2[nH]cnc2n1
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2cc[nH]c2n1
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2cc[nH]c2n1
+pepland nodes: 1552 molecules, 186008 atoms, 51547 fragments -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/pepland_nodes.npz | failed 0 | 1.8 min
+14:34:56 step 3: the benchmark runs (protein vectors: t12=/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/protein_esm_t12.npz esm3b=/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/protein_esm.npz; 10 random splits per cell; GRU: --gru)
+loaded /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/pepland_nodes.npz: 1552 molecules, 237555 nodes, usable 1552
+
+c-binding | protein vectors t12 (480-d) | 1801 rows (0 dropped: no usable vector) | 1225 distinct proteins, 1552 distinct peptides
+   t12 random seed 0  both_gru SCC 0.558 (2127s)
+   t12 random seed 1  both_gru SCC 0.585 (2134s)
+   t12 random seed 2  both_gru SCC 0.549 (2098s)
+   t12 random: 10 seeds done | both/released SCC 0.548; both/two SCC 0.547; both_gru/released SCC 0.564; peptide/released SCC 0.409; peptide/two SCC 0.399; protein/released SCC 0.507; protein/two SCC 0.515
+   t12 protein seed 0  both_gru SCC 0.352 (1765s)
+   t12 protein seed 1  both_gru SCC 0.462 (1927s)
+   t12 protein seed 2  both_gru SCC 0.378 (1988s)
+   t12 protein: 10 seeds done | both/released SCC 0.443; both/two SCC 0.457; both_gru/released SCC 0.397; peptide/released SCC 0.366; peptide/two SCC 0.359; protein/released SCC 0.364; protein/two SCC 0.347
+
+c-binding | protein vectors esm3b (2560-d) | 1801 rows (0 dropped: no usable vector) | 1225 distinct proteins, 1552 distinct peptides
+   esm3b random: 10 seeds done | both/released SCC 0.574; both/two SCC 0.565; peptide/released SCC 0.409; peptide/two SCC 0.399; protein/released SCC 0.532; protein/two SCC 0.522
+   esm3b protein: 10 seeds done | both/released SCC 0.457; both/two SCC 0.455; peptide/released SCC 0.366; peptide/two SCC 0.359; protein/released SCC 0.424; protein/two SCC 0.438
+
+nc-binding | protein vectors t12 (480-d) | 299 rows (0 dropped: no usable vector) | 183 distinct proteins, 231 distinct peptides
+   t12 random seed 0  both_gru SCC 0.671 (260s)
+   t12 random seed 1  both_gru SCC 0.527 (254s)
+   t12 random seed 2  both_gru SCC 0.565 (256s)
+   t12 random: 10 seeds done | both/released SCC 0.614; both/two SCC 0.600; both_gru/released SCC 0.588; peptide/released SCC 0.518; peptide/two SCC 0.509; protein/released SCC 0.560; protein/two SCC 0.591
+   t12 protein seed 0  both_gru SCC 0.110 (259s)
+   t12 protein seed 1  both_gru SCC 0.364 (258s)
+   t12 protein seed 2  both_gru SCC 0.312 (257s)
+   t12 protein: 10 seeds done | both/released SCC 0.209; both/two SCC 0.261; both_gru/released SCC 0.262; peptide/released SCC 0.316; peptide/two SCC 0.330; protein/released SCC 0.024; protein/two SCC 0.111
+
+nc-binding | protein vectors esm3b (2560-d) | 299 rows (0 dropped: no usable vector) | 183 distinct proteins, 231 distinct peptides
+   esm3b random: 10 seeds done | both/released SCC 0.624; both/two SCC 0.612; peptide/released SCC 0.518; peptide/two SCC 0.509; protein/released SCC 0.548; protein/two SCC 0.550
+   esm3b protein: 10 seeds done | both/released SCC 0.317; both/two SCC 0.330; peptide/released SCC 0.316; peptide/two SCC 0.330; protein/released SCC 0.217; protein/two SCC 0.246
+
+==============================================================================================================
+
+c-binding | published (PepLand): SCC 0.503, PCC 0.450, MAE 1.146, RMSE 1.493 (ESM2 baseline SCC 0.452; PepLand + ESM 0.454 / PCC 0.530)
+                                         SCC    PCC    MAE   RMSE  SCC sd  seeds
+split   protein_vec features head                                               
+protein esm3b       both     released  0.457  0.478  1.082  1.388   0.061     10
+                             two       0.455  0.460  1.088  1.408   0.063     10
+                    peptide  released  0.366  0.378  1.137  1.442   0.071     10
+                             two       0.359  0.364  1.136  1.440   0.078     10
+                    protein  released  0.424  0.449  1.097  1.397   0.071     10
+                             two       0.438  0.455  1.091  1.391   0.076     10
+        t12         both     released  0.443  0.455  1.079  1.401   0.066     10
+                             two       0.457  0.478  1.094  1.420   0.062     10
+                    both_gru released  0.397  0.444  1.068  1.347   0.058      3
+                    peptide  released  0.366  0.378  1.137  1.442   0.071     10
+                             two       0.359  0.364  1.136  1.440   0.078     10
+                    protein  released  0.364  0.397  1.108  1.407   0.053     10
+                             two       0.347  0.381  1.125  1.437   0.069     10
+random  esm3b       both     released  0.574  0.634  0.924  1.183   0.064     10
+                             two       0.565  0.617  0.937  1.216   0.065     10
+                    peptide  released  0.409  0.457  1.085  1.369   0.061     10
+                             two       0.399  0.448  1.093  1.365   0.065     10
+                    protein  released  0.532  0.593  0.969  1.225   0.042     10
+                             two       0.522  0.573  0.979  1.263   0.074     10
+        t12         both     released  0.548  0.606  0.948  1.215   0.062     10
+                             two       0.547  0.601  0.951  1.221   0.066     10
+                    both_gru released  0.564  0.625  0.938  1.189   0.019      3
+                    peptide  released  0.409  0.457  1.085  1.369   0.061     10
+                             two       0.399  0.448  1.093  1.365   0.065     10
+                    protein  released  0.507  0.566  0.986  1.264   0.065     10
+                             two       0.515  0.575  0.980  1.251   0.046     10
+
+nc-binding | published (PepLand): SCC 0.768, PCC 0.873, MAE 0.762, RMSE 1.045
+                                         SCC    PCC    MAE   RMSE  SCC sd  seeds
+split   protein_vec features head                                               
+protein esm3b       both     released  0.317  0.279  1.517  1.966   0.157     10
+                             two       0.330  0.314  1.450  1.863   0.258     10
+                    peptide  released  0.316  0.316  1.530  1.931   0.147     10
+                             two       0.330  0.361  1.497  1.889   0.249     10
+                    protein  released  0.217  0.196  1.626  2.082   0.310     10
+                             two       0.246  0.214  1.621  2.053   0.247     10
+        t12         both     released  0.209  0.184  1.587  2.033   0.215     10
+                             two       0.261  0.297  1.600  2.018   0.214     10
+                    both_gru released  0.262  0.270  1.534  2.031   0.134      3
+                    peptide  released  0.316  0.316  1.530  1.931   0.147     10
+                             two       0.330  0.361  1.497  1.889   0.249     10
+                    protein  released  0.024  0.003  1.686  2.160   0.210     10
+                             two       0.111  0.105  1.714  2.216   0.246     10
+random  esm3b       both     released  0.624  0.664  1.097  1.409   0.129     10
+                             two       0.612  0.650  1.115  1.467   0.149     10
+                    peptide  released  0.518  0.575  1.234  1.548   0.184     10
+                             two       0.509  0.549  1.311  1.628   0.186     10
+                    protein  released  0.548  0.575  1.182  1.564   0.138     10
+                             two       0.550  0.558  1.197  1.616   0.160     10
+        t12         both     released  0.614  0.659  1.112  1.399   0.132     10
+                             two       0.600  0.653  1.148  1.448   0.108     10
+                    both_gru released  0.588  0.657  1.087  1.393   0.075      3
+                    peptide  released  0.518  0.575  1.234  1.548   0.184     10
+                             two       0.509  0.549  1.311  1.628   0.186     10
+                    protein  released  0.560  0.586  1.174  1.528   0.114     10
+                             two       0.591  0.585  1.196  1.553   0.092     10
+
+reading guide: 'random' is the paper's split (rows of one protein or one peptide may sit on both sides: a leak the authors acknowledge); 'protein' keeps every protein in one part. Compare 'both' with 'protein' alone: the gap is what the peptide adds.
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepland_binding
+19:33:31 === PEPMSND: PeptideCLM-2 on the 10 cluster folds, the authors' species/environment script ===
+19:33:31 implementation: port (authors = their script verbatim, needs lightning; port = same recipe in plain PyTorch) | models: mlm-large mtr-large | seeds: 103 203 303 | folds: 1 2 3 4 5 6 7 8 9 10
+19:33:31 model folders: mlm-large /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/peptideclm-2-mlm-large | mtr-large /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/models--aaronfeller--peptideclm-2-mtr-large/snapshots/5f6e79dfebcdd0f8ca63e78c3b46e004693c83b4 | hybrid-large -  ('-' = not on the server; the hybrid model is optional)
+19:33:31 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+19:34:31 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+19:35:31 waiting for the GPU: 15748 MB free, 20000 MB needed (checking every 60 s)
+19:36:31 waiting for the GPU: 15748 MB free, 20000 MB needed (checking every 60 s)
+19:37:31 waiting for the GPU: 15746 MB free, 20000 MB needed (checking every 60 s)
+19:38:31 waiting for the GPU: 15746 MB free, 20000 MB needed (checking every 60 s)
+19:39:31 waiting for the GPU: 15734 MB free, 20000 MB needed (checking every 60 s)
+19:40:31 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:41:31 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:42:31 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:43:31 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:44:31 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:45:31 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:46:31 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:47:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:48:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:49:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:50:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:51:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:52:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:53:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:54:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:55:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:56:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:57:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:58:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+19:59:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:00:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:01:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:02:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:03:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:04:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:05:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:06:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:07:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:08:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:09:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:10:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:11:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:12:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:13:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:14:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:15:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:16:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:17:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:18:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:19:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:20:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:21:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:22:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:23:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:24:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:25:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:26:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:27:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:28:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:29:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:30:32 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:31:33 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:32:33 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:33:33 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:34:33 waiting for the GPU: 15732 MB free, 20000 MB needed (checking every 60 s)
+20:35:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:36:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:37:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:38:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:39:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:40:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:41:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:42:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:43:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:44:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:45:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:46:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:47:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:48:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:49:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:50:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:51:33 waiting for the GPU: 15730 MB free, 20000 MB needed (checking every 60 s)
+20:52:33 mlm-large seed 103 fold 1 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold1_mb32.log
+20:52:52    out of memory at micro-batch 32: trying a smaller one
+20:52:52 mlm-large seed 103 fold 1 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold1_mb16.log
+21:24:52    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold1/preds_fold1.csv (best epoch 5, v
+21:24:52 mlm-large seed 103 fold 2 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold2_mb32.log
+21:25:02    out of memory at micro-batch 32: trying a smaller one
+21:25:02 mlm-large seed 103 fold 2 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold2_mb16.log
+22:00:34    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold2/preds_fold2.csv (best epoch 8, v
+22:00:34 mlm-large seed 103 fold 3 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold3_mb32.log
+22:00:44    out of memory at micro-batch 32: trying a smaller one
+22:00:44 mlm-large seed 103 fold 3 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold3_mb16.log
+22:31:47    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold3/preds_fold3.csv (best epoch 5, v
+22:31:47 mlm-large seed 103 fold 4 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold4_mb32.log
+22:31:56    out of memory at micro-batch 32: trying a smaller one
+22:31:56 mlm-large seed 103 fold 4 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold4_mb16.log
+22:49:11    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold4/preds_fold4.csv (best epoch 3, v
+22:49:11 mlm-large seed 103 fold 5 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold5_mb32.log
+22:49:20    out of memory at micro-batch 32: trying a smaller one
+22:49:20 mlm-large seed 103 fold 5 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold5_mb16.log
+23:15:31    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold5/preds_fold5.csv (best epoch 6, v
+23:15:31 mlm-large seed 103 fold 6 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold6_mb32.log
+23:15:40    out of memory at micro-batch 32: trying a smaller one
+23:15:40 mlm-large seed 103 fold 6 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold6_mb16.log
+23:41:37    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold6/preds_fold6.csv (best epoch 8, v
+23:41:37 mlm-large seed 103 fold 7 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold7_mb32.log
+23:41:46    out of memory at micro-batch 32: trying a smaller one
+23:41:46 mlm-large seed 103 fold 7 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold7_mb16.log
+00:08:29    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold7/preds_fold7.csv (best epoch 7, v
+00:08:29 mlm-large seed 103 fold 8 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold8_mb32.log
+00:08:38    out of memory at micro-batch 32: trying a smaller one
+00:08:38 mlm-large seed 103 fold 8 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold8_mb16.log
+00:35:36    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold8/preds_fold8.csv (best epoch 6, v
+00:35:36 mlm-large seed 103 fold 9 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold9_mb32.log
+00:35:45    out of memory at micro-batch 32: trying a smaller one
+00:35:45 mlm-large seed 103 fold 9 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold9_mb16.log
+01:00:10    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold9/preds_fold9.csv (best epoch 5, v
+01:00:10 mlm-large seed 103 fold 10 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold10_mb32.log
+01:00:19    out of memory at micro-batch 32: trying a smaller one
+01:00:19 mlm-large seed 103 fold 10 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed103_fold10_mb16.log
+01:19:19    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed103/fold10/preds_fold10.csv (best epoch 3,
+01:19:19 mtr-large seed 103 fold 1 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold1_mb32.log
+01:19:33    out of memory at micro-batch 32: trying a smaller one
+01:19:33 mtr-large seed 103 fold 1 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold1_mb16.log
+01:45:33    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold1/preds_fold1.csv (best epoch 9, v
+01:45:33 mtr-large seed 103 fold 2 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold2_mb32.log
+01:45:42    out of memory at micro-batch 32: trying a smaller one
+01:45:42 mtr-large seed 103 fold 2 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold2_mb16.log
+02:11:16    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold2/preds_fold2.csv (best epoch 9, v
+02:11:16 mtr-large seed 103 fold 3 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold3_mb32.log
+02:11:25    out of memory at micro-batch 32: trying a smaller one
+02:11:25 mtr-large seed 103 fold 3 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold3_mb16.log
+02:36:34    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold3/preds_fold3.csv (best epoch 9, v
+02:36:34 mtr-large seed 103 fold 4 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold4_mb32.log
+02:36:46    out of memory at micro-batch 32: trying a smaller one
+02:36:46 mtr-large seed 103 fold 4 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold4_mb16.log
+02:58:43    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold4/preds_fold4.csv (best epoch 9, v
+02:58:43 mtr-large seed 103 fold 5 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold5_mb32.log
+02:58:50    out of memory at micro-batch 32: trying a smaller one
+02:58:50 mtr-large seed 103 fold 5 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold5_mb16.log
+03:23:10    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold5/preds_fold5.csv (best epoch 9, v
+03:23:10 mtr-large seed 103 fold 6 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold6_mb32.log
+03:23:18    out of memory at micro-batch 32: trying a smaller one
+03:23:18 mtr-large seed 103 fold 6 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold6_mb16.log
+03:47:27    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold6/preds_fold6.csv (best epoch 9, v
+03:47:27 mtr-large seed 103 fold 7 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold7_mb32.log
+03:47:35    out of memory at micro-batch 32: trying a smaller one
+03:47:35 mtr-large seed 103 fold 7 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold7_mb16.log
+03:57:28    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold7/preds_fold7.csv (best epoch 0, v
+03:57:28 mtr-large seed 103 fold 8 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold8_mb32.log
+03:57:37    out of memory at micro-batch 32: trying a smaller one
+03:57:37 mtr-large seed 103 fold 8 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold8_mb16.log
+04:22:07    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold8/preds_fold8.csv (best epoch 9, v
+04:22:07 mtr-large seed 103 fold 9 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold9_mb32.log
+04:22:16    out of memory at micro-batch 32: trying a smaller one
+04:22:16 mtr-large seed 103 fold 9 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold9_mb16.log
+04:46:53    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold9/preds_fold9.csv (best epoch 9, v
+04:46:53 mtr-large seed 103 fold 10 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold10_mb32.log
+04:47:02    out of memory at micro-batch 32: trying a smaller one
+04:47:02 mtr-large seed 103 fold 10 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed103_fold10_mb16.log
+05:11:50    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold10/preds_fold10.csv (best epoch 9,
+05:11:50 mlm-large seed 203 fold 1 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold1_mb32.log
+05:11:58    out of memory at micro-batch 32: trying a smaller one
+05:11:58 mlm-large seed 203 fold 1 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold1_mb16.log
+05:37:01    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold1/preds_fold1.csv (best epoch 7, v
+05:37:01 mlm-large seed 203 fold 2 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold2_mb32.log
+05:37:10    out of memory at micro-batch 32: trying a smaller one
+05:37:10 mlm-large seed 203 fold 2 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold2_mb16.log
+05:59:42    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold2/preds_fold2.csv (best epoch 5, v
+05:59:42 mlm-large seed 203 fold 3 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold3_mb32.log
+05:59:51    out of memory at micro-batch 32: trying a smaller one
+05:59:51 mlm-large seed 203 fold 3 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold3_mb16.log
+06:17:15    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold3/preds_fold3.csv (best epoch 6, v
+06:17:15 mlm-large seed 203 fold 4 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold4_mb32.log
+06:28:05    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold4/preds_fold4.csv (best epoch 4, v
+06:28:05 mlm-large seed 203 fold 5 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold5_mb32.log
+06:28:13    out of memory at micro-batch 32: trying a smaller one
+06:28:13 mlm-large seed 203 fold 5 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold5_mb16.log
+06:40:15    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold5/preds_fold5.csv (best epoch 3, v
+06:40:15 mlm-large seed 203 fold 6 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold6_mb32.log
+06:40:22    out of memory at micro-batch 32: trying a smaller one
+06:40:22 mlm-large seed 203 fold 6 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold6_mb16.log
+06:57:25    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold6/preds_fold6.csv (best epoch 7, v
+06:57:25 mlm-large seed 203 fold 7 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold7_mb32.log
+06:57:32    out of memory at micro-batch 32: trying a smaller one
+06:57:32 mlm-large seed 203 fold 7 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold7_mb16.log
+07:14:35    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold7/preds_fold7.csv (best epoch 7, v
+07:14:35 mlm-large seed 203 fold 8 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold8_mb32.log
+07:14:43    out of memory at micro-batch 32: trying a smaller one
+07:14:43 mlm-large seed 203 fold 8 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold8_mb16.log
+07:28:27    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold8/preds_fold8.csv (best epoch 4, v
+07:28:27 mlm-large seed 203 fold 9 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold9_mb32.log
+07:28:35    out of memory at micro-batch 32: trying a smaller one
+07:28:35 mlm-large seed 203 fold 9 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold9_mb16.log
+07:44:03    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold9/preds_fold9.csv (best epoch 5, v
+07:44:03 mlm-large seed 203 fold 10 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold10_mb32.log
+07:44:10    out of memory at micro-batch 32: trying a smaller one
+07:44:10 mlm-large seed 203 fold 10 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed203_fold10_mb16.log
+07:56:15    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed203/fold10/preds_fold10.csv (best epoch 3,
+07:56:15 mtr-large seed 203 fold 1 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold1_mb32.log
+07:56:22    out of memory at micro-batch 32: trying a smaller one
+07:56:22 mtr-large seed 203 fold 1 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold1_mb16.log
+08:13:37    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold1/preds_fold1.csv (best epoch 9, v
+08:13:37 mtr-large seed 203 fold 2 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold2_mb32.log
+08:13:44    out of memory at micro-batch 32: trying a smaller one
+08:13:44 mtr-large seed 203 fold 2 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold2_mb16.log
+08:30:38    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold2/preds_fold2.csv (best epoch 9, v
+08:30:38 mtr-large seed 203 fold 3 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold3_mb32.log
+08:30:45    out of memory at micro-batch 32: trying a smaller one
+08:30:45 mtr-large seed 203 fold 3 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold3_mb16.log
+08:47:48    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold3/preds_fold3.csv (best epoch 9, v
+08:47:48 mtr-large seed 203 fold 4 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold4_mb32.log
+09:01:10    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold4/preds_fold4.csv (best epoch 9, v
+09:01:10 mtr-large seed 203 fold 5 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold5_mb32.log
+09:01:18    out of memory at micro-batch 32: trying a smaller one
+09:01:18 mtr-large seed 203 fold 5 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold5_mb16.log
+09:18:19    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold5/preds_fold5.csv (best epoch 9, v
+09:18:19 mtr-large seed 203 fold 6 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold6_mb32.log
+09:18:27    out of memory at micro-batch 32: trying a smaller one
+09:18:27 mtr-large seed 203 fold 6 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold6_mb16.log
+09:34:38    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold6/preds_fold6.csv (best epoch 9, v
+09:34:38 mtr-large seed 203 fold 7 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold7_mb32.log
+09:34:46    out of memory at micro-batch 32: trying a smaller one
+09:34:46 mtr-large seed 203 fold 7 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold7_mb16.log
+09:41:15    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold7/preds_fold7.csv (best epoch 0, v
+09:41:15 mtr-large seed 203 fold 8 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold8_mb32.log
+09:41:23    out of memory at micro-batch 32: trying a smaller one
+09:41:23 mtr-large seed 203 fold 8 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold8_mb16.log
+09:57:28    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold8/preds_fold8.csv (best epoch 9, v
+09:57:28 mtr-large seed 203 fold 9 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold9_mb32.log
+09:57:35    out of memory at micro-batch 32: trying a smaller one
+09:57:35 mtr-large seed 203 fold 9 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold9_mb16.log
+10:13:47    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold9/preds_fold9.csv (best epoch 9, v
+10:13:47 mtr-large seed 203 fold 10 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold10_mb32.log
+10:13:54    out of memory at micro-batch 32: trying a smaller one
+10:13:54 mtr-large seed 203 fold 10 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed203_fold10_mb16.log
+10:30:00    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed203/fold10/preds_fold10.csv (best epoch 9,
+10:30:00 mlm-large seed 303 fold 1 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold1_mb32.log
+10:30:08    out of memory at micro-batch 32: trying a smaller one
+10:30:08 mlm-large seed 303 fold 1 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold1_mb16.log
+10:45:25    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold1/preds_fold1.csv (best epoch 5, v
+10:45:25 mlm-large seed 303 fold 2 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold2_mb32.log
+10:45:32    out of memory at micro-batch 32: trying a smaller one
+10:45:32 mlm-large seed 303 fold 2 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold2_mb16.log
+11:02:45    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold2/preds_fold2.csv (best epoch 7, v
+11:02:45 mlm-large seed 303 fold 3 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold3_mb32.log
+11:02:53    out of memory at micro-batch 32: trying a smaller one
+11:02:53 mlm-large seed 303 fold 3 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold3_mb16.log
+11:18:27    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold3/preds_fold3.csv (best epoch 5, v
+11:18:27 mlm-large seed 303 fold 4 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold4_mb32.log
+11:27:56    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold4/preds_fold4.csv (best epoch 3, v
+11:27:56 mlm-large seed 303 fold 5 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold5_mb32.log
+11:28:04    out of memory at micro-batch 32: trying a smaller one
+11:28:04 mlm-large seed 303 fold 5 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold5_mb16.log
+11:41:49    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold5/preds_fold5.csv (best epoch 4, v
+11:41:49 mlm-large seed 303 fold 6 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold6_mb32.log
+11:41:57    out of memory at micro-batch 32: trying a smaller one
+11:41:57 mlm-large seed 303 fold 6 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold6_mb16.log
+11:59:04    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold6/preds_fold6.csv (best epoch 8, v
+11:59:04 mlm-large seed 303 fold 7 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold7_mb32.log
+11:59:12    out of memory at micro-batch 32: trying a smaller one
+11:59:12 mlm-large seed 303 fold 7 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold7_mb16.log
+12:16:19    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold7/preds_fold7.csv (best epoch 6, v
+12:16:19 mlm-large seed 303 fold 8 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold8_mb32.log
+12:16:27    out of memory at micro-batch 32: trying a smaller one
+12:16:27 mlm-large seed 303 fold 8 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold8_mb16.log
+12:33:37    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold8/preds_fold8.csv (best epoch 6, v
+12:33:37 mlm-large seed 303 fold 9 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold9_mb32.log
+12:33:45    out of memory at micro-batch 32: trying a smaller one
+12:33:45 mlm-large seed 303 fold 9 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold9_mb16.log
+12:49:16    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold9/preds_fold9.csv (best epoch 5, v
+12:49:16 mlm-large seed 303 fold 10 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold10_mb32.log
+12:49:24    out of memory at micro-batch 32: trying a smaller one
+12:49:24 mlm-large seed 303 fold 10 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mlm-large_seed303_fold10_mb16.log
+13:01:20    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mlm-large/seed303/fold10/preds_fold10.csv (best epoch 3,
+13:01:20 mtr-large seed 303 fold 1 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold1_mb32.log
+13:01:28    out of memory at micro-batch 32: trying a smaller one
+13:01:28 mtr-large seed 303 fold 1 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold1_mb16.log
+13:18:00    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold1/preds_fold1.csv (best epoch 9, v
+13:18:00 mtr-large seed 303 fold 2 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold2_mb32.log
+13:18:08    out of memory at micro-batch 32: trying a smaller one
+13:18:08 mtr-large seed 303 fold 2 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold2_mb16.log
+13:34:35    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold2/preds_fold2.csv (best epoch 9, v
+13:34:35 mtr-large seed 303 fold 3 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold3_mb32.log
+13:34:41    out of memory at micro-batch 32: trying a smaller one
+13:34:42 mtr-large seed 303 fold 3 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold3_mb16.log
+13:51:06    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold3/preds_fold3.csv (best epoch 9, v
+13:51:06 mtr-large seed 303 fold 4 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold4_mb32.log
+13:56:26    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold4/preds_fold4.csv (best epoch 0, v
+13:56:26 mtr-large seed 303 fold 5 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold5_mb32.log
+13:56:33    out of memory at micro-batch 32: trying a smaller one
+13:56:33 mtr-large seed 303 fold 5 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold5_mb16.log
+14:12:56    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold5/preds_fold5.csv (best epoch 9, v
+14:12:56 mtr-large seed 303 fold 6 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold6_mb32.log
+14:13:03    out of memory at micro-batch 32: trying a smaller one
+14:13:03 mtr-large seed 303 fold 6 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold6_mb16.log
+14:29:25    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold6/preds_fold6.csv (best epoch 9, v
+14:29:25 mtr-large seed 303 fold 7 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold7_mb32.log
+14:29:33    out of memory at micro-batch 32: trying a smaller one
+14:29:33 mtr-large seed 303 fold 7 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold7_mb16.log
+14:36:07    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold7/preds_fold7.csv (best epoch 0, v
+14:36:07 mtr-large seed 303 fold 8 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold8_mb32.log
+14:36:14    out of memory at micro-batch 32: trying a smaller one
+14:36:14 mtr-large seed 303 fold 8 | micro-batch 16 (x2) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold8_mb16.log
+14:46:12    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold8/preds_fold8.csv (best epoch 9, v
+14:46:12 mtr-large seed 303 fold 9 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold9_mb32.log
+14:52:48    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold9/preds_fold9.csv (best epoch 9, v
+14:52:48 mtr-large seed 303 fold 10 | micro-batch 32 (x1) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/repro_pepmsnd/mtr-large_seed303_fold10_mb32.log
+14:59:23    done: [INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed303/fold10/preds_fold10.csv (best epoch 9,
+14:59:23 === SUMMARY ===
+PepLand binding: 492 runs
+
+c-binding (published SCC 0.503, PCC 0.450)
+                                         SCC    PCC    MAE   RMSE  SCC sd  seeds
+split   protein_vec features head                                               
+protein esm3b       both     released  0.457  0.478  1.082  1.388   0.061     10
+                             two       0.455  0.460  1.088  1.408   0.063     10
+                    peptide  released  0.366  0.378  1.137  1.442   0.071     10
+                             two       0.359  0.364  1.136  1.440   0.078     10
+                    protein  released  0.424  0.449  1.097  1.397   0.071     10
+                             two       0.438  0.455  1.091  1.391   0.076     10
+        t12         both     released  0.443  0.455  1.079  1.401   0.066     10
+                             two       0.457  0.478  1.094  1.420   0.062     10
+                    both_gru released  0.397  0.444  1.068  1.347   0.058      3
+                    peptide  released  0.366  0.378  1.137  1.442   0.071     10
+                             two       0.359  0.364  1.136  1.440   0.078     10
+                    protein  released  0.364  0.397  1.108  1.407   0.053     10
+                             two       0.347  0.381  1.125  1.437   0.069     10
+random  esm3b       both     released  0.574  0.634  0.924  1.183   0.064     10
+                             two       0.565  0.617  0.937  1.216   0.065     10
+                    peptide  released  0.409  0.457  1.085  1.369   0.061     10
+                             two       0.399  0.448  1.093  1.365   0.065     10
+                    protein  released  0.532  0.593  0.969  1.225   0.042     10
+                             two       0.522  0.573  0.979  1.263   0.074     10
+        t12         both     released  0.548  0.606  0.948  1.215   0.062     10
+                             two       0.547  0.601  0.951  1.221   0.066     10
+                    both_gru released  0.564  0.625  0.938  1.189   0.019      3
+                    peptide  released  0.409  0.457  1.085  1.369   0.061     10
+                             two       0.399  0.448  1.093  1.365   0.065     10
+                    protein  released  0.507  0.566  0.986  1.264   0.065     10
+                             two       0.515  0.575  0.980  1.251   0.046     10
+
+nc-binding (published SCC 0.768, PCC 0.873)
+                                         SCC    PCC    MAE   RMSE  SCC sd  seeds
+split   protein_vec features head                                               
+protein esm3b       both     released  0.317  0.279  1.517  1.966   0.157     10
+                             two       0.330  0.314  1.450  1.863   0.258     10
+                    peptide  released  0.316  0.316  1.530  1.931   0.147     10
+                             two       0.330  0.361  1.497  1.889   0.249     10
+                    protein  released  0.217  0.196  1.626  2.082   0.310     10
+                             two       0.246  0.214  1.621  2.053   0.247     10
+        t12         both     released  0.209  0.184  1.587  2.033   0.215     10
+                             two       0.261  0.297  1.600  2.018   0.214     10
+                    both_gru released  0.262  0.270  1.534  2.031   0.134      3
+                    peptide  released  0.316  0.316  1.530  1.931   0.147     10
+                             two       0.330  0.361  1.497  1.889   0.249     10
+                    protein  released  0.024  0.003  1.686  2.160   0.210     10
+                             two       0.111  0.105  1.714  2.216   0.246     10
+random  esm3b       both     released  0.624  0.664  1.097  1.409   0.129     10
+                             two       0.612  0.650  1.115  1.467   0.149     10
+                    peptide  released  0.518  0.575  1.234  1.548   0.184     10
+                             two       0.509  0.549  1.311  1.628   0.186     10
+                    protein  released  0.548  0.575  1.182  1.564   0.138     10
+                             two       0.550  0.558  1.197  1.616   0.160     10
+        t12         both     released  0.614  0.659  1.112  1.399   0.132     10
+                             two       0.600  0.653  1.148  1.448   0.108     10
+                    both_gru released  0.588  0.657  1.087  1.393   0.075      3
+                    peptide  released  0.518  0.575  1.234  1.548   0.184     10
+                             two       0.509  0.549  1.311  1.628   0.186     10
+                    protein  released  0.560  0.586  1.174  1.528   0.114     10
+                             two       0.591  0.585  1.196  1.553   0.092     10
+=== per model and seed (a seed is complete with 10 folds) ===
+    model seed  folds  MCC pooled  MCC fold mean  AUROC pooled  AUROC fold mean
+mlm-large  103     10      0.5003         0.4974        0.8328           0.8200
+mlm-large  203     10      0.4806         0.4841        0.8229           0.8279
+mlm-large  303     10      0.4998         0.4986        0.8224           0.8123
+mtr-large  103     10      0.3115         0.3178        0.7583           0.7550
+mtr-large  203     10      0.3040         0.3066        0.7509           0.7511
+mtr-large  303     10      0.2472         0.2440        0.7411           0.7517
+
+=== mean and sd over complete seeds, next to the paper (Table 1 MCC) ===
+           seeds  MCC pooled mean  MCC pooled std  MCC fold mean mean  MCC fold mean std  AUROC pooled mean  AUROC pooled std  AUROC fold mean mean  AUROC fold mean std   published MCC
+model                                                                                                                                                                                   
+mlm-large      3           0.4936          0.0112              0.4934             0.0081             0.8260            0.0058                0.8201               0.0078  0.729 +- 0.006
+mtr-large      3           0.2876          0.0351              0.2895             0.0397             0.7501            0.0087                0.7526               0.0021  0.749 +- 0.007
+
+references: PepMSND's own model 0.726 MCC; earlier Distillation run of the authors' scripts on mlm-large 0.618 +- 0.003 MCC, AUROC 0.867.
+Note: the authors' script chooses the stopping epoch on the TEST fold, so these numbers are optimistic by construction; src/finetune/finetune_smiles.py (no test-fold selection) is the honest comparison.
+14:59:25 == done.

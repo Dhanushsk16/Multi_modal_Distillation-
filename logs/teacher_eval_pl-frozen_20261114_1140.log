@@ -1,0 +1,124 @@
+== Saturday 14 November 2026 11:40:56 AM IST | stage pl-frozen | teacher t8 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_pl-frozen_20261114_1140.log
+
+== pl-frozen: teacher_t8 on PepLand's five tasks (11:40)
+representations: ['teacher_t8']
+PL_cCPP  teacher_t8 done (134.0s) | mlp MCC 0.700
+PL_cSol  teacher_t8 done (125.3s) | mlp MCC 0.171
+PL_ncCPP teacher_t8 done (198.7s) | mlp R2 0.346
+PL_cBinding teacher_t8 done (120.3s) | mlp R2 0.032
+PL_ncBinding teacher_t8 done (35.0s) | mlp R2 -0.386
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                   teacher_t8
+benchmark    learner            
+PL_cBinding  gbt           0.173
+             linear        0.169
+             mlp           0.037
+PL_cCPP      gbt           0.720
+             linear        0.707
+             mlp           0.716
+PL_cSol      gbt           0.204
+             linear        0.232
+             mlp           0.168
+PL_ncBinding gbt           0.125
+             linear       -0.028
+             mlp          -0.724
+PL_ncCPP     gbt           0.408
+             linear        0.377
+             mlp           0.364
+
+=== AUROC (classification), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PL_cCPP   gbt           0.935
+          linear        0.924
+          mlp           0.923
+PL_cSol   gbt           0.654
+          linear        0.659
+          mlp           0.633
+
+=== accuracy (classification), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PL_cCPP   gbt           0.860
+          linear        0.853
+          mlp           0.858
+PL_cSol   gbt           0.627
+          linear        0.645
+          mlp           0.606
+
+=== F1 (classification), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PL_cCPP   gbt           0.858
+          linear        0.853
+          mlp           0.857
+PL_cSol   gbt           0.709
+          linear        0.745
+          mlp           0.683
+
+=== Pearson r (regression), mean over seeds ===
+rep                   teacher_t8
+benchmark    learner            
+PL_cBinding  gbt           0.433
+             linear        0.431
+             mlp           0.377
+PL_ncBinding gbt           0.463
+             linear        0.377
+             mlp           0.353
+PL_ncCPP     gbt           0.642
+             linear        0.620
+             mlp           0.617
+
+=== Spearman (regression), mean over seeds ===
+rep                   teacher_t8
+benchmark    learner            
+PL_cBinding  gbt           0.407
+             linear        0.407
+             mlp           0.348
+PL_ncBinding gbt           0.413
+             linear        0.375
+             mlp           0.345
+PL_ncCPP     gbt           0.735
+             linear        0.704
+             mlp           0.681
+
+=== RMSE (regression, lower is better), mean over seeds ===
+rep                   teacher_t8
+benchmark    learner            
+PL_cBinding  gbt           1.418
+             linear        1.422
+             mlp           1.529
+PL_ncBinding gbt           1.675
+             linear        1.821
+             mlp           2.295
+PL_ncCPP     gbt           0.823
+             linear        0.844
+             mlp           0.853
+
+=== POOLED R2 over all folds (PAMPA: the authors' metric), mean over seeds ===
+rep                   teacher_t8
+benchmark    learner            
+PL_cBinding  gbt           0.177
+             linear        0.171
+             mlp           0.039
+PL_ncBinding gbt           0.159
+             linear       -0.007
+             mlp          -0.643
+PL_ncCPP     gbt           0.409
+             linear        0.378
+             mlp           0.365
+
+=== POOLED MCC over all folds (cluster-CV benchmarks), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PL_cCPP   gbt           0.720
+          linear        0.707
+          mlp           0.715
+PL_cSol   gbt           0.204
+          linear        0.231
+          mlp           0.169
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/teacher_t8_pl_gate
+
+== stage pl-frozen finished, exit code 0 (11:51)

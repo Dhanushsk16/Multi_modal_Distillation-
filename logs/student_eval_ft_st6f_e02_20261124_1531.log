@@ -1,0 +1,23 @@
+15:31:21 == stage ft | student st6f | epoch 2 (name st6f_e02) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_eval_ft_st6f_e02_20261124_1531.log
+student st6f_e02: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_distill/st6f/epoch_02.pt | weights of epoch 2 | 10.821M parameters | feature z (1024-d) | modes ['ft', 'frozen'] | benchmarks ['THPep_o101', 'THPep_o202', 'THPep_o303']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1, hidden 1024 | lr: head 0.001, student 1e-05 (ft) | inner folds 5 (max models 5) | seeds 3 | device cuda
+results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_student
+THPep_o101: 609 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+THPep_o101   ft      done (7s) | MCC 0.587 (mean of folds 0.587) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o101   frozen  done (1s) | MCC 0.576 (mean of folds 0.576) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202: 609 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+THPep_o202   ft      done (8s) | MCC 0.712 (mean of folds 0.712) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202   frozen  done (1s) | MCC 0.754 (mean of folds 0.754) | epochs run 19, best at 9, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303: 609 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+THPep_o303   ft      done (7s) | MCC 0.693 (mean of folds 0.693) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303   frozen  done (1s) | MCC 0.690 (mean of folds 0.690) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+
+=== primary metric on the pooled predictions (mean over seeds) ===
+mode          metric  frozen     ft
+THPep_o101       MCC   0.597  0.594
+THPep_o202       MCC   0.739  0.726
+THPep_o303       MCC   0.688  0.664
+AVERAGE (all)    NaN   0.675  0.661
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_student
+15:31:49 == ft finished with exit status 0

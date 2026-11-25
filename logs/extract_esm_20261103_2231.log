@@ -1,0 +1,92 @@
+pclm_esmatlas part_00000: 250,000 read in shard, 98,365 kept | 250,000 read overall | 1.3 min
+pclm_esmatlas part_00000 done: 280,812 read, 110,511 kept | 280,812 read overall | 1.5 min
+pclm_esmatlas part_00040: 200,000 read in shard, 78,596 kept | 480,812 read overall | 2.5 min
+pclm_esmatlas part_00040 done: 279,385 read, 109,987 kept | 560,197 read overall | 2.9 min
+pclm_esmatlas part_00080: 150,000 read in shard, 58,604 kept | 710,197 read overall | 3.7 min
+pclm_esmatlas part_00080 done: 280,214 read, 109,589 kept | 840,411 read overall | 4.4 min
+pclm_esmatlas part_00120: 100,000 read in shard, 39,274 kept | 940,411 read overall | 4.9 min
+pclm_esmatlas part_00120 done: 280,569 read, 110,274 kept | 1,120,980 read overall | 5.9 min
+pclm_esmatlas part_00160: 50,000 read in shard, 19,563 kept | 1,170,980 read overall | 6.1 min
+pclm_esmatlas part_00160: 279,897 read in shard, 109,703 kept | 1,400,877 read overall | 7.3 min
+pclm_esmatlas part_00160 done: 279,897 read, 109,703 kept | 1,400,877 read overall | 7.3 min
+pclm_esmatlas part_00200: 250,000 read in shard, 97,991 kept | 1,650,877 read overall | 8.6 min
+pclm_esmatlas part_00200 done: 279,115 read, 109,511 kept | 1,679,992 read overall | 8.8 min
+pclm_esmatlas part_00240: 200,000 read in shard, 78,605 kept | 1,879,992 read overall | 9.8 min
+pclm_esmatlas part_00240 done: 280,136 read, 109,998 kept | 1,960,128 read overall | 10.3 min
+pclm_esmatlas part_00280: 150,000 read in shard, 59,074 kept | 2,110,128 read overall | 11.0 min
+pclm_esmatlas part_00280 done: 280,396 read, 110,157 kept | 2,240,524 read overall | 11.7 min
+pclm_esmatlas part_00320: 100,000 read in shard, 39,325 kept | 2,340,524 read overall | 12.2 min
+pclm_esmatlas part_00320 done: 279,799 read, 109,731 kept | 2,520,323 read overall | 13.2 min
+pclm_esmatlas part_00360: 50,000 read in shard, 19,743 kept | 2,570,323 read overall | 13.4 min
+pclm_esmatlas part_00360: 281,196 read in shard, 110,750 kept | 2,801,519 read overall | 14.6 min
+pclm_esmatlas part_00360 done: 281,196 read, 110,750 kept | 2,801,519 read overall | 14.6 min
+pclm_esmatlas part_00400: 250,000 read in shard, 98,222 kept | 3,051,519 read overall | 15.9 min
+pclm_esmatlas part_00400 done: 279,805 read, 109,826 kept | 3,081,324 read overall | 16.1 min
+pclm_esmatlas part_00440: 200,000 read in shard, 78,363 kept | 3,281,324 read overall | 17.1 min
+pclm_esmatlas part_00440 done: 280,132 read, 109,819 kept | 3,361,456 read overall | 17.6 min
+pclm_esmatlas part_00480: 150,000 read in shard, 58,901 kept | 3,511,456 read overall | 18.3 min
+pclm_esmatlas part_00480 done: 279,596 read, 109,830 kept | 3,641,052 read overall | 19.0 min
+pclm_esmatlas part_00520: 100,000 read in shard, 39,361 kept | 3,741,052 read overall | 19.5 min
+pclm_esmatlas part_00520 done: 279,556 read, 109,727 kept | 3,920,608 read overall | 20.5 min
+pclm_esmatlas part_00560: 50,000 read in shard, 19,576 kept | 3,970,608 read overall | 20.7 min
+pclm_esmatlas part_00560: 280,561 read in shard, 110,345 kept | 4,201,169 read overall | 21.9 min
+pclm_esmatlas part_00560 done: 280,561 read, 110,345 kept | 4,201,169 read overall | 22.0 min
+pclm_esmatlas part_00600: 250,000 read in shard, 97,878 kept | 4,451,169 read overall | 23.2 min
+pclm_esmatlas part_00600 done: 280,707 read, 109,895 kept | 4,481,876 read overall | 23.4 min
+pclm_esmatlas part_00640: 200,000 read in shard, 78,686 kept | 4,681,876 read overall | 24.4 min
+pclm_esmatlas part_00640 done: 280,397 read, 110,429 kept | 4,762,273 read overall | 24.9 min
+pclm_esmatlas part_00680: 150,000 read in shard, 58,832 kept | 4,912,273 read overall | 25.6 min
+pclm_esmatlas part_00680 done: 280,665 read, 109,902 kept | 5,042,938 read overall | 26.3 min
+pclm_esmatlas part_00720: 100,000 read in shard, 39,565 kept | 5,142,938 read overall | 26.8 min
+pclm_esmatlas part_00720 done: 280,926 read, 110,263 kept | 5,323,864 read overall | 27.8 min
+pclm_esmatlas part_00760: 50,000 read in shard, 19,711 kept | 5,373,864 read overall | 28.1 min
+pclm_esmatlas part_00760: 280,405 read in shard, 109,951 kept | 5,604,269 read overall | 29.3 min
+pclm_esmatlas part_00760 done: 280,405 read, 109,951 kept | 5,604,269 read overall | 29.3 min
+pclm_esmatlas part_00800: 250,000 read in shard, 98,364 kept | 5,854,269 read overall | 30.6 min
+pclm_esmatlas part_00800 done: 280,153 read, 110,269 kept | 5,884,422 read overall | 30.8 min
+pclm_esmatlas part_00840: 200,000 read in shard, 78,722 kept | 6,084,422 read overall | 31.8 min
+pclm_esmatlas part_00840 done: 279,785 read, 109,924 kept | 6,164,207 read overall | 32.2 min
+pclm_esmatlas part_00880: 150,000 read in shard, 59,382 kept | 6,314,207 read overall | 33.0 min
+pclm_esmatlas part_00880 done: 280,067 read, 110,735 kept | 6,444,274 read overall | 33.7 min
+pclm_esmatlas part_00920: 100,000 read in shard, 39,198 kept | 6,544,274 read overall | 34.2 min
+pclm_esmatlas part_00920 done: 280,310 read, 110,053 kept | 6,724,584 read overall | 35.1 min
+pclm_esmatlas part_00960: 50,000 read in shard, 19,705 kept | 6,774,584 read overall | 35.4 min
+pclm_esmatlas part_00960: 279,724 read in shard, 109,812 kept | 7,004,308 read overall | 36.6 min
+pclm_esmatlas part_00960 done: 279,724 read, 109,812 kept | 7,004,308 read overall | 36.6 min
+pclm_esmatlas part_01000: 250,000 read in shard, 98,316 kept | 7,254,308 read overall | 37.9 min
+pclm_esmatlas part_01000 done: 280,745 read, 110,311 kept | 7,285,053 read overall | 38.1 min
+pclm_esmatlas part_01040: 200,000 read in shard, 78,289 kept | 7,485,053 read overall | 39.1 min
+pclm_esmatlas part_01040 done: 280,082 read, 109,454 kept | 7,565,135 read overall | 39.5 min
+pclm_esmatlas part_01080: 150,000 read in shard, 58,687 kept | 7,715,135 read overall | 40.3 min
+pclm_esmatlas part_01080 done: 281,036 read, 110,356 kept | 7,846,171 read overall | 41.0 min
+pclm_esmatlas part_01120: 100,000 read in shard, 39,443 kept | 7,946,171 read overall | 41.5 min
+pclm_esmatlas part_01120 done: 279,827 read, 109,974 kept | 8,125,998 read overall | 42.5 min
+pclm_esmatlas part_01160: 50,000 read in shard, 19,640 kept | 8,175,998 read overall | 42.7 min
+pclm_esmatlas part_01160: 280,448 read in shard, 110,196 kept | 8,406,446 read overall | 43.9 min
+pclm_esmatlas part_01160 done: 280,448 read, 110,196 kept | 8,406,446 read overall | 43.9 min
+pclm_esmatlas part_01200: 250,000 read in shard, 98,032 kept | 8,656,446 read overall | 45.2 min
+pclm_esmatlas part_01200 done: 279,700 read, 109,857 kept | 8,686,146 read overall | 45.4 min
+pclm_esmatlas part_01240: 200,000 read in shard, 78,782 kept | 8,886,146 read overall | 46.4 min
+pclm_esmatlas part_01240 done: 280,787 read, 110,696 kept | 8,966,933 read overall | 46.9 min
+pclm_esmatlas part_01280: 150,000 read in shard, 58,900 kept | 9,116,933 read overall | 47.6 min
+pclm_esmatlas part_01280 done: 280,080 read, 110,130 kept | 9,247,013 read overall | 48.3 min
+pclm_esmatlas part_01320: 100,000 read in shard, 39,082 kept | 9,347,013 read overall | 48.8 min
+pclm_esmatlas part_01320 done: 280,043 read, 109,696 kept | 9,527,056 read overall | 49.8 min
+pclm_esmatlas part_01360: 11,540 read in shard, 4,527 kept | 9,538,596 read overall | 49.8 min
+pclm_esmatlas part_01360 done: 11,540 read, 4,527 kept | 9,538,596 read overall | 49.8 min
+pclm_esmatlas: shards done, 9,538,596 rows read in 49.8 min
+{
+ "source": "pclm_esmatlas",
+ "shards": 35,
+ "raw": 9538596,
+ "parse_fail": 0,
+ "prefiltered": 0,
+ "not_peptide_or_out_of_window": 5792406,
+ "below_min_res": 0,
+ "duplicate": 28,
+ "kept": 3746162,
+ "kept_canonical": 3746162,
+ "kept_noncanonical": 0,
+ "kept_cyclic": 0,
+ "residues_median": 29.0
+}

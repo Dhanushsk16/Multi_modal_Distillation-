@@ -1,0 +1,10 @@
+17:09:20 == stage export | student st6f | epoch 6 (name st6f_e06) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_eval_export_st6f_e06_20261123_1709.log
+student st6f_e06: 10.821M parameters at inference | weights of epoch 6 | tokenizer /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_tokenizer_norm/atombpe_v1024
+single   26029 molecules | unparsable 0 | cut at 128 tokens: 0 | usable 26029
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_st6f_e06.npz (26029, 1024)
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_st6f_e06_pre.npz (26029, 1280)
+pepland  12567 molecules | unparsable 0 | cut at 128 tokens: 0 | usable 12567
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_st6f_e06.npz (12567, 1024)
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_st6f_e06_pre.npz (12567, 1280)
+next: python src/teacher/eval_harness.py --teachers st6f_e06 st6f_e06_pre --out harness_st6f_e06
+17:11:36 == export finished with exit status 0

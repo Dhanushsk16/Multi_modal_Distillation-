@@ -1,0 +1,11 @@
+{
+ "vocab_size_requested": 1024,
+ "vocab_size": 1024,
+ "n_train": 500000,
+ "min_atom_count": 20,
+ "min_frequency": 100,
+ "max_token_length": null,
+ "n_atoms": 56,
+ "atoms_seen": 169,
+ "atoms_below_min_count": 113
+}

@@ -1,0 +1,284 @@
+11:12:54 == stage harness | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_harness_20261123_1112.log
+representations: ['P', 'L', 'H', 'L+H', 'P+L', 'P+L+H', 'PCA', 'E', 'P+L+H+E', 'teacher_v3_base', 'teacher_bot'] | learners ['linear'] | seeds 5 | select val
+workers: 4 processes x 2 threads = 8 threads (cap 8)
+   PL_ncCPP     all    P            linear seed 0 | Spearman 0.655 (1s)
+   PAMPA        all    P            linear seed 0 | R2 -0.290 (1s)
+   PL_cCPP      all    P            linear seed 0 | AUROC 0.886 (6s)
+   AmpHGT       all    P            linear seed 0 | MCC 0.801 (7s)
+   PL_ncCPP     all    L            linear seed 0 | Spearman 0.696 (12s)
+   PL_cCPP      all    L            linear seed 0 | AUROC 0.915 (8s)
+   PAMPA        all    L            linear seed 0 | R2 -0.635 (16s)
+   PL_cCPP      all    H            linear seed 0 | AUROC 0.885 (14s)
+   PL_cCPP      all    L+H          linear seed 0 | AUROC 0.911 (34s)
+   AmpHGT       all    L            linear seed 0 | MCC 0.766 (58s)
+   PL_cCPP      all    P+L          linear seed 0 | AUROC 0.915 (10s)
+   PL_ncCPP     all    H            linear seed 0 | Spearman 0.668 (66s)
+   PAMPA        all    H            linear seed 0 | R2 0.244 (73s)
+   PL_cCPP      all    P+L+H        linear seed 0 | AUROC 0.912 (40s)
+   AmpHGT       all    H            linear seed 0 | MCC 0.662 (47s)
+   PL_cCPP      all    PCA          linear seed 0 | AUROC 0.905 (4s)
+   PL_cCPP      all    teacher_v3_base linear seed 0 | AUROC 0.925 (3s)
+   PL_cCPP      all    teacher_bot  linear seed 0 | AUROC 0.893 (2s)
+   PL_cCPP      has_E  E            linear seed 0 | AUROC 0.936 (16s)
+   PL_cCPP      has_E  P+L+H+E      linear seed 0 | AUROC 0.934 (61s)
+   PL_ncCPP     all    L+H          linear seed 0 | Spearman 0.696 (150s)
+   PL_ncCPP     all    P+L          linear seed 0 | Spearman 0.710 (25s)
+   PAMPA        all    L+H          linear seed 0 | R2 -0.044 (166s)
+   PL_cCPP      has_E  P+L+H        linear seed 0 | AUROC 0.912 (44s)
+   PL_cCPP      has_E  teacher_v3_base linear seed 0 | AUROC 0.928 (3s)
+   PL_cCPP      has_E  teacher_bot  linear seed 0 | AUROC 0.893 (2s)
+   AmpHGT       all    L+H          linear seed 0 | MCC 0.716 (166s)
+   PAMPA        all    P+L          linear seed 0 | R2 -0.509 (23s)
+== PL_cCPP done (314 s)
+   PL_cBinding  all    P            linear seed 0 | Spearman 0.322 (0s)
+   PL_cBinding  all    L            linear seed 0 | Spearman 0.415 (6s)
+   PL_cBinding  all    H            linear seed 0 | Spearman 0.382 (3s)
+   PL_cBinding  all    L+H          linear seed 0 | Spearman 0.429 (3s)
+   PL_cBinding  all    P+L          linear seed 0 | Spearman 0.417 (9s)
+   PL_cBinding  all    P+L+H        linear seed 0 | Spearman 0.432 (3s)
+   PL_cBinding  all    PCA          linear seed 0 | Spearman 0.423 (5s)
+   PL_cBinding  all    teacher_v3_base linear seed 0 | Spearman 0.416 (5s)
+   AmpHGT       all    P+L          linear seed 0 | MCC 0.782 (66s)
+   PL_cBinding  all    teacher_bot  linear seed 0 | Spearman 0.383 (5s)
+   PL_cBinding  has_E  E            linear seed 0 | Spearman 0.334 (0s)
+   PL_cBinding  has_E  P+L+H+E      linear seed 0 | Spearman 0.344 (0s)
+   PL_cBinding  has_E  P+L+H        linear seed 0 | Spearman 0.322 (0s)
+   PL_cBinding  has_E  teacher_v3_base linear seed 0 | Spearman 0.306 (0s)
+   PL_cBinding  has_E  teacher_bot  linear seed 0 | Spearman 0.304 (0s)
+== PL_cBinding done (52 s)
+   CellPPD      all    P            linear seed 0 | MCC 0.820 (1s)
+   CellPPD      all    L            linear seed 0 | MCC 0.821 (1s)
+   CellPPD      all    H            linear seed 0 | MCC 0.841 (1s)
+   CellPPD      all    L+H          linear seed 0 | MCC 0.854 (1s)
+   CellPPD      all    P+L          linear seed 0 | MCC 0.827 (1s)
+   CellPPD      all    P+L+H        linear seed 0 | MCC 0.867 (2s)
+   CellPPD      all    PCA          linear seed 0 | MCC 0.907 (0s)
+   CellPPD      all    teacher_v3_base linear seed 0 | MCC 0.920 (1s)
+   CellPPD      all    teacher_bot  linear seed 0 | MCC 0.821 (0s)
+   CellPPD      has_E  E            linear seed 0 | MCC 0.732 (1s)
+   CellPPD      has_E  P+L+H+E      linear seed 0 | MCC 0.891 (2s)
+   CellPPD      has_E  P+L+H        linear seed 0 | MCC 0.880 (1s)
+   CellPPD      has_E  teacher_v3_base linear seed 0 | MCC 0.867 (0s)
+   CellPPD      has_E  teacher_bot  linear seed 0 | MCC 0.759 (0s)
+== CellPPD done (23 s)
+   PL_cSol      all    P            linear seed 0 | AUROC 0.639 (4s)
+   PL_cSol      all    L            linear seed 0 | AUROC 0.677 (8s)
+   PL_cSol      all    H            linear seed 0 | AUROC 0.704 (6s)
+   PL_ncCPP     all    P+L+H        linear seed 0 | Spearman 0.701 (165s)
+   PL_cSol      all    L+H          linear seed 0 | AUROC 0.697 (20s)
+   PL_ncCPP     all    PCA          linear seed 0 | Spearman 0.685 (14s)
+   PL_cSol      all    P+L          linear seed 0 | AUROC 0.668 (8s)
+   PL_ncCPP     all    teacher_v3_base linear seed 0 | Spearman 0.702 (14s)
+   PL_cSol      all    P+L+H        linear seed 0 | AUROC 0.689 (22s)
+   PL_ncCPP     all    teacher_bot  linear seed 0 | Spearman 0.600 (18s)
+   PL_cSol      all    PCA          linear seed 0 | AUROC 0.694 (6s)
+   PL_cSol      all    teacher_v3_base linear seed 0 | AUROC 0.700 (3s)
+   PL_cSol      all    teacher_bot  linear seed 0 | AUROC 0.688 (2s)
+   PAMPA        all    P+L+H        linear seed 0 | R2 0.146 (190s)
+   PL_cSol [has_E]: too few usable items (9 of 1357) or a one-class split: skipped
+== PL_cSol done (104 s)
+   PAMPA        all    PCA          linear seed 0 | R2 0.153 (20s)
+   PepMSND      all    P            linear seed 0 | MCC 0.447 (6s)
+   PepMSND      all    L            linear seed 0 | MCC 0.501 (8s)
+   PAMPA        all    teacher_v3_base linear seed 0 | R2 0.072 (23s)
+   PepMSND      all    H            linear seed 0 | MCC 0.480 (8s)
+   PepMSND      all    L+H          linear seed 0 | MCC 0.503 (11s)
+   PepMSND      all    P+L          linear seed 0 | MCC 0.504 (8s)
+   PAMPA        all    teacher_bot  linear seed 0 | R2 0.038 (23s)
+   PepMSND      all    P+L+H        linear seed 0 | MCC 0.507 (12s)
+   PL_ncCPP [has_E]: too few usable items (0 of 7334) or a one-class split: skipped
+== PL_ncCPP done (554 s)
+   PepMSND      all    PCA          linear seed 0 | MCC 0.490 (4s)
+   PepMSND      all    teacher_v3_base linear seed 0 | MCC 0.530 (4s)
+   PepMSND      all    teacher_bot  linear seed 0 | MCC 0.510 (3s)
+   THPep        all    P            linear seed 0 | MCC 0.630 (2s)
+   THPep        all    L            linear seed 0 | MCC 0.742 (1s)
+   THPep        all    H            linear seed 0 | MCC 0.754 (1s)
+   THPep        all    L+H          linear seed 0 | MCC 0.809 (1s)
+   THPep        all    P+L          linear seed 0 | MCC 0.770 (1s)
+   THPep        all    P+L+H        linear seed 0 | MCC 0.770 (1s)
+   THPep        all    PCA          linear seed 0 | MCC 0.688 (0s)
+   THPep        all    teacher_v3_base linear seed 0 | MCC 0.840 (0s)
+   THPep        all    teacher_bot  linear seed 0 | MCC 0.543 (0s)
+   THPep        has_E  E            linear seed 0 | MCC 0.800 (1s)
+   THPep        has_E  P+L+H+E      linear seed 0 | MCC 0.800 (1s)
+   THPep        has_E  P+L+H        linear seed 0 | MCC 0.770 (1s)
+   THPep        has_E  teacher_v3_base linear seed 0 | MCC 0.840 (0s)
+   THPep        has_E  teacher_bot  linear seed 0 | MCC 0.543 (0s)
+== THPep done (24 s)
+   PL_ncBinding all    P            linear seed 0 | Spearman 0.175 (0s)
+   PL_ncBinding all    L            linear seed 0 | Spearman 0.368 (0s)
+   PL_ncBinding all    H            linear seed 0 | Spearman 0.406 (0s)
+   PL_ncBinding all    L+H          linear seed 0 | Spearman 0.379 (0s)
+   PL_ncBinding all    P+L          linear seed 0 | Spearman 0.317 (0s)
+   PL_ncBinding all    P+L+H        linear seed 0 | Spearman 0.395 (0s)
+   PL_ncBinding all    PCA          linear seed 0 | Spearman 0.363 (0s)
+   PL_ncBinding all    teacher_v3_base linear seed 0 | Spearman 0.417 (0s)
+   PL_ncBinding all    teacher_bot  linear seed 0 | Spearman 0.420 (0s)
+   PL_ncBinding [has_E]: too few usable items (33 of 299) or a one-class split: skipped
+== PL_ncBinding done (5 s)
+   AmpHGT       all    P+L+H        linear seed 0 | MCC 0.642 (234s)
+   PepMSND      has_E  E            linear seed 0 | MCC 0.414 (8s)
+   PepMSND      has_E  P+L+H+E      linear seed 0 | MCC 0.415 (15s)
+   PepMSND      has_E  P+L+H        linear seed 0 | MCC 0.338 (10s)
+   PepMSND      has_E  teacher_v3_base linear seed 0 | MCC 0.373 (3s)
+   PepMSND      has_E  teacher_bot  linear seed 0 | MCC 0.395 (3s)
+   PAMPA [has_E]: too few usable items (0 of 6701) or a one-class split: skipped
+== PAMPA done (628 s)
+   AmpHGT       all    PCA          linear seed 0 | MCC 0.534 (59s)
+== PepMSND done (156 s)
+   AmpHGT       all    teacher_v3_base linear seed 0 | MCC 0.630 (33s)
+   AmpHGT       all    teacher_bot  linear seed 0 | MCC 0.757 (9s)
+   AmpHGT [has_E]: too few usable items (2269 of 16900) or a one-class split: skipped
+== AmpHGT done (845 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            CellPPD  THPep  PepMSND  PAMPA  AmpHGT  AVERAGE
+H                             0.841  0.754    0.480  0.244   0.662    0.602
+L                             0.821  0.742    0.501 -0.635   0.766    0.527
+L+H                           0.854  0.809    0.503 -0.044   0.716    0.595
+P                             0.820  0.630    0.447 -0.290   0.801    0.508
+P+L                           0.827  0.770    0.504 -0.509   0.782    0.540
+P+L+H                         0.867  0.770    0.507  0.146   0.642    0.606
+PCA                           0.907  0.688    0.490  0.153   0.534    0.584
+bot                           0.821  0.543    0.510  0.038   0.757    0.565
+v3_base                       0.920  0.840    0.530  0.072   0.630    0.615
+REF (chosen on validation)    0.841  0.754    0.490 -0.635   0.766    0.527
+BEST single (on test)         0.841  0.754    0.501  0.244   0.801    0.628
+
+                            PL_cCPP  PL_cSol  PL_ncCPP  PL_cBinding  PL_ncBinding  AVERAGE
+H                             0.885    0.704     0.668        0.382         0.406    0.602
+L                             0.915    0.677     0.696        0.415         0.368    0.527
+L+H                           0.911    0.697     0.696        0.429         0.379    0.595
+P                             0.886    0.639     0.655        0.322         0.175    0.508
+P+L                           0.915    0.668     0.710        0.417         0.317    0.540
+P+L+H                         0.912    0.689     0.701        0.432         0.395    0.606
+PCA                           0.905    0.694     0.685        0.423         0.363    0.584
+bot                           0.893    0.688     0.600        0.383         0.420    0.565
+v3_base                       0.925    0.700     0.702        0.416         0.417    0.615
+REF (chosen on validation)    0.915    0.680     0.696        0.389         0.376    0.527
+BEST single (on test)         0.915    0.704     0.696        0.415         0.406    0.628
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_noPAMPA = the same average without PAMPA; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff     95% interval  diff_noPAMPA interval_noPAMPA W/L/T worse99.5
+   REF  linear     L+H 10  0.068   [0.050, 0.084]         0.009  [-0.008, 0.028] 3/1/6         1
+   REF  linear     P+L 10  0.013  [-0.008, 0.034]         0.000  [-0.018, 0.018] 2/0/8         0
+   REF  linear   P+L+H 10  0.079   [0.062, 0.096]         0.001  [-0.016, 0.019] 2/1/7         1
+   REF  linear     PCA 10  0.057   [0.038, 0.076]        -0.024 [-0.045, -0.005] 3/3/4         2
+   REF  linear v3_base 10  0.088   [0.068, 0.108]         0.019   [0.000, 0.039] 4/1/5         1
+   REF  linear     bot 10  0.038   [0.017, 0.060]        -0.032 [-0.056, -0.010] 1/3/6         2
+     H  linear     L+H 10 -0.008  [-0.025, 0.008]         0.023   [0.005, 0.041] 4/1/5         1
+     H  linear     P+L 10 -0.062 [-0.087, -0.038]         0.014  [-0.007, 0.035] 4/3/3         2
+     H  linear   P+L+H 10  0.004  [-0.014, 0.020]         0.015  [-0.003, 0.032] 3/2/5         1
+     H  linear     PCA 10 -0.018 [-0.036, -0.001]        -0.010  [-0.030, 0.008] 4/2/4         2
+     H  linear v3_base 10  0.013  [-0.008, 0.030]         0.033   [0.011, 0.053] 4/2/4         1
+     H  linear     bot 10 -0.037 [-0.058, -0.017]        -0.018  [-0.042, 0.003] 1/3/6         2
+  BEST  linear     L+H 10 -0.033                         -0.004                                 
+  BEST  linear     P+L 10 -0.087                         -0.013                                 
+  BEST  linear   P+L+H 10 -0.022                         -0.013                                 
+  BEST  linear     PCA 10 -0.043                         -0.038                                 
+  BEST  linear v3_base 10 -0.012                          0.005                                 
+  BEST  linear     bot 10 -0.062                         -0.046                                 
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 9 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank  avg_rank_noPAMPA
+v3_base       2.7               2.6
+P+L+H         3.6               3.7
+L+H           4.2               4.0
+P+L           4.6               4.3
+PCA           5.3               5.7
+H             5.3               5.8
+L             5.7               5.3
+bot           5.8               5.9
+P             7.7               7.8
+
+=== items that have E (the only items on which E can be used): primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            CellPPD  THPep  PepMSND  PL_cCPP  PL_cBinding  AVERAGE
+E                             0.732  0.800    0.414    0.936        0.334    0.643
+P+L+H                         0.880  0.770    0.338    0.912        0.322    0.644
+P+L+H+E                       0.891  0.800    0.415    0.934        0.344    0.677
+bot                           0.759  0.543    0.395    0.893        0.304    0.579
+v3_base                       0.867  0.840    0.373    0.928        0.306    0.663
+REF (chosen on validation)    0.780  0.754    0.381    0.915        0.277    0.621
+
+
+=== HEADLINE (has_E): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_wo = the same average without nothing; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff    95% interval  diff_wo     interval_wo W/L/T worse99.5
+   REF  linear   P+L+H  5  0.023 [-0.012, 0.057]    0.023 [-0.012, 0.057] 2/0/3         0
+   REF  linear       E  5  0.022 [-0.019, 0.064]    0.022 [-0.019, 0.064] 1/0/4         0
+   REF  linear P+L+H+E  5  0.055  [0.017, 0.095]    0.055  [0.017, 0.095] 3/0/2         0
+   REF  linear v3_base  5  0.041  [0.002, 0.080]    0.041  [0.002, 0.080] 2/0/3         0
+   REF  linear     bot  5 -0.042 [-0.090, 0.007]   -0.042 [-0.090, 0.007] 0/2/3         1
+  BEST  linear   P+L+H  5    NaN                      NaN                                
+  BEST  linear       E  5    NaN                      NaN                                
+  BEST  linear P+L+H+E  5    NaN                      NaN                                
+  BEST  linear v3_base  5    NaN                      NaN                                
+  BEST  linear     bot  5    NaN                      NaN                                
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 5 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank
+P+L+H+E       1.5
+E             2.5
+v3_base       3.0
+P+L+H         3.6
+bot           4.4
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA   vs_H  worse99.5 PASS  vs_REF_noPAMPA  vs_PCA_noPAMPA  worse_noPAMPA PASS_noPAMPA
+    bot  linear   0.038  -0.019 -0.037        2.0   no          -0.032          -0.008            2.0           no
+    bot     ALL   0.038  -0.019 -0.037        2.0   no          -0.032          -0.008            2.0           no
+v3_base  linear   0.088   0.031  0.013        1.0   no           0.019           0.043            1.0           no
+v3_base     ALL   0.088   0.031  0.013        1.0   no           0.019           0.043            1.0           no
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, PCA, 99.5% intervals)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                           H      L    L+H      P    P+L  P+L+H
+benchmark    subset                                            
+AmpHGT       modified  0.664  0.768  0.718  0.803  0.784  0.644
+             standard  0.000  0.000  0.000  0.000  0.000  0.000
+CellPPD      modified  0.894  0.840  0.896  0.840  0.823  0.896
+             standard  0.783  0.785  0.806  0.783  0.807  0.829
+PAMPA        modified  0.244 -0.635 -0.044 -0.290 -0.509  0.146
+PL_cBinding  modified  0.387  0.430  0.447  0.339  0.431  0.451
+             standard  0.367  0.345  0.357  0.279  0.352  0.359
+PL_cCPP      standard  0.886  0.915  0.911  0.886  0.916  0.912
+PL_cSol      modified  0.702  0.675  0.694  0.638  0.666  0.687
+PL_ncBinding modified  0.350  0.299  0.318  0.161  0.246  0.342
+             standard  0.712  0.679  0.694  0.214  0.684  0.705
+PL_ncCPP     modified  0.668  0.696  0.696  0.655  0.710  0.701
+PepMSND      modified  0.574  0.566  0.606  0.498  0.599  0.614
+             standard  0.347  0.401  0.364  0.350  0.380  0.366
+THPep        standard  0.754  0.742  0.809  0.630  0.770  0.770
+
+                         PCA    bot  v3_base
+benchmark    subset                         
+AmpHGT       modified  0.536  0.759    0.634
+             standard  0.000  0.000    0.000
+CellPPD      modified  0.948  0.858    0.947
+             standard  0.867  0.774    0.892
+PAMPA        modified  0.153  0.038    0.072
+PL_cBinding  modified  0.449  0.399    0.437
+             standard  0.324  0.322    0.333
+PL_cCPP      standard  0.906  0.894    0.926
+PL_cSol      modified  0.691  0.686    0.698
+PL_ncBinding modified  0.313  0.380    0.352
+             standard  0.669  0.562    0.731
+PL_ncCPP     modified  0.685  0.600    0.702
+PepMSND      modified  0.562  0.612    0.611
+             standard  0.380  0.389    0.407
+THPep        standard  0.688  0.543    0.840
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/harness_bot
+11:36:55 == done (exit status 0)

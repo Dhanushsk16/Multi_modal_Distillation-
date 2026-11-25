@@ -1,0 +1,301 @@
+== Thursday 19 November 2026 05:43:57 AM IST | stage train | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_train_20261119_0543.log
+shards: 51, numbers 0..50 | views ['pepland', 'pclm', 'ecfp', 'esm'] | E stays on cpu
+molecules: 3,400,449 cached, 3,400,367 usable: train 3,366,362, validation 34,005 | E present for 81.3% of train, 81.4% of validation | 387 s
+standardising statistics: ALL 3,366,362 training molecules (E: the 2,737,828 that have it) | 9 s
+teacher v3: 37,374,252 trainable parameters | inputs ['P', 'L', 'H'], targets ['P', 'L', 'H', 'E'] | fusion attention pooling (4 learned queries, 8 heads) | latent 1024 | view dropout 0.1 | balance 0.5 | weights {'P': 1.0, 'L': 1.0, 'H': 1.0, 'E': 1.0}
+schedule: AdamW lr 0.0003 | plateau x0.5 every 3 epochs without improvement | epochs <= 100 | patience 10 | 1643 steps per epoch
+epoch   1/100 |  52.3 s | lr 3.0e-04 | train 1.1533 | val 0.4959 = (std 0.4843 + mod 0.5075)/2, natural mix 0.4886 *
+           R2 std: P 0.979 L 0.967 H 0.819 E 0.568 | R2 mod: P 0.980 L 0.949 H 0.579 | own view hidden, std: P 0.923 L 0.808 H 0.613 | mod: P 0.793 L 0.715 H 0.424 | latent sd min 0.311 med 0.470, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.27 0.41 0.32 | q2 0.23 0.51 0.26 | q3 0.29 0.39 0.31 | q4 0.19 0.53 0.28
+epoch   2/100 | 127.8 s | lr 3.0e-04 | train 0.6835 | val 0.4172 = (std 0.4482 + mod 0.3862)/2, natural mix 0.4366 *
+           R2 std: P 0.987 L 0.976 H 0.897 E 0.587 | R2 mod: P 0.986 L 0.965 H 0.667 | own view hidden, std: P 0.942 L 0.839 H 0.650 | mod: P 0.824 L 0.759 H 0.452 | latent sd min 0.284 med 0.425, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.27 0.31 0.42 | q2 0.19 0.61 0.20 | q3 0.32 0.29 0.39 | q4 0.14 0.60 0.26
+epoch   3/100 | 128.3 s | lr 3.0e-04 | train 0.6209 | val 0.3803 = (std 0.4303 + mod 0.3302)/2, natural mix 0.4117 *
+           R2 std: P 0.989 L 0.980 H 0.939 E 0.597 | R2 mod: P 0.988 L 0.972 H 0.714 | own view hidden, std: P 0.947 L 0.857 H 0.676 | mod: P 0.829 L 0.783 H 0.482 | latent sd min 0.259 med 0.392, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.27 0.24 0.49 | q2 0.18 0.63 0.19 | q3 0.35 0.22 0.43 | q4 0.11 0.61 0.28
+epoch   4/100 | 127.2 s | lr 3.0e-04 | train 0.5864 | val 0.3555 = (std 0.4186 + mod 0.2923)/2, natural mix 0.3951 *
+           R2 std: P 0.991 L 0.983 H 0.950 E 0.604 | R2 mod: P 0.990 L 0.976 H 0.742 | own view hidden, std: P 0.950 L 0.867 H 0.697 | mod: P 0.842 L 0.796 H 0.500 | latent sd min 0.237 med 0.369, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.27 0.20 0.53 | q2 0.16 0.67 0.17 | q3 0.35 0.22 0.43 | q4 0.09 0.63 0.28
+epoch   5/100 | 127.6 s | lr 3.0e-04 | train 0.5639 | val 0.3427 = (std 0.4134 + mod 0.2721)/2, natural mix 0.3870 *
+           R2 std: P 0.991 L 0.985 H 0.956 E 0.607 | R2 mod: P 0.991 L 0.977 H 0.761 | own view hidden, std: P 0.953 L 0.869 H 0.713 | mod: P 0.850 L 0.805 H 0.506 | latent sd min 0.219 med 0.346, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.29 0.18 0.53 | q2 0.17 0.65 0.18 | q3 0.37 0.21 0.42 | q4 0.08 0.63 0.29
+epoch   6/100 | 128.1 s | lr 3.0e-04 | train 0.5474 | val 0.3321 = (std 0.4096 + mod 0.2547)/2, natural mix 0.3807 *
+           R2 std: P 0.991 L 0.985 H 0.961 E 0.610 | R2 mod: P 0.991 L 0.979 H 0.775 | own view hidden, std: P 0.959 L 0.873 H 0.721 | mod: P 0.859 L 0.808 H 0.519 | latent sd min 0.216 med 0.325, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.29 0.16 0.55 | q2 0.17 0.65 0.18 | q3 0.37 0.20 0.43 | q4 0.08 0.63 0.29
+epoch   7/100 | 130.2 s | lr 3.0e-04 | train 0.5348 | val 0.3228 = (std 0.4033 + mod 0.2423)/2, natural mix 0.3733 *
+           R2 std: P 0.993 L 0.986 H 0.965 E 0.614 | R2 mod: P 0.992 L 0.980 H 0.787 | own view hidden, std: P 0.962 L 0.883 H 0.734 | mod: P 0.861 L 0.816 H 0.523 | latent sd min 0.203 med 0.307, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.16 0.54 | q2 0.17 0.67 0.16 | q3 0.38 0.20 0.42 | q4 0.09 0.64 0.28
+epoch   8/100 | 120.5 s | lr 3.0e-04 | train 0.5243 | val 0.3133 = (std 0.3996 + mod 0.2270)/2, natural mix 0.3674 *
+           R2 std: P 0.994 L 0.987 H 0.968 E 0.617 | R2 mod: P 0.993 L 0.982 H 0.796 | own view hidden, std: P 0.963 L 0.882 H 0.741 | mod: P 0.873 L 0.821 H 0.530 | latent sd min 0.196 med 0.289, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.30 0.14 0.55 | q2 0.18 0.65 0.17 | q3 0.40 0.19 0.41 | q4 0.08 0.63 0.29
+epoch   9/100 | 119.6 s | lr 3.0e-04 | train 0.5159 | val 0.3096 = (std 0.3971 + mod 0.2221)/2, natural mix 0.3645 *
+           R2 std: P 0.993 L 0.987 H 0.970 E 0.619 | R2 mod: P 0.992 L 0.982 H 0.804 | own view hidden, std: P 0.963 L 0.887 H 0.750 | mod: P 0.864 L 0.825 H 0.536 | latent sd min 0.190 med 0.273, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.30 0.14 0.56 | q2 0.17 0.66 0.17 | q3 0.40 0.19 0.41 | q4 0.08 0.63 0.29
+epoch  10/100 | 118.2 s | lr 3.0e-04 | train 0.5092 | val 0.3018 = (std 0.3934 + mod 0.2102)/2, natural mix 0.3593 *
+           R2 std: P 0.994 L 0.988 H 0.972 E 0.622 | R2 mod: P 0.993 L 0.984 H 0.812 | own view hidden, std: P 0.966 L 0.889 H 0.757 | mod: P 0.876 L 0.827 H 0.539 | latent sd min 0.183 med 0.265, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.30 0.14 0.56 | q2 0.17 0.66 0.17 | q3 0.40 0.19 0.41 | q4 0.08 0.63 0.29
+epoch  11/100 | 119.0 s | lr 3.0e-04 | train 0.5021 | val 0.2973 = (std 0.3915 + mod 0.2032)/2, natural mix 0.3564 *
+           R2 std: P 0.994 L 0.988 H 0.973 E 0.624 | R2 mod: P 0.994 L 0.984 H 0.817 | own view hidden, std: P 0.967 L 0.891 H 0.763 | mod: P 0.880 L 0.830 H 0.543 | latent sd min 0.175 med 0.250, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.13 0.56 | q2 0.18 0.66 0.16 | q3 0.40 0.19 0.41 | q4 0.08 0.64 0.28
+epoch  12/100 | 118.0 s | lr 3.0e-04 | train 0.4959 | val 0.2944 = (std 0.3900 + mod 0.1987)/2, natural mix 0.3543 *
+           R2 std: P 0.994 L 0.988 H 0.973 E 0.625 | R2 mod: P 0.994 L 0.984 H 0.823 | own view hidden, std: P 0.965 L 0.892 H 0.768 | mod: P 0.883 L 0.832 H 0.547 | latent sd min 0.172 med 0.243, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.13 0.56 | q2 0.18 0.66 0.16 | q3 0.41 0.19 0.41 | q4 0.08 0.63 0.29
+epoch  13/100 | 117.9 s | lr 3.0e-04 | train 0.4913 | val 0.2899 = (std 0.3876 + mod 0.1922)/2, natural mix 0.3512 *
+           R2 std: P 0.995 L 0.989 H 0.975 E 0.627 | R2 mod: P 0.994 L 0.985 H 0.828 | own view hidden, std: P 0.968 L 0.897 H 0.774 | mod: P 0.887 L 0.835 H 0.549 | latent sd min 0.166 med 0.234, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.13 0.56 | q2 0.18 0.66 0.16 | q3 0.41 0.19 0.41 | q4 0.09 0.63 0.28
+epoch  14/100 | 118.2 s | lr 3.0e-04 | train 0.4855 | val 0.2871 = (std 0.3859 + mod 0.1883)/2, natural mix 0.3491 *
+           R2 std: P 0.995 L 0.989 H 0.975 E 0.628 | R2 mod: P 0.994 L 0.985 H 0.831 | own view hidden, std: P 0.969 L 0.896 H 0.778 | mod: P 0.885 L 0.836 H 0.553 | latent sd min 0.160 med 0.226, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.30 0.13 0.57 | q2 0.18 0.66 0.16 | q3 0.40 0.19 0.41 | q4 0.08 0.63 0.28
+epoch  15/100 | 118.4 s | lr 3.0e-04 | train 0.4818 | val 0.2847 = (std 0.3851 + mod 0.1843)/2, natural mix 0.3477 *
+           R2 std: P 0.994 L 0.989 H 0.975 E 0.629 | R2 mod: P 0.994 L 0.985 H 0.835 | own view hidden, std: P 0.968 L 0.897 H 0.782 | mod: P 0.881 L 0.835 H 0.554 | latent sd min 0.156 med 0.219, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.13 0.56 | q2 0.18 0.67 0.15 | q3 0.41 0.19 0.40 | q4 0.08 0.63 0.28
+epoch  16/100 | 119.2 s | lr 3.0e-04 | train 0.4777 | val 0.2805 = (std 0.3823 + mod 0.1787)/2, natural mix 0.3444 *
+           R2 std: P 0.995 L 0.989 H 0.977 E 0.631 | R2 mod: P 0.995 L 0.986 H 0.839 | own view hidden, std: P 0.969 L 0.897 H 0.788 | mod: P 0.892 L 0.839 H 0.557 | latent sd min 0.153 med 0.210, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.66 0.16 | q3 0.42 0.18 0.41 | q4 0.08 0.63 0.29
+epoch  17/100 | 118.3 s | lr 3.0e-04 | train 0.4730 | val 0.2789 = (std 0.3818 + mod 0.1759)/2, natural mix 0.3435 *
+           R2 std: P 0.995 L 0.989 H 0.977 E 0.632 | R2 mod: P 0.995 L 0.986 H 0.842 | own view hidden, std: P 0.971 L 0.900 H 0.791 | mod: P 0.895 L 0.841 H 0.560 | latent sd min 0.150 med 0.205, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.18 0.67 0.15 | q3 0.42 0.18 0.40 | q4 0.08 0.63 0.29
+epoch  18/100 | 118.5 s | lr 3.0e-04 | train 0.4702 | val 0.2761 = (std 0.3804 + mod 0.1719)/2, natural mix 0.3415 *
+           R2 std: P 0.995 L 0.990 H 0.978 E 0.633 | R2 mod: P 0.995 L 0.986 H 0.845 | own view hidden, std: P 0.971 L 0.899 H 0.792 | mod: P 0.895 L 0.843 H 0.561 | latent sd min 0.147 med 0.200, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.66 0.15 | q3 0.42 0.18 0.40 | q4 0.08 0.63 0.28
+epoch  19/100 | 119.6 s | lr 3.0e-04 | train 0.4660 | val 0.2748 = (std 0.3786 + mod 0.1709)/2, natural mix 0.3399 *
+           R2 std: P 0.995 L 0.990 H 0.978 E 0.634 | R2 mod: P 0.995 L 0.986 H 0.847 | own view hidden, std: P 0.970 L 0.904 H 0.797 | mod: P 0.894 L 0.843 H 0.562 | latent sd min 0.143 med 0.194, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.66 0.15 | q3 0.43 0.17 0.40 | q4 0.08 0.63 0.29
+epoch  20/100 | 119.3 s | lr 3.0e-04 | train 0.4635 | val 0.2728 = (std 0.3792 + mod 0.1663)/2, natural mix 0.3396 *
+           R2 std: P 0.995 L 0.990 H 0.978 E 0.633 | R2 mod: P 0.995 L 0.986 H 0.850 | own view hidden, std: P 0.972 L 0.905 H 0.800 | mod: P 0.899 L 0.845 H 0.564 | latent sd min 0.139 med 0.191, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.13 0.57 | q2 0.19 0.66 0.15 | q3 0.42 0.18 0.40 | q4 0.08 0.65 0.27
+epoch  21/100 | 120.1 s | lr 3.0e-04 | train 0.4611 | val 0.2714 = (std 0.3784 + mod 0.1645)/2, natural mix 0.3385 *
+           R2 std: P 0.995 L 0.990 H 0.979 E 0.634 | R2 mod: P 0.995 L 0.987 H 0.852 | own view hidden, std: P 0.972 L 0.903 H 0.805 | mod: P 0.899 L 0.847 H 0.567 | latent sd min 0.136 med 0.186, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.56 | q2 0.19 0.66 0.14 | q3 0.43 0.18 0.40 | q4 0.09 0.63 0.28
+epoch  22/100 | 118.3 s | lr 3.0e-04 | train 0.4571 | val 0.2682 = (std 0.3765 + mod 0.1599)/2, natural mix 0.3362 *
+           R2 std: P 0.995 L 0.990 H 0.979 E 0.636 | R2 mod: P 0.996 L 0.987 H 0.855 | own view hidden, std: P 0.970 L 0.903 H 0.805 | mod: P 0.901 L 0.847 H 0.569 | latent sd min 0.134 med 0.181, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.66 0.14 | q3 0.43 0.17 0.40 | q4 0.08 0.63 0.28
+epoch  23/100 | 117.3 s | lr 3.0e-04 | train 0.4549 | val 0.2682 = (std 0.3759 + mod 0.1606)/2, natural mix 0.3358 | no gain for 1/10
+           R2 std: P 0.995 L 0.990 H 0.979 E 0.637 | R2 mod: P 0.995 L 0.987 H 0.856 | own view hidden, std: P 0.971 L 0.905 H 0.807 | mod: P 0.896 L 0.848 H 0.569 | latent sd min 0.135 med 0.179, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.67 0.14 | q3 0.42 0.18 0.40 | q4 0.08 0.64 0.27
+epoch  24/100 | 118.6 s | lr 3.0e-04 | train 0.4524 | val 0.2672 = (std 0.3752 + mod 0.1592)/2, natural mix 0.3349 *
+           R2 std: P 0.995 L 0.991 H 0.979 E 0.637 | R2 mod: P 0.995 L 0.987 H 0.858 | own view hidden, std: P 0.971 L 0.905 H 0.808 | mod: P 0.896 L 0.848 H 0.571 | latent sd min 0.129 med 0.175, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.56 | q2 0.20 0.67 0.13 | q3 0.43 0.18 0.39 | q4 0.08 0.64 0.28
+epoch  25/100 | 120.4 s | lr 3.0e-04 | train 0.4499 | val 0.2650 = (std 0.3749 + mod 0.1550)/2, natural mix 0.3339 *
+           R2 std: P 0.995 L 0.991 H 0.979 E 0.637 | R2 mod: P 0.996 L 0.988 H 0.860 | own view hidden, std: P 0.972 L 0.906 H 0.808 | mod: P 0.907 L 0.850 H 0.573 | latent sd min 0.128 med 0.173, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.56 | q2 0.19 0.67 0.14 | q3 0.42 0.18 0.40 | q4 0.08 0.65 0.27
+epoch  26/100 | 120.6 s | lr 3.0e-04 | train 0.4484 | val 0.2645 = (std 0.3747 + mod 0.1544)/2, natural mix 0.3336 *
+           R2 std: P 0.995 L 0.991 H 0.980 E 0.638 | R2 mod: P 0.995 L 0.987 H 0.861 | own view hidden, std: P 0.973 L 0.908 H 0.810 | mod: P 0.900 L 0.850 H 0.573 | latent sd min 0.122 med 0.168, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.56 | q2 0.19 0.67 0.14 | q3 0.43 0.18 0.40 | q4 0.09 0.64 0.28
+epoch  27/100 | 120.0 s | lr 3.0e-04 | train 0.4444 | val 0.2625 = (std 0.3744 + mod 0.1506)/2, natural mix 0.3327 *
+           R2 std: P 0.995 L 0.991 H 0.980 E 0.637 | R2 mod: P 0.996 L 0.988 H 0.864 | own view hidden, std: P 0.973 L 0.905 H 0.813 | mod: P 0.905 L 0.850 H 0.576 | latent sd min 0.122 med 0.167, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.65 0.15 | q3 0.44 0.17 0.39 | q4 0.08 0.63 0.29
+epoch  28/100 | 117.9 s | lr 3.0e-04 | train 0.4434 | val 0.2626 = (std 0.3740 + mod 0.1512)/2, natural mix 0.3325 | no gain for 1/10
+           R2 std: P 0.995 L 0.990 H 0.980 E 0.638 | R2 mod: P 0.995 L 0.988 H 0.865 | own view hidden, std: P 0.974 L 0.908 H 0.814 | mod: P 0.903 L 0.849 H 0.574 | latent sd min 0.122 med 0.163, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.66 0.15 | q3 0.43 0.17 0.40 | q4 0.08 0.64 0.27
+epoch  29/100 | 119.4 s | lr 3.0e-04 | train 0.4418 | val 0.2608 = (std 0.3727 + mod 0.1489)/2, natural mix 0.3310 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.639 | R2 mod: P 0.996 L 0.988 H 0.866 | own view hidden, std: P 0.974 L 0.907 H 0.815 | mod: P 0.902 L 0.850 H 0.577 | latent sd min 0.118 med 0.159, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.56 | q2 0.20 0.66 0.14 | q3 0.43 0.17 0.40 | q4 0.09 0.63 0.28
+epoch  30/100 | 119.7 s | lr 3.0e-04 | train 0.4384 | val 0.2595 = (std 0.3722 + mod 0.1468)/2, natural mix 0.3302 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.640 | R2 mod: P 0.996 L 0.988 H 0.867 | own view hidden, std: P 0.974 L 0.908 H 0.816 | mod: P 0.905 L 0.852 H 0.578 | latent sd min 0.117 med 0.158, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.56 | q2 0.21 0.65 0.14 | q3 0.44 0.17 0.39 | q4 0.09 0.63 0.28
+epoch  31/100 | 118.9 s | lr 3.0e-04 | train 0.4376 | val 0.2585 = (std 0.3725 + mod 0.1445)/2, natural mix 0.3300 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.639 | R2 mod: P 0.996 L 0.989 H 0.869 | own view hidden, std: P 0.974 L 0.906 H 0.817 | mod: P 0.906 L 0.853 H 0.580 | latent sd min 0.117 med 0.157, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.56 | q2 0.20 0.66 0.14 | q3 0.43 0.17 0.39 | q4 0.08 0.64 0.28
+epoch  32/100 | 119.1 s | lr 3.0e-04 | train 0.4350 | val 0.2575 = (std 0.3710 + mod 0.1440)/2, natural mix 0.3287 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.988 H 0.870 | own view hidden, std: P 0.974 L 0.907 H 0.820 | mod: P 0.909 L 0.852 H 0.578 | latent sd min 0.115 med 0.154, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.56 | q2 0.19 0.67 0.14 | q3 0.43 0.17 0.40 | q4 0.09 0.64 0.28
+epoch  33/100 | 119.6 s | lr 3.0e-04 | train 0.4333 | val 0.2576 = (std 0.3723 + mod 0.1429)/2, natural mix 0.3295 | no gain for 1/10
+           R2 std: P 0.995 L 0.991 H 0.980 E 0.640 | R2 mod: P 0.996 L 0.988 H 0.871 | own view hidden, std: P 0.974 L 0.909 H 0.820 | mod: P 0.908 L 0.850 H 0.580 | latent sd min 0.115 med 0.152, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.66 0.14 | q3 0.43 0.17 0.39 | q4 0.09 0.64 0.28
+epoch  34/100 | 119.0 s | lr 3.0e-04 | train 0.4325 | val 0.2563 = (std 0.3703 + mod 0.1422)/2, natural mix 0.3278 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.989 H 0.873 | own view hidden, std: P 0.975 L 0.910 H 0.822 | mod: P 0.911 L 0.855 H 0.582 | latent sd min 0.113 med 0.150, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.67 0.13 | q3 0.43 0.18 0.39 | q4 0.08 0.65 0.27
+epoch  35/100 | 119.5 s | lr 3.0e-04 | train 0.4289 | val 0.2554 = (std 0.3705 + mod 0.1403)/2, natural mix 0.3276 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.989 H 0.873 | own view hidden, std: P 0.974 L 0.908 H 0.821 | mod: P 0.911 L 0.852 H 0.583 | latent sd min 0.111 med 0.147, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.67 0.14 | q3 0.43 0.17 0.40 | q4 0.08 0.64 0.28
+epoch  36/100 | 118.2 s | lr 3.0e-04 | train 0.4290 | val 0.2552 = (std 0.3720 + mod 0.1383)/2, natural mix 0.3285 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.640 | R2 mod: P 0.996 L 0.989 H 0.875 | own view hidden, std: P 0.974 L 0.910 H 0.821 | mod: P 0.910 L 0.855 H 0.583 | latent sd min 0.109 med 0.146, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.66 0.14 | q3 0.44 0.17 0.39 | q4 0.09 0.64 0.28
+epoch  37/100 | 118.6 s | lr 3.0e-04 | train 0.4267 | val 0.2540 = (std 0.3700 + mod 0.1380)/2, natural mix 0.3268 *
+           R2 std: P 0.996 L 0.991 H 0.982 E 0.641 | R2 mod: P 0.996 L 0.989 H 0.875 | own view hidden, std: P 0.975 L 0.908 H 0.822 | mod: P 0.912 L 0.855 H 0.583 | latent sd min 0.109 med 0.143, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.21 0.65 0.15 | q3 0.44 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  38/100 | 120.5 s | lr 3.0e-04 | train 0.4250 | val 0.2534 = (std 0.3705 + mod 0.1363)/2, natural mix 0.3269 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.989 H 0.876 | own view hidden, std: P 0.975 L 0.909 H 0.821 | mod: P 0.911 L 0.854 H 0.584 | latent sd min 0.108 med 0.142, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.67 0.14 | q3 0.44 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  39/100 | 119.8 s | lr 3.0e-04 | train 0.4248 | val 0.2534 = (std 0.3699 + mod 0.1369)/2, natural mix 0.3265 | no gain for 1/10
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.642 | R2 mod: P 0.996 L 0.989 H 0.877 | own view hidden, std: P 0.975 L 0.910 H 0.824 | mod: P 0.906 L 0.854 H 0.586 | latent sd min 0.106 med 0.141, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.56 | q2 0.20 0.67 0.13 | q3 0.44 0.17 0.39 | q4 0.09 0.64 0.28
+epoch  40/100 | 119.9 s | lr 3.0e-04 | train 0.4212 | val 0.2524 = (std 0.3694 + mod 0.1355)/2, natural mix 0.3258 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.642 | R2 mod: P 0.996 L 0.989 H 0.878 | own view hidden, std: P 0.974 L 0.910 H 0.825 | mod: P 0.914 L 0.856 H 0.587 | latent sd min 0.107 med 0.139, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.68 0.13 | q3 0.43 0.17 0.39 | q4 0.09 0.65 0.26
+epoch  41/100 | 120.3 s | lr 3.0e-04 | train 0.4213 | val 0.2523 = (std 0.3704 + mod 0.1342)/2, natural mix 0.3264 *
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.989 H 0.878 | own view hidden, std: P 0.975 L 0.911 H 0.824 | mod: P 0.911 L 0.857 H 0.587 | latent sd min 0.106 med 0.138, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.44 0.16 0.39 | q4 0.09 0.63 0.29
+epoch  42/100 |  95.7 s | lr 3.0e-04 | train 0.4196 | val 0.2522 = (std 0.3704 + mod 0.1341)/2, natural mix 0.3263 | no gain for 1/10
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.989 H 0.879 | own view hidden, std: P 0.975 L 0.912 H 0.825 | mod: P 0.907 L 0.856 H 0.587 | latent sd min 0.104 med 0.137, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.56 | q2 0.20 0.67 0.14 | q3 0.44 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  43/100 | 101.9 s | lr 3.0e-04 | train 0.4175 | val 0.2519 = (std 0.3700 + mod 0.1337)/2, natural mix 0.3260 *
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.989 H 0.879 | own view hidden, std: P 0.976 L 0.911 H 0.825 | mod: P 0.915 L 0.859 H 0.588 | latent sd min 0.104 med 0.135, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.19 0.67 0.14 | q3 0.44 0.17 0.40 | q4 0.09 0.64 0.27
+epoch  44/100 | 119.9 s | lr 3.0e-04 | train 0.4180 | val 0.2508 = (std 0.3701 + mod 0.1314)/2, natural mix 0.3256 *
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.997 L 0.990 H 0.880 | own view hidden, std: P 0.976 L 0.911 H 0.825 | mod: P 0.916 L 0.858 H 0.589 | latent sd min 0.105 med 0.136, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.66 0.14 | q3 0.44 0.17 0.39 | q4 0.09 0.63 0.28
+epoch  45/100 | 116.9 s | lr 3.0e-04 | train 0.4148 | val 0.2512 = (std 0.3701 + mod 0.1322)/2, natural mix 0.3258 | no gain for 1/10
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.641 | R2 mod: P 0.996 L 0.990 H 0.880 | own view hidden, std: P 0.976 L 0.910 H 0.824 | mod: P 0.912 L 0.857 H 0.588 | latent sd min 0.102 med 0.133, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.44 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  46/100 | 118.2 s | lr 3.0e-04 | train 0.4144 | val 0.2497 = (std 0.3684 + mod 0.1311)/2, natural mix 0.3241 *
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.643 | R2 mod: P 0.997 L 0.989 H 0.881 | own view hidden, std: P 0.976 L 0.912 H 0.825 | mod: P 0.914 L 0.857 H 0.589 | latent sd min 0.103 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.30 0.12 0.58 | q2 0.20 0.66 0.14 | q3 0.44 0.17 0.39 | q4 0.09 0.63 0.28
+epoch  47/100 | 118.8 s | lr 3.0e-04 | train 0.4141 | val 0.2491 = (std 0.3681 + mod 0.1301)/2, natural mix 0.3238 *
+           R2 std: P 0.996 L 0.991 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.989 H 0.882 | own view hidden, std: P 0.976 L 0.913 H 0.827 | mod: P 0.917 L 0.860 H 0.590 | latent sd min 0.102 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.58 | q2 0.20 0.66 0.14 | q3 0.44 0.16 0.39 | q4 0.08 0.63 0.29
+epoch  48/100 | 118.5 s | lr 3.0e-04 | train 0.4110 | val 0.2492 = (std 0.3685 + mod 0.1300)/2, natural mix 0.3240 | no gain for 1/10
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.643 | R2 mod: P 0.996 L 0.990 H 0.882 | own view hidden, std: P 0.976 L 0.911 H 0.826 | mod: P 0.916 L 0.858 H 0.591 | latent sd min 0.103 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.44 0.17 0.39 | q4 0.08 0.64 0.28
+epoch  49/100 | 118.3 s | lr 3.0e-04 | train 0.4115 | val 0.2501 = (std 0.3697 + mod 0.1305)/2, natural mix 0.3251 | no gain for 2/10
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.642 | R2 mod: P 0.996 L 0.990 H 0.882 | own view hidden, std: P 0.976 L 0.909 H 0.825 | mod: P 0.913 L 0.858 H 0.591 | latent sd min 0.102 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  50/100 | 117.9 s | lr 3.0e-04 | train 0.4098 | val 0.2483 = (std 0.3674 + mod 0.1291)/2, natural mix 0.3230 *
+           R2 std: P 0.996 L 0.991 H 0.982 E 0.644 | R2 mod: P 0.997 L 0.990 H 0.883 | own view hidden, std: P 0.976 L 0.912 H 0.827 | mod: P 0.918 L 0.861 H 0.592 | latent sd min 0.101 med 0.127, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.66 0.14 | q3 0.44 0.17 0.39 | q4 0.08 0.63 0.28
+epoch  51/100 | 117.6 s | lr 3.0e-04 | train 0.4077 | val 0.2486 = (std 0.3689 + mod 0.1283)/2, natural mix 0.3241 | no gain for 1/10
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.883 | own view hidden, std: P 0.976 L 0.912 H 0.828 | mod: P 0.914 L 0.859 H 0.590 | latent sd min 0.100 med 0.128, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.44 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  52/100 | 118.6 s | lr 3.0e-04 | train 0.4089 | val 0.2496 = (std 0.3689 + mod 0.1302)/2, natural mix 0.3244 | no gain for 2/10
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.642 | R2 mod: P 0.996 L 0.989 H 0.884 | own view hidden, std: P 0.977 L 0.911 H 0.827 | mod: P 0.914 L 0.859 H 0.592 | latent sd min 0.101 med 0.126, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  53/100 | 120.9 s | lr 3.0e-04 | train 0.4055 | val 0.2471 = (std 0.3674 + mod 0.1269)/2, natural mix 0.3226 *
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.644 | R2 mod: P 0.997 L 0.990 H 0.885 | own view hidden, std: P 0.977 L 0.910 H 0.826 | mod: P 0.917 L 0.860 H 0.591 | latent sd min 0.099 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  54/100 | 119.2 s | lr 3.0e-04 | train 0.4056 | val 0.2479 = (std 0.3695 + mod 0.1263)/2, natural mix 0.3242 | no gain for 1/10
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.885 | own view hidden, std: P 0.977 L 0.912 H 0.827 | mod: P 0.917 L 0.860 H 0.591 | latent sd min 0.100 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.44 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  55/100 | 118.9 s | lr 3.0e-04 | train 0.4044 | val 0.2471 = (std 0.3679 + mod 0.1264)/2, natural mix 0.3229 | no gain for 2/10
+           R2 std: P 0.995 L 0.991 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.990 H 0.885 | own view hidden, std: P 0.976 L 0.913 H 0.826 | mod: P 0.912 L 0.861 H 0.593 | latent sd min 0.099 med 0.124, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.58 | q2 0.22 0.65 0.13 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  56/100 | 118.0 s | lr 3.0e-04 | train 0.4026 | val 0.2472 = (std 0.3686 + mod 0.1258)/2, natural mix 0.3233 | no gain for 3/10
+           R2 std: P 0.995 L 0.991 H 0.981 E 0.643 | R2 mod: P 0.997 L 0.990 H 0.885 | own view hidden, std: P 0.977 L 0.912 H 0.827 | mod: P 0.917 L 0.860 H 0.593 | latent sd min 0.099 med 0.123, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.20 0.66 0.14 | q3 0.44 0.16 0.39 | q4 0.09 0.64 0.27
+epoch  57/100 | 117.6 s | lr 1.5e-04 | train 0.3917 | val 0.2419 = (std 0.3638 + mod 0.1200)/2, natural mix 0.3183 *
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.888 | own view hidden, std: P 0.979 L 0.916 H 0.836 | mod: P 0.923 L 0.866 H 0.600 | latent sd min 0.100 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.44 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  58/100 | 118.1 s | lr 1.5e-04 | train 0.3866 | val 0.2419 = (std 0.3643 + mod 0.1196)/2, natural mix 0.3187 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.979 L 0.916 H 0.837 | mod: P 0.922 L 0.866 H 0.600 | latent sd min 0.100 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  59/100 | 119.6 s | lr 1.5e-04 | train 0.3856 | val 0.2420 = (std 0.3644 + mod 0.1196)/2, natural mix 0.3187 | no gain for 2/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.979 L 0.917 H 0.837 | mod: P 0.926 L 0.865 H 0.600 | latent sd min 0.101 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.44 0.17 0.39 | q4 0.09 0.63 0.28
+epoch  60/100 | 122.2 s | lr 1.5e-04 | train 0.3854 | val 0.2415 = (std 0.3638 + mod 0.1193)/2, natural mix 0.3182 *
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.979 L 0.918 H 0.838 | mod: P 0.925 L 0.867 H 0.600 | latent sd min 0.101 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.20 0.66 0.13 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.28
+epoch  61/100 | 119.0 s | lr 1.5e-04 | train 0.3826 | val 0.2417 = (std 0.3646 + mod 0.1189)/2, natural mix 0.3188 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.979 L 0.919 H 0.837 | mod: P 0.927 L 0.867 H 0.601 | latent sd min 0.102 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.44 0.17 0.39 | q4 0.09 0.63 0.27
+epoch  62/100 | 121.7 s | lr 1.5e-04 | train 0.3836 | val 0.2413 = (std 0.3642 + mod 0.1185)/2, natural mix 0.3184 *
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.979 L 0.917 H 0.839 | mod: P 0.926 L 0.867 H 0.602 | latent sd min 0.102 med 0.126, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.63 0.28
+epoch  63/100 | 120.6 s | lr 1.5e-04 | train 0.3816 | val 0.2413 = (std 0.3644 + mod 0.1183)/2, natural mix 0.3185 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.979 L 0.918 H 0.837 | mod: P 0.926 L 0.867 H 0.599 | latent sd min 0.102 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  64/100 | 118.1 s | lr 1.5e-04 | train 0.3806 | val 0.2417 = (std 0.3654 + mod 0.1180)/2, natural mix 0.3192 | no gain for 2/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.645 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.980 L 0.918 H 0.838 | mod: P 0.928 L 0.867 H 0.601 | latent sd min 0.103 med 0.126, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  65/100 | 119.7 s | lr 1.5e-04 | train 0.3811 | val 0.2407 = (std 0.3634 + mod 0.1180)/2, natural mix 0.3177 *
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.647 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.979 L 0.919 H 0.838 | mod: P 0.927 L 0.867 H 0.600 | latent sd min 0.103 med 0.126, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.58 | q2 0.21 0.66 0.13 | q3 0.45 0.16 0.38 | q4 0.09 0.64 0.27
+epoch  66/100 | 119.9 s | lr 1.5e-04 | train 0.3784 | val 0.2415 = (std 0.3653 + mod 0.1177)/2, natural mix 0.3192 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.645 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.979 L 0.919 H 0.838 | mod: P 0.924 L 0.867 H 0.602 | latent sd min 0.103 med 0.127, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  67/100 | 120.5 s | lr 1.5e-04 | train 0.3790 | val 0.2422 = (std 0.3666 + mod 0.1177)/2, natural mix 0.3202 | no gain for 2/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.644 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.980 L 0.917 H 0.838 | mod: P 0.927 L 0.867 H 0.601 | latent sd min 0.104 med 0.127, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.22 0.65 0.13 | q3 0.45 0.16 0.39 | q4 0.09 0.64 0.27
+epoch  68/100 | 117.1 s | lr 1.5e-04 | train 0.3780 | val 0.2410 = (std 0.3646 + mod 0.1174)/2, natural mix 0.3185 | no gain for 3/10
+           R2 std: P 0.996 L 0.992 H 0.983 E 0.646 | R2 mod: P 0.997 L 0.991 H 0.891 | own view hidden, std: P 0.979 L 0.918 H 0.838 | mod: P 0.927 L 0.868 H 0.603 | latent sd min 0.104 med 0.127, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  69/100 | 119.8 s | lr 7.5e-05 | train 0.3701 | val 0.2384 = (std 0.3619 + mod 0.1149)/2, natural mix 0.3159 *
+           R2 std: P 0.996 L 0.993 H 0.984 E 0.648 | R2 mod: P 0.998 L 0.992 H 0.892 | own view hidden, std: P 0.981 L 0.921 H 0.843 | mod: P 0.930 L 0.870 H 0.606 | latent sd min 0.105 med 0.128, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.13 | q3 0.45 0.16 0.39 | q4 0.09 0.64 0.27
+epoch  70/100 | 116.8 s | lr 7.5e-05 | train 0.3696 | val 0.2387 = (std 0.3626 + mod 0.1148)/2, natural mix 0.3164 | no gain for 1/10
+           R2 std: P 0.996 L 0.993 H 0.983 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.892 | own view hidden, std: P 0.980 L 0.921 H 0.844 | mod: P 0.930 L 0.870 H 0.606 | latent sd min 0.105 med 0.128, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.13 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  71/100 | 116.6 s | lr 7.5e-05 | train 0.3674 | val 0.2387 = (std 0.3628 + mod 0.1145)/2, natural mix 0.3165 | no gain for 2/10
+           R2 std: P 0.997 L 0.993 H 0.983 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.892 | own view hidden, std: P 0.981 L 0.921 H 0.843 | mod: P 0.932 L 0.871 H 0.606 | latent sd min 0.105 med 0.128, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  72/100 | 116.9 s | lr 7.5e-05 | train 0.3669 | val 0.2387 = (std 0.3629 + mod 0.1145)/2, natural mix 0.3166 | no gain for 3/10
+           R2 std: P 0.996 L 0.993 H 0.983 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.892 | own view hidden, std: P 0.981 L 0.921 H 0.844 | mod: P 0.931 L 0.870 H 0.605 | latent sd min 0.106 med 0.128, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.63 0.28
+epoch  73/100 | 118.0 s | lr 3.7e-05 | train 0.3639 | val 0.2377 = (std 0.3621 + mod 0.1134)/2, natural mix 0.3157 *
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.981 L 0.923 H 0.846 | mod: P 0.933 L 0.872 H 0.608 | latent sd min 0.106 med 0.129, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  74/100 | 116.9 s | lr 3.7e-05 | train 0.3620 | val 0.2383 = (std 0.3634 + mod 0.1132)/2, natural mix 0.3168 | no gain for 1/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.981 L 0.923 H 0.846 | mod: P 0.933 L 0.872 H 0.608 | latent sd min 0.106 med 0.129, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.27
+epoch  75/100 | 118.7 s | lr 3.7e-05 | train 0.3619 | val 0.2378 = (std 0.3624 + mod 0.1132)/2, natural mix 0.3159 | no gain for 2/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.981 L 0.923 H 0.846 | mod: P 0.933 L 0.872 H 0.609 | latent sd min 0.107 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.64 0.27
+epoch  76/100 | 120.2 s | lr 3.7e-05 | train 0.3607 | val 0.2381 = (std 0.3630 + mod 0.1131)/2, natural mix 0.3165 | no gain for 3/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.981 L 0.923 H 0.846 | mod: P 0.933 L 0.872 H 0.608 | latent sd min 0.107 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.63 0.28
+epoch  77/100 | 118.9 s | lr 1.9e-05 | train 0.3593 | val 0.2375 = (std 0.3624 + mod 0.1126)/2, natural mix 0.3158 *
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.847 | mod: P 0.934 L 0.873 H 0.609 | latent sd min 0.107 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.64 0.27
+epoch  78/100 | 118.5 s | lr 1.9e-05 | train 0.3584 | val 0.2373 = (std 0.3621 + mod 0.1125)/2, natural mix 0.3156 *
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.848 | mod: P 0.934 L 0.873 H 0.609 | latent sd min 0.107 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.64 0.27
+epoch  79/100 | 117.2 s | lr 1.9e-05 | train 0.3580 | val 0.2375 = (std 0.3624 + mod 0.1125)/2, natural mix 0.3158 | no gain for 1/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.847 | mod: P 0.934 L 0.873 H 0.609 | latent sd min 0.108 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  80/100 | 117.0 s | lr 1.9e-05 | train 0.3581 | val 0.2376 = (std 0.3628 + mod 0.1124)/2, natural mix 0.3161 | no gain for 2/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.847 | mod: P 0.934 L 0.873 H 0.609 | latent sd min 0.107 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.16 0.39 | q4 0.09 0.64 0.27
+epoch  81/100 | 118.3 s | lr 1.9e-05 | train 0.3578 | val 0.2375 = (std 0.3626 + mod 0.1124)/2, natural mix 0.3160 | no gain for 3/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.848 | mod: P 0.933 L 0.873 H 0.610 | latent sd min 0.108 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.32 0.12 0.57 | q2 0.21 0.65 0.13 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  82/100 | 119.0 s | lr 9.4e-06 | train 0.3568 | val 0.2373 = (std 0.3624 + mod 0.1121)/2, natural mix 0.3158 | no gain for 4/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.848 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  83/100 | 118.0 s | lr 9.4e-06 | train 0.3562 | val 0.2372 = (std 0.3624 + mod 0.1121)/2, natural mix 0.3157 | no gain for 5/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.848 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  84/100 | 106.5 s | lr 9.4e-06 | train 0.3561 | val 0.2373 = (std 0.3624 + mod 0.1121)/2, natural mix 0.3158 | no gain for 6/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.848 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  85/100 |  88.4 s | lr 4.7e-06 | train 0.3558 | val 0.2373 = (std 0.3626 + mod 0.1120)/2, natural mix 0.3159 | no gain for 7/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.849 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  86/100 | 118.7 s | lr 4.7e-06 | train 0.3554 | val 0.2372 = (std 0.3624 + mod 0.1120)/2, natural mix 0.3157 *
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.982 L 0.924 H 0.849 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.131, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  87/100 | 117.2 s | lr 4.7e-06 | train 0.3552 | val 0.2373 = (std 0.3626 + mod 0.1119)/2, natural mix 0.3159 | no gain for 1/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  88/100 | 117.0 s | lr 4.7e-06 | train 0.3556 | val 0.2373 = (std 0.3627 + mod 0.1119)/2, natural mix 0.3160 | no gain for 2/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.924 H 0.849 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  89/100 | 116.9 s | lr 4.7e-06 | train 0.3549 | val 0.2373 = (std 0.3626 + mod 0.1119)/2, natural mix 0.3159 | no gain for 3/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.924 H 0.849 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  90/100 | 116.7 s | lr 2.3e-06 | train 0.3550 | val 0.2373 = (std 0.3627 + mod 0.1119)/2, natural mix 0.3159 | no gain for 4/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  91/100 | 116.8 s | lr 2.3e-06 | train 0.3550 | val 0.2372 = (std 0.3626 + mod 0.1119)/2, natural mix 0.3158 | no gain for 5/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.934 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  92/100 | 117.1 s | lr 2.3e-06 | train 0.3550 | val 0.2372 = (std 0.3626 + mod 0.1119)/2, natural mix 0.3158 | no gain for 6/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.935 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  93/100 | 116.9 s | lr 1.2e-06 | train 0.3545 | val 0.2372 = (std 0.3625 + mod 0.1118)/2, natural mix 0.3158 | no gain for 7/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.935 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  94/100 | 116.9 s | lr 1.2e-06 | train 0.3546 | val 0.2372 = (std 0.3626 + mod 0.1118)/2, natural mix 0.3158 | no gain for 8/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.935 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.65 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  95/100 | 117.6 s | lr 1.2e-06 | train 0.3548 | val 0.2372 = (std 0.3626 + mod 0.1118)/2, natural mix 0.3159 | no gain for 9/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.935 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+epoch  96/100 | 116.8 s | lr 5.9e-07 | train 0.3546 | val 0.2372 = (std 0.3626 + mod 0.1118)/2, natural mix 0.3158 | no gain for 10/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.982 L 0.925 H 0.849 | mod: P 0.935 L 0.874 H 0.610 | latent sd min 0.108 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+           attention weights (mean over validation molecules; views P/L/H): q1 0.31 0.12 0.57 | q2 0.21 0.66 0.14 | q3 0.45 0.17 0.39 | q4 0.09 0.64 0.27
+early stop: no improvement of the validation loss by 0.0001 for 10 epochs; best epoch 86 (val 0.2372)
+latent statistics (ALL 3,366,362 training rows) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_attn/latent_stats.npz
+latent sd per dimension before standardising: min 0.1081, median 0.132, max 0.8312 | 0 of 1024 dimensions are below the floor 0.0132 (0.1 x the median) and come out with a standardised sd below 1
+benchmark embeddings: 26029 molecules, 1024-d, usable 26029 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_v3_attn.npz
+done. checkpoint /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_attn/best.pt | next: python src/teacher/eval_harness.py --teachers v3_attn --out harness_v3_attn
+benchmark embeddings: 12567 molecules, 1024-d, usable 12567 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_v3_attn.npz
+== done 08:59 (exit status 0)

@@ -1,0 +1,113 @@
+{
+ "file": "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/clean.parquet",
+ "thresh": null,
+ "pool": 10245107,
+ "noncanonical": 644923,
+ "nc_pct": 6.29,
+ "above_30": 764536,
+ "above_30_pct": 7.46,
+ "by_source_kind": [
+  {
+   "source": "pclm_pubchem",
+   "kind": "canonical",
+   "n": 33415,
+   "median": 9.0,
+   "p90": 20.0,
+   "gt30": 375,
+   "pool_pct": 0.3,
+   "gt30_pct": 1.1
+  },
+  {
+   "source": "pclm_pubchem",
+   "kind": "noncanonical",
+   "n": 644923,
+   "median": 5.0,
+   "p90": 12.0,
+   "gt30": 4505,
+   "pool_pct": 6.3,
+   "gt30_pct": 0.7
+  },
+  {
+   "source": "pepland_stage1",
+   "kind": "canonical",
+   "n": 7072506,
+   "median": 13.0,
+   "p90": 26.0,
+   "gt30": 0,
+   "pool_pct": 69.0,
+   "gt30_pct": 0.0
+  },
+  {
+   "source": "pclm_esmatlas",
+   "kind": "canonical",
+   "n": 2494263,
+   "median": 26.0,
+   "p90": 38.0,
+   "gt30": 759656,
+   "pool_pct": 24.3,
+   "gt30_pct": 30.5
+  }
+ ],
+ "caps": [
+  {
+   "cap": 20,
+   "pool": 6327776,
+   "kept_pct": 61.8,
+   "canonical": 5697054,
+   "noncanonical": 630722,
+   "nc_pct": 10.0,
+   "nc_cyclic": 205393,
+   "N_max@15%": 4204813,
+   "N_max@25%": 2522888,
+   "N_max@35%": 1802062
+  },
+  {
+   "cap": 25,
+   "pool": 8104109,
+   "kept_pct": 79.1,
+   "canonical": 7467832,
+   "noncanonical": 636277,
+   "nc_pct": 7.9,
+   "nc_cyclic": 207336,
+   "N_max@15%": 4241846,
+   "N_max@25%": 2545108,
+   "N_max@35%": 1817934
+  },
+  {
+   "cap": 30,
+   "pool": 9480571,
+   "kept_pct": 92.5,
+   "canonical": 8840153,
+   "noncanonical": 640418,
+   "nc_pct": 6.8,
+   "nc_cyclic": 208610,
+   "N_max@15%": 4269453,
+   "N_max@25%": 2561672,
+   "N_max@35%": 1829765
+  },
+  {
+   "cap": 40,
+   "pool": 10069906,
+   "kept_pct": 98.3,
+   "canonical": 9425488,
+   "noncanonical": 644418,
+   "nc_pct": 6.4,
+   "nc_cyclic": 210301,
+   "N_max@15%": 4296120,
+   "N_max@25%": 2577672,
+   "N_max@35%": 1841194
+  },
+  {
+   "cap": 50,
+   "pool": 10245107,
+   "kept_pct": 100.0,
+   "canonical": 9600184,
+   "noncanonical": 644923,
+   "nc_pct": 6.3,
+   "nc_cyclic": 210492,
+   "N_max@15%": 4299486,
+   "N_max@25%": 2579692,
+   "N_max@35%": 1842637
+  }
+ ]
+}

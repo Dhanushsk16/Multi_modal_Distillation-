@@ -1,0 +1,15 @@
+{
+  "model": "s512x4",
+  "device": "cuda",
+  "dtype": "bf16",
+  "batch": 16,
+  "params_M": 10.9,
+  "n_molecules": 300,
+  "n_real_tokens": 28464,
+  "sweep_s_mean": 0.0861,
+  "sweep_s_sd": 0.0002,
+  "ms_per_molecule": 0.287,
+  "molecules_per_s": 3483.3,
+  "tokens_per_s": 330494.9,
+  "peak_mem_MB": 92.0
+}

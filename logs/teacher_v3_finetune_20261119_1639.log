@@ -1,0 +1,63 @@
+== Thursday 19 November 2026 04:39:52 PM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261119_1639.log
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/binding_prot_ft | latent statistics: yes
+teacher v3_base: inputs ['pepland', 'pclm', 'ecfp'], latent 1024-d, 35.3M parameters | variants ['ft'] | benchmarks ['PL_cBindingProt', 'PL_ncBindingProt', 'PL_cBindingProtUnseen', 'PL_ncBindingProtUnseen']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 1
+   PL_cBindingProt ft seed 0 fold 1/5 (362 molecules, 5 models) 69s
+   PL_cBindingProt ft seed 0 fold 2/5 (342 molecules, 5 models) 140s
+   PL_cBindingProt ft seed 0 fold 3/5 (358 molecules, 5 models) 210s
+   PL_cBindingProt ft seed 0 fold 4/5 (355 molecules, 5 models) 273s
+   PL_cBindingProt ft seed 0 fold 5/5 (384 molecules, 5 models) 316s
+PL_cBindingProt ft       done (316s) | R2 0.355 (pooled 0.356) | epochs run 32, best at 22, hit the 100-epoch cap in 0 of 25 fits
+   PL_ncBindingProt ft seed 0 fold 1/5 (54 molecules, 5 models) 16s
+   PL_ncBindingProt ft seed 0 fold 2/5 (54 molecules, 5 models) 33s
+   PL_ncBindingProt ft seed 0 fold 3/5 (63 molecules, 5 models) 45s
+   PL_ncBindingProt ft seed 0 fold 4/5 (55 molecules, 5 models) 60s
+   PL_ncBindingProt ft seed 0 fold 5/5 (73 molecules, 5 models) 74s
+PL_ncBindingProt ft       done (74s) | R2 0.325 (pooled 0.351) | epochs run 25, best at 15, hit the 100-epoch cap in 0 of 25 fits
+   PL_cBindingProtUnseen ft seed 0 fold 1/5 (352 molecules, 5 models) 79s
+   PL_cBindingProtUnseen ft seed 0 fold 2/5 (368 molecules, 5 models) 134s
+   PL_cBindingProtUnseen ft seed 0 fold 3/5 (361 molecules, 5 models) 182s
+   PL_cBindingProtUnseen ft seed 0 fold 4/5 (335 molecules, 5 models) 252s
+   PL_cBindingProtUnseen ft seed 0 fold 5/5 (385 molecules, 5 models) 299s
+PL_cBindingProtUnseen ft       done (299s) | R2 0.252 (pooled 0.259) | epochs run 30, best at 20, hit the 100-epoch cap in 0 of 25 fits
+   PL_ncBindingProtUnseen ft seed 0 fold 1/5 (66 molecules, 5 models) 13s
+   PL_ncBindingProtUnseen ft seed 0 fold 2/5 (78 molecules, 5 models) 27s
+   PL_ncBindingProtUnseen ft seed 0 fold 3/5 (48 molecules, 5 models) 43s
+   PL_ncBindingProtUnseen ft seed 0 fold 4/5 (56 molecules, 5 models) 61s
+   PL_ncBindingProtUnseen ft seed 0 fold 5/5 (51 molecules, 5 models) 77s
+PL_ncBindingProtUnseen ft       done (77s) | R2 0.080 (pooled 0.124) | epochs run 27, best at 17, hit the 100-epoch cap in 0 of 25 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode                       ft
+benchmark                    
+PL_cBindingProt         0.355
+PL_cBindingProtUnseen   0.252
+PL_ncBindingProt        0.325
+PL_ncBindingProtUnseen  0.080
+
+=== the same on the POOLED predictions of all folds (cluster-CV benchmarks only) ===
+mode                       ft
+benchmark                    
+PL_cBindingProt         0.356
+PL_cBindingProtUnseen   0.259
+PL_ncBindingProt        0.351
+PL_ncBindingProtUnseen  0.124
+
+=== test molecules that are standard chains (ESM-2 vector exists) / modified chains: MCC or R2 ===
+                             n_esm  head_esm  n_noesm  head_noesm
+benchmark              mode                                      
+PL_cBindingProt        ft    429.0     0.261   1372.0       0.387
+PL_cBindingProtUnseen  ft    429.0     0.217   1372.0       0.271
+PL_ncBindingProt       ft     33.0     0.655    266.0       0.270
+PL_ncBindingProtUnseen ft     33.0     0.114    266.0       0.094
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                              run  best  capped  fits
+benchmark              mode                          
+PL_cBindingProt        ft    32.0  22.0       0    25
+PL_cBindingProtUnseen  ft    30.4  20.4       0    25
+PL_ncBindingProt       ft    25.4  15.4       0    25
+PL_ncBindingProtUnseen ft    27.0  17.0       0    25
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/binding_prot_ft
+== done 16:52 (exit status 0)

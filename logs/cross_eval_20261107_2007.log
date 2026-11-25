@@ -1,0 +1,270 @@
+== Saturday 07 November 2026 08:07:03 PM IST | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/cross_eval_20261107_2007.log
+
+== features: ECFP, PepLand suite  (20:07, env peptide)
+ecfp: 12567 molecules -> (12567, 2048) | failed 0 | 0.0 min
+
+== features: PeptideCLM-2, PepLand suite  (20:07, env peptide)
+pclm: 12567 molecules -> (12567, 1024) | failed 0 | 0.7 min
+
+== features: PepLand, PepLand suite (the slow one)  (20:08, env pepland)
+2026/11/07 20:08:04 WARNING mlflow.pytorch: Stored model version '1.11.0' does not match installed PyTorch version '2.2.2+cpu'
+loading model from : /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/pepland_model
+     0/12567  0.0 min
+nothing to cut, not a peptide CC(C)(C)c1ccc(S(=O)(=O)O)cc1
+nothing to cut, not a peptide CC(C)(C)c1ccc(S(=O)(=O)O)cc1
+  3200/12567  1.8 min
+nothing to cut, not a peptide CC(N)c1ccccc1
+nothing to cut, not a peptide CC(N)c1ccccc1
+  6400/12567  4.4 min
+Warning Unfound fragments CCC[Se]C
+Warning Unfound fragments CCC[Se]C
+  9600/12567  19.9 min
+Warning Unfound fragments NCCS(=O)(=O)O
+Warning Unfound fragments CCC[Se]C
+nothing to cut, not a peptide NC(CCc1ccccc1)P(=O)(O)O
+nothing to cut, not a peptide NC(CCc1ccccc1)P(=O)(O)O
+nothing to cut, not a peptide NC(N)=NCc1cccc(CC=O)c1
+nothing to cut, not a peptide NC(N)=NCc1cccc(CC=O)c1
+nothing to cut, not a peptide NCCCCN=C(N)N
+nothing to cut, not a peptide NCCCCN=C(N)N
+nothing to cut, not a peptide Nc1nc2c(ncn2C2OC(COP(=O)(O)O)C(O)C2O)c(=O)[nH]1
+nothing to cut, not a peptide Nc1nc2c(ncn2C2OC(COP(=O)(O)O)C(O)C2O)c(=O)[nH]1
+Warning Unfound fragments Nc1nc2c(ncn2C2OC(COP(=O)(O)O)C(O)C2O)c(=O)[nH]1
+nothing to cut, not a peptide O=C(Cl)OCc1ccccc1
+nothing to cut, not a peptide O=C(Cl)OCc1ccccc1
+nothing to cut, not a peptide O=C(O)[C@@H]1CCCN1
+nothing to cut, not a peptide O=C(O)[C@@H]1CCCN1
+nothing to cut, not a peptide O=CCc1ccccc1
+nothing to cut, not a peptide O=CCc1ccccc1
+nothing to cut, not a peptide OCCOC1OC(CO)C(O)C(O)C1O
+nothing to cut, not a peptide OCCOC1OC(CO)C(O)C(O)C1O
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2[nH]cnc2n1
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2[nH]cnc2n1
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2cc[nH]c2n1
+nothing to cut, not a peptide c1nc(N2CCNCC2)c2cc[nH]c2n1
+pepland: 12567 molecules -> (12567, 300) | failed 0 | 35.0 min
+
+== A: PeptideCLM-2 suite, ECFP / PeptideCLM-2 / PepLand  (20:43, env peptide)
+representations: ['ecfp', 'pclm', 'pepland']
+CellPPD  ecfp       done (31.8s) | mlp MCC 0.873
+CellPPD  pclm       done (18.2s) | mlp MCC 0.834
+CellPPD  pepland    done (7.2s) | mlp MCC 0.834
+THPep    ecfp       done (14.1s) | mlp MCC 0.804
+THPep    pclm       done (9.1s) | mlp MCC 0.784
+THPep    pepland    done (3.9s) | mlp MCC 0.670
+PepMSND  ecfp       done (205.7s) | mlp MCC 0.546
+PepMSND  pclm       done (129.0s) | mlp MCC 0.470
+PepMSND  pepland    done (46.5s) | mlp MCC 0.464
+PAMPA    ecfp       done (406.0s) | mlp R2 -0.283
+PAMPA    pclm       done (240.5s) | mlp R2 -0.096
+PAMPA    pepland    done (99.3s) | mlp R2 0.150
+AmpHGT   ecfp       done (111.3s) | mlp MCC 0.651
+AmpHGT   pclm       done (152.8s) | mlp MCC 0.843
+AmpHGT   pepland    done (57.4s) | mlp MCC 0.776
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+AmpHGT    gbt      0.872  0.797    0.838
+          linear   0.606  0.767    0.799
+          mlp      0.622  0.833    0.796
+CellPPD   gbt      0.927  0.881    0.801
+          linear   0.848  0.821    0.820
+          mlp      0.836  0.865    0.785
+PAMPA     gbt      0.309 -0.077    0.257
+          linear   0.111 -0.938   -0.477
+          mlp     -0.250 -0.152    0.088
+PepMSND   gbt      0.572  0.549    0.512
+          linear   0.472  0.502    0.450
+          mlp      0.533  0.508    0.453
+THPep     gbt      0.792  0.693    0.522
+          linear   0.775  0.742    0.630
+          mlp      0.763  0.756    0.586
+
+=== AUROC (classification), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+AmpHGT    gbt      0.982  0.964    0.982
+          linear   0.853  0.935    0.941
+          mlp      0.801  0.965    0.946
+CellPPD   gbt      0.993  0.975    0.968
+          linear   0.981  0.972    0.970
+          mlp      0.974  0.979    0.963
+PepMSND   gbt      0.857  0.860    0.849
+          linear   0.814  0.823    0.774
+          mlp      0.829  0.827    0.790
+THPep     gbt      0.956  0.963    0.888
+          linear   0.965  0.948    0.941
+          mlp      0.950  0.925    0.865
+
+=== accuracy (classification), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+AmpHGT    gbt      0.935  0.893    0.916
+          linear   0.803  0.884    0.899
+          mlp      0.811  0.916    0.898
+CellPPD   gbt      0.963  0.940    0.900
+          linear   0.923  0.910    0.910
+          mlp      0.918  0.932    0.892
+PepMSND   gbt      0.792  0.781    0.764
+          linear   0.741  0.758    0.733
+          mlp      0.770  0.760    0.734
+THPep     gbt      0.910  0.877    0.811
+          linear   0.910  0.893    0.844
+          mlp      0.899  0.893    0.833
+
+=== F1 (classification), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+AmpHGT    gbt      0.940  0.906    0.925
+          linear   0.807  0.889    0.907
+          mlp      0.821  0.922    0.905
+CellPPD   gbt      0.963  0.939    0.898
+          linear   0.922  0.907    0.909
+          mlp      0.918  0.931    0.890
+PepMSND   gbt      0.749  0.735    0.713
+          linear   0.665  0.702    0.653
+          mlp      0.719  0.717    0.670
+THPep     gbt      0.853  0.776    0.646
+          linear   0.836  0.817    0.740
+          mlp      0.832  0.828    0.700
+
+=== Pearson r (regression), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+PAMPA     gbt      0.606  0.401    0.525
+          linear   0.503  0.328    0.355
+          mlp      0.428  0.403    0.516
+
+=== Spearman (regression), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+PAMPA     gbt      0.598  0.366    0.474
+          linear   0.516  0.304    0.430
+          mlp      0.470  0.353    0.512
+
+=== RMSE (regression, lower is better), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+PAMPA     gbt      0.612  0.761    0.640
+          linear   0.712  0.977    0.865
+          mlp      0.841  0.760    0.700
+
+AmpHGT test restricted to <=30 residues (MCC):
+rep       ecfp   pclm  pepland
+learner                       
+gbt      0.657  0.530    0.602
+linear   0.161  0.404    0.414
+mlp      0.288  0.592    0.472
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/cross_main
+
+== B: PepLand suite, ECFP / PeptideCLM-2 / PepLand  (21:08, env peptide)
+representations: ['ecfp', 'pclm', 'pepland']
+PL_cCPP  ecfp       done (167.4s) | mlp MCC 0.697
+PL_cCPP  pclm       done (133.8s) | mlp MCC 0.697
+PL_cCPP  pepland    done (51.8s) | mlp MCC 0.681
+PL_cSol  ecfp       done (133.2s) | mlp MCC 0.251
+PL_cSol  pclm       done (110.9s) | mlp MCC 0.228
+PL_cSol  pepland    done (42.4s) | mlp MCC 0.146
+PL_ncCPP ecfp       done (344.1s) | mlp R2 -0.216
+PL_ncCPP pclm       done (189.4s) | mlp R2 0.385
+PL_ncCPP pepland    done (91.2s) | mlp R2 0.393
+PL_cBinding ecfp       done (157.4s) | mlp R2 -0.589
+PL_cBinding pclm       done (120.5s) | mlp R2 0.113
+PL_cBinding pepland    done (47.1s) | mlp R2 -0.397
+PL_ncBinding ecfp       done (45.6s) | mlp R2 -0.627
+PL_ncBinding pclm       done (32.6s) | mlp R2 -1.186
+PL_ncBinding pepland    done (12.5s) | mlp R2 -0.583
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                    ecfp   pclm  pepland
+benchmark    learner                       
+PL_cBinding  gbt      0.166  0.219    0.133
+             linear   0.114  0.186   -0.297
+             mlp     -0.689  0.081   -0.487
+PL_cCPP      gbt      0.786  0.732    0.701
+             linear   0.617  0.667    0.629
+             mlp      0.701  0.711    0.675
+PL_cSol      gbt      0.269  0.243    0.168
+             linear   0.234  0.253    0.204
+             mlp      0.269  0.228    0.177
+PL_ncBinding gbt      0.085  0.073    0.250
+             linear   0.141 -0.247   -0.134
+             mlp     -0.501 -1.169   -0.595
+PL_ncCPP     gbt      0.446  0.406    0.362
+             linear   0.319  0.384    0.304
+             mlp      0.132  0.382    0.400
+
+=== AUROC (classification), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+PL_cCPP   gbt      0.952  0.939    0.928
+          linear   0.885  0.915    0.886
+          mlp      0.923  0.924    0.905
+PL_cSol   gbt      0.713  0.682    0.625
+          linear   0.707  0.676    0.638
+          mlp      0.717  0.671    0.626
+
+=== accuracy (classification), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+PL_cCPP   gbt      0.893  0.865    0.850
+          linear   0.809  0.834    0.815
+          mlp      0.850  0.855    0.837
+PL_cSol   gbt      0.652  0.642    0.608
+          linear   0.646  0.653    0.633
+          mlp      0.652  0.631    0.612
+
+=== F1 (classification), mean over seeds ===
+rep                 ecfp   pclm  pepland
+benchmark learner                       
+PL_cCPP   gbt      0.892  0.863    0.846
+          linear   0.807  0.833    0.812
+          mlp      0.850  0.855    0.835
+PL_cSol   gbt      0.717  0.714    0.688
+          linear   0.748  0.744    0.732
+          mlp      0.718  0.696    0.694
+
+=== Pearson r (regression), mean over seeds ===
+rep                    ecfp   pclm  pepland
+benchmark    learner                       
+PL_cBinding  gbt      0.455  0.475    0.392
+             linear   0.375  0.446    0.188
+             mlp      0.243  0.406    0.280
+PL_ncBinding gbt      0.467  0.410    0.550
+             linear   0.458  0.397    0.212
+             mlp      0.304  0.346    0.261
+PL_ncCPP     gbt      0.669  0.640    0.613
+             linear   0.566  0.622    0.558
+             mlp      0.535  0.628    0.636
+
+=== Spearman (regression), mean over seeds ===
+rep                    ecfp   pclm  pepland
+benchmark    learner                       
+PL_cBinding  gbt      0.413  0.433    0.367
+             linear   0.396  0.417    0.333
+             mlp      0.300  0.375    0.344
+PL_ncBinding gbt      0.420  0.370    0.495
+             linear   0.440  0.380    0.293
+             mlp      0.308  0.320    0.319
+PL_ncCPP     gbt      0.753  0.736    0.723
+             linear   0.645  0.696    0.655
+             mlp      0.661  0.693    0.712
+
+=== RMSE (regression, lower is better), mean over seeds ===
+rep                    ecfp   pclm  pepland
+benchmark    learner                       
+PL_cBinding  gbt      1.423  1.380    1.454
+             linear   1.471  1.409    1.771
+             mlp      1.974  1.495    1.811
+PL_ncBinding gbt      1.713  1.725    1.555
+             linear   1.667  1.950    1.912
+             mlp      2.192  2.527    2.234
+PL_ncCPP     gbt      0.796  0.825    0.854
+             linear   0.883  0.839    0.892
+             mlp      0.977  0.841    0.829
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/cross_pepland
+
+== done 21:36: results in /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/cross_main and /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/cross_pepland

@@ -1,0 +1,205 @@
+== Tuesday 17 November 2026 08:20:26 PM IST | stage train | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_train_20261117_2020.log
+shards: 51, numbers 0..50 | views ['pepland', 'pclm', 'ecfp', 'esm'] | E stays on cpu
+molecules: 3,400,449 cached, 3,400,367 usable: train 3,366,362, validation 34,005 | E present for 81.3% of train, 81.4% of validation | 312 s
+standardising statistics: ALL 3,366,362 training molecules (E: the 2,737,828 that have it) | 19 s
+teacher v3: 35,270,444 trainable parameters | inputs ['P', 'L', 'H'], targets ['P', 'L', 'H', 'E'] | latent 1024 | view dropout 0.1 | balance 0.5 | weights {'P': 1.0, 'L': 1.0, 'H': 1.0, 'E': 1.0}
+schedule: AdamW lr 0.0003 | plateau x0.5 every 3 epochs without improvement | epochs <= 100 | patience 10 | 1643 steps per epoch
+epoch   1/100 | 137.5 s | lr 3.0e-04 | train 1.1223 | val 0.4602 = (std 0.4728 + mod 0.4476)/2, natural mix 0.4681 *
+           R2 std: P 0.983 L 0.970 H 0.869 E 0.571 | R2 mod: P 0.982 L 0.957 H 0.626 | own view hidden, std: P 0.915 L 0.806 H 0.565 | mod: P 0.791 L 0.712 H 0.371 | latent sd min 0.306 med 0.442, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   2/100 | 140.9 s | lr 3.0e-04 | train 0.6549 | val 0.3931 = (std 0.4418 + mod 0.3444)/2, natural mix 0.4236 *
+           R2 std: P 0.985 L 0.979 H 0.935 E 0.587 | R2 mod: P 0.985 L 0.970 H 0.710 | own view hidden, std: P 0.932 L 0.838 H 0.603 | mod: P 0.814 L 0.760 H 0.405 | latent sd min 0.284 med 0.408, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   3/100 | 140.9 s | lr 3.0e-04 | train 0.5988 | val 0.3553 = (std 0.4246 + mod 0.2861)/2, natural mix 0.3988 *
+           R2 std: P 0.990 L 0.983 H 0.953 E 0.598 | R2 mod: P 0.990 L 0.976 H 0.750 | own view hidden, std: P 0.939 L 0.855 H 0.631 | mod: P 0.829 L 0.773 H 0.433 | latent sd min 0.266 med 0.381, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   4/100 | 140.7 s | lr 3.0e-04 | train 0.5682 | val 0.3367 = (std 0.4153 + mod 0.2580)/2, natural mix 0.3860 *
+           R2 std: P 0.992 L 0.984 H 0.959 E 0.605 | R2 mod: P 0.991 L 0.978 H 0.773 | own view hidden, std: P 0.951 L 0.867 H 0.659 | mod: P 0.844 L 0.786 H 0.453 | latent sd min 0.239 med 0.359, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   5/100 | 140.7 s | lr 3.0e-04 | train 0.5490 | val 0.3282 = (std 0.4114 + mod 0.2450)/2, natural mix 0.3804 *
+           R2 std: P 0.991 L 0.984 H 0.964 E 0.608 | R2 mod: P 0.991 L 0.979 H 0.789 | own view hidden, std: P 0.949 L 0.865 H 0.673 | mod: P 0.847 L 0.799 H 0.464 | latent sd min 0.221 med 0.337, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   6/100 | 139.5 s | lr 3.0e-04 | train 0.5344 | val 0.3163 = (std 0.4058 + mod 0.2267)/2, natural mix 0.3724 *
+           R2 std: P 0.994 L 0.986 H 0.967 E 0.612 | R2 mod: P 0.992 L 0.981 H 0.800 | own view hidden, std: P 0.952 L 0.875 H 0.687 | mod: P 0.856 L 0.802 H 0.480 | latent sd min 0.207 med 0.315, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   7/100 | 140.9 s | lr 3.0e-04 | train 0.5230 | val 0.3083 = (std 0.4008 + mod 0.2157)/2, natural mix 0.3663 *
+           R2 std: P 0.994 L 0.987 H 0.969 E 0.616 | R2 mod: P 0.993 L 0.982 H 0.809 | own view hidden, std: P 0.957 L 0.881 H 0.699 | mod: P 0.861 L 0.812 H 0.490 | latent sd min 0.195 med 0.298, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   8/100 | 140.8 s | lr 3.0e-04 | train 0.5142 | val 0.3038 = (std 0.3987 + mod 0.2089)/2, natural mix 0.3633 *
+           R2 std: P 0.994 L 0.987 H 0.970 E 0.618 | R2 mod: P 0.993 L 0.982 H 0.816 | own view hidden, std: P 0.957 L 0.883 H 0.709 | mod: P 0.846 L 0.815 H 0.498 | latent sd min 0.183 med 0.282, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch   9/100 | 140.7 s | lr 3.0e-04 | train 0.5061 | val 0.2954 = (std 0.3942 + mod 0.1966)/2, natural mix 0.3574 *
+           R2 std: P 0.995 L 0.988 H 0.973 E 0.621 | R2 mod: P 0.994 L 0.984 H 0.824 | own view hidden, std: P 0.963 L 0.885 H 0.721 | mod: P 0.873 L 0.822 H 0.508 | latent sd min 0.178 med 0.268, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  10/100 | 140.5 s | lr 3.0e-04 | train 0.4991 | val 0.2908 = (std 0.3915 + mod 0.1901)/2, natural mix 0.3539 *
+           R2 std: P 0.995 L 0.989 H 0.974 E 0.623 | R2 mod: P 0.994 L 0.985 H 0.829 | own view hidden, std: P 0.964 L 0.891 H 0.724 | mod: P 0.877 L 0.825 H 0.515 | latent sd min 0.172 med 0.258, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  11/100 | 139.6 s | lr 3.0e-04 | train 0.4931 | val 0.2876 = (std 0.3891 + mod 0.1861)/2, natural mix 0.3512 *
+           R2 std: P 0.995 L 0.989 H 0.974 E 0.625 | R2 mod: P 0.995 L 0.985 H 0.833 | own view hidden, std: P 0.966 L 0.891 H 0.733 | mod: P 0.874 L 0.830 H 0.514 | latent sd min 0.165 med 0.248, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  12/100 | 140.8 s | lr 3.0e-04 | train 0.4878 | val 0.2846 = (std 0.3881 + mod 0.1810)/2, natural mix 0.3495 *
+           R2 std: P 0.995 L 0.989 H 0.975 E 0.626 | R2 mod: P 0.995 L 0.985 H 0.838 | own view hidden, std: P 0.968 L 0.893 H 0.741 | mod: P 0.879 L 0.831 H 0.524 | latent sd min 0.161 med 0.240, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  13/100 | 140.7 s | lr 3.0e-04 | train 0.4834 | val 0.2816 = (std 0.3863 + mod 0.1769)/2, natural mix 0.3473 *
+           R2 std: P 0.995 L 0.989 H 0.976 E 0.628 | R2 mod: P 0.995 L 0.985 H 0.841 | own view hidden, std: P 0.968 L 0.899 H 0.746 | mod: P 0.888 L 0.834 H 0.530 | latent sd min 0.160 med 0.231, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  14/100 | 140.8 s | lr 3.0e-04 | train 0.4781 | val 0.2787 = (std 0.3837 + mod 0.1736)/2, natural mix 0.3445 *
+           R2 std: P 0.995 L 0.990 H 0.977 E 0.629 | R2 mod: P 0.995 L 0.986 H 0.844 | own view hidden, std: P 0.968 L 0.895 H 0.753 | mod: P 0.882 L 0.836 H 0.534 | latent sd min 0.153 med 0.222, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  15/100 | 140.8 s | lr 3.0e-04 | train 0.4752 | val 0.2759 = (std 0.3828 + mod 0.1691)/2, natural mix 0.3429 *
+           R2 std: P 0.995 L 0.990 H 0.977 E 0.630 | R2 mod: P 0.995 L 0.987 H 0.847 | own view hidden, std: P 0.970 L 0.900 H 0.756 | mod: P 0.890 L 0.838 H 0.536 | latent sd min 0.151 med 0.215, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  16/100 | 139.4 s | lr 3.0e-04 | train 0.4714 | val 0.2731 = (std 0.3807 + mod 0.1655)/2, natural mix 0.3406 *
+           R2 std: P 0.996 L 0.990 H 0.978 E 0.632 | R2 mod: P 0.996 L 0.986 H 0.850 | own view hidden, std: P 0.971 L 0.901 H 0.760 | mod: P 0.890 L 0.840 H 0.538 | latent sd min 0.148 med 0.209, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  17/100 | 140.8 s | lr 3.0e-04 | train 0.4665 | val 0.2721 = (std 0.3813 + mod 0.1628)/2, natural mix 0.3406 *
+           R2 std: P 0.995 L 0.990 H 0.977 E 0.631 | R2 mod: P 0.996 L 0.987 H 0.853 | own view hidden, std: P 0.970 L 0.900 H 0.764 | mod: P 0.896 L 0.843 H 0.544 | latent sd min 0.146 med 0.204, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  18/100 | 140.7 s | lr 3.0e-04 | train 0.4651 | val 0.2707 = (std 0.3805 + mod 0.1609)/2, natural mix 0.3396 *
+           R2 std: P 0.995 L 0.990 H 0.978 E 0.632 | R2 mod: P 0.996 L 0.987 H 0.855 | own view hidden, std: P 0.969 L 0.898 H 0.767 | mod: P 0.894 L 0.840 H 0.546 | latent sd min 0.144 med 0.198, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  19/100 | 140.8 s | lr 3.0e-04 | train 0.4611 | val 0.2672 = (std 0.3780 + mod 0.1565)/2, natural mix 0.3367 *
+           R2 std: P 0.996 L 0.991 H 0.978 E 0.634 | R2 mod: P 0.996 L 0.988 H 0.857 | own view hidden, std: P 0.972 L 0.904 H 0.770 | mod: P 0.893 L 0.847 H 0.548 | latent sd min 0.140 med 0.193, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  20/100 | 140.8 s | lr 3.0e-04 | train 0.4577 | val 0.2668 = (std 0.3776 + mod 0.1560)/2, natural mix 0.3363 *
+           R2 std: P 0.996 L 0.991 H 0.978 E 0.635 | R2 mod: P 0.996 L 0.988 H 0.859 | own view hidden, std: P 0.972 L 0.906 H 0.776 | mod: P 0.899 L 0.843 H 0.547 | latent sd min 0.137 med 0.188, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  21/100 | 139.6 s | lr 3.0e-04 | train 0.4559 | val 0.2656 = (std 0.3761 + mod 0.1551)/2, natural mix 0.3349 *
+           R2 std: P 0.996 L 0.991 H 0.979 E 0.636 | R2 mod: P 0.995 L 0.988 H 0.861 | own view hidden, std: P 0.973 L 0.905 H 0.780 | mod: P 0.899 L 0.846 H 0.552 | latent sd min 0.134 med 0.184, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  22/100 | 140.8 s | lr 3.0e-04 | train 0.4526 | val 0.2636 = (std 0.3762 + mod 0.1511)/2, natural mix 0.3342 *
+           R2 std: P 0.996 L 0.991 H 0.979 E 0.636 | R2 mod: P 0.996 L 0.988 H 0.863 | own view hidden, std: P 0.973 L 0.906 H 0.783 | mod: P 0.902 L 0.846 H 0.554 | latent sd min 0.134 med 0.181, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  23/100 | 140.7 s | lr 3.0e-04 | train 0.4507 | val 0.2619 = (std 0.3754 + mod 0.1484)/2, natural mix 0.3331 *
+           R2 std: P 0.996 L 0.991 H 0.979 E 0.636 | R2 mod: P 0.996 L 0.988 H 0.864 | own view hidden, std: P 0.973 L 0.906 H 0.786 | mod: P 0.901 L 0.848 H 0.556 | latent sd min 0.132 med 0.176, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  24/100 | 140.7 s | lr 3.0e-04 | train 0.4481 | val 0.2606 = (std 0.3743 + mod 0.1470)/2, natural mix 0.3319 *
+           R2 std: P 0.996 L 0.991 H 0.980 E 0.637 | R2 mod: P 0.996 L 0.988 H 0.866 | own view hidden, std: P 0.973 L 0.899 H 0.788 | mod: P 0.904 L 0.849 H 0.556 | latent sd min 0.130 med 0.173, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  25/100 | 140.7 s | lr 3.0e-04 | train 0.4452 | val 0.2599 = (std 0.3746 + mod 0.1452)/2, natural mix 0.3319 *
+           R2 std: P 0.996 L 0.991 H 0.980 E 0.637 | R2 mod: P 0.996 L 0.988 H 0.867 | own view hidden, std: P 0.971 L 0.909 H 0.789 | mod: P 0.896 L 0.850 H 0.558 | latent sd min 0.127 med 0.171, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  26/100 | 133.4 s | lr 3.0e-04 | train 0.4444 | val 0.2577 = (std 0.3718 + mod 0.1436)/2, natural mix 0.3293 *
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.639 | R2 mod: P 0.996 L 0.988 H 0.869 | own view hidden, std: P 0.974 L 0.908 H 0.789 | mod: P 0.905 L 0.848 H 0.559 | latent sd min 0.125 med 0.167, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  27/100 | 126.5 s | lr 3.0e-04 | train 0.4408 | val 0.2583 = (std 0.3731 + mod 0.1436)/2, natural mix 0.3303 | no gain for 1/10
+           R2 std: P 0.996 L 0.991 H 0.980 E 0.638 | R2 mod: P 0.996 L 0.988 H 0.870 | own view hidden, std: P 0.974 L 0.908 H 0.791 | mod: P 0.898 L 0.850 H 0.559 | latent sd min 0.124 med 0.164, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  28/100 | 140.8 s | lr 3.0e-04 | train 0.4395 | val 0.2561 = (std 0.3718 + mod 0.1404)/2, natural mix 0.3287 *
+           R2 std: P 0.996 L 0.991 H 0.980 E 0.639 | R2 mod: P 0.996 L 0.989 H 0.872 | own view hidden, std: P 0.974 L 0.908 H 0.796 | mod: P 0.907 L 0.851 H 0.564 | latent sd min 0.121 med 0.161, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  29/100 | 139.7 s | lr 3.0e-04 | train 0.4376 | val 0.2562 = (std 0.3720 + mod 0.1405)/2, natural mix 0.3288 | no gain for 1/10
+           R2 std: P 0.996 L 0.991 H 0.981 E 0.639 | R2 mod: P 0.996 L 0.989 H 0.873 | own view hidden, std: P 0.975 L 0.910 H 0.798 | mod: P 0.909 L 0.851 H 0.564 | latent sd min 0.118 med 0.158, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  30/100 | 140.3 s | lr 3.0e-04 | train 0.4345 | val 0.2546 = (std 0.3711 + mod 0.1382)/2, natural mix 0.3277 *
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.640 | R2 mod: P 0.996 L 0.989 H 0.874 | own view hidden, std: P 0.974 L 0.908 H 0.801 | mod: P 0.910 L 0.853 H 0.566 | latent sd min 0.116 med 0.157, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  31/100 | 139.1 s | lr 3.0e-04 | train 0.4348 | val 0.2544 = (std 0.3710 + mod 0.1378)/2, natural mix 0.3275 *
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.640 | R2 mod: P 0.997 L 0.989 H 0.875 | own view hidden, std: P 0.974 L 0.909 H 0.801 | mod: P 0.907 L 0.852 H 0.565 | latent sd min 0.116 med 0.154, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  32/100 | 141.0 s | lr 3.0e-04 | train 0.4311 | val 0.2529 = (std 0.3697 + mod 0.1361)/2, natural mix 0.3262 *
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.641 | R2 mod: P 0.997 L 0.989 H 0.876 | own view hidden, std: P 0.974 L 0.909 H 0.805 | mod: P 0.910 L 0.853 H 0.566 | latent sd min 0.113 med 0.152, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  33/100 | 140.3 s | lr 3.0e-04 | train 0.4304 | val 0.2530 = (std 0.3707 + mod 0.1352)/2, natural mix 0.3268 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.640 | R2 mod: P 0.997 L 0.989 H 0.877 | own view hidden, std: P 0.976 L 0.910 H 0.806 | mod: P 0.909 L 0.854 H 0.567 | latent sd min 0.115 med 0.151, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  34/100 | 141.0 s | lr 3.0e-04 | train 0.4294 | val 0.2515 = (std 0.3690 + mod 0.1341)/2, natural mix 0.3252 *
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.642 | R2 mod: P 0.997 L 0.989 H 0.878 | own view hidden, std: P 0.976 L 0.911 H 0.810 | mod: P 0.913 L 0.855 H 0.569 | latent sd min 0.112 med 0.147, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  35/100 | 140.7 s | lr 3.0e-04 | train 0.4263 | val 0.2510 = (std 0.3695 + mod 0.1326)/2, natural mix 0.3254 *
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.641 | R2 mod: P 0.997 L 0.990 H 0.879 | own view hidden, std: P 0.976 L 0.912 H 0.809 | mod: P 0.907 L 0.855 H 0.571 | latent sd min 0.112 med 0.146, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  36/100 | 138.8 s | lr 3.0e-04 | train 0.4261 | val 0.2513 = (std 0.3705 + mod 0.1320)/2, natural mix 0.3261 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.640 | R2 mod: P 0.997 L 0.990 H 0.879 | own view hidden, std: P 0.977 L 0.909 H 0.810 | mod: P 0.911 L 0.854 H 0.571 | latent sd min 0.109 med 0.144, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  37/100 | 140.9 s | lr 3.0e-04 | train 0.4236 | val 0.2496 = (std 0.3680 + mod 0.1312)/2, natural mix 0.3239 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.990 H 0.880 | own view hidden, std: P 0.975 L 0.909 H 0.810 | mod: P 0.911 L 0.853 H 0.571 | latent sd min 0.107 med 0.141, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  38/100 | 140.1 s | lr 3.0e-04 | train 0.4223 | val 0.2500 = (std 0.3696 + mod 0.1304)/2, natural mix 0.3250 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.641 | R2 mod: P 0.997 L 0.990 H 0.881 | own view hidden, std: P 0.977 L 0.910 H 0.812 | mod: P 0.912 L 0.856 H 0.573 | latent sd min 0.109 med 0.142, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  39/100 | 140.2 s | lr 3.0e-04 | train 0.4223 | val 0.2496 = (std 0.3684 + mod 0.1308)/2, natural mix 0.3241 | no gain for 2/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.989 H 0.881 | own view hidden, std: P 0.976 L 0.909 H 0.814 | mod: P 0.911 L 0.855 H 0.574 | latent sd min 0.107 med 0.139, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  40/100 | 140.9 s | lr 3.0e-04 | train 0.4193 | val 0.2483 = (std 0.3682 + mod 0.1285)/2, natural mix 0.3235 *
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.882 | own view hidden, std: P 0.976 L 0.910 H 0.813 | mod: P 0.910 L 0.858 H 0.573 | latent sd min 0.107 med 0.138, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  41/100 | 139.7 s | lr 3.0e-04 | train 0.4185 | val 0.2484 = (std 0.3682 + mod 0.1286)/2, natural mix 0.3235 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.989 H 0.883 | own view hidden, std: P 0.977 L 0.911 H 0.817 | mod: P 0.914 L 0.857 H 0.575 | latent sd min 0.106 med 0.137, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  42/100 | 139.9 s | lr 3.0e-04 | train 0.4175 | val 0.2479 = (std 0.3683 + mod 0.1275)/2, natural mix 0.3234 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.883 | own view hidden, std: P 0.977 L 0.912 H 0.814 | mod: P 0.914 L 0.859 H 0.574 | latent sd min 0.102 med 0.134, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  43/100 | 140.1 s | lr 3.0e-04 | train 0.4152 | val 0.2483 = (std 0.3689 + mod 0.1277)/2, natural mix 0.3239 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.884 | own view hidden, std: P 0.977 L 0.911 H 0.813 | mod: P 0.916 L 0.856 H 0.575 | latent sd min 0.103 med 0.133, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  44/100 | 140.9 s | lr 3.0e-04 | train 0.4159 | val 0.2470 = (std 0.3682 + mod 0.1258)/2, natural mix 0.3230 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.884 | own view hidden, std: P 0.977 L 0.910 H 0.817 | mod: P 0.910 L 0.854 H 0.575 | latent sd min 0.102 med 0.132, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  45/100 | 140.8 s | lr 3.0e-04 | train 0.4124 | val 0.2465 = (std 0.3675 + mod 0.1254)/2, natural mix 0.3224 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.990 H 0.885 | own view hidden, std: P 0.977 L 0.910 H 0.819 | mod: P 0.909 L 0.858 H 0.578 | latent sd min 0.099 med 0.130, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  46/100 | 140.2 s | lr 3.0e-04 | train 0.4124 | val 0.2466 = (std 0.3675 + mod 0.1256)/2, natural mix 0.3224 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.643 | R2 mod: P 0.997 L 0.990 H 0.885 | own view hidden, std: P 0.977 L 0.909 H 0.819 | mod: P 0.913 L 0.859 H 0.578 | latent sd min 0.100 med 0.129, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  47/100 | 139.7 s | lr 3.0e-04 | train 0.4121 | val 0.2462 = (std 0.3682 + mod 0.1241)/2, natural mix 0.3227 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.886 | own view hidden, std: P 0.977 L 0.910 H 0.822 | mod: P 0.916 L 0.859 H 0.578 | latent sd min 0.100 med 0.128, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  48/100 | 140.9 s | lr 3.0e-04 | train 0.4092 | val 0.2459 = (std 0.3682 + mod 0.1236)/2, natural mix 0.3226 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.990 H 0.886 | own view hidden, std: P 0.978 L 0.910 H 0.819 | mod: P 0.918 L 0.859 H 0.578 | latent sd min 0.101 med 0.127, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  49/100 | 140.9 s | lr 3.0e-04 | train 0.4098 | val 0.2457 = (std 0.3680 + mod 0.1234)/2, natural mix 0.3224 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.991 H 0.886 | own view hidden, std: P 0.977 L 0.911 H 0.821 | mod: P 0.916 L 0.859 H 0.577 | latent sd min 0.098 med 0.126, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  50/100 | 140.6 s | lr 3.0e-04 | train 0.4074 | val 0.2453 = (std 0.3677 + mod 0.1228)/2, natural mix 0.3220 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.990 H 0.887 | own view hidden, std: P 0.977 L 0.912 H 0.821 | mod: P 0.918 L 0.858 H 0.579 | latent sd min 0.096 med 0.125, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  51/100 | 140.7 s | lr 3.0e-04 | train 0.4069 | val 0.2450 = (std 0.3672 + mod 0.1227)/2, natural mix 0.3216 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.990 H 0.887 | own view hidden, std: P 0.977 L 0.912 H 0.822 | mod: P 0.915 L 0.856 H 0.579 | latent sd min 0.097 med 0.124, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  52/100 | 139.3 s | lr 3.0e-04 | train 0.4071 | val 0.2446 = (std 0.3672 + mod 0.1220)/2, natural mix 0.3215 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.888 | own view hidden, std: P 0.978 L 0.913 H 0.822 | mod: P 0.918 L 0.860 H 0.580 | latent sd min 0.095 med 0.123, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  53/100 | 140.0 s | lr 3.0e-04 | train 0.4039 | val 0.2445 = (std 0.3675 + mod 0.1216)/2, natural mix 0.3217 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.888 | own view hidden, std: P 0.978 L 0.912 H 0.821 | mod: P 0.921 L 0.860 H 0.580 | latent sd min 0.095 med 0.121, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  54/100 | 140.1 s | lr 3.0e-04 | train 0.4041 | val 0.2449 = (std 0.3683 + mod 0.1216)/2, natural mix 0.3223 | no gain for 2/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.991 H 0.888 | own view hidden, std: P 0.977 L 0.913 H 0.822 | mod: P 0.916 L 0.860 H 0.580 | latent sd min 0.095 med 0.122, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  55/100 | 140.9 s | lr 3.0e-04 | train 0.4030 | val 0.2445 = (std 0.3682 + mod 0.1208)/2, natural mix 0.3221 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.642 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.977 L 0.910 H 0.821 | mod: P 0.919 L 0.860 H 0.578 | latent sd min 0.093 med 0.119, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  56/100 | 141.0 s | lr 3.0e-04 | train 0.4015 | val 0.2438 = (std 0.3671 + mod 0.1205)/2, natural mix 0.3211 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.977 L 0.910 H 0.823 | mod: P 0.917 L 0.860 H 0.578 | latent sd min 0.094 med 0.119, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  57/100 | 139.8 s | lr 3.0e-04 | train 0.4022 | val 0.2435 = (std 0.3670 + mod 0.1199)/2, natural mix 0.3210 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.889 | own view hidden, std: P 0.979 L 0.913 H 0.822 | mod: P 0.920 L 0.860 H 0.580 | latent sd min 0.094 med 0.118, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  58/100 | 142.1 s | lr 3.0e-04 | train 0.3989 | val 0.2432 = (std 0.3668 + mod 0.1197)/2, natural mix 0.3207 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.644 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.978 L 0.913 H 0.824 | mod: P 0.920 L 0.861 H 0.581 | latent sd min 0.093 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  59/100 | 140.9 s | lr 3.0e-04 | train 0.3990 | val 0.2438 = (std 0.3677 + mod 0.1199)/2, natural mix 0.3215 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.978 L 0.912 H 0.822 | mod: P 0.921 L 0.861 H 0.583 | latent sd min 0.093 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  60/100 | 141.0 s | lr 3.0e-04 | train 0.3988 | val 0.2432 = (std 0.3667 + mod 0.1197)/2, natural mix 0.3206 | no gain for 2/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.644 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.978 L 0.913 H 0.823 | mod: P 0.921 L 0.859 H 0.581 | latent sd min 0.092 med 0.116, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  61/100 | 142.0 s | lr 3.0e-04 | train 0.3963 | val 0.2429 = (std 0.3672 + mod 0.1186)/2, natural mix 0.3209 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.890 | own view hidden, std: P 0.978 L 0.911 H 0.824 | mod: P 0.921 L 0.860 H 0.583 | latent sd min 0.091 med 0.115, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  62/100 | 139.8 s | lr 3.0e-04 | train 0.3977 | val 0.2429 = (std 0.3668 + mod 0.1189)/2, natural mix 0.3206 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.981 E 0.644 | R2 mod: P 0.997 L 0.991 H 0.891 | own view hidden, std: P 0.978 L 0.913 H 0.825 | mod: P 0.922 L 0.861 H 0.583 | latent sd min 0.091 med 0.114, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  63/100 | 142.2 s | lr 3.0e-04 | train 0.3949 | val 0.2427 = (std 0.3670 + mod 0.1184)/2, natural mix 0.3206 *
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.891 | own view hidden, std: P 0.979 L 0.911 H 0.825 | mod: P 0.924 L 0.861 H 0.585 | latent sd min 0.091 med 0.114, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  64/100 | 140.7 s | lr 3.0e-04 | train 0.3943 | val 0.2438 = (std 0.3695 + mod 0.1182)/2, natural mix 0.3226 | no gain for 1/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.641 | R2 mod: P 0.997 L 0.991 H 0.891 | own view hidden, std: P 0.977 L 0.913 H 0.828 | mod: P 0.921 L 0.861 H 0.582 | latent sd min 0.090 med 0.113, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  65/100 | 140.9 s | lr 3.0e-04 | train 0.3949 | val 0.2426 = (std 0.3673 + mod 0.1179)/2, natural mix 0.3208 | no gain for 2/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.643 | R2 mod: P 0.997 L 0.991 H 0.891 | own view hidden, std: P 0.978 L 0.913 H 0.823 | mod: P 0.919 L 0.861 H 0.583 | latent sd min 0.088 med 0.112, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  66/100 | 141.1 s | lr 3.0e-04 | train 0.3922 | val 0.2436 = (std 0.3696 + mod 0.1176)/2, natural mix 0.3227 | no gain for 3/10
+           R2 std: P 0.996 L 0.992 H 0.982 E 0.641 | R2 mod: P 0.997 L 0.991 H 0.891 | own view hidden, std: P 0.978 L 0.913 H 0.827 | mod: P 0.920 L 0.862 H 0.585 | latent sd min 0.089 med 0.112, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  67/100 | 140.8 s | lr 1.5e-04 | train 0.3817 | val 0.2388 = (std 0.3645 + mod 0.1131)/2, natural mix 0.3176 *
+           R2 std: P 0.997 L 0.993 H 0.983 E 0.645 | R2 mod: P 0.998 L 0.992 H 0.893 | own view hidden, std: P 0.981 L 0.918 H 0.834 | mod: P 0.924 L 0.867 H 0.591 | latent sd min 0.090 med 0.113, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  68/100 | 141.9 s | lr 1.5e-04 | train 0.3781 | val 0.2375 = (std 0.3626 + mod 0.1124)/2, natural mix 0.3160 *
+           R2 std: P 0.997 L 0.993 H 0.983 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.981 L 0.915 H 0.835 | mod: P 0.930 L 0.867 H 0.592 | latent sd min 0.091 med 0.113, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  69/100 | 140.9 s | lr 1.5e-04 | train 0.3762 | val 0.2389 = (std 0.3650 + mod 0.1128)/2, natural mix 0.3180 | no gain for 1/10
+           R2 std: P 0.997 L 0.993 H 0.983 E 0.645 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.980 L 0.918 H 0.835 | mod: P 0.930 L 0.866 H 0.592 | latent sd min 0.091 med 0.114, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  70/100 | 140.9 s | lr 1.5e-04 | train 0.3767 | val 0.2386 = (std 0.3650 + mod 0.1121)/2, natural mix 0.3179 | no gain for 2/10
+           R2 std: P 0.997 L 0.993 H 0.983 E 0.644 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.981 L 0.919 H 0.836 | mod: P 0.929 L 0.868 H 0.592 | latent sd min 0.091 med 0.114, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  71/100 | 140.9 s | lr 1.5e-04 | train 0.3742 | val 0.2381 = (std 0.3641 + mod 0.1120)/2, natural mix 0.3172 | no gain for 3/10
+           R2 std: P 0.997 L 0.993 H 0.983 E 0.645 | R2 mod: P 0.998 L 0.992 H 0.894 | own view hidden, std: P 0.980 L 0.916 H 0.835 | mod: P 0.929 L 0.868 H 0.591 | latent sd min 0.092 med 0.114, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  72/100 | 140.5 s | lr 7.5e-05 | train 0.3688 | val 0.2367 = (std 0.3632 + mod 0.1101)/2, natural mix 0.3160 *
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.992 H 0.895 | own view hidden, std: P 0.981 L 0.921 H 0.841 | mod: P 0.933 L 0.870 H 0.596 | latent sd min 0.093 med 0.114, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  73/100 | 141.9 s | lr 7.5e-05 | train 0.3670 | val 0.2360 = (std 0.3620 + mod 0.1099)/2, natural mix 0.3150 *
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.992 H 0.895 | own view hidden, std: P 0.982 L 0.922 H 0.843 | mod: P 0.934 L 0.871 H 0.597 | latent sd min 0.092 med 0.114, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  74/100 | 140.6 s | lr 7.5e-05 | train 0.3659 | val 0.2363 = (std 0.3628 + mod 0.1097)/2, natural mix 0.3156 | no gain for 1/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.992 H 0.895 | own view hidden, std: P 0.982 L 0.922 H 0.842 | mod: P 0.934 L 0.872 H 0.597 | latent sd min 0.092 med 0.115, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  75/100 | 140.7 s | lr 7.5e-05 | train 0.3657 | val 0.2363 = (std 0.3628 + mod 0.1098)/2, natural mix 0.3156 | no gain for 2/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.992 H 0.895 | own view hidden, std: P 0.981 L 0.922 H 0.841 | mod: P 0.933 L 0.871 H 0.596 | latent sd min 0.092 med 0.115, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  76/100 | 140.8 s | lr 7.5e-05 | train 0.3643 | val 0.2363 = (std 0.3631 + mod 0.1094)/2, natural mix 0.3158 | no gain for 3/10
+           R2 std: P 0.997 L 0.993 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.992 H 0.896 | own view hidden, std: P 0.982 L 0.922 H 0.841 | mod: P 0.934 L 0.871 H 0.596 | latent sd min 0.093 med 0.116, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  77/100 | 140.6 s | lr 3.7e-05 | train 0.3613 | val 0.2354 = (std 0.3621 + mod 0.1086)/2, natural mix 0.3149 *
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.923 H 0.844 | mod: P 0.935 L 0.873 H 0.598 | latent sd min 0.093 med 0.116, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  78/100 | 140.8 s | lr 3.7e-05 | train 0.3605 | val 0.2353 = (std 0.3621 + mod 0.1085)/2, natural mix 0.3148 | no gain for 1/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.924 H 0.844 | mod: P 0.935 L 0.873 H 0.598 | latent sd min 0.093 med 0.116, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  79/100 | 140.9 s | lr 3.7e-05 | train 0.3599 | val 0.2354 = (std 0.3625 + mod 0.1084)/2, natural mix 0.3151 | no gain for 2/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.924 H 0.845 | mod: P 0.936 L 0.873 H 0.599 | latent sd min 0.094 med 0.116, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  80/100 | 129.9 s | lr 3.7e-05 | train 0.3595 | val 0.2358 = (std 0.3632 + mod 0.1084)/2, natural mix 0.3157 | no gain for 3/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.924 H 0.845 | mod: P 0.936 L 0.873 H 0.599 | latent sd min 0.094 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  81/100 | 123.3 s | lr 1.9e-05 | train 0.3577 | val 0.2352 = (std 0.3624 + mod 0.1080)/2, natural mix 0.3150 *
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.924 H 0.845 | mod: P 0.936 L 0.874 H 0.600 | latent sd min 0.094 med 0.116, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  82/100 | 139.7 s | lr 1.9e-05 | train 0.3570 | val 0.2351 = (std 0.3622 + mod 0.1079)/2, natural mix 0.3148 *
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.925 H 0.846 | mod: P 0.937 L 0.874 H 0.600 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  83/100 | 139.9 s | lr 1.9e-05 | train 0.3573 | val 0.2351 = (std 0.3624 + mod 0.1079)/2, natural mix 0.3149 | no gain for 1/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.924 H 0.847 | mod: P 0.937 L 0.874 H 0.600 | latent sd min 0.094 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  84/100 | 140.1 s | lr 1.9e-05 | train 0.3564 | val 0.2351 = (std 0.3623 + mod 0.1078)/2, natural mix 0.3149 | no gain for 2/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.896 | own view hidden, std: P 0.982 L 0.925 H 0.846 | mod: P 0.936 L 0.874 H 0.600 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  85/100 | 140.1 s | lr 1.9e-05 | train 0.3569 | val 0.2350 = (std 0.3622 + mod 0.1079)/2, natural mix 0.3148 | no gain for 3/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.982 L 0.924 H 0.846 | mod: P 0.937 L 0.874 H 0.600 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  86/100 | 141.0 s | lr 9.4e-06 | train 0.3557 | val 0.2348 = (std 0.3619 + mod 0.1076)/2, natural mix 0.3145 *
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.600 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  87/100 | 139.1 s | lr 9.4e-06 | train 0.3553 | val 0.2349 = (std 0.3621 + mod 0.1076)/2, natural mix 0.3147 | no gain for 1/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  88/100 | 140.0 s | lr 9.4e-06 | train 0.3552 | val 0.2348 = (std 0.3621 + mod 0.1075)/2, natural mix 0.3147 | no gain for 2/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  89/100 | 140.0 s | lr 9.4e-06 | train 0.3549 | val 0.2348 = (std 0.3621 + mod 0.1075)/2, natural mix 0.3147 | no gain for 3/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  90/100 | 140.1 s | lr 4.7e-06 | train 0.3547 | val 0.2348 = (std 0.3622 + mod 0.1074)/2, natural mix 0.3147 | no gain for 4/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.848 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  91/100 | 140.1 s | lr 4.7e-06 | train 0.3543 | val 0.2348 = (std 0.3622 + mod 0.1074)/2, natural mix 0.3147 | no gain for 5/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  92/100 | 139.2 s | lr 4.7e-06 | train 0.3542 | val 0.2349 = (std 0.3623 + mod 0.1074)/2, natural mix 0.3148 | no gain for 6/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  93/100 | 139.4 s | lr 2.3e-06 | train 0.3546 | val 0.2348 = (std 0.3623 + mod 0.1073)/2, natural mix 0.3148 | no gain for 7/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.647 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  94/100 | 140.2 s | lr 2.3e-06 | train 0.3540 | val 0.2348 = (std 0.3623 + mod 0.1073)/2, natural mix 0.3148 | no gain for 8/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.847 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.117, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  95/100 | 140.3 s | lr 2.3e-06 | train 0.3541 | val 0.2348 = (std 0.3623 + mod 0.1073)/2, natural mix 0.3148 | no gain for 9/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.848 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.118, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+epoch  96/100 | 140.1 s | lr 1.2e-06 | train 0.3539 | val 0.2348 = (std 0.3623 + mod 0.1073)/2, natural mix 0.3148 | no gain for 10/10
+           R2 std: P 0.997 L 0.994 H 0.984 E 0.646 | R2 mod: P 0.998 L 0.993 H 0.897 | own view hidden, std: P 0.983 L 0.925 H 0.848 | mod: P 0.937 L 0.875 H 0.601 | latent sd min 0.095 med 0.118, 0 dims < 10% of median | passes per molecule std 0.61 mod 2.68
+early stop: no improvement of the validation loss by 0.0001 for 10 epochs; best epoch 86 (val 0.2348)
+latent statistics (ALL 3,366,362 training rows) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_base/latent_stats.npz
+latent sd per dimension before standardising: min 0.09463, median 0.1178, max 0.6811 | 0 of 1024 dimensions are below the floor 0.01178 (0.1 x the median) and come out with a standardised sd below 1
+benchmark embeddings: 26029 molecules, 1024-d, usable 26029 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_v3_base.npz
+done. checkpoint /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_base/best.pt | next: python src/teacher/eval_harness.py --teachers v3_base --out harness_v3_base
+benchmark embeddings: 12567 molecules, 1024-d, usable 12567 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_v3_base.npz
+== done 00:10

@@ -1,0 +1,22 @@
+{
+ "model_type": "MLM_model",
+ "size": "student-512x4",
+ "ffn_hidden_dim": 1024,
+ "embed_dim": 512,
+ "num_heads": 8,
+ "num_blocks": 4,
+ "vocab_size": 405,
+ "output_dim": 405,
+ "max_seq_len": 2048,
+ "auto_map": {
+  "AutoConfig": "config.model_config",
+  "AutoModel": "ChemPepMTR.MLM_model"
+ },
+ "architectures": [
+  "MLM_model"
+ ],
+ "init": {
+  "from": "random",
+  "seed": 0
+ }
+}

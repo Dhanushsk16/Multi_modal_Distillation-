@@ -1,0 +1,116 @@
+== Sunday 15 November 2026 02:36:05 PM IST | stage finetune | teacher t9 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_finetune_20261115_1436.log
+== finetune: stopping at 06:45 (968 min from now); run the same line again to continue
+
+== finetune: PeptideCLM-2's suite (14:36)
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_t9
+teacher t9: views ['pclm', 'pepland', 'esm'], optional ['esm'], fill token, latent 1024-d | variants ['frozen', 'ft'] | benchmarks ['CellPPD', 'THPep', 'PepMSND', 'PAMPA', 'AmpHGT']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 1
+CellPPD: 1464 usable molecules (100.0% of the file), ESM present for 57.2% | frozen embedding std per dimension 0.128
+CellPPD  frozen   done (14s) | MCC 0.674 | epochs run 61, best at 52, hit the 100-epoch cap in 1 of 5 fits
+CellPPD  ft       done (34s) | MCC 0.840 | epochs run 23, best at 13, hit the 100-epoch cap in 0 of 5 fits
+THPep: 609 usable molecules (100.0% of the file), ESM present for 100.0% | frozen embedding std per dimension 0.197
+THPep    frozen   done (4s) | MCC 0.764 | epochs run 36, best at 26, hit the 100-epoch cap in 0 of 5 fits
+THPep    ft       done (16s) | MCC 0.786 | epochs run 19, best at 9, hit the 100-epoch cap in 0 of 5 fits
+PepMSND: 640 usable molecules (100.0% of the file), ESM present for 60.6% | frozen embedding std per dimension 0.219
+   PepMSND frozen seed 0 fold 1/10 (64 molecules, 5 models) 5s
+   PepMSND frozen seed 0 fold 2/10 (64 molecules, 5 models) 8s
+   PepMSND frozen seed 0 fold 3/10 (64 molecules, 5 models) 12s
+   PepMSND frozen seed 0 fold 4/10 (64 molecules, 5 models) 15s
+   PepMSND frozen seed 0 fold 5/10 (64 molecules, 5 models) 20s
+   PepMSND frozen seed 0 fold 6/10 (64 molecules, 5 models) 24s
+   PepMSND frozen seed 0 fold 7/10 (64 molecules, 5 models) 28s
+   PepMSND frozen seed 0 fold 8/10 (64 molecules, 5 models) 33s
+   PepMSND frozen seed 0 fold 9/10 (64 molecules, 5 models) 38s
+   PepMSND frozen seed 0 fold 10/10 (64 molecules, 5 models) 42s
+PepMSND  frozen   done (42s) | MCC 0.508 (pooled 0.511) | epochs run 35, best at 25, hit the 100-epoch cap in 0 of 50 fits
+   PepMSND ft seed 0 fold 1/10 (64 molecules, 5 models) 18s
+   PepMSND ft seed 0 fold 2/10 (64 molecules, 5 models) 37s
+   PepMSND ft seed 0 fold 3/10 (64 molecules, 5 models) 58s
+   PepMSND ft seed 0 fold 4/10 (64 molecules, 5 models) 77s
+   PepMSND ft seed 0 fold 5/10 (64 molecules, 5 models) 96s
+   PepMSND ft seed 0 fold 6/10 (64 molecules, 5 models) 115s
+   PepMSND ft seed 0 fold 7/10 (64 molecules, 5 models) 133s
+   PepMSND ft seed 0 fold 8/10 (64 molecules, 5 models) 153s
+   PepMSND ft seed 0 fold 9/10 (64 molecules, 5 models) 171s
+   PepMSND ft seed 0 fold 10/10 (64 molecules, 5 models) 189s
+PepMSND  ft       done (189s) | MCC 0.484 (pooled 0.486) | epochs run 22, best at 12, hit the 100-epoch cap in 0 of 50 fits
+PAMPA: 6701 usable molecules (100.0% of the file), ESM present for 0.0% | frozen embedding std per dimension 0.054
+   PAMPA frozen seed 0 fold 1/6 (1546 molecules, 5 models) 21s
+   PAMPA frozen seed 0 fold 2/6 (1465 molecules, 5 models) 53s
+   PAMPA frozen seed 0 fold 3/6 (1455 molecules, 5 models) 77s
+   PAMPA frozen seed 0 fold 4/6 (1206 molecules, 5 models) 98s
+   PAMPA frozen seed 0 fold 5/6 (535 molecules, 5 models) 117s
+   PAMPA frozen seed 0 fold 6/6 (494 molecules, 5 models) 137s
+PAMPA    frozen   done (137s) | R2 0.055 (pooled 0.178) | epochs run 25, best at 15, hit the 100-epoch cap in 0 of 30 fits
+   PAMPA ft seed 0 fold 1/6 (1546 molecules, 5 models) 130s
+   PAMPA ft seed 0 fold 2/6 (1465 molecules, 5 models) 364s
+   PAMPA ft seed 0 fold 3/6 (1455 molecules, 5 models) 503s
+   PAMPA ft seed 0 fold 4/6 (1206 molecules, 5 models) 698s
+   PAMPA ft seed 0 fold 5/6 (535 molecules, 5 models) 924s
+   PAMPA ft seed 0 fold 6/6 (494 molecules, 5 models) 1194s
+PAMPA    ft       done (1194s) | R2 0.266 (pooled 0.339) | epochs run 33, best at 23, hit the 100-epoch cap in 0 of 30 fits
+AmpHGT: 16900 usable molecules (100.0% of the file), ESM present for 13.4% | frozen embedding std per dimension 0.162
+AmpHGT   frozen   done (17s) | MCC 0.780 | epochs run 33, best at 23, hit the 100-epoch cap in 0 of 1 fits
+AmpHGT   ft       done (56s) | MCC 0.757 | epochs run 22, best at 12, hit the 100-epoch cap in 0 of 1 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode       frozen     ft
+benchmark               
+AmpHGT      0.780  0.757
+CellPPD     0.674  0.840
+PAMPA       0.055  0.266
+PepMSND     0.508  0.484
+THPep       0.764  0.786
+
+=== the same on the POOLED predictions of all folds (cluster-CV benchmarks only; PAMPA pooled R2 = the authors' metric) ===
+mode       frozen     ft
+benchmark               
+PAMPA       0.178  0.339
+PepMSND     0.511  0.486
+
+=== AUROC (classification) ===
+mode       frozen     ft
+benchmark               
+AmpHGT      0.950  0.942
+CellPPD     0.927  0.964
+PepMSND     0.812  0.810
+THPep       0.966  0.949
+
+=== test molecules WITH an ESM view (canonical) / WITHOUT (the p_E fill): MCC or R2 ===
+                  n_esm  head_esm  n_noesm  head_noesm
+benchmark mode                                        
+AmpHGT    frozen   13.0     0.000   5135.0       0.782
+          ft       13.0     0.000   5135.0       0.760
+CellPPD   frozen  174.0     0.583    126.0       0.731
+          ft      174.0     0.805    126.0       0.858
+PAMPA     frozen    0.0       NaN   6701.0       0.178
+          ft        0.0       NaN   6701.0       0.339
+PepMSND   frozen  388.0     0.456    252.0       0.514
+          ft      388.0     0.410    252.0       0.496
+THPep     frozen  122.0     0.764      0.0         NaN
+          ft      122.0     0.786      0.0         NaN
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                   run  best  capped  fits
+benchmark mode                            
+AmpHGT    frozen  33.0  23.0       0     1
+          ft      22.0  12.0       0     1
+CellPPD   frozen  60.8  51.8       1     5
+          ft      23.2  13.2       0     5
+PAMPA     frozen  25.4  15.4       0    30
+          ft      32.9  22.9       0    30
+PepMSND   frozen  34.7  24.7       0    50
+          ft      21.8  11.8       0    50
+THPep     frozen  36.0  26.0       0     5
+          ft      19.0   9.0       0     5
+
+AmpHGT test restricted to <=30 residues (MCC):
+mode
+frozen    0.347
+ft        0.442
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_t9
+missing /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_t9.npz
+(PepLand's suite skipped: pl-features first)
+
+== stage finetune finished, exit code 1 (15:04)

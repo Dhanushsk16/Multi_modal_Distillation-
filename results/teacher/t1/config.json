@@ -1,0 +1,17 @@
+{
+ "name": "t1",
+ "epochs": 40,
+ "batch": 2048,
+ "lr": 0.001,
+ "wd": 1e-05,
+ "hidden": 1024,
+ "sea_dim": 512,
+ "sea_input": "latents",
+ "first": 0,
+ "strict": false,
+ "data_on": "gpu",
+ "seed": 0,
+ "resume": false,
+ "no_bench": false,
+ "embed_pool": false
+}

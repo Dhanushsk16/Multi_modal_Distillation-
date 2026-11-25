@@ -1,0 +1,122 @@
+== Saturday 14 November 2026 11:31:11 AM IST | stage frozen | teacher t8 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_frozen_20261114_1131.log
+
+== frozen: teacher_t8 on PeptideCLM-2's five benchmarks (11:31)
+representations: ['teacher_t8']
+CellPPD  teacher_t8 done (25.7s) | mlp MCC 0.740
+THPep    teacher_t8 done (10.1s) | mlp MCC 0.685
+PepMSND  teacher_t8 done (127.9s) | mlp MCC 0.470
+PAMPA    teacher_t8 done (235.2s) | mlp R2 -0.203
+AmpHGT   teacher_t8 done (100.2s) | mlp MCC 0.825
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+AmpHGT    gbt           0.773
+          linear        0.736
+          mlp           0.823
+CellPPD   gbt           0.853
+          linear        0.807
+          mlp           0.787
+PAMPA     gbt           0.104
+          linear       -0.468
+          mlp          -0.142
+PepMSND   gbt           0.506
+          linear        0.490
+          mlp           0.462
+THPep     gbt           0.782
+          linear        0.742
+          mlp           0.699
+
+=== AUROC (classification), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+AmpHGT    gbt           0.947
+          linear        0.924
+          mlp           0.964
+CellPPD   gbt           0.975
+          linear        0.961
+          mlp           0.957
+PepMSND   gbt           0.847
+          linear        0.801
+          mlp           0.803
+THPep     gbt           0.972
+          linear        0.968
+          mlp           0.946
+
+=== accuracy (classification), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+AmpHGT    gbt           0.885
+          linear        0.868
+          mlp           0.909
+CellPPD   gbt           0.927
+          linear        0.903
+          mlp           0.893
+PepMSND   gbt           0.761
+          linear        0.752
+          mlp           0.737
+THPep     gbt           0.910
+          linear        0.893
+          mlp           0.874
+
+=== F1 (classification), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+AmpHGT    gbt           0.896
+          linear        0.875
+          mlp           0.918
+CellPPD   gbt           0.927
+          linear        0.903
+          mlp           0.895
+PepMSND   gbt           0.702
+          linear        0.704
+          mlp           0.688
+THPep     gbt           0.845
+          linear        0.817
+          mlp           0.787
+
+=== Pearson r (regression), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PAMPA     gbt           0.459
+          linear        0.394
+          mlp           0.401
+
+=== Spearman (regression), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PAMPA     gbt           0.417
+          linear        0.343
+          mlp           0.374
+
+=== RMSE (regression, lower is better), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PAMPA     gbt           0.705
+          linear        0.864
+          mlp           0.773
+
+=== POOLED R2 over all folds (PAMPA: the authors' metric), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PAMPA     gbt           0.237
+          linear       -0.313
+          mlp           0.055
+
+=== POOLED MCC over all folds (cluster-CV benchmarks), mean over seeds ===
+rep                teacher_t8
+benchmark learner            
+PepMSND   gbt           0.507
+          linear        0.491
+          mlp           0.464
+
+AmpHGT test restricted to <=30 residues (MCC):
+rep      teacher_t8
+learner            
+gbt           0.356
+linear        0.353
+mlp           0.501
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/teacher_t8_gate
+
+== stage frozen finished, exit code 0 (11:39)

@@ -1,0 +1,18 @@
+pclm: 27 shards for this process, 15 to do
+check: pclm cache code vs the benchmark features on 96 molecules | cosine median 1.00000, min 1.00000 | failed 0 | 4 s | PASS
+pclm shard  12 | 100,000 molecules | failed 0 | 2.9 min (run total 2.9 min, 1 shards done)
+pclm shard  13 | 100,000 molecules | failed 0 | 2.9 min (run total 5.8 min, 2 shards done)
+pclm shard  14 | 100,000 molecules | failed 0 | 2.9 min (run total 8.7 min, 3 shards done)
+pclm shard  15 | 100,000 molecules | failed 0 | 2.9 min (run total 11.6 min, 4 shards done)
+pclm shard  16 | 100,000 molecules | failed 0 | 2.9 min (run total 14.4 min, 5 shards done)
+pclm shard  17 | 100,000 molecules | failed 0 | 2.9 min (run total 17.3 min, 6 shards done)
+pclm shard  18 | 100,000 molecules | failed 0 | 2.9 min (run total 20.2 min, 7 shards done)
+pclm shard  19 | 100,000 molecules | failed 0 | 2.9 min (run total 23.2 min, 8 shards done)
+pclm shard  20 | 100,000 molecules | failed 0 | 2.9 min (run total 26.0 min, 9 shards done)
+pclm shard  21 | 100,000 molecules | failed 0 | 2.9 min (run total 28.9 min, 10 shards done)
+pclm shard  22 | 100,000 molecules | failed 0 | 2.9 min (run total 31.8 min, 11 shards done)
+pclm shard  23 | 100,000 molecules | failed 0 | 2.9 min (run total 34.7 min, 12 shards done)
+pclm shard  24 | 100,000 molecules | failed 0 | 2.9 min (run total 37.6 min, 13 shards done)
+pclm shard  25 | 100,000 molecules | failed 0 | 2.9 min (run total 40.5 min, 14 shards done)
+pclm shard  26 | 40,418 molecules | failed 0 | 1.2 min (run total 41.6 min, 15 shards done)
+pclm: 15 shards written, 0 molecules failed, 41.6 min

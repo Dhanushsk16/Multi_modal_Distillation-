@@ -1,0 +1,24 @@
+== Monday 09 November 2026 12:57:46 PM IST | stage cache | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/rdkit_cache_20261109_1257.log
+== rdkit cache: 24 workers, stopping at 06:45 (1067 min from now)
+rdkit: 27 shards for this process, 27 to do
+check: rdkit cache code vs the benchmark features on 96 molecules | cosine median 1.00000, min 1.00000 | failed 0 | 1 s | PASS
+rdkit shard   0 | 100,000 molecules | failed 0 | 2.0 min (run total 2.0 min, 1 shards done)
+rdkit shard   1 | 100,000 molecules | failed 0 | 2.0 min (run total 4.1 min, 2 shards done)
+rdkit shard   2 | 100,000 molecules | failed 0 | 2.0 min (run total 6.1 min, 3 shards done)
+rdkit shard   3 | 100,000 molecules | failed 0 | 2.1 min (run total 8.2 min, 4 shards done)
+rdkit shard   4 | 100,000 molecules | failed 0 | 2.0 min (run total 10.2 min, 5 shards done)
+rdkit shard   5 | 100,000 molecules | failed 0 | 2.0 min (run total 12.3 min, 6 shards done)
+rdkit shard   6 | 100,000 molecules | failed 0 | 84.3 min (run total 96.5 min, 7 shards done)
+rdkit shard   7 | 100,000 molecules | failed 0 | 2.1 min (run total 98.6 min, 8 shards done)
+rdkit shard   8 | 100,000 molecules | failed 0 | 2.0 min (run total 100.6 min, 9 shards done)
+rdkit shard   9 | 100,000 molecules | failed 0 | 2.0 min (run total 102.7 min, 10 shards done)
+rdkit shard  10 | 100,000 molecules | failed 0 | 2.0 min (run total 104.7 min, 11 shards done)
+rdkit shard  11 | 100,000 molecules | failed 0 | 2.0 min (run total 106.8 min, 12 shards done)
+rdkit shard  12 | 100,000 molecules | failed 0 | 2.0 min (run total 108.8 min, 13 shards done)
+rdkit shard  13 | 100,000 molecules | failed 0 | 2.0 min (run total 110.8 min, 14 shards done)
+/home/dhanushsk/code/peptidefusion/scripts/run_rdkit.sh: line 41: 2303030 Killed                  timeout --signal=INT --kill-after=120 "$t" python "$S/corpus/cache_views.py" --view rdkit --workers "$WORKERS"
+ecfp      27 / 27 shards finished | 2,640,418 of 2,640,418 molecules (100%)
+pclm      27 / 27 shards finished | 2,640,418 of 2,640,418 molecules (100%)
+pepland   15 / 27 shards finished + 12 in progress | 2,324,834 of 2,640,418 molecules (88%)
+rdkit     14 / 27 shards finished | 1,400,000 of 2,640,418 molecules (53%)
+== stopped (exit 137); run the same command again to continue

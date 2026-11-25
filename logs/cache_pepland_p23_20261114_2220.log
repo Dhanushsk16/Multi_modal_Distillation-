@@ -1,0 +1,128 @@
+pepland: 2 shards for this process, 1 to do
+2026/11/14 22:20:44 WARNING mlflow.pytorch: Stored model version '1.11.0' does not match installed PyTorch version '2.2.2+cpu'
+loading model from : /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/pepland_model
+Warning Unfound fragments C#CCCCC
+Warning Unfound fragments CCCCCN=[N+]=[N-]
+Warning Unfound fragments O=CNC=O
+Warning Unfound fragments O=CNC=O
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NCCCN
+Warning Unfound fragments NCCCCC[NH3+]
+Warning Unfound fragments O[C@H]1COC[C@@H]1O
+Warning Unfound fragments O[C@H]1COC[C@@H]1O
+Warning Unfound fragments O[C@H]1COC[C@@H]1O
+Warning Unfound fragments OC1[C@H](O)COC[C@H]1O
+Warning Unfound fragments O[C@@H]1CCOC[C@H]1O
+Warning Unfound fragments OC1[C@H](O)COC[C@H]1O
+Warning Unfound fragments N[C@H]1COCC[C@@H]1O
+Warning Unfound fragments O[C@@H]1[C@@H](O)[C@@H](O)CC[C@H]1O
+Warning Unfound fragments CCCCCCCCCCCCC
+Warning Unfound fragments CCCC[C@H](C)CC
+Warning Unfound fragments CCC(C)O
+Warning Unfound fragments C=CN
+Warning Unfound fragments O[C@@H]1CCOC[C@H]1O
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments C1CNCN1
+Warning Unfound fragments [NH3+]CCCCCC=O
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments [NH3+]CCCCCC=O
+Warning Unfound fragments CCCN=C(N)N
+Warning Unfound fragments NCCCN
+Warning Unfound fragments NCCCCC[NH3+]
+check: pepland cache code vs the benchmark features on 96 molecules | cosine median 1.00000, min 1.00000 | failed 0 | 14 s | PASS
+  pepland shard 47: 448/31,668 molecules | 281 ms/molecule | about 146 min to go
+  pepland shard 47: 896/31,668 molecules | 288 ms/molecule | about 148 min to go
+  pepland shard 47: 1,280/31,668 molecules | 303 ms/molecule | about 153 min to go
+  pepland shard 47: 1,728/31,668 molecules | 304 ms/molecule | about 152 min to go
+  pepland shard 47: 2,176/31,668 molecules | 301 ms/molecule | about 148 min to go
+  pepland shard 47: 2,624/31,668 molecules | 301 ms/molecule | about 146 min to go
+  pepland shard 47: 3,072/31,668 molecules | 300 ms/molecule | about 143 min to go
+  pepland shard 47: 3,520/31,668 molecules | 300 ms/molecule | about 141 min to go
+  pepland shard 47: 3,968/31,668 molecules | 300 ms/molecule | about 138 min to go
+  pepland shard 47: 4,416/31,668 molecules | 300 ms/molecule | about 136 min to go
+  pepland shard 47: 4,864/31,668 molecules | 300 ms/molecule | about 134 min to go
+  pepland shard 47: 5,312/31,668 molecules | 301 ms/molecule | about 132 min to go
+  pepland shard 47: 5,696/31,668 molecules | 302 ms/molecule | about 131 min to go
+  pepland shard 47: 6,080/31,668 molecules | 303 ms/molecule | about 129 min to go
+  pepland shard 47: 6,528/31,668 molecules | 303 ms/molecule | about 127 min to go
+  pepland shard 47: 6,976/31,668 molecules | 303 ms/molecule | about 125 min to go
+  pepland shard 47: 7,424/31,668 molecules | 303 ms/molecule | about 122 min to go
+  pepland shard 47: 7,808/31,668 molecules | 303 ms/molecule | about 121 min to go
+  pepland shard 47: 8,256/31,668 molecules | 304 ms/molecule | about 119 min to go
+  pepland shard 47: 8,704/31,668 molecules | 304 ms/molecule | about 116 min to go
+  pepland shard 47: 9,088/31,668 molecules | 305 ms/molecule | about 115 min to go
+  pepland shard 47: 9,472/31,668 molecules | 305 ms/molecule | about 113 min to go
+  pepland shard 47: 9,856/31,668 molecules | 306 ms/molecule | about 111 min to go
+  pepland shard 47: 10,240/31,668 molecules | 307 ms/molecule | about 110 min to go
+  pepland shard 47: 10,624/31,668 molecules | 307 ms/molecule | about 108 min to go
+  pepland shard 47: 11,008/31,668 molecules | 308 ms/molecule | about 106 min to go
+  pepland shard 47: 11,392/31,668 molecules | 309 ms/molecule | about 104 min to go
+  pepland shard 47: 11,776/31,668 molecules | 309 ms/molecule | about 103 min to go
+  pepland shard 47: 12,160/31,668 molecules | 309 ms/molecule | about 101 min to go
+  pepland shard 47: 12,608/31,668 molecules | 309 ms/molecule | about 98 min to go
+  pepland shard 47: 13,056/31,668 molecules | 310 ms/molecule | about 96 min to go
+  pepland shard 47: 13,440/31,668 molecules | 310 ms/molecule | about 94 min to go
+  pepland shard 47: 13,824/31,668 molecules | 311 ms/molecule | about 92 min to go
+  pepland shard 47: 14,208/31,668 molecules | 311 ms/molecule | about 90 min to go
+  pepland shard 47: 14,592/31,668 molecules | 311 ms/molecule | about 89 min to go
+  pepland shard 47: 14,976/31,668 molecules | 312 ms/molecule | about 87 min to go
+  pepland shard 47: 15,360/31,668 molecules | 312 ms/molecule | about 85 min to go
+  pepland shard 47: 15,744/31,668 molecules | 312 ms/molecule | about 83 min to go
+  pepland shard 47: 16,128/31,668 molecules | 313 ms/molecule | about 81 min to go
+  pepland shard 47: 16,512/31,668 molecules | 313 ms/molecule | about 79 min to go
+  pepland shard 47: 16,896/31,668 molecules | 313 ms/molecule | about 77 min to go
+  pepland shard 47: 17,280/31,668 molecules | 314 ms/molecule | about 75 min to go
+  pepland shard 47: 17,664/31,668 molecules | 314 ms/molecule | about 73 min to go
+  pepland shard 47: 18,048/31,668 molecules | 314 ms/molecule | about 71 min to go
+  pepland shard 47: 18,432/31,668 molecules | 314 ms/molecule | about 69 min to go
+  pepland shard 47: 18,816/31,668 molecules | 315 ms/molecule | about 68 min to go
+  pepland shard 47: 19,136/31,668 molecules | 316 ms/molecule | about 66 min to go
+  pepland shard 47: 19,456/31,668 molecules | 318 ms/molecule | about 65 min to go
+  pepland shard 47: 19,776/31,668 molecules | 320 ms/molecule | about 63 min to go
+  pepland shard 47: 20,096/31,668 molecules | 322 ms/molecule | about 62 min to go
+  pepland shard 47: 20,352/31,668 molecules | 324 ms/molecule | about 61 min to go
+  pepland shard 47: 20,672/31,668 molecules | 326 ms/molecule | about 60 min to go
+  pepland shard 47: 20,928/31,668 molecules | 328 ms/molecule | about 59 min to go
+  pepland shard 47: 21,184/31,668 molecules | 330 ms/molecule | about 58 min to go
+  pepland shard 47: 21,376/31,668 molecules | 333 ms/molecule | about 57 min to go
+  pepland shard 47: 21,632/31,668 molecules | 336 ms/molecule | about 56 min to go
+  pepland shard 47: 21,824/31,668 molecules | 339 ms/molecule | about 56 min to go
+  pepland shard 47: 22,144/31,668 molecules | 340 ms/molecule | about 54 min to go
+  pepland shard 47: 22,400/31,668 molecules | 342 ms/molecule | about 53 min to go
+  pepland shard 47: 22,656/31,668 molecules | 343 ms/molecule | about 52 min to go
+  pepland shard 47: 22,912/31,668 molecules | 346 ms/molecule | about 50 min to go
+  pepland shard 47: 23,232/31,668 molecules | 346 ms/molecule | about 49 min to go
+  pepland shard 47: 23,552/31,668 molecules | 347 ms/molecule | about 47 min to go
+  pepland shard 47: 23,872/31,668 molecules | 349 ms/molecule | about 45 min to go
+  pepland shard 47: 24,256/31,668 molecules | 349 ms/molecule | about 43 min to go
+  pepland shard 47: 24,640/31,668 molecules | 349 ms/molecule | about 41 min to go
+  pepland shard 47: 24,960/31,668 molecules | 350 ms/molecule | about 39 min to go
+  pepland shard 47: 25,280/31,668 molecules | 350 ms/molecule | about 37 min to go
+  pepland shard 47: 25,664/31,668 molecules | 350 ms/molecule | about 35 min to go
+  pepland shard 47: 26,048/31,668 molecules | 351 ms/molecule | about 33 min to go
+  pepland shard 47: 26,368/31,668 molecules | 351 ms/molecule | about 31 min to go
+  pepland shard 47: 26,560/31,668 molecules | 354 ms/molecule | about 30 min to go
+  pepland shard 47: 26,944/31,668 molecules | 354 ms/molecule | about 28 min to go
+  pepland shard 47: 27,328/31,668 molecules | 354 ms/molecule | about 26 min to go
+  pepland shard 47: 27,648/31,668 molecules | 355 ms/molecule | about 24 min to go
+  pepland shard 47: 27,968/31,668 molecules | 356 ms/molecule | about 22 min to go
+  pepland shard 47: 28,352/31,668 molecules | 356 ms/molecule | about 20 min to go
+  pepland shard 47: 28,736/31,668 molecules | 355 ms/molecule | about 17 min to go
+  pepland shard 47: 29,120/31,668 molecules | 356 ms/molecule | about 15 min to go
+  pepland shard 47: 29,440/31,668 molecules | 356 ms/molecule | about 13 min to go
+  pepland shard 47: 29,760/31,668 molecules | 364 ms/molecule | about 12 min to go
+  pepland shard 47: 30,144/31,668 molecules | 364 ms/molecule | about 9 min to go
+  pepland shard 47: 30,528/31,668 molecules | 363 ms/molecule | about 7 min to go
+  pepland shard 47: 30,912/31,668 molecules | 363 ms/molecule | about 5 min to go
+  pepland shard 47: 31,232/31,668 molecules | 364 ms/molecule | about 3 min to go
+  pepland shard 47: 31,616/31,668 molecules | 364 ms/molecule | about 0 min to go
+pepland shard  47 | 31,668 molecules | failed 0 | 192.0 min (run total 192.0 min, 1 shards done)
+pepland: 1 shards written, 0 molecules failed, 192.0 min

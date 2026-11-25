@@ -1,0 +1,8 @@
+18:19:39 == stage embed | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_embed_20261122_1819.log
+teacher_v3_base shard   0 | 100,000 molecules | unusable 6
+teacher_v3_base shard   1 | 100,000 molecules | unusable 1
+teacher_v3_base shard   2 | 100,000 molecules | unusable 3
+teacher_v3_base shard   3 | 100,000 molecules | unusable 1
+teacher_v3_base shard   4 | 100,000 molecules | unusable 1
+done: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/corpus/teacher_v3_base
+18:20:01 == done (exit status 0)

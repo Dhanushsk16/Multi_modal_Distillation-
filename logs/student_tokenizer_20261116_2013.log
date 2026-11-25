@@ -1,0 +1,125 @@
+== Monday 16 November 2026 08:13:52 PM IST | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_tokenizer_20261116_2013.log
+threads: 8 (rayon 8) | cores: 8 | load: 2.06 2.64 2.68 | memory: 301 GB available of 314 GB
+pool: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/pool.parquet
+sample: {"pool_rows": 3400449, "pool_noncanonical_share": 0.1883, "sampling": "stratified", "train": 500000, "train_noncanonical": 250000, "held_out": 50000, "held_out_noncanonical": 9417}
+normalised (neutralised + RDKit canonical): 0 of 500000 training and 0 of 50000 held-out molecules changed, 0 unparsable (kept as they are) | 59 s
+training sample: 500,000 molecules, 148,288,845 characters (mean 297) | projected peak memory about 12.6 GB (estimate: 85 bytes per character)
+  noncanonical: 12 strata, 7 taken whole, smallest quota 1462, largest 36477
+  canonical: 18 strata, 8 taken whole, smallest quota 31, largest 21706
+learned vocab 2048 in 76 s (55 base atoms, 105 atoms spelled out) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/st_strat_500k/atombpe_v2048  [peak memory 10450 MB]
+
+== pool_heldout (50,000 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.38      111.00   256.00      375       1.00       0.00        20.91      1.00               NaN             NaN
+        B_fixed    405         5.40      111.00   257.00      375       1.03       0.00         0.04      1.00               NaN             NaN
+C_atombpe_v2048   2048         0.83       18.00    42.00      277       0.00       0.00         0.00      0.17              0.03            0.00
+
+== CellPPD (1,339 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.43       81.00   200.62      291       0.07       0.00        35.40      1.00               NaN             NaN
+        B_fixed    405         5.45       81.00   200.62      291       0.07       0.00         0.00      1.01               NaN             NaN
+C_atombpe_v2048   2048         1.10       17.00    52.00       97       0.00       0.00         0.00      0.22              0.90            0.00
+
+== THPep (609 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.33       87.00   139.00      151       0.00       0.00        22.00      1.00               NaN             NaN
+        B_fixed    405         5.33       87.00   139.92      154       0.00       0.00         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         0.88       14.00    21.00       22       0.00       0.00         0.00      0.16              0.00            0.00
+
+== AmpHGT (16,841 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.20      274.00   539.00      649      53.63       2.92        42.12      1.00               NaN             NaN
+        B_fixed    405         5.22      275.00   541.00      653      53.73       3.09         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         0.76       41.00    72.00       85       0.00       0.00         0.00      0.15              0.00            0.00
+
+== PAMPA (6,649 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         6.29       46.00    83.00      101       0.00       0.00         0.74      1.00               NaN             NaN
+        B_fixed    405         6.29       46.00    83.00      101       0.00       0.00         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         1.86       14.00    23.00       28       0.00       0.00         0.00      0.30              0.00            0.00
+
+== PepMSND (605 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.43       99.00   335.84      438       3.47       0.00        33.22      1.00               NaN             NaN
+        B_fixed    405         5.45       99.00   335.84      444       3.64       0.00         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         0.89       17.00    51.00       69       0.00       0.00         0.00      0.17              0.00            0.00
+
+== PL_cCPP (2,324 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.39       93.00   233.77      349       0.30       0.00        33.86      1.00               NaN             NaN
+        B_fixed    405         5.40       93.00   233.77      351       0.30       0.00         0.00      1.01               NaN             NaN
+C_atombpe_v2048   2048         0.86       14.00    31.00       45       0.00       0.00         0.00      0.16              0.00            0.00
+
+== PL_cSol (1,357 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.28      446.00   557.44      611      99.19      11.05        55.64      1.00               NaN             NaN
+        B_fixed    405         5.29      447.00   558.00      612      99.19      11.42         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         0.70       59.00    71.00       75       0.00       0.00         0.00      0.13              0.00            0.00
+
+== PL_ncCPP (7,334 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         6.29       46.00    83.00      101       0.00       0.00         0.94      1.00               NaN             NaN
+        B_fixed    405         6.29       46.00    83.00      101       0.00       0.00         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         1.86       14.00    24.00       36       0.00       0.00         0.00      0.30              0.00            0.00
+
+== PL_cBinding (1,552 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         5.50       68.00   238.98      282       0.45       0.00        19.33      1.00               NaN             NaN
+        B_fixed    405         5.50       68.50   239.49      283       0.45       0.00         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         1.17       15.00    47.49       58       0.00       0.00         0.00      0.21              1.22            0.00
+
+== PL_ncBinding (231 molecules)
+      tokenizer  vocab  tok_per_res  len_median  len_p99  len_max  pct_gt256  pct_gt512  pct_mol_unk  len_vs_A  pct_mol_fallback  roundtrip_fail
+     A_released    405         6.50       42.00   141.50      177       0.00       0.00        14.72      1.00               NaN             NaN
+        B_fixed    405         6.58       42.00   141.80      177       0.00       0.00         0.00      1.00               NaN             NaN
+C_atombpe_v2048   2048         1.78       14.00    33.00       36       0.00       0.00         0.00      0.29              7.79            0.00
+
+== held-out pool: tokens (with [CLS], [SEP]) by residues
+      tokenizer residues     n  median    p95    p99  max
+     A_released     1-10 13996   45.00  78.00 117.00  320
+     A_released    11-20  9814   82.00 114.00 131.87  271
+     A_released    21-30 15060  132.00 168.00 182.41  301
+     A_released    31-40  8623  183.00 226.00 245.00  301
+     A_released    41-50  2507  232.00 283.00 313.00  375
+        B_fixed     1-10 13996   45.00  79.00 118.00  321
+        B_fixed    11-20  9814   82.00 114.00 132.00  279
+        B_fixed    21-30 15060  132.00 168.00 183.00  315
+        B_fixed    31-40  8623  183.00 227.00 246.00  301
+        B_fixed    41-50  2507  232.00 283.00 313.94  375
+C_atombpe_v2048     1-10 13996   10.00  33.00  53.00  277
+C_atombpe_v2048    11-20  9814   14.00  22.00  44.00  142
+C_atombpe_v2048    21-30 15060   20.00  24.00  26.00  110
+C_atombpe_v2048    31-40  8623   25.00  30.00  32.00   36
+C_atombpe_v2048    41-50  2507   32.00  37.00  39.00   42
+
+== maximum length needed to keep this share of molecules whole (the student's max length is chosen from this)
+      tokenizer  pool_99  pool_99.9  pool_100  bench_99  bench_99.9  bench_100
+     A_released      256        302       375       526         568        649
+        B_fixed      257        302       375       527         572        653
+C_atombpe_v2048       42         79       277        70          74         97
+
+C_atombpe_v2048: 1964 of 2048 tokens used on the held-out pool; token length in atoms: median 12, p90 32, max 113; top 12: ['C(C)C)', 'CC[C@H](C)[C@H](NC(=O)[C@H](C', 'CC(=O)O)C(=O)N[C@@H](C', ')', 'O)', 'O)C(=O)N[C@@H](C', 'CCCN)C(=O)N[C@@H](C', 'CCNC(=N)N)C(=O)N[C@@H](C', 'CC(=O)O)', 'C(C)C)C(=O)N[C@@H](C', 'c1ccccc1)NC(=O)[C@H](C', 'C(=O)O)C(=O)N[C@@H](C']
+
+== examples (first 40 tokens)
+### Ala-Leu-Trp
+CC(C)C[C@H](NC(=O)[C@@H](N)C)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O
+A_released              23 tokens: CC(C) | C | [C@H] | ( | NC(=O) | [C@@H] | (N) | C) | C(=O)N | [C@@H] | (C | c | 1 | c | [nH] | c | 2 | ccccc | [UNK] | ) | C(=O)O
+B_fixed                 24 tokens: CC(C) | C | [C@H] | ( | NC(=O) | [C@@H] | (N) | C) | C(=O)N | [C@@H] | (C | c | 1 | c | [nH] | c | 2 | ccccc | 1 | 2 | ) | C(=O)O
+C_atombpe_v2048          7 tokens: CC(C)C[C@H]( | NC(=O)[C@@H](N) | C) | C(=O)N[C@@H](C | c1c[nH]c2ccccc12)C(=O)O
+
+### non-canonical, held-out pool
+CNC(=O)C1CC(OCNC(=O)CNC(=O)[C@H](Cc2ccccc2)NC(=O)CNC(=O)CNC(=O)COCCOCCOCCOCCOCCOCCOCCOCCNC(=O)CCCCCN2C(=O)C=CC2=O)C1
+A_released              43 tokens: CNC | (=O) | C | 1 | CC | (O | CNC | (=O) | CNC | (=O) | [C@H] | (C | c | 2 | ccccc | 2 | ) | NC(=O) | CNC | (=O) | CNC | (=O) | COC | COC | COC | COC | COC | COC | COC | COC | CNC | (=O) | CCCC | CN | 2 | C(=O)C | =CC | 2 | =O) | C ...
+B_fixed                 43 tokens: CNC | (=O) | C | 1 | CC | (O | CNC | (=O) | CNC | (=O) | [C@H] | (C | c | 2 | ccccc | 2 | ) | NC(=O) | CNC | (=O) | CNC | (=O) | COC | COC | COC | COC | COC | COC | COC | COC | CNC | (=O) | CCCC | CN | 2 | C(=O)C | =CC | 2 | =O) | C ...
+C_atombpe_v2048         16 tokens: C | NC(=O)C1 | CC( | OC | NC(=O)CNC(=O)[C@H](C | c2ccccc2) | NC(=O)CNC(=O)C | NC(=O)C | OCCOCCOCCOCCOCCOCCOCCOCC | NC(=O)CC | CCCN2 | C(=O)C= | CC2=O) | C1
+
+### 33 residues, held-out pool
+CC[C@H](C)[C@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@H](C)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](C)NC(=O)[C@H](CCCCN)NC(=O)[C@@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCCN)NC(=O)[C@@H](N)CCSC)[C@@H](C)O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](CCSC)C(=O)N[C@H](C(=O)N[C@@H](CCSC)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@H](C(=O)N[C@@H](CCSC)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C(=O)N[C@@H](C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@H](C(=O)NCC(=O)N[C@@H](CS)C(=O)NCC(=O)NCC(=O)NCC(=O)N[C@H](C(=O)N[C@@H](CC(=O)O)C(=O)O)[C@@H](C)O)C(C)C)[C@@H](C)O)[C@@H](C)O)[C@@H](C)CC
+A_released             155 tokens: CC | [C@H] | (C) | [C@H] | ( | NC(=O) | [C@H] | (C | C(C)C | ) | NC(=O) | [C@H] | (C) | NC(=O) | [C@H] | (C | C(C)C | ) | NC(=O) | [C@H] | (C) | NC(=O) | [C@H] | (C | CCCN) | NC(=O) | [C@@H] | ( | NC(=O) | [C@H] | (C | C(C)C | ) | NC(=O) | [C@H] | (C | CCCN) | NC(=O) | [C@H] | (C ...
+B_fixed                155 tokens: CC | [C@H] | (C) | [C@H] | ( | NC(=O) | [C@H] | (C | C(C)C | ) | NC(=O) | [C@H] | (C) | NC(=O) | [C@H] | (C | C(C)C | ) | NC(=O) | [C@H] | (C) | NC(=O) | [C@H] | (C | CCCN) | NC(=O) | [C@@H] | ( | NC(=O) | [C@H] | (C | C(C)C | ) | NC(=O) | [C@H] | (C | CCCN) | NC(=O) | [C@H] | (C ...
+C_atombpe_v2048         24 tokens: CC[C@H](C)[C@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@H](C | )NC(=O)[C@H](CC(C)C)NC(=O)[C@H](C | )NC(=O)[C@H](C | CCCN)NC(=O)[C@@H](NC(=O)[C@H](C | C(C)C)NC(=O)[C@H](CCCCN)NC(=O)[C@H](C | CCCN)NC(=O)[C@@H](N)CCSC) | [C@@H](C)O)C(=O)N[C@@H](C | C(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](C | CSC)C(=O)N[C@H](C(=O)N[C@@H](C | CSC)C(=O)N[C@@H](C | C(C)C)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@H](C(=O)N[C@@H](C | CSC)C(=O)N[C@@H](C | C(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C(=O)N[C@@H](C | )C(=O)N[C@@H](CC(C)C) | C(=O)N[C@H](C(=O)NCC(=O)N[C@@H](C | S) | C(=O)NCC(=O)NC | C(=O)NCC(=O)N[C@H](C(=O)N[C@@H](C | C(=O)O) | C(=O)O)[C@@H](C)O) | C(C)C)[C@@H](C)O)[C@@H](C)O) | [C@@H](C)CC
+
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/st_strat_500k (347 s)
+
+== done 20:19 (exit 0)

@@ -1,0 +1,9 @@
+benchmark,subset,H,L,P,P+L+H,PCA,PROT,teacher_v3_base
+PL_cBindingProt,modified,0.548,0.581,0.52,0.571,0.551,0.49,0.568
+PL_cBindingProt,standard,0.457,0.457,0.429,0.454,0.438,0.41,0.439
+PL_cBindingProtUnseen,modified,0.492,0.514,0.473,0.527,0.483,0.414,0.5
+PL_cBindingProtUnseen,standard,0.417,0.387,0.355,0.421,0.366,0.324,0.398
+PL_ncBindingProt,modified,0.479,0.497,0.469,0.492,0.467,0.446,0.542
+PL_ncBindingProt,standard,0.806,0.794,0.783,0.817,0.794,0.813,0.786
+PL_ncBindingProtUnseen,modified,0.251,0.326,0.285,0.307,0.259,0.272,0.324
+PL_ncBindingProtUnseen,standard,0.258,-0.049,0.022,0.091,0.041,-0.001,0.016

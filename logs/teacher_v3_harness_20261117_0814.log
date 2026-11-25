@@ -1,0 +1,58 @@
+== Tuesday 17 November 2026 08:14:39 AM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261117_0814.log
+representations: ['P', 'L', 'H', 'P+L+H', 'PCA', 'teacher_abl_base_s1'] | learners ['linear'] | seeds 1 | select val
+   THPep        all    P            linear seed 0 | MCC 0.630 (1s)
+   THPep        all    L            linear seed 0 | MCC 0.742 (1s)
+   THPep        all    H            linear seed 0 | MCC 0.754 (1s)
+   THPep        all    P+L+H        linear seed 0 | MCC 0.770 (1s)
+   THPep        all    PCA          linear seed 0 | MCC 0.688 (0s)
+   THPep        all    teacher_abl_base_s1 linear seed 0 | MCC 0.821 (0s)
+== THPep done (13 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            THPep  AVERAGE
+H                           0.754    0.754
+L                           0.742    0.742
+P                           0.630    0.630
+P+L+H                       0.770    0.770
+PCA                         0.688    0.688
+teacher_abl_base_s1         0.821    0.821
+REF (chosen on validation)  0.754    0.754
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = the best single input among P, L, H chosen per benchmark on validation data; versus H = the ECFP counts alone; learner ALL = mean over the learners; intervals = paired bootstrap over test items, benchmarks resampled independently, then averaged; wins / losses / ties = benchmarks whose 95% interval is above / below / around 0; better995 / worse995 = benchmarks whose 99.5% interval is entirely above / below 0)
+versus learner                 rep  benchmarks  mean_diff  ci_lo  ci_hi  ci995_lo  ci995_hi  wins  losses  ties  better995  worse995
+   REF  linear                   P           1     -0.124 -0.229 -0.022    -0.289    -0.016   0.0     1.0   0.0        0.0       1.0
+   REF  linear                   L           1     -0.012 -0.155  0.097    -0.204     0.109   0.0     0.0   1.0        0.0       0.0
+   REF  linear                   H           1      0.000  0.000  0.000     0.000     0.000   0.0     0.0   1.0        0.0       0.0
+   REF  linear               P+L+H           1      0.016 -0.088  0.103    -0.115     0.149   0.0     0.0   1.0        0.0       0.0
+   REF  linear                 PCA           1     -0.066 -0.192  0.059    -0.200     0.108   0.0     0.0   1.0        0.0       0.0
+   REF  linear teacher_abl_base_s1           1      0.068 -0.085  0.166    -0.110     0.173   0.0     0.0   1.0        0.0       0.0
+   REF     ALL                   P           1     -0.124    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+   REF     ALL                   L           1     -0.012    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+   REF     ALL                   H           1      0.000    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+   REF     ALL               P+L+H           1      0.016    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+   REF     ALL                 PCA           1     -0.066    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+   REF     ALL teacher_abl_base_s1           1      0.068    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+     H  linear                   P           1     -0.124 -0.229 -0.022    -0.289    -0.016   0.0     1.0   0.0        0.0       1.0
+     H  linear                   L           1     -0.012 -0.155  0.097    -0.204     0.109   0.0     0.0   1.0        0.0       0.0
+     H  linear               P+L+H           1      0.016 -0.088  0.103    -0.115     0.149   0.0     0.0   1.0        0.0       0.0
+     H  linear                 PCA           1     -0.066 -0.192  0.059    -0.200     0.108   0.0     0.0   1.0        0.0       0.0
+     H  linear teacher_abl_base_s1           1      0.068 -0.085  0.166    -0.110     0.173   0.0     0.0   1.0        0.0       0.0
+     H     ALL                   P           1     -0.124    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+     H     ALL                   L           1     -0.012    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+     H     ALL               P+L+H           1      0.016    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+     H     ALL                 PCA           1     -0.066    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+     H     ALL teacher_abl_base_s1           1      0.068    NaN    NaN       NaN       NaN   NaN     NaN   NaN        NaN       NaN
+
+=== PASS MARK (teachers, all usable items): average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse (99.5% interval) ===
+            teacher learner  mean_diff_vs_REF  mean_diff_vs_PCA  mean_diff_vs_H  clearly_worse_benchmarks_99.5 PASS                   checked
+teacher_abl_base_s1  linear             0.068             0.133           0.068                            0.0  yes REF, PCA, 99.5% intervals
+teacher_abl_base_s1     ALL             0.068             0.133           0.068                            0.0  yes REF, PCA, 99.5% intervals
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+rep                     H      L     P  P+L+H    PCA  teacher_abl_base_s1
+benchmark subset                                                         
+THPep     standard  0.754  0.742  0.63   0.77  0.688                0.821
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/harness_smoke
+== done 08:14

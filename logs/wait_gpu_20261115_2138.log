@@ -1,0 +1,4 @@
+21:38:16 == wait_gpu_run | poll 30s, idle needed 60s, util <= 0%, free >= 34000 MB | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/wait_gpu_20261115_2138.log
+21:38:16 == command: bash /home/dhanushsk/code/peptidefusion/scripts/run_teacher.sh t10 --views pclm pepland esm --optional-views esm --fill token --sea-input latents --cons-weight 1.0 --cons-frac 0.5 --hidden 1024 --sea-hidden 2048 --sea-dim 1024 --arch res --blocks 1 --dropout 0.1 --view-dropout 0.1 --lr 3e-4 --wd 1e-5 --batch 2048 --epochs 200 --patience 10 --min-delta 1e-4 --sched plateau --plateau-patience 3 --plateau-factor 0.5 --seed 0 --resume
+21:38:17 the cache is complete
+21:38:17 GPU busy: process 3489754: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-a7 --phi 0 --seed 123 --out

@@ -1,0 +1,15 @@
+20:07:24 == stage data | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_data_20261122_2007.log
+Traceback (most recent call last):
+  File "/home/dhanushsk/code/peptidefusion/src/student/make_student_data.py", line 164, in <module>
+    main()
+  File "/home/dhanushsk/code/peptidefusion/src/student/make_student_data.py", line 106, in main
+    tok = T.load_tokenizer(a.tok)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/code/peptidefusion/src/student/tokenizer.py", line 192, in load_tokenizer
+    return AtomBPE.load(folder)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/code/peptidefusion/src/student/tokenizer.py", line 178, in load
+    tk = _tokenizers().from_file(os.path.join(folder, "tokenizer.json"))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: No such file or directory (os error 2)
+20:07:25 == done (exit status 1)

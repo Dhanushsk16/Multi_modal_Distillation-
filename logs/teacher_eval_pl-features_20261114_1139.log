@@ -1,0 +1,13 @@
+== Saturday 14 November 2026 11:39:48 AM IST | stage pl-features | teacher t8 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_pl-features_20261114_1139.log
+
+== ESM features of PepLand's suite (11:39); same caps setting as the pool cache and the main benchmark file
+esm: loading /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/esm2_t36_3B_UR50D on cuda (the 3B .bin shards are 11 GB: reading them takes minutes) ...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 30.88it/s]
+esm: loaded in 3 s | weights on cuda:0, float16
+esm: 12567 benchmark molecules, 2560-d, canonical (embedded) 2699 = 21.5% | 49 s -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/esm.npz
+
+== teacher t8 embeds PepLand's suite (11:40)
+benchmark molecules with a esm view: 2699 of 12567 (21.5%); the others use the view predicted by its SCA from the other views
+benchmark embeddings: 12567 molecules, 1024-d, usable 12567 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_t8.npz
+
+== stage pl-features finished, exit code 0 (11:40)

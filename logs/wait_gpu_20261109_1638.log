@@ -1,0 +1,247 @@
+16:38:42 == wait_gpu_run | poll 30s, idle needed 60s, util <= 0%, free >= 30000 MB | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/wait_gpu_20261109_1638.log
+16:38:42 == command: bash /home/dhanushsk/code/peptidefusion/scripts/run_teacher.sh t5 --views ecfp pclm rdkit --sea-input both --sea-dim 1024 --hidden 1024 --sea-hidden 2048 --arch res --blocks 1 --dropout 0.1 --view-dropout 0.1 --lr 3e-4 --epochs 200 --patience 20 --sched plateau --resume
+16:38:42 the cache is complete
+16:38:42 GPU busy: process 2341563: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi 0 --seed 99 --out-root /mn
+16:48:43 GPU busy: process 2341563: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi 0 --seed 99 --out-root /mn
+16:58:45 GPU busy: process 2341563: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi 0 --seed 99 --out-root /mn
+17:05:46 GPU busy: process 2357757: shivanhu python tinygpq/train_cv.py --variant ms_fc --phi 0 --seed 99 --out-root /mnt/wwn-
+17:15:47 GPU busy: process 2357757: shivanhu python tinygpq/train_cv.py --variant ms_fc --phi 0 --seed 99 --out-root /mnt/wwn-
+17:19:17 GPU busy: process 2357757: shivanhu python tinygpq/train_cv.py --variant ms_fc --phi 0 --seed 99 --out-root /mnt/wwn-
+process 2360933: shubham  .venv-qc/bin/python -u -m experiments.trident_grandqc_transition.storage_lifecycl
+17:29:19 GPU busy: process 2357757: shivanhu python tinygpq/train_cv.py --variant ms_fc --phi 0 --seed 99 --out-root /mnt/wwn-
+process 2360933: shubham  .venv-qc/bin/python -u -m experiments.trident_grandqc_transition.storage_lifecycl
+17:39:21 GPU busy: process 2357757: shivanhu python tinygpq/train_cv.py --variant ms_fc --phi 0 --seed 99 --out-root /mnt/wwn-
+process 2360933: shubham  .venv-qc/bin/python -u -m experiments.trident_grandqc_transition.storage_lifecycl
+17:45:52 GPU busy: process 2357757: shivanhu python tinygpq/train_cv.py --variant ms_fc --phi 0 --seed 99 --out-root /mnt/wwn-
+17:50:53 GPU busy: process 2357757: shivanhu python tinygpq/train_cv.py --variant ms_fc --phi 0 --seed 99 --out-root /mnt/wwn-
+process 2369887: shubham  .venv-qc/bin/python -u -m experiments.trident_grandqc_transition.storage_lifecycl
+17:51:23 GPU busy: process 2369887: shubham  .venv-qc/bin/python -u -m experiments.trident_grandqc_transition.storage_lifecycl
+process 2370297: shivanhu python tinygpq/train_cv.py --variant pq --phi 0 --seed 99 --out-root /mnt/wwn-0x5
+18:01:25 GPU busy: process 2369887: shubham  .venv-qc/bin/python -u -m experiments.trident_grandqc_transition.storage_lifecycl
+process 2370297: shivanhu python tinygpq/train_cv.py --variant pq --phi 0 --seed 99 --out-root /mnt/wwn-0x5
+18:03:25 GPU busy: process 2370297: shivanhu python tinygpq/train_cv.py --variant pq --phi 0 --seed 99 --out-root /mnt/wwn-0x5
+18:13:27 GPU busy: process 2370297: shivanhu python tinygpq/train_cv.py --variant pq --phi 0 --seed 99 --out-root /mnt/wwn-0x5
+18:23:28 GPU busy: process 2370297: shivanhu python tinygpq/train_cv.py --variant pq --phi 0 --seed 99 --out-root /mnt/wwn-0x5
+18:33:29 GPU busy: process 2370297: shivanhu python tinygpq/train_cv.py --variant pq --phi 0 --seed 99 --out-root /mnt/wwn-0x5
+18:39:30 GPU busy: process 2380441: shivanhu python tinygpq/train_cv.py --variant pq_pca --phi 0 --seed 99 --out-root /mnt/wwn
+18:49:31 GPU busy: process 2380441: shivanhu python tinygpq/train_cv.py --variant pq_pca --phi 0 --seed 99 --out-root /mnt/wwn
+18:58:02 GPU busy: process 2380441: shivanhu python tinygpq/train_cv.py --variant pq_pca --phi 0 --seed 99 --out-root /mnt/wwn
+process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+19:08:04 GPU busy: process 2380441: shivanhu python tinygpq/train_cv.py --variant pq_pca --phi 0 --seed 99 --out-root /mnt/wwn
+process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+19:18:06 GPU busy: process 2380441: shivanhu python tinygpq/train_cv.py --variant pq_pca --phi 0 --seed 99 --out-root /mnt/wwn
+process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+19:22:07 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+19:32:08 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+19:42:09 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+19:52:10 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+20:02:15 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+20:08:46 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+20:18:49 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+20:28:50 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+20:38:52 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+20:48:54 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+20:58:56 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+21:08:58 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+21:19:00 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2407495: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+21:28:01 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+21:36:02 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+21:46:04 GPU busy: process 2384590: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+21:47:04 GPU busy: process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+21:57:06 GPU busy: process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+22:07:07 GPU busy: process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+22:17:08 GPU busy: process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+22:27:09 GPU busy: process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+22:37:10 GPU busy: process 2416983: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d1 --phi 0 --seed 123 --out
+22:43:11 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+22:45:11 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+22:55:13 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+23:05:15 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+23:10:46 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+23:20:49 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+23:24:20 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+23:34:23 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+23:44:26 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+23:54:29 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+23:59:31 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2439214: shivanhu python tinygpq/preflight.py
+00:00:31 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+00:01:01 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2440646: shivanhu python tinygpq/decoder_equivalence.py --seeds 123
+00:01:32 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2440839: shivanhu python tinygpq/attn_diagnostics.py
+00:02:32 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+00:12:35 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+00:21:38 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2432743: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2444355: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+00:25:40 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2444355: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+00:35:43 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2444355: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+00:36:43 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2444355: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+process 2450305: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2450308: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+00:43:16 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2450305: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2450308: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+00:43:46 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2430581: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2450305: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2450308: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2453778: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+00:52:20 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2453778: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+01:02:22 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2453778: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+01:12:25 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2453778: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+01:13:55 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+01:14:25 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2426637: shubham  /home/shubham/PFM/.venv-qc/bin/python -u -m experiments.trident_grandqc_transitio
+process 2464833: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+01:22:58 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2464833: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+01:24:58 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2464833: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+process 2472089: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2472155: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+01:27:59 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2464833: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+process 2472089: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2472155: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+01:38:03 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2464833: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+process 2472089: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2472155: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+01:43:34 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2472089: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2472155: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2484510: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+01:53:38 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2472089: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2472155: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2484510: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+01:59:10 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2484510: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+02:09:13 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+process 2484510: shivanhu python tinygpq/train_cv.py --variant pq_pca_deep --phi -12.95 --seed 123 --decode
+02:12:43 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+02:22:45 GPU busy: process 2426048: shivanhu python deform_fullb0/train_deform.py --variant pq_pca-d2 --phi 0 --seed 123 --out
+process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+02:27:16 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+02:37:17 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+02:47:18 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+02:57:19 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+03:07:21 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+03:17:22 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+03:27:23 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+03:37:24 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+03:47:25 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+03:57:26 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+04:07:28 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+04:17:29 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+04:27:30 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+04:37:31 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+04:47:32 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+04:57:33 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+05:07:35 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+05:17:36 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+05:27:37 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+05:37:38 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+05:47:39 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+05:57:40 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+06:07:42 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+06:17:43 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+06:27:44 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+06:37:45 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+06:47:46 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+06:57:47 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+07:07:49 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+07:17:50 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+07:27:51 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+07:37:52 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+07:47:53 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+07:57:54 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+08:07:56 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+08:17:57 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+08:27:58 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+08:37:59 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+08:48:00 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+08:58:01 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+09:08:03 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+09:18:04 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+09:28:05 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+09:38:06 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+09:48:07 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_
+09:58:09 GPU busy: process 2476751: shubham  /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_

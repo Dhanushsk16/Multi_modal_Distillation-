@@ -1,0 +1,45 @@
+== Tuesday 17 November 2026 01:04:42 AM IST | stage prep | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_prep_20261117_0104.log
+statistics of ALL training rows of 51 shards (0..50)
+   statistics: shard 5 of 51 | 494,988 rows | 22 s
+   statistics: shard 10 of 51 | 989,972 rows | 42 s
+   statistics: shard 15 of 51 | 1,484,957 rows | 63 s
+   statistics: shard 20 of 51 | 1,979,941 rows | 84 s
+   statistics: shard 25 of 51 | 2,474,925 rows | 105 s
+   statistics: shard 30 of 51 | 2,707,985 rows | 115 s
+   statistics: shard 35 of 51 | 2,864,742 rows | 122 s
+   statistics: shard 40 of 51 | 3,021,498 rows | 129 s
+   statistics: shard 45 of 51 | 3,178,255 rows | 136 s
+   statistics: shard 50 of 51 | 3,335,012 rows | 143 s
+   statistics: shard 51 of 51 | 3,366,362 rows | 145 s
+training rows: 3,366,362 | E present for 81.3%
+   clipping check: shard 5 of 51 | 20 s
+   clipping check: shard 10 of 51 | 40 s
+   clipping check: shard 15 of 51 | 60 s
+   clipping check: shard 20 of 51 | 80 s
+   clipping check: shard 25 of 51 | 100 s
+   clipping check: shard 30 of 51 | 110 s
+   clipping check: shard 35 of 51 | 117 s
+   clipping check: shard 40 of 51 | 124 s
+   clipping check: shard 45 of 51 | 131 s
+   clipping check: shard 50 of 51 | 138 s
+   clipping check: shard 51 of 51 | 139 s
+pepland  dims  300 | sd: min 0.4014 median 0.7194 max 1.334 | clipped at +-10: 0.091% of values | |z| > 5: 0.376%
+pclm     dims 1024 | sd: min 0.07221 median 0.1288 max 0.7142 | clipped at +-10: 0.000% of values | |z| > 5: 0.023%
+ecfp     dims 2048 | sd: min 0.1 median 0.1 max 1.087 | clipped at +-10: 0.048% of values | |z| > 5: 0.287%
+         H: dimensions held at the 0.1 floor: 1714 of 2048
+esm      dims 2560 | sd: min 0.02816 median 0.04374 max 0.888 | clipped at +-10: 0.000% of values | |z| > 5: 0.019%
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/corpus/views_v3_stats.npz
+   covariance: shard 5 of 51 | 494,988 rows | 20 s
+   covariance: shard 10 of 51 | 989,972 rows | 40 s
+   covariance: shard 15 of 51 | 1,484,957 rows | 59 s
+   covariance: shard 20 of 51 | 1,979,941 rows | 79 s
+   covariance: shard 25 of 51 | 2,474,925 rows | 99 s
+   covariance: shard 30 of 51 | 2,707,985 rows | 108 s
+   covariance: shard 35 of 51 | 2,864,742 rows | 115 s
+   covariance: shard 40 of 51 | 3,021,498 rows | 121 s
+   covariance: shard 45 of 51 | 3,178,255 rows | 128 s
+   covariance: shard 50 of 51 | 3,335,012 rows | 134 s
+   covariance: shard 51 of 51 | 3,366,362 rows | 136 s
+eigendecomposition of the 3372 x 3372 covariance of 3,366,362 rows
+PCA on ALL 3,366,362 training rows x 3372 dims -> 1024 components | explained variance 97.5% | wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/corpus/pca_plh_1024.npz
+== done 01:11

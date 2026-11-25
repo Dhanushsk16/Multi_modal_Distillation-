@@ -1,0 +1,27 @@
+representations: ['ecfp', 'teacher_t3']
+CellPPD  ecfp       done (3.9s) | mlp MCC 0.873
+CellPPD  teacher_t3 done (1.3s) | mlp MCC 0.868
+THPep    ecfp       done (1.7s) | mlp MCC 0.804
+THPep    teacher_t3 done (0.7s) | mlp MCC 0.747
+PepMSND  ecfp       done (20.3s) | mlp MCC 0.546
+PepMSND  teacher_t3 done (7.6s) | mlp MCC 0.506
+PAMPA    ecfp       done (222.5s) | mlp R2 -0.365
+PAMPA    teacher_t3 done (79.0s) | mlp R2 -0.138
+AmpHGT   ecfp       done (45.7s) | mlp MCC 0.651
+AmpHGT   teacher_t3 done (24.5s) | mlp MCC 0.821
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                 ecfp  teacher_t3
+benchmark learner                   
+AmpHGT    mlp      0.612       0.772
+CellPPD   mlp      0.836       0.865
+PAMPA     mlp     -0.265      -0.066
+PepMSND   mlp      0.533       0.508
+THPep     mlp      0.763       0.731
+
+AmpHGT test restricted to <=30 residues (MCC):
+rep       ecfp  teacher_t3
+learner                   
+mlp      0.271       0.476
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/teacher_t3_mlp

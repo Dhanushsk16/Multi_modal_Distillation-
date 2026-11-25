@@ -1,0 +1,52 @@
+pool: 10,245,107 molecules from clean.parquet | canonical 9,600,184 | non-canonical 644,923 (6.3%) | above 30 residues: 764,536 (7.5%)
+
+== source x kind
+        source         kind         n  median  p90    gt30  pool_pct  gt30_pct
+  pclm_pubchem    canonical    33,415     9.0 20.0     375       0.3       1.1
+  pclm_pubchem noncanonical   644,923     5.0 12.0   4,505       6.3       0.7
+pepland_stage1    canonical 7,072,506    13.0 26.0       0      69.0       0.0
+ pclm_esmatlas    canonical 2,494,263    26.0 38.0 759,656      24.3      30.5
+
+== residue bins x kind
+  bin canonical noncanonical  nc_pct  cum_pct
+  2-4    33,727      290,406    89.6      3.2
+  5-9 2,194,504      237,267     9.8     26.9
+10-14 1,851,777       78,525     4.1     45.7
+15-19 1,293,921       21,397     1.6     58.6
+20-24 1,782,314        8,003     0.4     76.1
+25-30 1,683,910        4,820     0.3     92.5
+31-40   585,335        4,000     0.7     98.3
+41-50   174,696          505     0.3    100.0
+
+== non-canonical only: source x cyclic
+      source  cyclic       n  median    le30
+pclm_pubchem   False 434,431     4.0 431,808
+pclm_pubchem    True 210,492     7.0 208,610
+
+== length caps: what is left, and N_max for a non-canonical share (UPPER BOUND, before near-dup removal)
+ cap       pool  kept_pct canonical noncanonical  nc_pct nc_cyclic N_max@15% N_max@25% N_max@35%
+  20  6,327,776      61.8 5,697,054      630,722    10.0   205,393 4,204,813 2,522,888 1,802,062
+  25  8,104,109      79.1 7,467,832      636,277     7.9   207,336 4,241,846 2,545,108 1,817,934
+  30  9,480,571      92.5 8,840,153      640,418     6.8   208,610 4,269,453 2,561,672 1,829,765
+  40 10,069,906      98.3 9,425,488      644,418     6.4   210,301 4,296,120 2,577,672 1,841,194
+  50 10,245,107     100.0 9,600,184      644,923     6.3   210,492 4,299,486 2,579,692 1,842,637
+
+== tokens per molecule (PeptideCLM-2 tokenizer, sample of 100,000 per kind)
+        kind  cap  sampled  mean  median   p90   p99  max  tok_per_res  >128 tok %  >192 tok %  >256 tok %
+   canonical   30    92004  88.4    81.0 144.0 172.0  236         5.30        19.6         0.1         0.0
+   canonical   50   100000  97.1    88.0 161.0 236.0  351         5.31        26.0         4.0         0.4
+noncanonical   30    99327  51.9    45.0  94.0 153.0  600         7.81         2.5         0.2         0.1
+noncanonical   50   100000  52.8    46.0  95.0 170.0  600         7.72         3.1         0.5         0.1
+
+== tokens per epoch if the corpus were N molecules (hypothetical; see N_max above)
+ cap  nc_share         N  tokens_M  tok_per_param
+  30      0.15 2,000,000       166           15.8
+  30      0.15 4,000,000       332           31.6
+  30      0.25 2,000,000       159           15.1
+  30      0.25 4,000,000       317           30.2
+  50      0.15 2,000,000       181           17.2
+  50      0.15 4,000,000       362           34.5
+  50      0.25 2,000,000       172           16.4
+  50      0.25 4,000,000       344           32.8
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/corpus_profile

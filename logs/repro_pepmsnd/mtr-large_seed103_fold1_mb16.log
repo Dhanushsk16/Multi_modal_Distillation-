@@ -1,0 +1,13 @@
+[INFO] Species/Environment one-hot dimension: 4 | train 571, test 64
+[INFO] padded length: train 438, test 378 tokens
+[epoch  0] train_loss 0.6866  val_loss(test fold) 0.6791  (158s)
+[epoch  1] train_loss 0.6793  val_loss(test fold) 0.6741  (153s)
+[epoch  2] train_loss 0.6746  val_loss(test fold) 0.6699  (155s)
+[epoch  3] train_loss 0.6700  val_loss(test fold) 0.6654  (154s)
+[epoch  4] train_loss 0.6645  val_loss(test fold) 0.6608  (153s)
+[epoch  5] train_loss 0.6582  val_loss(test fold) 0.6540  (155s)
+[epoch  6] train_loss 0.6505  val_loss(test fold) 0.6477  (153s)
+[epoch  7] train_loss 0.6412  val_loss(test fold) 0.6404  (155s)
+[epoch  8] train_loss 0.6284  val_loss(test fold) 0.6344  (157s)
+[epoch  9] train_loss 0.6134  val_loss(test fold) 0.6246  (151s)
+[INFO] Saved predictions: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/repro_pepmsnd/mtr-large/seed103/fold1/preds_fold1.csv (best epoch 9, val_loss 0.6246)

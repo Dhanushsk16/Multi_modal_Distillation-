@@ -1,0 +1,11 @@
+== Tuesday 03 November 2026 10:19:21 PM IST | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/extract_20261103_2219.log | CPU threads: 32 of 64
+sources ok | free on data drive: 2.1T
+
+== pepland_stage1  (22:19)
+already done: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/sources/pepland_stage1.parquet
+
+== pre-filter (>=3 carbonyls): pubchem recall 1.0, benchmark peptides dropped 0, rejects 0.8192 of the file
+
+== pclm_pubchem  (22:19)
+ABORT pclm_pubchem: Stalled: no batch finished in 10 min (1 batches pending) -- finished shards are kept; re-run to resume
+== pclm_pubchem FAILED (exit 4)

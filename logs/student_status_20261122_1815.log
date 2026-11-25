@@ -1,0 +1,17 @@
+18:15:34 == stage status | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_status_20261122_1815.log
+18:15:34 -- what the student needs, on this server
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/pool.parquet (322M)
+  NO   /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/pool_norm.parquet
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/corpus/views_v3_stats.npz (52K)
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_base/best.pt (135M)
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/v3_base/latent_stats.npz (16K)
+  yes  features/corpus/pepland: 51 shards (2.0G)
+  yes  features/corpus/pclm: 51 shards (6.5G)
+  yes  features/corpus/ecfp: 51 shards (553M)
+  yes  features/corpus/esm: 51 shards (17G)
+  yes  features/corpus/pclm_mtr: 51 shards (6.5G)
+  NO   features/corpus/teacher_v3_base
+  yes  /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_tokenizer: atombpe_v1024 atombpe_v2048 atombpe_v4096 
+  NO   /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_tokenizer_norm
+  free VRAM: 19705 MiB | RAM available: 301 GB of 314 GB | cores 8, load 2.11 2.16 2.17
+18:15:34 == done (exit status 0)

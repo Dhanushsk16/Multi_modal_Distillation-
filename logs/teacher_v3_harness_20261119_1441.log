@@ -1,0 +1,167 @@
+== Thursday 19 November 2026 02:41:02 PM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261119_1441.log
+representations: ['PROT', 'P', 'L', 'H', 'P+L+H', 'PCA', 'teacher_v3_base'] | learners ['gbt'] | seeds 3 | select val
+workers: 4 processes x 2 threads = 8 threads (cap 8)
+   PL_ncBindingProtUnseen all    PROT         gbt    seed 0 | Spearman 0.290 (36s)
+   PL_ncBindingProt all    PROT         gbt    seed 0 | Spearman 0.523 (37s)
+   PL_ncBindingProtUnseen all    P            gbt    seed 0 | Spearman 0.321 (37s)
+   PL_ncBindingProt all    P            gbt    seed 0 | Spearman 0.593 (39s)
+   PL_ncBindingProtUnseen all    L            gbt    seed 0 | Spearman 0.367 (49s)
+   PL_ncBindingProt all    L            gbt    seed 0 | Spearman 0.555 (51s)
+   PL_cBindingProtUnseen all    PROT         gbt    seed 0 | Spearman 0.391 (136s)
+   PL_cBindingProt all    PROT         gbt    seed 0 | Spearman 0.548 (139s)
+   PL_ncBindingProtUnseen all    H            gbt    seed 0 | Spearman 0.249 (66s)
+   PL_ncBindingProt all    H            gbt    seed 0 | Spearman 0.581 (68s)
+   PL_ncBindingProtUnseen all    P+L+H        gbt    seed 0 | Spearman 0.354 (80s)
+   PL_ncBindingProt all    P+L+H        gbt    seed 0 | Spearman 0.591 (81s)
+   PL_cBindingProtUnseen all    P            gbt    seed 0 | Spearman 0.479 (157s)
+   PL_cBindingProt all    P            gbt    seed 0 | Spearman 0.565 (158s)
+   PL_ncBindingProtUnseen all    PCA          gbt    seed 0 | Spearman 0.368 (44s)
+   PL_ncBindingProt all    PCA          gbt    seed 0 | Spearman 0.564 (44s)
+   PL_ncBindingProtUnseen all    teacher_v3_base gbt    seed 0 | Spearman 0.382 (47s)
+   PL_ncBindingProt all    teacher_v3_base gbt    seed 0 | Spearman 0.569 (44s)
+   PL_ncBindingProtUnseen all    PROT         gbt    seed 1 | Spearman 0.290 (26s)
+   PL_ncBindingProt all    PROT         gbt    seed 1 | Spearman 0.523 (28s)
+   PL_ncBindingProtUnseen all    P            gbt    seed 1 | Spearman 0.321 (30s)
+   PL_ncBindingProt all    P            gbt    seed 1 | Spearman 0.593 (33s)
+   PL_ncBindingProtUnseen all    L            gbt    seed 1 | Spearman 0.367 (51s)
+   PL_ncBindingProt all    L            gbt    seed 1 | Spearman 0.555 (49s)
+   PL_cBindingProtUnseen all    L            gbt    seed 0 | Spearman 0.536 (215s)
+   PL_cBindingProt all    L            gbt    seed 0 | Spearman 0.572 (218s)
+   PL_ncBindingProtUnseen all    H            gbt    seed 1 | Spearman 0.249 (66s)
+   PL_ncBindingProt all    H            gbt    seed 1 | Spearman 0.581 (72s)
+   PL_ncBindingProtUnseen all    P+L+H        gbt    seed 1 | Spearman 0.354 (91s)
+   PL_ncBindingProt all    P+L+H        gbt    seed 1 | Spearman 0.591 (88s)
+   PL_ncBindingProtUnseen all    PCA          gbt    seed 1 | Spearman 0.368 (49s)
+   PL_ncBindingProt all    PCA          gbt    seed 1 | Spearman 0.564 (42s)
+   PL_ncBindingProt all    teacher_v3_base gbt    seed 1 | Spearman 0.569 (49s)
+   PL_ncBindingProtUnseen all    teacher_v3_base gbt    seed 1 | Spearman 0.382 (52s)
+   PL_ncBindingProt all    PROT         gbt    seed 2 | Spearman 0.523 (28s)
+   PL_ncBindingProtUnseen all    PROT         gbt    seed 2 | Spearman 0.290 (28s)
+   PL_ncBindingProt all    P            gbt    seed 2 | Spearman 0.593 (31s)
+   PL_ncBindingProtUnseen all    P            gbt    seed 2 | Spearman 0.321 (31s)
+   PL_cBindingProtUnseen all    H            gbt    seed 0 | Spearman 0.497 (313s)
+   PL_ncBindingProt all    L            gbt    seed 2 | Spearman 0.555 (45s)
+   PL_ncBindingProtUnseen all    L            gbt    seed 2 | Spearman 0.367 (47s)
+   PL_cBindingProt all    H            gbt    seed 0 | Spearman 0.606 (330s)
+   PL_ncBindingProtUnseen all    H            gbt    seed 2 | Spearman 0.249 (66s)
+   PL_ncBindingProt all    H            gbt    seed 2 | Spearman 0.581 (76s)
+   PL_ncBindingProtUnseen all    P+L+H        gbt    seed 2 | Spearman 0.354 (106s)
+   PL_ncBindingProt all    P+L+H        gbt    seed 2 | Spearman 0.591 (117s)
+   PL_ncBindingProtUnseen all    PCA          gbt    seed 2 | Spearman 0.368 (45s)
+   PL_ncBindingProt all    PCA          gbt    seed 2 | Spearman 0.564 (41s)
+   PL_ncBindingProtUnseen all    teacher_v3_base gbt    seed 2 | Spearman 0.382 (49s)
+   PL_ncBindingProt all    teacher_v3_base gbt    seed 2 | Spearman 0.569 (52s)
+== PL_ncBindingProtUnseen done (1214 s)
+== PL_ncBindingProt done (1236 s)
+   PL_cBindingProtUnseen all    P+L+H        gbt    seed 0 | Spearman 0.528 (450s)
+   PL_cBindingProt all    P+L+H        gbt    seed 0 | Spearman 0.579 (466s)
+   PL_cBindingProtUnseen all    PCA          gbt    seed 0 | Spearman 0.519 (220s)
+   PL_cBindingProt all    PCA          gbt    seed 0 | Spearman 0.573 (217s)
+   PL_cBindingProtUnseen all    teacher_v3_base gbt    seed 0 | Spearman 0.516 (220s)
+   PL_cBindingProt all    teacher_v3_base gbt    seed 0 | Spearman 0.581 (218s)
+   PL_cBindingProtUnseen all    PROT         gbt    seed 1 | Spearman 0.391 (135s)
+   PL_cBindingProt all    PROT         gbt    seed 1 | Spearman 0.548 (134s)
+   PL_cBindingProtUnseen all    P            gbt    seed 1 | Spearman 0.479 (157s)
+   PL_cBindingProt all    P            gbt    seed 1 | Spearman 0.565 (158s)
+   PL_cBindingProtUnseen all    L            gbt    seed 1 | Spearman 0.536 (214s)
+   PL_cBindingProt all    L            gbt    seed 1 | Spearman 0.572 (212s)
+   PL_cBindingProtUnseen all    H            gbt    seed 1 | Spearman 0.497 (301s)
+   PL_cBindingProt all    H            gbt    seed 1 | Spearman 0.606 (304s)
+   PL_cBindingProtUnseen all    P+L+H        gbt    seed 1 | Spearman 0.528 (410s)
+   PL_cBindingProt all    P+L+H        gbt    seed 1 | Spearman 0.579 (410s)
+   PL_cBindingProtUnseen all    PCA          gbt    seed 1 | Spearman 0.519 (220s)
+   PL_cBindingProt all    PCA          gbt    seed 1 | Spearman 0.573 (218s)
+   PL_cBindingProtUnseen all    teacher_v3_base gbt    seed 1 | Spearman 0.516 (217s)
+   PL_cBindingProt all    teacher_v3_base gbt    seed 1 | Spearman 0.581 (216s)
+   PL_cBindingProtUnseen all    PROT         gbt    seed 2 | Spearman 0.391 (136s)
+   PL_cBindingProt all    PROT         gbt    seed 2 | Spearman 0.548 (135s)
+   PL_cBindingProtUnseen all    P            gbt    seed 2 | Spearman 0.479 (158s)
+   PL_cBindingProt all    P            gbt    seed 2 | Spearman 0.565 (159s)
+   PL_cBindingProtUnseen all    L            gbt    seed 2 | Spearman 0.536 (214s)
+   PL_cBindingProt all    L            gbt    seed 2 | Spearman 0.572 (212s)
+   PL_cBindingProtUnseen all    H            gbt    seed 2 | Spearman 0.497 (301s)
+   PL_cBindingProt all    H            gbt    seed 2 | Spearman 0.606 (303s)
+   PL_cBindingProtUnseen all    P+L+H        gbt    seed 2 | Spearman 0.528 (412s)
+   PL_cBindingProt all    P+L+H        gbt    seed 2 | Spearman 0.579 (406s)
+   PL_cBindingProtUnseen all    PCA          gbt    seed 2 | Spearman 0.519 (217s)
+   PL_cBindingProt all    PCA          gbt    seed 2 | Spearman 0.573 (215s)
+   PL_cBindingProtUnseen all    teacher_v3_base gbt    seed 2 | Spearman 0.516 (219s)
+   PL_cBindingProt all    teacher_v3_base gbt    seed 2 | Spearman 0.581 (218s)
+== PL_cBindingProtUnseen done (5662 s)
+== PL_cBindingProt done (5683 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            PL_cBindingProt  PL_ncBindingProt  PL_cBindingProtUnseen  PL_ncBindingProtUnseen  AVERAGE
+H                                     0.606             0.581                  0.497                   0.249    0.483
+L                                     0.572             0.555                  0.536                   0.367    0.507
+P                                     0.565             0.593                  0.479                   0.321    0.490
+P+L+H                                 0.579             0.591                  0.528                   0.354    0.513
+PCA                                   0.573             0.564                  0.519                   0.368    0.506
+PROT                                  0.548             0.523                  0.391                   0.290    0.438
+v3_base                               0.581             0.569                  0.516                   0.382    0.512
+REF (chosen on validation)            0.580             0.540                  0.528                   0.318    0.492
+BEST single (on test)                 0.606             0.593                  0.536                   0.367    0.526
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_wo = the same average without nothing; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff 95% interval  diff_wo interval_wo W/L/T worse99.5
+   REF     gbt    PROT  4 -0.054                -0.054                            
+   REF     gbt   P+L+H  4  0.021                 0.021                            
+   REF     gbt     PCA  4  0.014                 0.014                            
+   REF     gbt v3_base  4  0.020                 0.020                            
+     H     gbt    PROT  4 -0.045                -0.045                            
+     H     gbt   P+L+H  4  0.030                 0.030                            
+     H     gbt     PCA  4  0.023                 0.023                            
+     H     gbt v3_base  4  0.029                 0.029                            
+  BEST     gbt    PROT  4 -0.088                -0.088                            
+  BEST     gbt   P+L+H  4 -0.013                -0.013                            
+  BEST     gbt     PCA  4 -0.020                -0.020                            
+  BEST     gbt v3_base  4 -0.014                -0.014                            
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 7 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank
+P+L+H         2.8
+v3_base       2.8
+PCA           3.5
+L             3.8
+H             4.0
+P             4.5
+PROT          6.8
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA  vs_H  worse99.5 PASS  vs_REF_wo  vs_PCA_wo  worse_wo PASS_wo
+v3_base     gbt    0.02   0.006 0.029        NaN  yes       0.02      0.006       NaN     yes
+v3_base     ALL    0.02   0.006 0.029        NaN  yes       0.02      0.006       NaN     yes
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, PCA)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                                     H      L      P  P+L+H    PCA   PROT
+benchmark              subset                                            
+PL_cBindingProt        modified  0.628  0.600  0.598  0.610  0.595  0.566
+                       standard  0.532  0.474  0.465  0.471  0.485  0.503
+PL_cBindingProtUnseen  modified  0.524  0.564  0.508  0.555  0.539  0.410
+                       standard  0.393  0.427  0.389  0.425  0.425  0.328
+PL_ncBindingProt       modified  0.543  0.519  0.551  0.560  0.514  0.474
+                       standard  0.760  0.729  0.768  0.718  0.751  0.764
+PL_ncBindingProtUnseen modified  0.219  0.335  0.271  0.302  0.353  0.246
+                       standard  0.476  0.521  0.555  0.494  0.374  0.540
+
+                                 v3_base
+benchmark              subset           
+PL_cBindingProt        modified    0.616
+                       standard    0.451
+PL_cBindingProtUnseen  modified    0.549
+                       standard    0.387
+PL_ncBindingProt       modified    0.520
+                       standard    0.755
+PL_ncBindingProtUnseen modified    0.322
+                       standard    0.657
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/binding_prot_gbt
+== done 16:15 (exit status 0)

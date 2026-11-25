@@ -1,0 +1,89 @@
+== Tuesday 03 November 2026 11:39:48 AM IST | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/extract_20261103_1139.log | CPU threads: 32 of 64
+sources ok | free on data drive: 2.2T
+
+== prefilter_check  (11:39)
+CellPPD    1,339 molecules, 1,327 peptides, dropped at 3: 0
+THPep      609 molecules, 609 peptides, dropped at 3: 0
+PepMSND    605 molecules, 575 peptides, dropped at 3: 0
+PAMPA      6,649 molecules, 6,546 peptides, dropped at 3: 0
+AmpHGT     16,841 molecules, 7,760 peptides, dropped at 3: 0
+pubchem: 400,000 rows, 2,594 would be kept (0.1 min)
+{
+ "threshold": 3,
+ "benchmark_peptides_dropped": 0,
+ "pubchem_recall": 1.0,
+ "rejects_frac_of_file": 0.8192
+}
+
+== pepland_stage1  (11:40)
+pepland_stage1 train_000: 250,000 read in shard, 249,547 kept | 250,000 read overall | 0.6 min
+pepland_stage1 train_000: 500,000 read in shard, 498,272 kept | 500,000 read overall | 1.3 min
+pepland_stage1 train_000 done: 500,000 read, 498,272 kept | 500,000 read overall | 1.3 min
+pepland_stage1 train_001: 200,000 read in shard, 199,687 kept | 700,000 read overall | 1.8 min
+pepland_stage1 train_001: 450,000 read in shard, 448,498 kept | 950,000 read overall | 2.4 min
+pepland_stage1 train_001 done: 500,000 read, 498,160 kept | 1,000,000 read overall | 2.6 min
+pepland_stage1 train_002: 150,000 read in shard, 149,813 kept | 1,150,000 read overall | 2.9 min
+pepland_stage1 train_002: 400,000 read in shard, 398,821 kept | 1,400,000 read overall | 3.6 min
+pepland_stage1 train_002 done: 500,000 read, 498,200 kept | 1,500,000 read overall | 3.8 min
+pepland_stage1 train_003: 100,000 read in shard, 99,920 kept | 1,600,000 read overall | 4.1 min
+pepland_stage1 train_003: 350,000 read in shard, 349,163 kept | 1,850,000 read overall | 4.7 min
+pepland_stage1 train_003 done: 500,000 read, 498,259 kept | 2,000,000 read overall | 5.1 min
+pepland_stage1 train_004: 50,000 read in shard, 49,983 kept | 2,050,000 read overall | 5.2 min
+pepland_stage1 train_004: 300,000 read in shard, 299,346 kept | 2,300,000 read overall | 5.9 min
+pepland_stage1 train_004: 500,000 read in shard, 498,237 kept | 2,500,000 read overall | 6.4 min
+pepland_stage1 train_004 done: 500,000 read, 498,237 kept | 2,500,000 read overall | 6.4 min
+pepland_stage1 train_005: 250,000 read in shard, 249,535 kept | 2,750,000 read overall | 7.0 min
+pepland_stage1 train_005: 500,000 read in shard, 498,201 kept | 3,000,000 read overall | 7.7 min
+pepland_stage1 train_005 done: 500,000 read, 498,201 kept | 3,000,000 read overall | 7.7 min
+pepland_stage1 train_006: 200,000 read in shard, 199,725 kept | 3,200,000 read overall | 8.2 min
+pepland_stage1 train_006: 450,000 read in shard, 448,599 kept | 3,450,000 read overall | 8.8 min
+pepland_stage1 train_006 done: 500,000 read, 498,257 kept | 3,500,000 read overall | 9.0 min
+pepland_stage1 train_007: 150,000 read in shard, 149,801 kept | 3,650,000 read overall | 9.3 min
+pepland_stage1 train_007: 400,000 read in shard, 398,863 kept | 3,900,000 read overall | 10.0 min
+pepland_stage1 train_007 done: 500,000 read, 498,186 kept | 4,000,000 read overall | 10.2 min
+pepland_stage1 train_008: 100,000 read in shard, 99,933 kept | 4,100,000 read overall | 10.5 min
+pepland_stage1 train_008: 350,000 read in shard, 349,154 kept | 4,350,000 read overall | 11.1 min
+pepland_stage1 train_008 done: 500,000 read, 498,276 kept | 4,500,000 read overall | 11.5 min
+pepland_stage1 train_009: 50,000 read in shard, 49,983 kept | 4,550,000 read overall | 11.6 min
+pepland_stage1 train_009: 300,000 read in shard, 299,367 kept | 4,800,000 read overall | 12.3 min
+pepland_stage1 train_009: 500,000 read in shard, 498,232 kept | 5,000,000 read overall | 12.8 min
+pepland_stage1 train_009 done: 500,000 read, 498,232 kept | 5,000,000 read overall | 12.8 min
+pepland_stage1 train_010: 250,000 read in shard, 249,554 kept | 5,250,000 read overall | 13.4 min
+pepland_stage1 train_010: 500,000 read in shard, 498,231 kept | 5,500,000 read overall | 14.1 min
+pepland_stage1 train_010 done: 500,000 read, 498,231 kept | 5,500,000 read overall | 14.1 min
+pepland_stage1 train_011: 200,000 read in shard, 199,698 kept | 5,700,000 read overall | 14.6 min
+pepland_stage1 train_011: 450,000 read in shard, 448,583 kept | 5,950,000 read overall | 15.2 min
+pepland_stage1 train_011 done: 500,000 read, 498,256 kept | 6,000,000 read overall | 15.3 min
+pepland_stage1 train_012: 150,000 read in shard, 149,841 kept | 6,150,000 read overall | 15.7 min
+pepland_stage1 train_012: 400,000 read in shard, 398,835 kept | 6,400,000 read overall | 16.3 min
+pepland_stage1 train_012 done: 500,000 read, 498,244 kept | 6,500,000 read overall | 16.6 min
+pepland_stage1 train_013: 100,000 read in shard, 99,940 kept | 6,600,000 read overall | 16.9 min
+pepland_stage1 train_013: 350,000 read in shard, 349,143 kept | 6,850,000 read overall | 17.5 min
+pepland_stage1 train_013 done: 500,000 read, 498,244 kept | 7,000,000 read overall | 17.9 min
+pepland_stage1 train_014: 50,000 read in shard, 49,973 kept | 7,050,000 read overall | 18.0 min
+pepland_stage1 train_014 done: 132,058 read, 131,916 kept | 7,132,058 read overall | 18.2 min
+pepland_stage1 valid_000: 150,000 read in shard, 149,851 kept | 7,282,058 read overall | 18.6 min
+pepland_stage1 valid_000: 396,225 read in shard, 395,150 kept | 7,528,283 read overall | 19.2 min
+pepland_stage1 valid_000 done: 396,225 read, 395,150 kept | 7,528,283 read overall | 19.2 min
+pepland_stage1 test_000: 250,000 read in shard, 249,544 kept | 7,778,283 read overall | 19.9 min
+pepland_stage1 test_000 done: 396,226 read, 395,112 kept | 7,924,509 read overall | 20.3 min
+pepland_stage1: shards done, 7,924,509 rows read in 20.3 min
+{
+ "source": "pepland_stage1",
+ "shards": 17,
+ "raw": 7924509,
+ "parse_fail": 0,
+ "prefiltered": 6,
+ "not_peptide_or_out_of_window": 40,
+ "below_min_res": 0,
+ "duplicate": 312048,
+ "kept": 7612415,
+ "kept_canonical": 7604052,
+ "kept_noncanonical": 8363,
+ "kept_cyclic": 7342,
+ "residues_median": 14.0
+}
+
+== pre-filter (>=3 carbonyls): pubchem recall 1.0, benchmark peptides dropped 0, rejects 0.8192 of the file
+
+== pclm_pubchem  (12:00)

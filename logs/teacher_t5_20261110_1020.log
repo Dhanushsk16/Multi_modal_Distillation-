@@ -1,0 +1,4 @@
+== Tuesday 10 November 2026 10:20:47 AM IST | teacher 't5' | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_t5_20261110_1020.log
+GPU in use by:
+shubham     08:53:29 /home/shubham/PFM/.venv-qc/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=11, pipe_handle=15) --multiprocessing-fork
+not starting (FORCE=1 to override)

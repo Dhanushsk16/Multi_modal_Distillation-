@@ -1,0 +1,50 @@
+== Tuesday 24 November 2026 03:30:56 PM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261124_1530.log
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_teacher | latent statistics: yes
+teacher v3_base: inputs ['pepland', 'pclm', 'ecfp'], latent 1024-d, 35.3M parameters | variants ['ft', 'frozen'] | benchmarks ['THPep_o101', 'THPep_o202', 'THPep_o303']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 3
+THPep_o101: 609 usable molecules (100.0% of the file), standard chains 100.0% | frozen embedding std per dimension 0.760
+THPep_o101 ft       done (5s) | MCC 0.674 | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o101 frozen   done (0s) | MCC 0.693 | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202: 609 usable molecules (100.0% of the file), standard chains 100.0% | frozen embedding std per dimension 0.760
+THPep_o202 ft       done (5s) | MCC 0.821 | epochs run 16, best at 6, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202 frozen   done (1s) | MCC 0.797 | epochs run 17, best at 7, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303: 609 usable molecules (100.0% of the file), standard chains 100.0% | frozen embedding std per dimension 0.760
+THPep_o303 ft       done (5s) | MCC 0.648 | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303 frozen   done (0s) | MCC 0.657 | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 1 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode        frozen     ft
+benchmark                
+THPep_o101   0.681  0.664
+THPep_o202   0.792  0.786
+THPep_o303   0.632  0.617
+
+=== AUROC (classification) ===
+mode        frozen     ft
+benchmark                
+THPep_o101   0.946  0.944
+THPep_o202   0.965  0.967
+THPep_o303   0.913  0.916
+
+=== test molecules that are standard chains (ESM-2 vector exists) / modified chains: MCC or R2 ===
+                   n_esm  head_esm  n_noesm  head_noesm
+benchmark  mode                                        
+THPep_o101 frozen  122.0     0.681      0.0         NaN
+           ft      122.0     0.664      0.0         NaN
+THPep_o202 frozen  122.0     0.792      0.0         NaN
+           ft      122.0     0.786      0.0         NaN
+THPep_o303 frozen  122.0     0.632      0.0         NaN
+           ft      122.0     0.617      0.0         NaN
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                    run  best  capped  fits
+benchmark  mode                            
+THPep_o101 frozen  14.3   4.3       0     3
+           ft      14.0   4.0       0     3
+THPep_o202 frozen  16.7   6.7       0     3
+           ft      16.3   6.3       0     3
+THPep_o303 frozen  15.0   5.0       0     3
+           ft      15.3   5.3       0     3
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_teacher
+== done 15:31 (exit status 0)

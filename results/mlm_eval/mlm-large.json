@@ -1,0 +1,27 @@
+{
+ "name": "mlm-large",
+ "params_M": 336.67,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.96,
+ "all": {
+  "loss": 0.554,
+  "acc": 0.8098,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.3479,
+  "acc": 0.8763,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.5337,
+  "acc": 0.8135,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 0.8383,
+  "acc": 0.7551,
+  "masked_tokens": 54596
+ }
+}

@@ -1,0 +1,30 @@
+esm: 51 shards for this process, 24 to do
+esm: loading /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/esm2_t36_3B_UR50D on cuda (the 3B .bin shards are 11 GB: reading them takes minutes) ...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 28.76it/s]
+esm: loaded in 58 s | weights on cuda:0, float16
+check: esm cache code vs the benchmark features on 96 molecules | cosine median 1.00000, min 0.99998 | failed 0 | 63 s | PASS
+esm shard  27 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 4.1 min, 1 shards done)
+esm shard  28 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 8.1 min, 2 shards done)
+esm shard  29 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 12.2 min, 3 shards done)
+esm shard  30 | 31,668 molecules | not canonical (absent) 1 | 4.1 min (run total 16.3 min, 4 shards done)
+esm shard  31 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 20.4 min, 5 shards done)
+esm shard  32 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 24.5 min, 6 shards done)
+esm shard  33 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 28.6 min, 7 shards done)
+esm shard  34 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 32.6 min, 8 shards done)
+esm shard  35 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 36.7 min, 9 shards done)
+esm shard  36 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 40.9 min, 10 shards done)
+esm shard  37 | 31,668 molecules | not canonical (absent) 1 | 4.1 min (run total 45.0 min, 11 shards done)
+esm shard  38 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 49.1 min, 12 shards done)
+esm shard  39 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 53.2 min, 13 shards done)
+esm shard  40 | 31,668 molecules | not canonical (absent) 1 | 4.1 min (run total 57.3 min, 14 shards done)
+esm shard  41 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 61.4 min, 15 shards done)
+esm shard  42 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 65.5 min, 16 shards done)
+esm shard  43 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 69.6 min, 17 shards done)
+esm shard  44 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 73.8 min, 18 shards done)
+esm shard  45 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 77.9 min, 19 shards done)
+esm shard  46 | 31,668 molecules | not canonical (absent) 1 | 4.1 min (run total 82.0 min, 20 shards done)
+esm shard  47 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 86.1 min, 21 shards done)
+esm shard  48 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 90.2 min, 22 shards done)
+esm shard  49 | 31,668 molecules | not canonical (absent) 0 | 4.1 min (run total 94.3 min, 23 shards done)
+esm shard  50 | 31,667 molecules | not canonical (absent) 1 | 4.1 min (run total 98.4 min, 24 shards done)
+esm: 24 shards written, 5 molecules failed, 98.4 min

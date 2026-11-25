@@ -1,0 +1,4 @@
+== Saturday 14 November 2026 12:08:37 PM IST | stage finetune | teacher t8 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_finetune_20261114_1208.log
+it is 12:08: long GPU jobs run at night (20:00-07:00). FORCE=1 to start anyway
+
+== stage finetune finished, exit code 2 (12:08)

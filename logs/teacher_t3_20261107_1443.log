@@ -1,0 +1,81 @@
+== Saturday 07 November 2026 02:43:01 PM IST | teacher 't3' | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_t3_20261107_1443.log
+shards: 27, numbers 0..26 (15 complete, 12 with PepLand still partly cached: only its finished rows are used)
+molecules: 2,324,834 cached, 2,324,761 usable (all three views ok): train 2,301,507, validation 23,254 | data on cuda | 16 s
+teacher: 35,603,420 trainable parameters (3 SCAs + SEA, sea-input both, SEA latent 512)
+epoch   1/40 |  20.2 s | train 0.6788 | val 0.3631 | R2 of the held-out view predicted from the other two: ECFP 0.340 PCLM 0.811 PepLand 0.848 | SEA R2 0.887
+epoch   2/40 |  23.0 s | train 0.3136 | val 0.2948 | R2 of the held-out view predicted from the other two: ECFP 0.408 PCLM 0.844 PepLand 0.885 | SEA R2 0.917
+epoch   3/40 |  23.2 s | train 0.2716 | val 0.2675 | R2 of the held-out view predicted from the other two: ECFP 0.443 PCLM 0.858 PepLand 0.899 | SEA R2 0.927
+epoch   4/40 |  22.6 s | train 0.2499 | val 0.2507 | R2 of the held-out view predicted from the other two: ECFP 0.466 PCLM 0.867 PepLand 0.908 | SEA R2 0.931
+epoch   5/40 |  22.5 s | train 0.2362 | val 0.2409 | R2 of the held-out view predicted from the other two: ECFP 0.484 PCLM 0.873 PepLand 0.913 | SEA R2 0.935
+epoch   6/40 |  22.8 s | train 0.2264 | val 0.2341 | R2 of the held-out view predicted from the other two: ECFP 0.497 PCLM 0.877 PepLand 0.918 | SEA R2 0.937
+epoch   7/40 |  22.6 s | train 0.2191 | val 0.2251 | R2 of the held-out view predicted from the other two: ECFP 0.508 PCLM 0.880 PepLand 0.922 | SEA R2 0.939
+epoch   8/40 |  22.8 s | train 0.2133 | val 0.2205 | R2 of the held-out view predicted from the other two: ECFP 0.518 PCLM 0.883 PepLand 0.925 | SEA R2 0.939
+epoch   9/40 |  22.7 s | train 0.2084 | val 0.2154 | R2 of the held-out view predicted from the other two: ECFP 0.525 PCLM 0.886 PepLand 0.927 | SEA R2 0.940
+epoch  10/40 |  22.8 s | train 0.2043 | val 0.2128 | R2 of the held-out view predicted from the other two: ECFP 0.532 PCLM 0.887 PepLand 0.928 | SEA R2 0.941
+epoch  11/40 |  22.6 s | train 0.2007 | val 0.2094 | R2 of the held-out view predicted from the other two: ECFP 0.538 PCLM 0.889 PepLand 0.930 | SEA R2 0.942
+epoch  12/40 |  22.7 s | train 0.1976 | val 0.2070 | R2 of the held-out view predicted from the other two: ECFP 0.544 PCLM 0.890 PepLand 0.932 | SEA R2 0.942
+epoch  13/40 |  22.8 s | train 0.1948 | val 0.2037 | R2 of the held-out view predicted from the other two: ECFP 0.549 PCLM 0.892 PepLand 0.933 | SEA R2 0.942
+epoch  14/40 |  22.7 s | train 0.1922 | val 0.2025 | R2 of the held-out view predicted from the other two: ECFP 0.553 PCLM 0.893 PepLand 0.934 | SEA R2 0.943
+epoch  15/40 |  22.7 s | train 0.1900 | val 0.2005 | R2 of the held-out view predicted from the other two: ECFP 0.557 PCLM 0.894 PepLand 0.935 | SEA R2 0.943
+epoch  16/40 |  22.7 s | train 0.1879 | val 0.1983 | R2 of the held-out view predicted from the other two: ECFP 0.560 PCLM 0.895 PepLand 0.935 | SEA R2 0.943
+epoch  17/40 |  22.7 s | train 0.1860 | val 0.1964 | R2 of the held-out view predicted from the other two: ECFP 0.564 PCLM 0.896 PepLand 0.936 | SEA R2 0.944
+epoch  18/40 |  22.8 s | train 0.1842 | val 0.1948 | R2 of the held-out view predicted from the other two: ECFP 0.567 PCLM 0.897 PepLand 0.937 | SEA R2 0.944
+epoch  19/40 |  22.6 s | train 0.1826 | val 0.1938 | R2 of the held-out view predicted from the other two: ECFP 0.570 PCLM 0.897 PepLand 0.938 | SEA R2 0.944
+epoch  20/40 |  22.7 s | train 0.1812 | val 0.1924 | R2 of the held-out view predicted from the other two: ECFP 0.572 PCLM 0.898 PepLand 0.939 | SEA R2 0.944
+epoch  21/40 |  22.8 s | train 0.1798 | val 0.1912 | R2 of the held-out view predicted from the other two: ECFP 0.574 PCLM 0.899 PepLand 0.939 | SEA R2 0.945
+epoch  22/40 |  22.8 s | train 0.1785 | val 0.1900 | R2 of the held-out view predicted from the other two: ECFP 0.576 PCLM 0.899 PepLand 0.940 | SEA R2 0.945
+epoch  23/40 |  22.9 s | train 0.1773 | val 0.1890 | R2 of the held-out view predicted from the other two: ECFP 0.578 PCLM 0.900 PepLand 0.940 | SEA R2 0.945
+epoch  24/40 |  23.3 s | train 0.1763 | val 0.1883 | R2 of the held-out view predicted from the other two: ECFP 0.580 PCLM 0.901 PepLand 0.941 | SEA R2 0.945
+epoch  25/40 |  23.7 s | train 0.1753 | val 0.1872 | R2 of the held-out view predicted from the other two: ECFP 0.581 PCLM 0.901 PepLand 0.941 | SEA R2 0.945
+epoch  26/40 |  23.6 s | train 0.1743 | val 0.1863 | R2 of the held-out view predicted from the other two: ECFP 0.583 PCLM 0.902 PepLand 0.942 | SEA R2 0.945
+epoch  27/40 |  23.5 s | train 0.1735 | val 0.1857 | R2 of the held-out view predicted from the other two: ECFP 0.584 PCLM 0.902 PepLand 0.942 | SEA R2 0.946
+epoch  28/40 |  23.4 s | train 0.1727 | val 0.1851 | R2 of the held-out view predicted from the other two: ECFP 0.585 PCLM 0.902 PepLand 0.942 | SEA R2 0.946
+epoch  29/40 |  23.5 s | train 0.1720 | val 0.1845 | R2 of the held-out view predicted from the other two: ECFP 0.586 PCLM 0.903 PepLand 0.942 | SEA R2 0.946
+epoch  30/40 |  23.3 s | train 0.1714 | val 0.1840 | R2 of the held-out view predicted from the other two: ECFP 0.587 PCLM 0.903 PepLand 0.942 | SEA R2 0.946
+epoch  31/40 |  23.7 s | train 0.1708 | val 0.1835 | R2 of the held-out view predicted from the other two: ECFP 0.588 PCLM 0.903 PepLand 0.943 | SEA R2 0.946
+epoch  32/40 |  23.6 s | train 0.1703 | val 0.1831 | R2 of the held-out view predicted from the other two: ECFP 0.589 PCLM 0.903 PepLand 0.943 | SEA R2 0.946
+epoch  33/40 |  23.3 s | train 0.1698 | val 0.1827 | R2 of the held-out view predicted from the other two: ECFP 0.589 PCLM 0.904 PepLand 0.943 | SEA R2 0.946
+epoch  34/40 |  23.7 s | train 0.1695 | val 0.1825 | R2 of the held-out view predicted from the other two: ECFP 0.590 PCLM 0.904 PepLand 0.943 | SEA R2 0.946
+epoch  35/40 |  23.3 s | train 0.1691 | val 0.1822 | R2 of the held-out view predicted from the other two: ECFP 0.590 PCLM 0.904 PepLand 0.943 | SEA R2 0.946
+epoch  36/40 |  23.6 s | train 0.1688 | val 0.1820 | R2 of the held-out view predicted from the other two: ECFP 0.591 PCLM 0.904 PepLand 0.943 | SEA R2 0.946
+epoch  37/40 |  23.4 s | train 0.1686 | val 0.1819 | R2 of the held-out view predicted from the other two: ECFP 0.591 PCLM 0.904 PepLand 0.944 | SEA R2 0.946
+epoch  38/40 |  23.2 s | train 0.1684 | val 0.1818 | R2 of the held-out view predicted from the other two: ECFP 0.591 PCLM 0.904 PepLand 0.944 | SEA R2 0.946
+epoch  39/40 |  22.8 s | train 0.1683 | val 0.1817 | R2 of the held-out view predicted from the other two: ECFP 0.591 PCLM 0.904 PepLand 0.944 | SEA R2 0.946
+epoch  40/40 |  22.7 s | train 0.1682 | val 0.1816 | R2 of the held-out view predicted from the other two: ECFP 0.591 PCLM 0.904 PepLand 0.944 | SEA R2 0.946
+benchmark embeddings: 26029 molecules, 512-d, usable 26029 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_t3.npz
+done. checkpoint /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/t3/last.pt | next: python src/eval_single.py --reps ecfp teacher_t3 --out teacher_t3
+== gate: teacher_t3 vs ecfp (14:58)
+representations: ['ecfp', 'teacher_t3']
+CellPPD  ecfp     done (25.9s) | gbt MCC 0.927
+CellPPD  teacher_t3 done (8.9s) | gbt MCC 0.863
+THPep    ecfp     done (12.2s) | gbt MCC 0.792
+THPep    teacher_t3 done (4.2s) | gbt MCC 0.731
+PepMSND  ecfp     done (204.4s) | gbt MCC 0.572
+PepMSND  teacher_t3 done (61.1s) | gbt MCC 0.554
+PAMPA    ecfp     done (208.0s) | gbt R2 0.309
+PAMPA    teacher_t3 done (67.5s) | gbt R2 0.211
+AmpHGT   ecfp     done (69.7s) | gbt MCC 0.867
+AmpHGT   teacher_t3 done (36.4s) | gbt MCC 0.812
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                 ecfp  teacher_t3
+benchmark learner                   
+AmpHGT    gbt      0.872       0.812
+          linear   0.606       0.653
+CellPPD   gbt      0.927       0.863
+          linear   0.848       0.894
+PAMPA     gbt      0.309       0.211
+          linear   0.111      -0.198
+PepMSND   gbt      0.572       0.554
+          linear   0.472       0.469
+THPep     gbt      0.792       0.731
+          linear   0.775       0.782
+
+AmpHGT test restricted to <=30 residues (MCC):
+rep       ecfp  teacher_t3
+learner                   
+gbt      0.657       0.536
+linear   0.161       0.270
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/teacher_t3
+== done 15:10: results in /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/teacher_t3/

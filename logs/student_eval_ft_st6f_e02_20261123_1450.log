@@ -1,0 +1,134 @@
+14:50:56 == stage ft | student st6f | epoch 2 (name st6f_e02) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_eval_ft_st6f_e02_20261123_1450.log
+student st6f_e02: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_distill/st6f/epoch_02.pt | weights of epoch 2 | 10.821M parameters | feature z (1024-d) | modes ['ft', 'frozen'] | benchmarks ['CellPPD', 'THPep', 'PepMSND', 'PAMPA', 'AmpHGT', 'PL_cCPP', 'PL_cSol', 'PL_ncCPP', 'PL_cBinding', 'PL_ncBinding']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1, hidden 1024 | lr: head 0.001, student 1e-05 (ft) | inner folds 5 (max models 5) | seeds 1 | device cuda
+results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_student_st6f_e02
+CellPPD: 1464 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+CellPPD      ft      done (40s) | MCC 0.880 (mean of folds 0.880) | epochs run 17, best at 7, hit the 100-epoch cap in 0 of 5 fits
+CellPPD      frozen  done (2s) | MCC 0.893 (mean of folds 0.893) | epochs run 20, best at 10, hit the 100-epoch cap in 0 of 5 fits
+THPep: 609 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+THPep        ft      done (12s) | MCC 0.843 (mean of folds 0.843) | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 5 fits
+THPep        frozen  done (1s) | MCC 0.826 (mean of folds 0.826) | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 5 fits
+PepMSND: 640 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+   PepMSND ft seed 0 fold 1/10 (64 molecules, 5 models) 20s
+   PepMSND ft seed 0 fold 2/10 (64 molecules, 5 models) 41s
+   PepMSND ft seed 0 fold 3/10 (64 molecules, 5 models) 59s
+   PepMSND ft seed 0 fold 4/10 (64 molecules, 5 models) 78s
+   PepMSND ft seed 0 fold 5/10 (64 molecules, 5 models) 98s
+   PepMSND ft seed 0 fold 6/10 (64 molecules, 5 models) 119s
+   PepMSND ft seed 0 fold 7/10 (64 molecules, 5 models) 139s
+   PepMSND ft seed 0 fold 8/10 (64 molecules, 5 models) 160s
+   PepMSND ft seed 0 fold 9/10 (64 molecules, 5 models) 181s
+   PepMSND ft seed 0 fold 10/10 (64 molecules, 5 models) 199s
+PepMSND      ft      done (199s) | MCC 0.492 (mean of folds 0.494) | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 50 fits
+   PepMSND frozen seed 0 fold 1/10 (64 molecules, 5 models) 1s
+   PepMSND frozen seed 0 fold 2/10 (64 molecules, 5 models) 2s
+   PepMSND frozen seed 0 fold 3/10 (64 molecules, 5 models) 2s
+   PepMSND frozen seed 0 fold 4/10 (64 molecules, 5 models) 3s
+   PepMSND frozen seed 0 fold 5/10 (64 molecules, 5 models) 4s
+   PepMSND frozen seed 0 fold 6/10 (64 molecules, 5 models) 5s
+   PepMSND frozen seed 0 fold 7/10 (64 molecules, 5 models) 6s
+   PepMSND frozen seed 0 fold 8/10 (64 molecules, 5 models) 7s
+   PepMSND frozen seed 0 fold 9/10 (64 molecules, 5 models) 8s
+   PepMSND frozen seed 0 fold 10/10 (64 molecules, 5 models) 9s
+PepMSND      frozen  done (9s) | MCC 0.476 (mean of folds 0.479) | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 50 fits
+PAMPA: 6701 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+   PAMPA ft seed 0 fold 1/6 (1546 molecules, 5 models) 146s
+   PAMPA ft seed 0 fold 2/6 (1465 molecules, 5 models) 306s
+   PAMPA ft seed 0 fold 3/6 (1455 molecules, 5 models) 447s
+   PAMPA ft seed 0 fold 4/6 (1206 molecules, 5 models) 599s
+   PAMPA ft seed 0 fold 5/6 (535 molecules, 5 models) 819s
+   PAMPA ft seed 0 fold 6/6 (494 molecules, 5 models) 1095s
+PAMPA        ft      done (1095s) | R2 0.322 (mean of folds 0.244) | epochs run 21, best at 11, hit the 100-epoch cap in 0 of 30 fits
+   PAMPA frozen seed 0 fold 1/6 (1546 molecules, 5 models) 16s
+   PAMPA frozen seed 0 fold 2/6 (1465 molecules, 5 models) 37s
+   PAMPA frozen seed 0 fold 3/6 (1455 molecules, 5 models) 56s
+   PAMPA frozen seed 0 fold 4/6 (1206 molecules, 5 models) 77s
+   PAMPA frozen seed 0 fold 5/6 (535 molecules, 5 models) 100s
+   PAMPA frozen seed 0 fold 6/6 (494 molecules, 5 models) 127s
+PAMPA        frozen  done (127s) | R2 0.325 (mean of folds 0.255) | epochs run 22, best at 12, hit the 100-epoch cap in 0 of 30 fits
+AmpHGT: 16900 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+AmpHGT       ft      done (162s) | MCC 0.678 (mean of folds 0.678) | epochs run 19, best at 9, hit the 100-epoch cap in 0 of 1 fits
+AmpHGT       frozen  done (9s) | MCC 0.692 (mean of folds 0.692) | epochs run 22, best at 12, hit the 100-epoch cap in 0 of 1 fits
+PL_cCPP: 2324 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+   PL_cCPP ft seed 0 fold 1/5 (466 molecules, 5 models) 60s
+   PL_cCPP ft seed 0 fold 2/5 (466 molecules, 5 models) 126s
+   PL_cCPP ft seed 0 fold 3/5 (464 molecules, 5 models) 190s
+   PL_cCPP ft seed 0 fold 4/5 (464 molecules, 5 models) 252s
+   PL_cCPP ft seed 0 fold 5/5 (464 molecules, 5 models) 315s
+PL_cCPP      ft      done (315s) | AUROC 0.934 (mean of folds 0.934) | epochs run 16, best at 6, hit the 100-epoch cap in 0 of 25 fits
+   PL_cCPP frozen seed 0 fold 1/5 (466 molecules, 5 models) 6s
+   PL_cCPP frozen seed 0 fold 2/5 (466 molecules, 5 models) 12s
+   PL_cCPP frozen seed 0 fold 3/5 (464 molecules, 5 models) 18s
+   PL_cCPP frozen seed 0 fold 4/5 (464 molecules, 5 models) 22s
+   PL_cCPP frozen seed 0 fold 5/5 (464 molecules, 5 models) 27s
+PL_cCPP      frozen  done (27s) | AUROC 0.936 (mean of folds 0.936) | epochs run 17, best at 7, hit the 100-epoch cap in 0 of 25 fits
+PL_cSol: 1357 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+   PL_cSol ft seed 0 fold 1/5 (272 molecules, 5 models) 69s
+   PL_cSol ft seed 0 fold 2/5 (272 molecules, 5 models) 133s
+   PL_cSol ft seed 0 fold 3/5 (271 molecules, 5 models) 201s
+   PL_cSol ft seed 0 fold 4/5 (271 molecules, 5 models) 263s
+   PL_cSol ft seed 0 fold 5/5 (271 molecules, 5 models) 329s
+PL_cSol      ft      done (329s) | AUROC 0.703 (mean of folds 0.707) | epochs run 16, best at 6, hit the 100-epoch cap in 0 of 25 fits
+   PL_cSol frozen seed 0 fold 1/5 (272 molecules, 5 models) 5s
+   PL_cSol frozen seed 0 fold 2/5 (272 molecules, 5 models) 9s
+   PL_cSol frozen seed 0 fold 3/5 (271 molecules, 5 models) 12s
+   PL_cSol frozen seed 0 fold 4/5 (271 molecules, 5 models) 15s
+   PL_cSol frozen seed 0 fold 5/5 (271 molecules, 5 models) 18s
+PL_cSol      frozen  done (18s) | AUROC 0.704 (mean of folds 0.705) | epochs run 19, best at 9, hit the 100-epoch cap in 0 of 25 fits
+PL_ncCPP: 7334 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+   PL_ncCPP ft seed 0 fold 1/5 (1467 molecules, 5 models) 344s
+   PL_ncCPP ft seed 0 fold 2/5 (1467 molecules, 5 models) 755s
+   PL_ncCPP ft seed 0 fold 3/5 (1467 molecules, 5 models) 1121s
+   PL_ncCPP ft seed 0 fold 4/5 (1467 molecules, 5 models) 1496s
+   PL_ncCPP ft seed 0 fold 5/5 (1466 molecules, 5 models) 1871s
+PL_ncCPP     ft      done (1871s) | Spearman 0.770 (mean of folds 0.771) | epochs run 33, best at 23, hit the 100-epoch cap in 0 of 25 fits
+   PL_ncCPP frozen seed 0 fold 1/5 (1467 molecules, 5 models) 44s
+   PL_ncCPP frozen seed 0 fold 2/5 (1467 molecules, 5 models) 86s
+   PL_ncCPP frozen seed 0 fold 3/5 (1467 molecules, 5 models) 110s
+   PL_ncCPP frozen seed 0 fold 4/5 (1467 molecules, 5 models) 156s
+   PL_ncCPP frozen seed 0 fold 5/5 (1466 molecules, 5 models) 199s
+PL_ncCPP     frozen  done (199s) | Spearman 0.734 (mean of folds 0.735) | epochs run 43, best at 33, hit the 100-epoch cap in 0 of 25 fits
+PL_cBinding: 1801 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+   PL_cBinding ft seed 0 fold 1/5 (362 molecules, 5 models) 72s
+   PL_cBinding ft seed 0 fold 2/5 (342 molecules, 5 models) 135s
+   PL_cBinding ft seed 0 fold 3/5 (358 molecules, 5 models) 211s
+   PL_cBinding ft seed 0 fold 4/5 (355 molecules, 5 models) 315s
+   PL_cBinding ft seed 0 fold 5/5 (384 molecules, 5 models) 385s
+PL_cBinding  ft      done (385s) | Spearman 0.441 (mean of folds 0.447) | epochs run 21, best at 11, hit the 100-epoch cap in 0 of 25 fits
+   PL_cBinding frozen seed 0 fold 1/5 (362 molecules, 5 models) 5s
+   PL_cBinding frozen seed 0 fold 2/5 (342 molecules, 5 models) 10s
+   PL_cBinding frozen seed 0 fold 3/5 (358 molecules, 5 models) 15s
+   PL_cBinding frozen seed 0 fold 4/5 (355 molecules, 5 models) 22s
+   PL_cBinding frozen seed 0 fold 5/5 (384 molecules, 5 models) 27s
+PL_cBinding  frozen  done (27s) | Spearman 0.439 (mean of folds 0.442) | epochs run 20, best at 10, hit the 100-epoch cap in 0 of 25 fits
+PL_ncBinding: 299 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+   PL_ncBinding ft seed 0 fold 1/5 (54 molecules, 5 models) 13s
+   PL_ncBinding ft seed 0 fold 2/5 (54 molecules, 5 models) 30s
+   PL_ncBinding ft seed 0 fold 3/5 (63 molecules, 5 models) 42s
+   PL_ncBinding ft seed 0 fold 4/5 (55 molecules, 5 models) 57s
+   PL_ncBinding ft seed 0 fold 5/5 (73 molecules, 5 models) 71s
+PL_ncBinding ft      done (71s) | Spearman 0.364 (mean of folds 0.393) | epochs run 22, best at 12, hit the 100-epoch cap in 0 of 25 fits
+   PL_ncBinding frozen seed 0 fold 1/5 (54 molecules, 5 models) 2s
+   PL_ncBinding frozen seed 0 fold 2/5 (54 molecules, 5 models) 4s
+   PL_ncBinding frozen seed 0 fold 3/5 (63 molecules, 5 models) 6s
+   PL_ncBinding frozen seed 0 fold 4/5 (55 molecules, 5 models) 7s
+   PL_ncBinding frozen seed 0 fold 5/5 (73 molecules, 5 models) 9s
+PL_ncBinding frozen  done (9s) | Spearman 0.355 (mean of folds 0.376) | epochs run 23, best at 13, hit the 100-epoch cap in 0 of 25 fits
+
+=== primary metric on the pooled predictions (mean over seeds) ===
+mode                                   metric  frozen     ft
+CellPPD                                   MCC   0.893  0.880
+THPep                                     MCC   0.826  0.843
+PepMSND                                   MCC   0.476  0.492
+PAMPA                                      R2   0.325  0.322
+AmpHGT                                    MCC   0.692  0.678
+PL_cCPP                                 AUROC   0.936  0.934
+PL_cSol                                 AUROC   0.704  0.703
+PL_ncCPP                             Spearman   0.734  0.770
+PL_cBinding                          Spearman   0.439  0.441
+PL_ncBinding                         Spearman   0.355  0.364
+AVERAGE (all)                             NaN   0.638  0.643
+AVERAGE of 7 (no PAMPA, no binding)       NaN   0.752  0.757
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_student_st6f_e02
+16:13:28 == ft finished with exit status 0

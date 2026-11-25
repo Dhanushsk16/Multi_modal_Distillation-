@@ -1,0 +1,27 @@
+{
+ "name": "s256x15_lr5e-4",
+ "params_M": 10.07,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.15,
+ "all": {
+  "loss": 0.3544,
+  "acc": 0.868,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.5723,
+  "acc": 0.8229,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.288,
+  "acc": 0.8833,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 1.2088,
+  "acc": 0.6701,
+  "masked_tokens": 54596
+ }
+}

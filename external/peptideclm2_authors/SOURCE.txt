@@ -1,0 +1,7 @@
+Verbatim copies (not edited) of the PeptideCLM-2 authors' PepMSND training code.
+  repository : https://github.com/AaronFeller/PeptideCLM-2 (MIT, see LICENSE)
+  commit     : 6b9708d4cb05717307d310daaf1c0f88c71ff084  (master, 2026-07-23, "Update finetuning script to final")
+  path       : training/03_PepMSND_training_code/
+  fetched    : 2026-11-20
+Used by src/repro/run_authors_script.py (scripts/run_reproduce.sh). The PepMSND data they read (X_train1..10.csv, X_test1..10.csv) is the
+repository's data/PepMSND_data/, identical to data/benchmarks/PepMSND_data on the server.

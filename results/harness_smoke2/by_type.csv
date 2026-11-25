@@ -1,0 +1,7 @@
+benchmark,subset,H,L,P,P+L+H,PCA,teacher_abl_base_s1
+AmpHGT,modified,0.663,0.769,0.802,0.643,0.537,0.725
+AmpHGT,standard,0.0,0.0,0.0,0.0,0.0,0.0
+PAMPA,modified,0.244,-0.635,-0.29,0.146,0.153,-0.033
+PL_cCPP,standard,0.886,0.915,0.886,0.912,0.906,0.925
+PepMSND,modified,0.574,0.566,0.498,0.614,0.562,0.588
+PepMSND,standard,0.347,0.401,0.35,0.366,0.38,0.326

@@ -1,0 +1,51 @@
+12:23:40 == stage data | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_data_20261123_1223.log
+tokenizer C_atombpe_v1024 (1024 tokens) | 51 shards | 8 random spellings per molecule -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/corpus/student_atombpe_v1024
+shard   5 | rows 500000..600000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 32 s
+shard   6 | rows 600000..700000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 65 s
+shard   7 | rows 700000..800000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 96 s
+shard   8 | rows 800000..900000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 128 s
+shard   9 | rows 900000..1000000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 159 s
+shard  10 | rows 1000000..1100000 | tokens/molecule mean 20.1 max 128 | random spelling mean 30.6 | 191 s
+shard  11 | rows 1100000..1200000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 223 s
+shard  12 | rows 1200000..1300000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 261 s
+shard  13 | rows 1300000..1400000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 303 s
+shard  14 | rows 1400000..1500000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 352 s
+shard  15 | rows 1500000..1600000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 396 s
+shard  16 | rows 1600000..1700000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 443 s
+shard  17 | rows 1700000..1800000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 491 s
+shard  18 | rows 1800000..1900000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 538 s
+shard  19 | rows 1900000..2000000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 582 s
+shard  20 | rows 2000000..2100000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 623 s
+shard  21 | rows 2100000..2200000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 665 s
+shard  22 | rows 2200000..2300000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 709 s
+shard  23 | rows 2300000..2400000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 753 s
+shard  24 | rows 2400000..2500000 | tokens/molecule mean 20.1 max 128 | random spelling mean 30.6 | 794 s
+shard  25 | rows 2500000..2600000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 837 s
+shard  26 | rows 2600000..2640418 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 855 s
+shard  27 | rows 2640418..2672086 | tokens/molecule mean 33.7 max 54 | random spelling mean 54.5 | 884 s
+shard  28 | rows 2672086..2703754 | tokens/molecule mean 33.7 max 51 | random spelling mean 54.6 | 913 s
+shard  29 | rows 2703754..2735422 | tokens/molecule mean 33.6 max 53 | random spelling mean 54.5 | 939 s
+shard  30 | rows 2735422..2767090 | tokens/molecule mean 33.7 max 53 | random spelling mean 54.6 | 965 s
+shard  31 | rows 2767090..2798758 | tokens/molecule mean 33.6 max 53 | random spelling mean 54.5 | 990 s
+shard  32 | rows 2798758..2830426 | tokens/molecule mean 33.6 max 53 | random spelling mean 54.5 | 1016 s
+shard  33 | rows 2830426..2862094 | tokens/molecule mean 33.7 max 52 | random spelling mean 54.6 | 1040 s
+shard  34 | rows 2862094..2893762 | tokens/molecule mean 33.7 max 53 | random spelling mean 54.6 | 1067 s
+shard  35 | rows 2893762..2925430 | tokens/molecule mean 33.7 max 55 | random spelling mean 54.6 | 1090 s
+shard  36 | rows 2925430..2957098 | tokens/molecule mean 33.7 max 53 | random spelling mean 54.5 | 1113 s
+shard  37 | rows 2957098..2988766 | tokens/molecule mean 33.7 max 54 | random spelling mean 54.6 | 1135 s
+shard  38 | rows 2988766..3020434 | tokens/molecule mean 33.7 max 53 | random spelling mean 54.6 | 1159 s
+shard  39 | rows 3020434..3052102 | tokens/molecule mean 33.7 max 54 | random spelling mean 54.5 | 1181 s
+shard  40 | rows 3052102..3083770 | tokens/molecule mean 33.6 max 59 | random spelling mean 54.4 | 1204 s
+shard  41 | rows 3083770..3115438 | tokens/molecule mean 33.7 max 53 | random spelling mean 54.5 | 1227 s
+shard  42 | rows 3115438..3147106 | tokens/molecule mean 33.6 max 52 | random spelling mean 54.5 | 1250 s
+shard  43 | rows 3147106..3178774 | tokens/molecule mean 33.7 max 54 | random spelling mean 54.5 | 1272 s
+shard  44 | rows 3178774..3210442 | tokens/molecule mean 33.7 max 53 | random spelling mean 54.5 | 1295 s
+shard  45 | rows 3210442..3242110 | tokens/molecule mean 33.6 max 52 | random spelling mean 54.5 | 1318 s
+shard  46 | rows 3242110..3273778 | tokens/molecule mean 33.7 max 55 | random spelling mean 54.5 | 1341 s
+shard  47 | rows 3273778..3305446 | tokens/molecule mean 33.6 max 53 | random spelling mean 54.5 | 1364 s
+shard  48 | rows 3305446..3337114 | tokens/molecule mean 33.7 max 52 | random spelling mean 54.6 | 1386 s
+shard  49 | rows 3337114..3368782 | tokens/molecule mean 33.7 max 53 | random spelling mean 54.5 | 1409 s
+shard  50 | rows 3368782..3400449 | tokens/molecule mean 33.6 max 53 | random spelling mean 54.5 | 1432 s
+done: 2,900,449 molecules | cut at 128 tokens: 863 (0.030%) | [UNK] tokens: 0
+random spellings: mean tokens 36.9 against 23.7 canonical (1.56x) | replaced by the canonical one (longer than 192): 1661 | parsed back and compared: 73600, NOT the same molecule: 0
+12:47:35 == done (exit status 0)

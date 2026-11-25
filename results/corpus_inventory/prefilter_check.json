@@ -1,0 +1,92 @@
+{
+ "threshold_in_use": 3,
+ "benchmarks": {
+  "CellPPD": {
+   "molecules": 1339,
+   "peptides_ge_4_res": 1327,
+   "dropped_at_2": 0,
+   "frac_dropped_at_2": 0.0,
+   "dropped_at_3": 0,
+   "frac_dropped_at_3": 0.0,
+   "examples": [],
+   "dropped_at_4": 1,
+   "frac_dropped_at_4": 0.0008
+  },
+  "THPep": {
+   "molecules": 609,
+   "peptides_ge_4_res": 609,
+   "dropped_at_2": 0,
+   "frac_dropped_at_2": 0.0,
+   "dropped_at_3": 0,
+   "frac_dropped_at_3": 0.0,
+   "examples": [],
+   "dropped_at_4": 0,
+   "frac_dropped_at_4": 0.0
+  },
+  "PepMSND": {
+   "molecules": 605,
+   "peptides_ge_4_res": 575,
+   "dropped_at_2": 0,
+   "frac_dropped_at_2": 0.0,
+   "dropped_at_3": 0,
+   "frac_dropped_at_3": 0.0,
+   "examples": [],
+   "dropped_at_4": 0,
+   "frac_dropped_at_4": 0.0
+  },
+  "PAMPA": {
+   "molecules": 6649,
+   "peptides_ge_4_res": 6546,
+   "dropped_at_2": 0,
+   "frac_dropped_at_2": 0.0,
+   "dropped_at_3": 0,
+   "frac_dropped_at_3": 0.0,
+   "examples": [],
+   "dropped_at_4": 0,
+   "frac_dropped_at_4": 0.0
+  },
+  "AmpHGT": {
+   "molecules": 16841,
+   "peptides_ge_4_res": 7760,
+   "dropped_at_2": 0,
+   "frac_dropped_at_2": 0.0,
+   "dropped_at_3": 0,
+   "frac_dropped_at_3": 0.0,
+   "examples": [],
+   "dropped_at_4": 0,
+   "frac_dropped_at_4": 0.0
+  }
+ },
+ "pubchem": {
+  "rows": 400000,
+  "min_res": 4,
+  "kept_by_classify": 2594,
+  "carbonyls_median_of_kept": 8.0,
+  "thresholds": {
+   "2": {
+    "rejects_frac_of_file": 0.5827,
+    "recall_of_kept": 1.0,
+    "missed": 0,
+    "missed_examples": []
+   },
+   "3": {
+    "rejects_frac_of_file": 0.8192,
+    "recall_of_kept": 1.0,
+    "missed": 0,
+    "missed_examples": []
+   },
+   "4": {
+    "rejects_frac_of_file": 0.9315,
+    "recall_of_kept": 1.0,
+    "missed": 0,
+    "missed_examples": []
+   }
+  }
+ },
+ "gate": {
+  "threshold": 3,
+  "benchmark_peptides_dropped": 0,
+  "pubchem_recall": 1.0,
+  "rejects_frac_of_file": 0.8192
+ }
+}

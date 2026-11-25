@@ -1,0 +1,161 @@
+== Tuesday 17 November 2026 03:02:21 PM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261117_1502.log
+representations: ['P', 'L', 'H', 'teacher_abl_base_s1', 'teacher_abl_base_s2', 'teacher_abl_base_s3'] | learners ['gbt'] | seeds 1 | select val
+   CellPPD      all    P            gbt    seed 0 | MCC 0.801 (2s)
+   CellPPD      all    L            gbt    seed 0 | MCC 0.881 (7s)
+   CellPPD      all    H            gbt    seed 0 | MCC 0.927 (9s)
+   CellPPD      all    teacher_abl_base_s1 gbt    seed 0 | MCC 0.901 (6s)
+   CellPPD      all    teacher_abl_base_s2 gbt    seed 0 | MCC 0.927 (6s)
+   CellPPD      all    teacher_abl_base_s3 gbt    seed 0 | MCC 0.881 (6s)
+== CellPPD done (58 s)
+   THPep        all    P            gbt    seed 0 | MCC 0.522 (1s)
+   THPep        all    L            gbt    seed 0 | MCC 0.693 (3s)
+   THPep        all    H            gbt    seed 0 | MCC 0.792 (4s)
+   THPep        all    teacher_abl_base_s1 gbt    seed 0 | MCC 0.756 (3s)
+   THPep        all    teacher_abl_base_s2 gbt    seed 0 | MCC 0.720 (3s)
+   THPep        all    teacher_abl_base_s3 gbt    seed 0 | MCC 0.775 (3s)
+== THPep done (31 s)
+   PepMSND      all    P            gbt    seed 0 | MCC 0.514 (13s)
+   PepMSND      all    L            gbt    seed 0 | MCC 0.550 (36s)
+   PepMSND      all    H            gbt    seed 0 | MCC 0.574 (60s)
+   PepMSND      all    teacher_abl_base_s1 gbt    seed 0 | MCC 0.566 (36s)
+   PepMSND      all    teacher_abl_base_s2 gbt    seed 0 | MCC 0.513 (36s)
+   PepMSND      all    teacher_abl_base_s3 gbt    seed 0 | MCC 0.527 (36s)
+== PepMSND done (309 s)
+   PAMPA        all    P            gbt    seed 0 | R2 0.323 (15s)
+   PAMPA        all    L            gbt    seed 0 | R2 0.106 (41s)
+   PAMPA        all    H            gbt    seed 0 | R2 0.364 (66s)
+   PAMPA        all    teacher_abl_base_s1 gbt    seed 0 | R2 0.267 (42s)
+   PAMPA        all    teacher_abl_base_s2 gbt    seed 0 | R2 0.249 (42s)
+   PAMPA        all    teacher_abl_base_s3 gbt    seed 0 | R2 0.267 (42s)
+== PAMPA done (372 s)
+   AmpHGT       all    P            gbt    seed 0 | MCC 0.841 (2s)
+   AmpHGT       all    L            gbt    seed 0 | MCC 0.800 (7s)
+   AmpHGT       all    H            gbt    seed 0 | MCC 0.884 (13s)
+   AmpHGT       all    teacher_abl_base_s1 gbt    seed 0 | MCC 0.871 (5s)
+   AmpHGT       all    teacher_abl_base_s2 gbt    seed 0 | MCC 0.828 (5s)
+   AmpHGT       all    teacher_abl_base_s3 gbt    seed 0 | MCC 0.868 (7s)
+== AmpHGT done (75 s)
+   PL_cCPP      all    P            gbt    seed 0 | AUROC 0.928 (12s)
+   PL_cCPP      all    L            gbt    seed 0 | AUROC 0.939 (35s)
+   PL_cCPP      all    H            gbt    seed 0 | AUROC 0.952 (49s)
+   PL_cCPP      all    teacher_abl_base_s1 gbt    seed 0 | AUROC 0.945 (35s)
+   PL_cCPP      all    teacher_abl_base_s2 gbt    seed 0 | AUROC 0.945 (35s)
+   PL_cCPP      all    teacher_abl_base_s3 gbt    seed 0 | AUROC 0.944 (36s)
+== PL_cCPP done (299 s)
+   PL_cSol      all    P            gbt    seed 0 | AUROC 0.626 (11s)
+   PL_cSol      all    L            gbt    seed 0 | AUROC 0.680 (30s)
+   PL_cSol      all    H            gbt    seed 0 | AUROC 0.713 (45s)
+   PL_cSol      all    teacher_abl_base_s1 gbt    seed 0 | AUROC 0.714 (30s)
+   PL_cSol      all    teacher_abl_base_s2 gbt    seed 0 | AUROC 0.708 (30s)
+   PL_cSol      all    teacher_abl_base_s3 gbt    seed 0 | AUROC 0.716 (30s)
+== PL_cSol done (261 s)
+   PL_ncCPP     all    P            gbt    seed 0 | Spearman 0.723 (13s)
+   PL_ncCPP     all    L            gbt    seed 0 | Spearman 0.736 (35s)
+   PL_ncCPP     all    H            gbt    seed 0 | Spearman 0.752 (56s)
+   PL_ncCPP     all    teacher_abl_base_s1 gbt    seed 0 | Spearman 0.729 (36s)
+   PL_ncCPP     all    teacher_abl_base_s2 gbt    seed 0 | Spearman 0.730 (36s)
+   PL_ncCPP     all    teacher_abl_base_s3 gbt    seed 0 | Spearman 0.728 (36s)
+== PL_ncCPP done (315 s)
+   PL_cBinding  all    P            gbt    seed 0 | Spearman 0.362 (12s)
+   PL_cBinding  all    L            gbt    seed 0 | Spearman 0.426 (34s)
+   PL_cBinding  all    H            gbt    seed 0 | Spearman 0.408 (40s)
+   PL_cBinding  all    teacher_abl_base_s1 gbt    seed 0 | Spearman 0.453 (34s)
+   PL_cBinding  all    teacher_abl_base_s2 gbt    seed 0 | Spearman 0.448 (34s)
+   PL_cBinding  all    teacher_abl_base_s3 gbt    seed 0 | Spearman 0.467 (34s)
+== PL_cBinding done (277 s)
+   PL_ncBinding all    P            gbt    seed 0 | Spearman 0.495 (3s)
+   PL_ncBinding all    L            gbt    seed 0 | Spearman 0.347 (9s)
+   PL_ncBinding all    H            gbt    seed 0 | Spearman 0.384 (11s)
+   PL_ncBinding all    teacher_abl_base_s1 gbt    seed 0 | Spearman 0.469 (9s)
+   PL_ncBinding all    teacher_abl_base_s2 gbt    seed 0 | Spearman 0.411 (9s)
+   PL_ncBinding all    teacher_abl_base_s3 gbt    seed 0 | Spearman 0.407 (9s)
+== PL_ncBinding done (74 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            CellPPD  THPep  PepMSND  PAMPA  AmpHGT  AVERAGE
+H                             0.927  0.792    0.574  0.364   0.884    0.675
+L                             0.881  0.693    0.550  0.106   0.800    0.616
+P                             0.801  0.522    0.514  0.323   0.841    0.613
+base_s1                       0.901  0.756    0.566  0.267   0.871    0.667
+base_s2                       0.927  0.720    0.513  0.249   0.828    0.648
+base_s3                       0.881  0.775    0.527  0.267   0.868    0.658
+REF (chosen on validation)    0.927  0.792    0.560  0.307   0.884    0.667
+BEST single (on test)         0.927  0.792    0.574  0.364   0.884    0.688
+
+                            PL_cCPP  PL_cSol  PL_ncCPP  PL_cBinding  PL_ncBinding  AVERAGE
+H                             0.952    0.713     0.752        0.408         0.384    0.675
+L                             0.939    0.680     0.736        0.426         0.347    0.616
+P                             0.928    0.626     0.723        0.362         0.495    0.613
+base_s1                       0.945    0.714     0.729        0.453         0.469    0.667
+base_s2                       0.945    0.708     0.730        0.448         0.411    0.648
+base_s3                       0.944    0.716     0.728        0.467         0.407    0.658
+REF (chosen on validation)    0.950    0.709     0.752        0.425         0.368    0.667
+BEST single (on test)         0.952    0.713     0.752        0.426         0.495    0.688
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_noPAMPA = the same average without PAMPA; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff     95% interval  diff_noPAMPA interval_noPAMPA W/L/T worse99.5
+   REF     gbt base_s1 10 -0.000  [-0.015, 0.014]         0.004  [-0.012, 0.020] 2/3/5         2
+   REF     gbt base_s2 10 -0.020  [-0.036, 0.000]        -0.015  [-0.033, 0.007] 0/3/7         3
+   REF     gbt base_s3 10 -0.009  [-0.026, 0.007]        -0.006  [-0.023, 0.011] 1/5/4         3
+     H     gbt base_s1 10 -0.008  [-0.025, 0.006]         0.002  [-0.016, 0.018] 2/4/4         2
+     H     gbt base_s2 10 -0.027 [-0.043, -0.008]        -0.017  [-0.035, 0.004] 1/5/4         3
+     H     gbt base_s3 10 -0.017 [-0.035, -0.003]        -0.008  [-0.027, 0.008] 1/5/4         4
+  BEST     gbt base_s1 10 -0.021                         -0.012                                 
+  BEST     gbt base_s2 10 -0.040                         -0.032                                 
+  BEST     gbt base_s3 10 -0.030                         -0.022                                 
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 6 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank  avg_rank_noPAMPA
+H             2.0               2.2
+base_s1       2.7               2.6
+base_s3       3.2               3.2
+base_s2       3.6               3.5
+L             4.6               4.5
+P             4.8               5.1
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA   vs_H  worse99.5 PASS  vs_REF_noPAMPA  vs_PCA_noPAMPA  worse_noPAMPA PASS_noPAMPA
+base_s1     gbt  -0.000     NaN -0.008        2.0   no           0.004             NaN            1.0           no
+base_s1     ALL  -0.000     NaN -0.008        2.0   no           0.004             NaN            1.0           no
+base_s2     gbt  -0.020     NaN -0.027        3.0   no          -0.015             NaN            2.0           no
+base_s2     ALL  -0.020     NaN -0.027        3.0   no          -0.015             NaN            2.0           no
+base_s3     gbt  -0.009     NaN -0.017        3.0   no          -0.006             NaN            2.0           no
+base_s3     ALL  -0.009     NaN -0.017        3.0   no          -0.006             NaN            2.0           no
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, 99.5% intervals)
+
+=== TEACHER-SEED SPREAD: the headline number (average difference over benchmarks) of repeated trainings of one configuration ===
+teacher versus learner  runs    mean     sd     min     max  mean_wo  sd_wo
+   base    REF     ALL     3 -0.0097 0.0097 -0.0195 -0.0001  -0.0056 0.0098
+   base    REF     gbt     3 -0.0097 0.0097 -0.0195 -0.0001  -0.0056 0.0098
+   base      H     ALL     3 -0.0174 0.0097 -0.0273 -0.0078  -0.0078 0.0098
+   base      H     gbt     3 -0.0174 0.0097 -0.0273 -0.0078  -0.0078 0.0098
+(rule: one final run is acceptable if this spread is smaller than the gain you plan to claim; otherwise train 3 seeds)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                           H      L      P  base_s1  base_s2  base_s3
+benchmark    subset                                                  
+AmpHGT       modified  0.886  0.802  0.844    0.875    0.831    0.871
+             standard  0.000  0.000  0.000    0.000    0.000    0.000
+CellPPD      modified  0.965  0.911  0.911    0.894    0.947    0.912
+             standard  0.891  0.846  0.702    0.892    0.904    0.844
+PAMPA        modified  0.364  0.106  0.323    0.267    0.249    0.267
+PL_cBinding  modified  0.427  0.454  0.394    0.469    0.477    0.494
+             standard  0.330  0.320  0.271    0.373    0.318    0.351
+PL_cCPP      standard  0.952  0.939  0.929    0.945    0.945    0.944
+PL_cSol      modified  0.711  0.679  0.626    0.712    0.705    0.715
+PL_ncBinding modified  0.314  0.284  0.447    0.390    0.345    0.354
+             standard  0.736  0.713  0.730    0.791    0.707    0.645
+PL_ncCPP     modified  0.752  0.736  0.723    0.729    0.730    0.728
+PepMSND      modified  0.628  0.612  0.592    0.586    0.629    0.571
+             standard  0.489  0.456  0.412    0.498    0.366    0.435
+THPep        standard  0.792  0.693  0.522    0.756    0.720    0.775
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/harness_seeds
+== done 15:37

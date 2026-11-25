@@ -1,0 +1,31 @@
+== Monday 16 November 2026 01:05:31 PM IST | teacher 't11' | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_t11_20261116_1305.log
+shards: 51, numbers 0..50 (51 complete, 0 with PepLand still partly cached: only its finished rows are used)
+molecules: 3,400,449 cached, 3,400,367 usable (every required view ok): train 3,366,362, validation 34,005 | data on cuda | 21 s
+optional view esm: present for 2,765,495 of the usable molecules (81.3% of train, 81.4% of validation); the others get the mask token + consistency loss, weight 1 on 0.5 of the eligible molecules
+teacher: 89,330,140 trainable parameters (3 SCAs + SEA, views ['pclm', 'pepland', 'esm'], arch res, sea-input both, SEA latent 1024, hidden 1024/2048)
+schedule: plateau | epochs <= 200 | patience 10 (min-delta 0.0001) | lr x 0.5 every 3 epochs without improvement
+epoch   1/200 | 239.2 s | lr 3.0e-04 | train 1.0359 | val 0.6382 * | R2 of the held-out view predicted from the others: pclm 0.784 pepland 0.829 esm 0.529 | SEA R2 0.914 | cons (masked vs full latent) rel.err 0.194 cos 0.940
+epoch   2/200 | 250.2 s | lr 3.0e-04 | train 0.6999 | val 0.5641 * | R2 of the held-out view predicted from the others: pclm 0.840 pepland 0.866 esm 0.551 | SEA R2 0.932 | cons (masked vs full latent) rel.err 0.189 cos 0.948
+epoch   3/200 | 249.2 s | lr 3.0e-04 | train 0.6450 | val 0.5313 * | R2 of the held-out view predicted from the others: pclm 0.858 pepland 0.873 esm 0.563 | SEA R2 0.937 | cons (masked vs full latent) rel.err 0.182 cos 0.955
+epoch   4/200 | 249.5 s | lr 3.0e-04 | train 0.6157 | val 0.4963 * | R2 of the held-out view predicted from the others: pclm 0.868 pepland 0.887 esm 0.571 | SEA R2 0.944 | cons (masked vs full latent) rel.err 0.168 cos 0.958
+epoch   5/200 | 246.2 s | lr 3.0e-04 | train 0.5874 | val 0.4770 * | R2 of the held-out view predicted from the others: pclm 0.876 pepland 0.894 esm 0.576 | SEA R2 0.948 | cons (masked vs full latent) rel.err 0.162 cos 0.967
+epoch   6/200 | 249.3 s | lr 3.0e-04 | train 0.5686 | val 0.4611 * | R2 of the held-out view predicted from the others: pclm 0.880 pepland 0.900 esm 0.581 | SEA R2 0.951 | cons (masked vs full latent) rel.err 0.155 cos 0.969
+epoch   7/200 | 249.3 s | lr 3.0e-04 | train 0.5539 | val 0.4500 * | R2 of the held-out view predicted from the others: pclm 0.884 pepland 0.903 esm 0.585 | SEA R2 0.954 | cons (masked vs full latent) rel.err 0.151 cos 0.966
+epoch   8/200 | 248.7 s | lr 3.0e-04 | train 0.5440 | val 0.4429 * | R2 of the held-out view predicted from the others: pclm 0.887 pepland 0.907 esm 0.586 | SEA R2 0.955 | cons (masked vs full latent) rel.err 0.151 cos 0.961
+epoch   9/200 | 245.8 s | lr 3.0e-04 | train 0.5395 | val 0.4427 * | R2 of the held-out view predicted from the others: pclm 0.890 pepland 0.912 esm 0.589 | SEA R2 0.956 | cons (masked vs full latent) rel.err 0.155 cos 0.957
+epoch  10/200 | 248.7 s | lr 3.0e-04 | train 0.5390 | val 0.4425 * | R2 of the held-out view predicted from the others: pclm 0.891 pepland 0.912 esm 0.591 | SEA R2 0.959 | cons (masked vs full latent) rel.err 0.159 cos 0.953
+epoch  11/200 | 247.5 s | lr 3.0e-04 | train 0.5410 | val 0.4450 | R2 of the held-out view predicted from the others: pclm 0.893 pepland 0.915 esm 0.594 | SEA R2 0.960 | cons (masked vs full latent) rel.err 0.166 cos 0.947 | no gain for 1/10
+epoch  12/200 | 247.5 s | lr 3.0e-04 | train 0.5433 | val 0.4461 | R2 of the held-out view predicted from the others: pclm 0.894 pepland 0.917 esm 0.595 | SEA R2 0.961 | cons (masked vs full latent) rel.err 0.170 cos 0.944 | no gain for 2/10
+epoch  13/200 | 244.2 s | lr 3.0e-04 | train 0.5427 | val 0.4462 | R2 of the held-out view predicted from the others: pclm 0.896 pepland 0.918 esm 0.595 | SEA R2 0.962 | cons (masked vs full latent) rel.err 0.172 cos 0.941 | no gain for 3/10
+epoch  14/200 | 247.5 s | lr 1.5e-04 | train 0.5419 | val 0.4510 | R2 of the held-out view predicted from the others: pclm 0.900 pepland 0.926 esm 0.601 | SEA R2 0.966 | cons (masked vs full latent) rel.err 0.188 cos 0.948 | no gain for 4/10
+epoch  15/200 | 247.7 s | lr 1.5e-04 | train 0.5510 | val 0.4569 | R2 of the held-out view predicted from the others: pclm 0.901 pepland 0.926 esm 0.602 | SEA R2 0.966 | cons (masked vs full latent) rel.err 0.196 cos 0.949 | no gain for 5/10
+epoch  16/200 | 247.5 s | lr 1.5e-04 | train 0.5556 | val 0.4609 | R2 of the held-out view predicted from the others: pclm 0.902 pepland 0.927 esm 0.602 | SEA R2 0.967 | cons (masked vs full latent) rel.err 0.201 cos 0.948 | no gain for 6/10
+epoch  17/200 | 245.2 s | lr 7.5e-05 | train 0.5564 | val 0.4636 | R2 of the held-out view predicted from the others: pclm 0.905 pepland 0.930 esm 0.605 | SEA R2 0.969 | cons (masked vs full latent) rel.err 0.209 cos 0.958 | no gain for 7/10
+epoch  18/200 | 246.9 s | lr 7.5e-05 | train 0.5614 | val 0.4665 | R2 of the held-out view predicted from the others: pclm 0.905 pepland 0.931 esm 0.606 | SEA R2 0.969 | cons (masked vs full latent) rel.err 0.213 cos 0.961 | no gain for 8/10
+epoch  19/200 | 246.3 s | lr 7.5e-05 | train 0.5634 | val 0.4692 | R2 of the held-out view predicted from the others: pclm 0.905 pepland 0.931 esm 0.606 | SEA R2 0.969 | cons (masked vs full latent) rel.err 0.216 cos 0.962 | no gain for 9/10
+epoch  20/200 | 247.7 s | lr 3.7e-05 | train 0.5614 | val 0.4668 | R2 of the held-out view predicted from the others: pclm 0.906 pepland 0.933 esm 0.607 | SEA R2 0.970 | cons (masked vs full latent) rel.err 0.216 cos 0.966 | no gain for 10/10
+early stop: no improvement of the validation loss by 0.0001 for 10 epochs; best epoch 10 (val 0.4425)
+benchmark molecules with a esm view: 3976 of 26029 (15.3%); the others use the mask token
+benchmark embeddings: 26029 molecules, 1024-d, usable 26029 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_t11.npz
+done. checkpoint /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/teacher/t11/best.pt | next: python src/eval_single.py --reps ecfp teacher_t11 --out teacher_t11
+== GATE=0: the frozen-embedding gate is skipped

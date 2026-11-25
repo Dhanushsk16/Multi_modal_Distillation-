@@ -1,0 +1,48 @@
+{
+ "name": "t11",
+ "views": [
+  "pclm",
+  "pepland",
+  "esm"
+ ],
+ "optional_views": [
+  "esm"
+ ],
+ "fill": "token",
+ "cons_weight": 1.0,
+ "cons_frac": 0.5,
+ "epochs": 200,
+ "patience": 10,
+ "min_delta": 0.0001,
+ "sched": "plateau",
+ "plateau_patience": 3,
+ "plateau_factor": 0.5,
+ "batch": 2048,
+ "lr": 0.0003,
+ "wd": 1e-05,
+ "hidden": 1024,
+ "sea_dim": 1024,
+ "sea_hidden": 2048,
+ "sea_input": "both",
+ "arch": "res",
+ "blocks": 1,
+ "dropout": 0.1,
+ "view_dropout": 0.1,
+ "first": 0,
+ "strict": false,
+ "data_on": "gpu",
+ "seed": 0,
+ "resume": true,
+ "no_bench": false,
+ "embed_pool": false,
+ "use_last": false,
+ "embed_bench_from": null,
+ "dims": [
+  1024,
+  300,
+  2560
+ ],
+ "optional": [
+  "esm"
+ ]
+}

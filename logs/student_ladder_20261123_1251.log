@@ -1,0 +1,27 @@
+12:51:25 == stage ladder | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_ladder_20261123_1251.log
+12:51:25 === train st6f | --first 0 --epochs 10 --patience 4 --seed 1 --data-on cpu --save-every 2 --targets latent,P,L,H,E --w-nce 1 --w-rel 1 --balance ema --teacher-drop 0.1 --p-random 0.5 --w-consist 1 --consist-frac 0.25 
+12:54:45 rows: 3,400,367 usable of 3,400,449 (51 shards) | train 3,366,362, validation 34,005 | standard (ESM present) 81.3% / 81.4% | 200 s
+12:54:45 tokens per molecule: mean 23.2, max 192 | vocabulary 1024 | P is imitated on 77.6% of the training molecules (<= 30 residues)
+12:54:45 random spellings: 8 per molecule, mean 36.0 tokens against 23.2 canonical | augmentation: read in a random spelling with probability 0.50 | consistency loss weight 1 on 25% of each batch
+12:54:46 student: 10.821M parameters at inference (embedding 0.328M, blocks 9.180M, pooling + output 1.313M) | training-only 10.29M (discarded)
+12:54:46 steps per epoch 1643 (batch 2048: 1024 standard + 1024 modified) | 10 epochs | lr 5.0e-04 | targets ['latent', 'P', 'L', 'H', 'E'] | rel on ['latent'] | nce 1 rel 1 | balance ema | drop 0.10 | mlm 0.00 | random spelling p 0.50 consist 1
+13:08:51 epoch   1/10 | 845 s (111962 tokens/s) | lr 4.97e-04 | train: a_latent 0.6112 a_P 0.1201 a_L 0.1672 a_H 0.2853 a_E 0.3152 nce_latent 2.5744 rel_latent 0.4148 cons 0.0095 | val crit 0.9051 (best 0.9051, no gain 0/4) | std cos_latent 0.483 cos_P 0.991 cos_L 0.956 cos_H 0.862 cos_E 0.752 r2_latent -0.139 spell 1.000 | mod cos_latent 0.522 cos_P 0.948 cos_L 0.923 cos_H 0.753 r2_latent 0.096 spell 0.999
+13:22:58 epoch   2/10 | 847 s (111693 tokens/s) | lr 4.71e-04 | train: a_latent 0.4770 a_P 0.0355 a_L 0.0675 a_H 0.1359 a_E 0.2431 nce_latent 0.0738 rel_latent 0.2662 cons 0.0010 | val crit 0.7733 (best 0.7733, no gain 0/4) | std cos_latent 0.511 cos_P 0.997 cos_L 0.972 cos_H 0.940 cos_E 0.760 r2_latent 0.015 spell 1.000 | mod cos_latent 0.553 cos_P 0.965 cos_L 0.944 cos_H 0.810 r2_latent 0.119 spell 0.999
+13:23:01 saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_distill/st6f/epoch_02.pt (EMA weights after epoch 2)
+13:37:06 epoch   3/10 | 845 s (111881 tokens/s) | lr 4.23e-04 | train: a_latent 0.5126 a_P 0.0289 a_L 0.0573 a_H 0.1152 a_E 0.2407 nce_latent 0.0084 rel_latent 0.2512 cons 0.0008 | val crit 0.7996 (best 0.7733, no gain 1/4) | std cos_latent 0.470 cos_P 0.998 cos_L 0.975 cos_H 0.943 cos_E 0.761 r2_latent -0.215 spell 1.000 | mod cos_latent 0.510 cos_P 0.969 cos_L 0.950 cos_H 0.825 r2_latent -0.096 spell 0.999
+13:51:13 epoch   4/10 | 845 s (111885 tokens/s) | lr 3.58e-04 | train: a_latent 0.5361 a_P 0.0255 a_L 0.0520 a_H 0.1085 a_E 0.2381 nce_latent 0.0054 rel_latent 0.2518 cons 0.0004 | val crit 0.8016 (best 0.7733, no gain 2/4) | std cos_latent 0.462 cos_P 0.998 cos_L 0.976 cos_H 0.944 cos_E 0.762 r2_latent -0.327 spell 1.000 | mod cos_latent 0.498 cos_P 0.972 cos_L 0.952 cos_H 0.833 r2_latent -0.211 spell 1.000
+13:51:15 saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_distill/st6f/epoch_04.pt (EMA weights after epoch 4)
+14:05:19 epoch   5/10 | 844 s (111959 tokens/s) | lr 2.82e-04 | train: a_latent 0.5286 a_P 0.0228 a_L 0.0478 a_H 0.1044 a_E 0.2361 nce_latent 0.0045 rel_latent 0.2442 cons 0.0003 | val crit 0.7919 (best 0.7733, no gain 3/4) | std cos_latent 0.467 cos_P 0.998 cos_L 0.976 cos_H 0.944 cos_E 0.763 r2_latent -0.344 spell 1.000 | mod cos_latent 0.502 cos_P 0.974 cos_L 0.954 cos_H 0.838 r2_latent -0.234 spell 1.000
+14:19:26 epoch   6/10 | 844 s (111982 tokens/s) | lr 2.04e-04 | train: a_latent 0.5187 a_P 0.0207 a_L 0.0447 a_H 0.1017 a_E 0.2340 nce_latent 0.0038 rel_latent 0.2359 cons 0.0002 | val crit 0.7814 (best 0.7733, no gain 4/4) | std cos_latent 0.474 cos_P 0.998 cos_L 0.977 cos_H 0.945 cos_E 0.764 r2_latent -0.347 spell 1.000 | mod cos_latent 0.509 cos_P 0.975 cos_L 0.956 cos_H 0.840 r2_latent -0.229 spell 1.000
+14:19:28 saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_distill/st6f/epoch_06.pt (EMA weights after epoch 6)
+14:19:28 early stop: no gain of the validation criterion for 4 epochs; best epoch 2 (criterion 0.7733)
+14:19:28 done. best.pt = the EMA weights of the best epoch (criterion 0.7733) in /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_distill/st6f | next: python src/student/export_student.py --name st6f
+student st6f: 10.821M parameters at inference | weights of epoch 2 | tokenizer /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_tokenizer_norm/atombpe_v1024
+single   26029 molecules | unparsable 0 | cut at 128 tokens: 0 | usable 26029
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_st6f.npz (26029, 1024)
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality/teacher_st6f_pre.npz (26029, 1280)
+pepland  12567 molecules | unparsable 0 | cut at 128 tokens: 0 | usable 12567
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_st6f.npz (12567, 1024)
+  wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_st6f_pre.npz (12567, 1280)
+next: python src/teacher/eval_harness.py --teachers st6f st6f_pre --out harness_st6f
+14:20:47 == done (exit status 0)

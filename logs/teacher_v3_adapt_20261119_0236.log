@@ -1,0 +1,39 @@
+== Thursday 19 November 2026 02:36:57 AM IST | stage adapt | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_adapt_20261119_0236.log
+teacher v3_base (frozen): inputs ['P', 'L', 'H'], fusion concat, latent 1024-d | device cuda | modes ['adapt'] | seeds 3 | adapters 3 x 512, lr 0.001
+CellPPD       adapt  done (2s) | MCC 0.894 (mean over 3 seeds) | epochs 18 | adapter movement (mean |a-1|) P 0.006 L 0.006 H 0.007
+THPep         adapt  done (1s) | MCC 0.783 (mean over 3 seeds) | epochs 18 | adapter movement (mean |a-1|) P 0.006 L 0.006 H 0.006
+PepMSND       adapt  done (7s) | MCC 0.527 (mean over 3 seeds) | epochs 18 | adapter movement (mean |a-1|) P 0.006 L 0.005 H 0.005
+PAMPA         adapt  done (63s) | R2 0.171 (mean over 3 seeds) | epochs 47 | adapter movement (mean |a-1|) P 0.013 L 0.013 H 0.013
+AmpHGT        adapt  done (9s) | MCC 0.713 (mean over 3 seeds) | epochs 20 | adapter movement (mean |a-1|) P 0.050 L 0.039 H 0.035
+
+=== main: primary metric (MCC / pooled R2 / AUROC / Spearman as in the harness; pooled for cluster / CV benchmarks), mean over 3 seeds ===
+mode       adapt  sklearn MLP (harness)
+benchmark                              
+CellPPD    0.894                  0.880
+THPep      0.783                  0.767
+PepMSND    0.527                  0.506
+PAMPA      0.171                 -0.099
+AmpHGT     0.713                  0.693
+mode               adapt  sklearn MLP (harness)
+average, all       0.618                  0.550
+average, no PAMPA  0.729                  0.712
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/adapter_lr1e-3
+PL_cCPP       adapt  done (7s) | AUROC 0.938 (mean over 3 seeds) | epochs 17 | adapter movement (mean |a-1|) P 0.008 L 0.007 H 0.007
+PL_cSol       adapt  done (5s) | AUROC 0.701 (mean over 3 seeds) | epochs 16 | adapter movement (mean |a-1|) P 0.005 L 0.005 H 0.005
+PL_ncCPP      adapt  done (42s) | Spearman 0.699 (mean over 3 seeds) | epochs 36 | adapter movement (mean |a-1|) P 0.020 L 0.019 H 0.021
+PL_cBinding   adapt  done (9s) | Spearman 0.365 (mean over 3 seeds) | epochs 26 | adapter movement (mean |a-1|) P 0.010 L 0.010 H 0.007
+PL_ncBinding  adapt  done (4s) | Spearman 0.266 (mean over 3 seeds) | epochs 31 | adapter movement (mean |a-1|) P 0.007 L 0.007 H 0.004
+
+=== pepland: primary metric (MCC / pooled R2 / AUROC / Spearman as in the harness; pooled for cluster / CV benchmarks), mean over 3 seeds ===
+mode          adapt  sklearn MLP (harness)
+benchmark                                 
+PL_cCPP       0.938                  0.941
+PL_cSol       0.701                  0.703
+PL_ncCPP      0.699                  0.698
+PL_cBinding   0.365                  0.357
+PL_ncBinding  0.266                  0.284
+mode               adapt  sklearn MLP (harness)
+average, all       0.594                  0.596
+average, no PAMPA  0.594                  0.596
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/adapter_lr1e-3_pepland
+== done 02:40 (exit status 0)

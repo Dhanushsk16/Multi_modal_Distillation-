@@ -1,0 +1,326 @@
+== Thursday 19 November 2026 10:55:21 AM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261119_1055.log
+representations: ['P', 'L', 'H', 'P+L+H', 'PCA', 'teacher_v3_base', 'teacher_v3_attn'] | learners ['mlp'] | seeds 3 | select val
+workers: 4 processes x 2 threads = 8 threads (cap 8)
+   PL_cCPP      all    P            mlp    seed 0 | AUROC 0.901 (3s)
+   AmpHGT       all    P            mlp    seed 0 | MCC 0.833 (5s)
+   PL_cCPP      all    L            mlp    seed 0 | AUROC 0.923 (8s)
+   PL_ncCPP     all    P            mlp    seed 0 | Spearman 0.710 (14s)
+   AmpHGT       all    L            mlp    seed 0 | MCC 0.805 (6s)
+   PL_cCPP      all    H            mlp    seed 0 | AUROC 0.922 (11s)
+   PAMPA        all    P            mlp    seed 0 | R2 0.195 (22s)
+   AmpHGT       all    H            mlp    seed 0 | MCC 0.631 (16s)
+   PL_cCPP      all    P+L+H        mlp    seed 0 | AUROC 0.925 (16s)
+   PL_cCPP      all    PCA          mlp    seed 0 | AUROC 0.922 (6s)
+   PL_ncCPP     all    L            mlp    seed 0 | Spearman 0.692 (33s)
+   PL_cCPP      all    teacher_v3_base mlp    seed 0 | AUROC 0.939 (5s)
+   PL_cCPP      all    teacher_v3_attn mlp    seed 0 | AUROC 0.943 (5s)
+   PL_cCPP      all    P            mlp    seed 1 | AUROC 0.907 (4s)
+   PL_cCPP      all    L            mlp    seed 1 | AUROC 0.924 (9s)
+   AmpHGT       all    P+L+H        mlp    seed 0 | MCC 0.786 (37s)
+   PAMPA        all    L            mlp    seed 0 | R2 0.040 (42s)
+   AmpHGT       all    PCA          mlp    seed 0 | MCC 0.734 (8s)
+   PL_cCPP      all    H            mlp    seed 1 | AUROC 0.918 (13s)
+   AmpHGT       all    teacher_v3_base mlp    seed 0 | MCC 0.667 (7s)
+   AmpHGT       all    teacher_v3_attn mlp    seed 0 | MCC 0.716 (7s)
+   AmpHGT       all    P            mlp    seed 1 | MCC 0.805 (4s)
+   PL_cCPP      all    P+L+H        mlp    seed 1 | AUROC 0.929 (25s)
+   AmpHGT       all    L            mlp    seed 1 | MCC 0.812 (12s)
+   PL_cCPP      all    PCA          mlp    seed 1 | AUROC 0.930 (5s)
+   PL_cCPP      all    teacher_v3_base mlp    seed 1 | AUROC 0.939 (4s)
+   PL_cCPP      all    teacher_v3_attn mlp    seed 1 | AUROC 0.941 (6s)
+   PL_ncCPP     all    H            mlp    seed 0 | Spearman 0.694 (73s)
+   AmpHGT       all    H            mlp    seed 1 | MCC 0.637 (15s)
+   PL_cCPP      all    P            mlp    seed 2 | AUROC 0.907 (4s)
+   PL_cCPP      all    L            mlp    seed 2 | AUROC 0.916 (6s)
+   PL_cCPP      all    H            mlp    seed 2 | AUROC 0.922 (11s)
+   PAMPA        all    H            mlp    seed 0 | R2 0.012 (73s)
+   AmpHGT       all    P+L+H        mlp    seed 1 | MCC 0.785 (20s)
+   AmpHGT       all    PCA          mlp    seed 1 | MCC 0.562 (10s)
+   AmpHGT       all    teacher_v3_base mlp    seed 1 | MCC 0.685 (6s)
+   PL_cCPP      all    P+L+H        mlp    seed 2 | AUROC 0.927 (24s)
+   PL_cCPP      all    PCA          mlp    seed 2 | AUROC 0.930 (5s)
+   AmpHGT       all    teacher_v3_attn mlp    seed 1 | MCC 0.700 (11s)
+   PL_cCPP      all    teacher_v3_base mlp    seed 2 | AUROC 0.944 (5s)
+   AmpHGT       all    P            mlp    seed 2 | MCC 0.803 (8s)
+   PL_cCPP      all    teacher_v3_attn mlp    seed 2 | AUROC 0.939 (4s)
+   AmpHGT       all    L            mlp    seed 2 | MCC 0.844 (11s)
+== PL_cCPP done (198 s)
+   AmpHGT       all    H            mlp    seed 2 | MCC 0.742 (9s)
+   PL_cBinding  all    P            mlp    seed 0 | Spearman 0.332 (4s)
+   PL_cBinding  all    L            mlp    seed 0 | Spearman 0.371 (9s)
+   PL_ncCPP     all    P+L+H        mlp    seed 0 | Spearman 0.648 (90s)
+   AmpHGT       all    P+L+H        mlp    seed 2 | MCC 0.799 (17s)
+   AmpHGT       all    PCA          mlp    seed 2 | MCC 0.592 (5s)
+   AmpHGT       all    teacher_v3_base mlp    seed 2 | MCC 0.726 (6s)
+   PL_cBinding  all    H            mlp    seed 0 | Spearman 0.290 (16s)
+   AmpHGT       all    teacher_v3_attn mlp    seed 2 | MCC 0.705 (5s)
+== AmpHGT done (255 s)
+   PL_cBinding  all    P+L+H        mlp    seed 0 | Spearman 0.345 (28s)
+   CellPPD      all    P            mlp    seed 0 | MCC 0.788 (0s)
+   CellPPD      all    L            mlp    seed 0 | MCC 0.881 (1s)
+   CellPPD      all    H            mlp    seed 0 | MCC 0.820 (1s)
+   CellPPD      all    P+L+H        mlp    seed 0 | MCC 0.843 (2s)
+   CellPPD      all    PCA          mlp    seed 0 | MCC 0.887 (1s)
+   CellPPD      all    teacher_v3_base mlp    seed 0 | MCC 0.834 (0s)
+   PL_cBinding  all    PCA          mlp    seed 0 | Spearman 0.327 (9s)
+   CellPPD      all    teacher_v3_attn mlp    seed 0 | MCC 0.888 (1s)
+   CellPPD      all    P            mlp    seed 1 | MCC 0.733 (0s)
+   CellPPD      all    L            mlp    seed 1 | MCC 0.880 (1s)
+   CellPPD      all    H            mlp    seed 1 | MCC 0.820 (1s)
+   CellPPD      all    P+L+H        mlp    seed 1 | MCC 0.841 (2s)
+   PL_ncCPP     all    PCA          mlp    seed 0 | Spearman 0.694 (59s)
+   CellPPD      all    PCA          mlp    seed 1 | MCC 0.894 (1s)
+   CellPPD      all    teacher_v3_base mlp    seed 1 | MCC 0.900 (1s)
+   CellPPD      all    teacher_v3_attn mlp    seed 1 | MCC 0.888 (1s)
+   CellPPD      all    P            mlp    seed 2 | MCC 0.834 (1s)
+   PL_cBinding  all    teacher_v3_base mlp    seed 0 | Spearman 0.364 (8s)
+   CellPPD      all    L            mlp    seed 2 | MCC 0.834 (1s)
+   CellPPD      all    H            mlp    seed 2 | MCC 0.853 (2s)
+   CellPPD      all    P+L+H        mlp    seed 2 | MCC 0.793 (2s)
+   CellPPD      all    PCA          mlp    seed 2 | MCC 0.874 (1s)
+   CellPPD      all    teacher_v3_base mlp    seed 2 | MCC 0.907 (1s)
+   CellPPD      all    teacher_v3_attn mlp    seed 2 | MCC 0.914 (1s)
+   PL_cBinding  all    teacher_v3_attn mlp    seed 0 | Spearman 0.355 (7s)
+== CellPPD done (28 s)
+   PL_cBinding  all    P            mlp    seed 1 | Spearman 0.347 (5s)
+   PAMPA        all    P+L+H        mlp    seed 0 | R2 -0.457 (144s)
+   PL_cSol      all    P            mlp    seed 0 | AUROC 0.624 (1s)
+   PL_cBinding  all    L            mlp    seed 1 | Spearman 0.350 (8s)
+   PL_cSol      all    L            mlp    seed 0 | AUROC 0.669 (3s)
+   PL_cSol      all    H            mlp    seed 0 | AUROC 0.716 (4s)
+   PL_cSol      all    P+L+H        mlp    seed 0 | AUROC 0.729 (10s)
+   PL_cSol      all    PCA          mlp    seed 0 | AUROC 0.725 (2s)
+   PL_cSol      all    teacher_v3_base mlp    seed 0 | AUROC 0.700 (2s)
+   PL_cBinding  all    H            mlp    seed 1 | Spearman 0.336 (20s)
+   PL_cSol      all    teacher_v3_attn mlp    seed 0 | AUROC 0.700 (3s)
+   PL_cSol      all    P            mlp    seed 1 | AUROC 0.634 (1s)
+   PL_cSol      all    L            mlp    seed 1 | AUROC 0.674 (3s)
+   PL_ncCPP     all    teacher_v3_base mlp    seed 0 | Spearman 0.707 (50s)
+   PL_cSol      all    H            mlp    seed 1 | AUROC 0.725 (4s)
+   PL_cSol      all    P+L+H        mlp    seed 1 | AUROC 0.722 (11s)
+   PL_cSol      all    PCA          mlp    seed 1 | AUROC 0.719 (2s)
+   PL_cBinding  all    P+L+H        mlp    seed 1 | Spearman 0.325 (24s)
+   PL_cSol      all    teacher_v3_base mlp    seed 1 | AUROC 0.706 (2s)
+   PL_cSol      all    teacher_v3_attn mlp    seed 1 | AUROC 0.690 (2s)
+   PL_cSol      all    P            mlp    seed 2 | AUROC 0.615 (1s)
+   PAMPA        all    PCA          mlp    seed 0 | R2 -0.101 (57s)
+   PL_cBinding  all    PCA          mlp    seed 1 | Spearman 0.324 (7s)
+   PL_cSol      all    L            mlp    seed 2 | AUROC 0.666 (3s)
+   PL_cSol      all    H            mlp    seed 2 | AUROC 0.710 (4s)
+   PL_cBinding  all    teacher_v3_base mlp    seed 1 | Spearman 0.339 (9s)
+   PL_cSol      all    P+L+H        mlp    seed 2 | AUROC 0.713 (9s)
+   PL_cSol      all    PCA          mlp    seed 2 | AUROC 0.716 (2s)
+   PL_cSol      all    teacher_v3_base mlp    seed 2 | AUROC 0.702 (3s)
+   PL_cBinding  all    teacher_v3_attn mlp    seed 1 | Spearman 0.357 (9s)
+   PL_cSol      all    teacher_v3_attn mlp    seed 2 | AUROC 0.686 (2s)
+   PL_cBinding  all    P            mlp    seed 2 | Spearman 0.336 (4s)
+== PL_cSol done (92 s)
+   PL_cBinding  all    L            mlp    seed 2 | Spearman 0.388 (8s)
+   PL_ncCPP     all    teacher_v3_attn mlp    seed 0 | Spearman 0.709 (54s)
+   PepMSND      all    P            mlp    seed 0 | MCC 0.468 (1s)
+   PepMSND      all    L            mlp    seed 0 | MCC 0.518 (3s)
+   PAMPA        all    teacher_v3_base mlp    seed 0 | R2 0.120 (43s)
+   PL_ncCPP     all    P            mlp    seed 1 | Spearman 0.711 (15s)
+   PepMSND      all    H            mlp    seed 0 | MCC 0.510 (6s)
+   PL_cBinding  all    H            mlp    seed 2 | Spearman 0.337 (18s)
+   PepMSND      all    P+L+H        mlp    seed 0 | MCC 0.545 (12s)
+   PepMSND      all    PCA          mlp    seed 0 | MCC 0.511 (4s)
+   PepMSND      all    teacher_v3_base mlp    seed 0 | MCC 0.491 (3s)
+   PepMSND      all    teacher_v3_attn mlp    seed 0 | MCC 0.505 (3s)
+   PepMSND      all    P            mlp    seed 1 | MCC 0.424 (2s)
+   PL_cBinding  all    P+L+H        mlp    seed 2 | Spearman 0.384 (24s)
+   PepMSND      all    L            mlp    seed 1 | MCC 0.540 (3s)
+   PL_ncCPP     all    L            mlp    seed 1 | Spearman 0.680 (30s)
+   PepMSND      all    H            mlp    seed 1 | MCC 0.503 (6s)
+   PL_cBinding  all    PCA          mlp    seed 2 | Spearman 0.340 (8s)
+   PL_cBinding  all    teacher_v3_base mlp    seed 2 | Spearman 0.369 (7s)
+   PepMSND      all    P+L+H        mlp    seed 1 | MCC 0.511 (10s)
+   PepMSND      all    PCA          mlp    seed 1 | MCC 0.490 (3s)
+   PepMSND      all    teacher_v3_base mlp    seed 1 | MCC 0.531 (3s)
+   PL_cBinding  all    teacher_v3_attn mlp    seed 2 | Spearman 0.371 (8s)
+   PepMSND      all    teacher_v3_attn mlp    seed 1 | MCC 0.508 (4s)
+   PepMSND      all    P            mlp    seed 2 | MCC 0.462 (2s)
+   PAMPA        all    teacher_v3_attn mlp    seed 0 | R2 -0.075 (59s)
+   PepMSND      all    L            mlp    seed 2 | MCC 0.469 (3s)
+   PepMSND      all    H            mlp    seed 2 | MCC 0.494 (6s)
+== PL_cBinding done (267 s)
+   PAMPA        all    P            mlp    seed 1 | R2 0.048 (19s)
+   PL_ncCPP     all    H            mlp    seed 1 | Spearman 0.639 (47s)
+   PepMSND      all    P+L+H        mlp    seed 2 | MCC 0.551 (12s)
+   THPep        all    P            mlp    seed 0 | MCC 0.593 (0s)
+   THPep        all    L            mlp    seed 0 | MCC 0.754 (0s)
+   THPep        all    H            mlp    seed 0 | MCC 0.734 (1s)
+   PepMSND      all    PCA          mlp    seed 2 | MCC 0.517 (3s)
+   THPep        all    P+L+H        mlp    seed 0 | MCC 0.647 (1s)
+   THPep        all    PCA          mlp    seed 0 | MCC 0.679 (0s)
+   THPep        all    teacher_v3_base mlp    seed 0 | MCC 0.838 (0s)
+   THPep        all    teacher_v3_attn mlp    seed 0 | MCC 0.756 (0s)
+   THPep        all    P            mlp    seed 1 | MCC 0.495 (0s)
+   THPep        all    L            mlp    seed 1 | MCC 0.731 (0s)
+   THPep        all    H            mlp    seed 1 | MCC 0.756 (0s)
+   PepMSND      all    teacher_v3_base mlp    seed 2 | MCC 0.497 (2s)
+   THPep        all    P+L+H        mlp    seed 1 | MCC 0.725 (1s)
+   THPep        all    PCA          mlp    seed 1 | MCC 0.679 (0s)
+   THPep        all    teacher_v3_base mlp    seed 1 | MCC 0.685 (0s)
+   THPep        all    teacher_v3_attn mlp    seed 1 | MCC 0.761 (0s)
+   THPep        all    P            mlp    seed 2 | MCC 0.670 (0s)
+   THPep        all    L            mlp    seed 2 | MCC 0.784 (0s)
+   THPep        all    H            mlp    seed 2 | MCC 0.725 (1s)
+   PepMSND      all    teacher_v3_attn mlp    seed 2 | MCC 0.513 (3s)
+   THPep        all    P+L+H        mlp    seed 2 | MCC 0.623 (1s)
+   THPep        all    PCA          mlp    seed 2 | MCC 0.653 (0s)
+   THPep        all    teacher_v3_base mlp    seed 2 | MCC 0.778 (0s)
+   THPep        all    teacher_v3_attn mlp    seed 2 | MCC 0.840 (0s)
+== THPep done (16 s)
+   PL_ncBinding all    P            mlp    seed 0 | Spearman 0.249 (1s)
+   PL_ncBinding all    L            mlp    seed 0 | Spearman 0.184 (2s)
+== PepMSND done (113 s)
+   PL_ncBinding all    H            mlp    seed 0 | Spearman 0.332 (3s)
+   PL_ncBinding all    P+L+H        mlp    seed 0 | Spearman 0.225 (8s)
+   PL_ncBinding all    PCA          mlp    seed 0 | Spearman 0.214 (2s)
+   PL_ncBinding all    teacher_v3_base mlp    seed 0 | Spearman 0.244 (2s)
+   PL_ncBinding all    teacher_v3_attn mlp    seed 0 | Spearman 0.190 (2s)
+   PL_ncBinding all    P            mlp    seed 1 | Spearman 0.287 (1s)
+   PL_ncBinding all    L            mlp    seed 1 | Spearman 0.369 (2s)
+   PL_ncBinding all    H            mlp    seed 1 | Spearman 0.268 (3s)
+   PAMPA        all    L            mlp    seed 1 | R2 0.026 (45s)
+   PL_ncBinding all    P+L+H        mlp    seed 1 | Spearman 0.242 (7s)
+   PL_ncBinding all    PCA          mlp    seed 1 | Spearman 0.158 (3s)
+   PL_ncBinding all    teacher_v3_base mlp    seed 1 | Spearman 0.264 (2s)
+   PL_ncBinding all    teacher_v3_attn mlp    seed 1 | Spearman 0.125 (1s)
+   PL_ncBinding all    P            mlp    seed 2 | Spearman 0.221 (1s)
+   PL_ncBinding all    L            mlp    seed 2 | Spearman 0.365 (2s)
+   PL_ncBinding all    H            mlp    seed 2 | Spearman 0.331 (4s)
+   PL_ncBinding all    P+L+H        mlp    seed 2 | Spearman 0.110 (8s)
+   PL_ncBinding all    PCA          mlp    seed 2 | Spearman 0.218 (2s)
+   PL_ncBinding all    teacher_v3_base mlp    seed 2 | Spearman 0.345 (2s)
+   PL_ncBinding all    teacher_v3_attn mlp    seed 2 | Spearman 0.222 (2s)
+== PL_ncBinding done (67 s)
+   PL_ncCPP     all    P+L+H        mlp    seed 1 | Spearman 0.666 (88s)
+   PAMPA        all    H            mlp    seed 1 | R2 -0.333 (73s)
+   PL_ncCPP     all    PCA          mlp    seed 1 | Spearman 0.687 (37s)
+   PL_ncCPP     all    teacher_v3_base mlp    seed 1 | Spearman 0.706 (42s)
+   PL_ncCPP     all    teacher_v3_attn mlp    seed 1 | Spearman 0.689 (35s)
+   PL_ncCPP     all    P            mlp    seed 2 | Spearman 0.701 (15s)
+   PL_ncCPP     all    L            mlp    seed 2 | Spearman 0.697 (37s)
+   PAMPA        all    P+L+H        mlp    seed 1 | R2 -0.180 (182s)
+   PL_ncCPP     all    H            mlp    seed 2 | Spearman 0.584 (45s)
+   PAMPA        all    PCA          mlp    seed 1 | R2 -0.012 (59s)
+   PL_ncCPP     all    P+L+H        mlp    seed 2 | Spearman 0.702 (114s)
+   PAMPA        all    teacher_v3_base mlp    seed 1 | R2 -0.390 (57s)
+   PL_ncCPP     all    PCA          mlp    seed 2 | Spearman 0.695 (52s)
+   PAMPA        all    teacher_v3_attn mlp    seed 1 | R2 0.158 (79s)
+   PL_ncCPP     all    teacher_v3_base mlp    seed 2 | Spearman 0.680 (29s)
+   PAMPA        all    P            mlp    seed 2 | R2 0.194 (21s)
+   PL_ncCPP     all    teacher_v3_attn mlp    seed 2 | Spearman 0.692 (40s)
+   PAMPA        all    L            mlp    seed 2 | R2 0.051 (60s)
+== PL_ncCPP done (1100 s)
+   PAMPA        all    H            mlp    seed 2 | R2 0.036 (83s)
+   PAMPA        all    P+L+H        mlp    seed 2 | R2 -0.778 (212s)
+   PAMPA        all    PCA          mlp    seed 2 | R2 0.078 (57s)
+   PAMPA        all    teacher_v3_base mlp    seed 2 | R2 -0.026 (59s)
+   PAMPA        all    teacher_v3_attn mlp    seed 2 | R2 -0.000 (58s)
+== PAMPA done (1615 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            CellPPD  THPep  PepMSND  PAMPA  AmpHGT  AVERAGE
+H                             0.831  0.738    0.502 -0.095   0.670    0.555
+L                             0.865  0.756    0.509  0.039   0.820    0.595
+P                             0.785  0.586    0.451  0.146   0.814    0.561
+P+L+H                         0.826  0.665    0.535 -0.472   0.790    0.521
+PCA                           0.885  0.671    0.506 -0.012   0.629    0.555
+v3_attn                       0.897  0.786    0.509  0.027   0.707    0.580
+v3_base                       0.880  0.767    0.506 -0.099   0.693    0.573
+REF (chosen on validation)    0.831  0.738    0.499 -0.037   0.670    0.569
+BEST single (on test)         0.865  0.756    0.509  0.146   0.820    0.612
+
+                            PL_cCPP  PL_cSol  PL_ncCPP  PL_cBinding  PL_ncBinding  AVERAGE
+H                             0.920    0.717     0.639        0.321         0.310    0.555
+L                             0.921    0.670     0.690        0.370         0.306    0.595
+P                             0.905    0.624     0.707        0.338         0.252    0.561
+P+L+H                         0.927    0.721     0.672        0.351         0.193    0.521
+PCA                           0.928    0.720     0.692        0.330         0.197    0.555
+v3_attn                       0.941    0.692     0.697        0.361         0.179    0.580
+v3_base                       0.941    0.703     0.698        0.357         0.284    0.573
+REF (chosen on validation)    0.923    0.700     0.707        0.365         0.288    0.569
+BEST single (on test)         0.921    0.717     0.707        0.370         0.310    0.612
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_noPAMPA = the same average without PAMPA; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff     95% interval  diff_noPAMPA interval_noPAMPA W/L/T worse99.5
+   REF     mlp   P+L+H 10 -0.048 [-0.066, -0.003]        -0.005  [-0.012, 0.039] 1/2/7         2
+   REF     mlp     PCA 10 -0.014  [-0.023, 0.025]        -0.018  [-0.013, 0.039] 2/2/6         1
+   REF     mlp v3_base 10  0.004   [0.008, 0.057]         0.012  [-0.002, 0.051] 3/0/7         0
+   REF     mlp v3_attn 10  0.011  [-0.011, 0.033]         0.005  [-0.003, 0.045] 3/1/6         1
+     H     mlp   P+L+H 10 -0.035 [-0.074, -0.011]         0.003  [-0.019, 0.030] 2/2/6         2
+     H     mlp     PCA 10 -0.001  [-0.032, 0.017]        -0.010  [-0.021, 0.030] 2/1/7         0
+     H     mlp v3_base 10  0.018  [-0.000, 0.049]         0.020  [-0.011, 0.041] 5/0/5         0
+     H     mlp v3_attn 10  0.024  [-0.020, 0.028]         0.013  [-0.011, 0.038] 5/1/4         0
+  BEST     mlp   P+L+H 10 -0.091                         -0.033                                 
+  BEST     mlp     PCA 10 -0.058                         -0.046                                 
+  BEST     mlp v3_base 10 -0.039                         -0.016                                 
+  BEST     mlp v3_attn 10 -0.033                         -0.023                                 
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 7 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank  avg_rank_noPAMPA
+v3_attn       3.0               3.0
+L             3.1               3.2
+v3_base       3.4               3.1
+PCA           4.3               4.3
+P+L+H         4.4               4.1
+P             4.8               5.2
+H             5.0               5.0
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA  vs_H  worse99.5 PASS  vs_REF_noPAMPA  vs_PCA_noPAMPA  worse_noPAMPA PASS_noPAMPA
+v3_attn     mlp   0.011   0.025 0.024        1.0   no           0.005           0.023            0.0          yes
+v3_attn     ALL   0.011   0.025 0.024        1.0   no           0.005           0.023            0.0          yes
+v3_base     mlp   0.004   0.018 0.018        0.0  yes           0.012           0.030            0.0          yes
+v3_base     ALL   0.004   0.018 0.018        0.0  yes           0.012           0.030            0.0          yes
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, PCA, 99.5% intervals)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                           H      L      P  P+L+H    PCA  v3_attn
+benchmark    subset                                              
+AmpHGT       modified  0.672  0.822  0.816  0.792  0.631    0.709
+             standard  0.000  0.000  0.000  0.000  0.000    0.000
+CellPPD      modified  0.864  0.900  0.870  0.877  0.912    0.930
+             standard  0.785  0.822  0.699  0.769  0.851    0.861
+PAMPA        modified -0.095  0.039  0.146 -0.472 -0.012    0.027
+PL_cBinding  modified  0.307  0.383  0.358  0.344  0.347    0.382
+             standard  0.364  0.315  0.291  0.370  0.261    0.284
+PL_cCPP      standard  0.921  0.922  0.905  0.927  0.928    0.941
+PL_cSol      modified  0.715  0.669  0.623  0.719  0.718    0.691
+PL_ncBinding modified  0.234  0.265  0.186  0.139  0.131    0.127
+             standard  0.708  0.593  0.626  0.525  0.639    0.515
+PL_ncCPP     modified  0.639  0.690  0.707  0.672  0.692    0.697
+PepMSND      modified  0.601  0.541  0.511  0.563  0.553    0.531
+             standard  0.373  0.437  0.354  0.472  0.423    0.440
+THPep        standard  0.738  0.756  0.586  0.665  0.671    0.786
+
+                       v3_base
+benchmark    subset           
+AmpHGT       modified    0.696
+             standard    0.000
+CellPPD      modified    0.888
+             standard    0.858
+PAMPA        modified   -0.099
+PL_cBinding  modified    0.371
+             standard    0.316
+PL_cCPP      standard    0.941
+PL_cSol      modified    0.701
+PL_ncBinding modified    0.203
+             standard    0.717
+PL_ncCPP     modified    0.698
+PepMSND      modified    0.538
+             standard    0.425
+THPep        standard    0.767
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/v3_attn_mlp
+== done 11:25 (exit status 0)

@@ -1,0 +1,48 @@
+22:38:58 == stage ladder | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_ladder_20261122_2238.log
+22:38:58 === train st3 | --first 5 --epochs 20 --patience 8 --seed 1 --targets latent,P,L,H,E --w-nce 1 --w-rel 1 --balance ema --teacher-drop 0.1
+22:39:21 rows: 499,988 usable of 500,000 (5 shards) | train 494,988, validation 5,000 | standard (ESM present) 76.0% / 75.1% | 22 s
+22:39:21 tokens per molecule: mean 20.2, max 192 | vocabulary 1024 | P is imitated on 100.0% of the training molecules (<= 30 residues)
+22:39:21 random spellings: 8 per molecule, mean 30.7 tokens against 20.2 canonical | augmentation: read in a random spelling with probability 0.00 | consistency loss weight 0 on 25% of each batch
+22:39:22 student: 10.821M parameters at inference (embedding 0.328M, blocks 9.180M, pooling + output 1.313M) | training-only 10.29M (discarded)
+22:39:22 steps per epoch 241 (batch 2048: 1024 standard + 1024 modified) | 20 epochs | lr 5.0e-04 | targets ['latent', 'P', 'L', 'H', 'E'] | rel on ['latent'] | nce 1 rel 1 | balance ema | drop 0.10 | mlm 0.00 | random spelling p 0.00 consist 0
+Traceback (most recent call last):
+  File "/home/dhanushsk/code/peptidefusion/src/student/train_student.py", line 667, in <module>
+    main()
+  File "/home/dhanushsk/code/peptidefusion/src/student/train_student.py", line 601, in main
+    out = run_student(model, R, slots, a.len_chunks, mlm_rate=a.mlm_rate if masked else 0.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/code/peptidefusion/src/student/train_student.py", line 216, in run_student
+    o = model(ids_in, keep)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/code/peptidefusion/src/student/model.py", line 150, in forward
+    h, tap, mask = self.encode(ids, keep)
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/code/peptidefusion/src/student/model.py", line 135, in encode
+    x = b(x, self.cos, self.sin, m4)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/code/peptidefusion/src/student/model.py", line 77, in forward
+    return x + self.w2(F.silu(self.w1(y)) * self.w3(y))
+                       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB. GPU 0 has a total capacity of 47.53 GiB of which 67.19 MiB is free. Process 1463 has 260.00 MiB memory in use. Process 4051976 has 13.70 GiB memory in use. Process 4052531 has 13.81 GiB memory in use. Including non-PyTorch memory, this process has 19.66 GiB memory in use. Of the allocated memory 18.61 GiB is allocated by PyTorch, and 750.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+22:39:25 !! training st3 failed
+22:39:25 === train stc | --first 5 --epochs 20 --patience 8 --seed 1 --targets none --mlm-frac 1
+22:39:27 rows: 499,988 usable of 500,000 (5 shards) | train 494,988, validation 5,000 | standard (ESM present) 76.0% / 75.1% | 1 s
+22:39:27 tokens per molecule: mean 20.2, max 192 | vocabulary 1024 | P is imitated on 100.0% of the training molecules (<= 30 residues)
+22:39:27 random spellings: 8 per molecule, mean 30.7 tokens against 20.2 canonical | augmentation: read in a random spelling with probability 0.00 | consistency loss weight 0 on 25% of each batch
+22:39:27 student: 10.821M parameters at inference (embedding 0.328M, blocks 9.180M, pooling + output 1.313M) | training-only 0.00M (discarded)
+22:39:28 steps per epoch 241 (batch 2048: 1024 standard + 1024 modified) | 20 epochs | lr 5.0e-04 | targets none | rel on [] | nce 0 rel 0 | balance none | drop 0.00 | mlm 1.00 | random spelling p 0.00 consist 0
+22:44:04 epoch   1/20 | 277 s (37740 tokens/s) | lr 5.00e-04 | train: mlm 4.2979 | val crit 2.5777 (best 2.5777, no gain 0/8) | std mlm 2.743 spell 0.194 | mod mlm 2.412 spell 0.684
+22:48:39 epoch   2/20 | 275 s (37978 tokens/s) | lr 4.97e-04 | train: mlm 2.2190 | val crit 2.0019 (best 2.0019, no gain 0/8) | std mlm 2.516 spell 0.145 | mod mlm 1.488 spell 0.608
+22:53:18 epoch   3/20 | 277 s (37649 tokens/s) | lr 4.87e-04 | train: mlm 1.9398 | val crit 1.8510 (best 1.8510, no gain 0/8) | std mlm 2.470 spell 0.173 | mod mlm 1.232 spell 0.586

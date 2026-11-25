@@ -1,0 +1,6 @@
+backbone_learning_rate: 1.0e-05
+dropout: 0.1
+freeze_backbone_epochs: 3
+head_learning_rate: 0.001
+kan_input_dim: 140
+model_name: aaronfeller/peptideclm-2-mtr-large

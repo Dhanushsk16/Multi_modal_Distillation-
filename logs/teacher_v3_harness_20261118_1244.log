@@ -1,0 +1,57 @@
+== Wednesday 18 November 2026 12:44:47 PM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261118_1244.log
+representations: ['P', 'L', 'H', 'teacher_v3_base'] | learners ['kernel'] | seeds 5 | select val
+   THPep        all    P            kernel seed 0 | MCC 0.511 (0s)
+   THPep        all    L            kernel seed 0 | MCC 0.710 (0s)
+   THPep        all    H            kernel seed 0 | MCC 0.671 (0s)
+   THPep        all    teacher_v3_base kernel seed 0 | MCC 0.710 (0s)
+== THPep done (15 s)
+   PL_ncBinding all    P            kernel seed 0 | Spearman 0.396 (0s)
+   PL_ncBinding all    L            kernel seed 0 | Spearman 0.413 (0s)
+   PL_ncBinding all    H            kernel seed 0 | Spearman 0.398 (0s)
+   PL_ncBinding all    teacher_v3_base kernel seed 0 | Spearman 0.383 (0s)
+== PL_ncBinding done (5 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            THPep  PL_ncBinding  AVERAGE
+H                           0.671         0.398    0.534
+L                           0.710         0.413    0.561
+P                           0.511         0.396    0.454
+v3_base                     0.710         0.383    0.546
+REF (chosen on validation)  0.671         0.377    0.524
+BEST single (on test)       0.710         0.413    0.561
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_wo = the same average without nothing; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff 95% interval  diff_wo interval_wo W/L/T worse99.5
+   REF  kernel v3_base  2  0.023                 0.023                            
+     H  kernel v3_base  2  0.012                 0.012                            
+  BEST  kernel v3_base  2 -0.015                -0.015                            
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 4 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank
+L             1.0
+H             2.5
+v3_base       3.0
+P             3.5
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA  vs_H  worse99.5 PASS  vs_REF_wo  vs_PCA_wo  worse_wo PASS_wo
+v3_base  kernel   0.023     NaN 0.012        NaN  yes      0.023        NaN       NaN     yes
+v3_base     ALL   0.023     NaN 0.012        NaN  yes      0.023        NaN       NaN     yes
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                           H      L      P  v3_base
+benchmark    subset                                
+PL_ncBinding modified  0.305  0.341  0.329    0.297
+             standard  0.750  0.730  0.748    0.734
+THPep        standard  0.671  0.710  0.511    0.710
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/smoke_kernel
+== done 12:45

@@ -1,0 +1,4 @@
+benchmark,subset,H,L,P,teacher_st6f_e02,teacher_v3_base
+THPep_o101,standard,0.635,0.595,0.353,0.639,0.638
+THPep_o202,standard,0.712,0.679,0.655,0.73,0.733
+THPep_o303,standard,0.653,0.593,0.447,0.7,0.646

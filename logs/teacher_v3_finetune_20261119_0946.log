@@ -1,0 +1,60 @@
+== Thursday 19 November 2026 09:46:41 AM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261119_0946.log
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_cv_ft | latent statistics: yes
+teacher v3_base: inputs ['pepland', 'pclm', 'ecfp'], latent 1024-d, 35.3M parameters | variants ['ft'] | benchmarks ['THPep_cv0', 'THPep_cv1', 'THPep_cv2']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 1
+   THPep_cv0 ft seed 0 fold 1/5 (122 molecules, 5 models) 11s
+   THPep_cv0 ft seed 0 fold 2/5 (122 molecules, 5 models) 21s
+   THPep_cv0 ft seed 0 fold 3/5 (122 molecules, 5 models) 32s
+   THPep_cv0 ft seed 0 fold 4/5 (122 molecules, 5 models) 42s
+   THPep_cv0 ft seed 0 fold 5/5 (121 molecules, 5 models) 53s
+THPep_cv0 ft       done (53s) | MCC 0.716 (pooled 0.713) | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 25 fits
+   THPep_cv1 ft seed 0 fold 1/5 (122 molecules, 5 models) 10s
+   THPep_cv1 ft seed 0 fold 2/5 (122 molecules, 5 models) 20s
+   THPep_cv1 ft seed 0 fold 3/5 (122 molecules, 5 models) 30s
+   THPep_cv1 ft seed 0 fold 4/5 (122 molecules, 5 models) 40s
+   THPep_cv1 ft seed 0 fold 5/5 (121 molecules, 5 models) 51s
+THPep_cv1 ft       done (51s) | MCC 0.728 (pooled 0.728) | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 25 fits
+   THPep_cv2 ft seed 0 fold 1/5 (122 molecules, 5 models) 10s
+   THPep_cv2 ft seed 0 fold 2/5 (122 molecules, 5 models) 21s
+   THPep_cv2 ft seed 0 fold 3/5 (122 molecules, 5 models) 31s
+   THPep_cv2 ft seed 0 fold 4/5 (122 molecules, 5 models) 41s
+   THPep_cv2 ft seed 0 fold 5/5 (121 molecules, 5 models) 52s
+THPep_cv2 ft       done (52s) | MCC 0.710 (pooled 0.711) | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 25 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode          ft
+benchmark       
+THPep_cv0  0.716
+THPep_cv1  0.728
+THPep_cv2  0.710
+
+=== the same on the POOLED predictions of all folds (cluster-CV benchmarks only) ===
+mode          ft
+benchmark       
+THPep_cv0  0.713
+THPep_cv1  0.728
+THPep_cv2  0.711
+
+=== AUROC (classification) ===
+mode          ft
+benchmark       
+THPep_cv0  0.942
+THPep_cv1  0.944
+THPep_cv2  0.944
+
+=== test molecules that are standard chains (ESM-2 vector exists) / modified chains: MCC or R2 ===
+                n_esm  head_esm  n_noesm  head_noesm
+benchmark mode                                      
+THPep_cv0 ft    609.0     0.713      0.0         NaN
+THPep_cv1 ft    609.0     0.728      0.0         NaN
+THPep_cv2 ft    609.0     0.711      0.0         NaN
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                 run  best  capped  fits
+benchmark mode                          
+THPep_cv0 ft    15.2   5.2       0    25
+THPep_cv1 ft    15.3   5.3       0    25
+THPep_cv2 ft    15.0   5.0       0    25
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_cv_ft
+== done 09:49 (exit status 0)

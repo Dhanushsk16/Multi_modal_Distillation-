@@ -1,0 +1,6 @@
+== Sunday 15 November 2026 02:28:26 PM IST | stage pl-features | teacher t9 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_pl-features_20261115_1428.log
+GPU in use by:
+shivanhu       26:39 python deform_fullb0/train_deform.py --variant pq_pca-e2 --phi 0 --seed 99 --out-root /mnt/wwn-0x5000c500e64c5cc0/shivanhu/tinyh2gnet_replication/deform_fullb0/outputs --aug --inner-patients 2
+not starting (FORCE=1 to override)
+
+== stage pl-features finished, exit code 2 (14:28)

@@ -1,0 +1,4 @@
+20:07:59 == wait_gpu_run | poll 60s, idle needed 30s, util <= 10%, free >= 25600 MB | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/wait_gpu_20261117_2007.log
+20:07:59 == command: bash /home/dhanushsk/code/peptidefusion/scripts/run_teacher_v3.sh train v3_base --epochs 100 --patience 10 --resume
+20:07:59 the cache is complete
+20:07:59 GPU busy: utilisation 100%

@@ -1,0 +1,80 @@
+== Tuesday 17 November 2026 08:26:14 AM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261117_0826.log
+representations: ['P', 'L', 'H', 'P+L+H', 'PCA', 'teacher_abl_base_s1'] | learners ['linear'] | seeds 1 | select val
+   PAMPA        all    P            linear seed 0 | R2 -0.290 (1s)
+   PAMPA        all    L            linear seed 0 | R2 -0.635 (5s)
+   PAMPA        all    H            linear seed 0 | R2 0.244 (22s)
+   PAMPA        all    P+L+H        linear seed 0 | R2 0.146 (53s)
+   PAMPA        all    PCA          linear seed 0 | R2 0.153 (5s)
+   PAMPA        all    teacher_abl_base_s1 linear seed 0 | R2 -0.033 (5s)
+== PAMPA done (123 s)
+   AmpHGT       all    P            linear seed 0 | MCC 0.799 (11s)
+   AmpHGT       all    L            linear seed 0 | MCC 0.767 (47s)
+   AmpHGT       all    H            linear seed 0 | MCC 0.660 (31s)
+   AmpHGT       all    P+L+H        linear seed 0 | MCC 0.640 (151s)
+   AmpHGT       all    PCA          linear seed 0 | MCC 0.534 (30s)
+   AmpHGT       all    teacher_abl_base_s1 linear seed 0 | MCC 0.722 (22s)
+== AmpHGT done (359 s)
+   PepMSND      all    P            linear seed 0 | MCC 0.447 (3s)
+   PepMSND      all    L            linear seed 0 | MCC 0.501 (19s)
+   PepMSND      all    H            linear seed 0 | MCC 0.480 (15s)
+   PepMSND      all    P+L+H        linear seed 0 | MCC 0.507 (20s)
+   PepMSND      all    PCA          linear seed 0 | MCC 0.490 (7s)
+   PepMSND      all    teacher_abl_base_s1 linear seed 0 | MCC 0.475 (9s)
+== PepMSND done (99 s)
+   PL_cCPP      all    P            linear seed 0 | AUROC 0.886 (3s)
+   PL_cCPP      all    L            linear seed 0 | AUROC 0.915 (20s)
+   PL_cCPP      all    H            linear seed 0 | AUROC 0.885 (11s)
+   PL_cCPP      all    P+L+H        linear seed 0 | AUROC 0.912 (37s)
+   PL_cCPP      all    PCA          linear seed 0 | AUROC 0.905 (9s)
+   PL_cCPP      all    teacher_abl_base_s1 linear seed 0 | AUROC 0.925 (7s)
+== PL_cCPP done (117 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                         PAMPA  AmpHGT  PepMSND  PL_cCPP  AVERAGE
+H                        0.244   0.660    0.480    0.885    0.567
+L                       -0.635   0.767    0.501    0.915    0.387
+P                       -0.290   0.799    0.447    0.886    0.461
+P+L+H                    0.146   0.640    0.507    0.912    0.551
+PCA                      0.153   0.534    0.490    0.905    0.521
+base_s1                 -0.033   0.722    0.475    0.925    0.522
+REF (best single input) -0.635   0.767    0.490    0.915    0.384
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; ALL = mean over learners; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%)
+versus learner     rep  n   diff     95% interval W/L/T worse99.5
+   REF  linear   P+L+H  4  0.167   [0.145, 0.193] 1/1/2         1
+   REF  linear     PCA  4  0.136   [0.118, 0.163] 1/2/1         2
+   REF  linear base_s1  4  0.138   [0.118, 0.166] 2/1/1         1
+   REF     ALL   P+L+H  4  0.167                                 
+   REF     ALL     PCA  4  0.136                                 
+   REF     ALL base_s1  4  0.138                                 
+     H  linear   P+L+H  4 -0.016 [-0.035, -0.001] 1/2/1         2
+     H  linear     PCA  4 -0.047 [-0.063, -0.031] 1/2/1         2
+     H  linear base_s1  4 -0.045 [-0.064, -0.027] 2/1/1         1
+     H     ALL   P+L+H  4 -0.016                                 
+     H     ALL     PCA  4 -0.047                                 
+     H     ALL base_s1  4 -0.045                                 
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA   vs_H  worse99.5 PASS
+base_s1  linear   0.138   0.002 -0.045        1.0   no
+base_s1     ALL   0.138   0.002 -0.045        1.0   no
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, PCA, 99.5% intervals)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                        H      L      P  P+L+H    PCA  base_s1
+benchmark subset                                              
+AmpHGT    modified  0.663  0.769  0.802  0.643  0.537    0.725
+          standard  0.000  0.000  0.000  0.000  0.000    0.000
+PAMPA     modified  0.244 -0.635 -0.290  0.146  0.153   -0.033
+PL_cCPP   standard  0.886  0.915  0.886  0.912  0.906    0.925
+PepMSND   modified  0.574  0.566  0.498  0.614  0.562    0.588
+          standard  0.347  0.401  0.350  0.366  0.380    0.326
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/harness_smoke2
+== done 08:37

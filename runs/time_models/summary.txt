@@ -1,0 +1,55 @@
+time_models | Intel64 Family 6 Model 154 Stepping 3, GenuineInte | torch 2.12.1+cu126 | GPU: NVIDIA GeForce RTX 3050 Laptop GPU | 16 logical cores, 8 threads | 2026-11-24 21:24
+molecules: 512 drawn at random (seed 0) from the benchmark files; 350 characters per SMILES on average
+parameters at inference: student 10.82 M | teacher fusion network 24.99 M | PeptideCLM-2 336.7 M
+
+======================================================================================================================
+GPU (bf16 autocast) | 512 molecules per pass, 5 timed passes | batches [1, 16, 64]
+tokens per molecule: student median 19, p95 77, max 121 | PeptideCLM-2 median 60, p95 396, max 541
+CPU parts, ms per molecule: normalise (RDKit) 1.5194 | tokenise student 0.0659 (one by one) 0.0231 (batch call) | tokenise PeptideCLM-2 0.1861 / 0.0304 | ECFP parse+fingerprint 1.0412 (fingerprint only 0.3441)
+   student  batch 1   forward   10.1361 ms per molecule
+   student  batch 16  forward    0.8233 ms per molecule
+   student  batch 64  forward    0.2570 ms per molecule
+   teacher  batch 1   forward    2.3070 ms per molecule
+   teacher  batch 16  forward    0.1242 ms per molecule
+   teacher  batch 64  forward    0.0338 ms per molecule
+   pclm     batch 1   forward   73.1142 ms per molecule
+   pclm     batch 16  forward   12.1604 ms per molecule
+   pclm     batch 64  forward   17.9753 ms per molecule
+peak GPU memory (weights + activations, largest batch): student 163 MB | teacher 195 MB | PeptideCLM-2 3042 MB
+
+per molecule, in ms (student = normalise + tokenise + forward; PeptideCLM-2 = tokenise + forward; teacher cached = forward only; chain = ECFP + PeptideCLM-2 + fusion network)
+batch  |   student | PeptideCLM-2 | teacher cached | teacher chain* |      ECFP | student faster than PeptideCLM-2 | than the chain
+1      |    11.721 |       73.300 |         2.307 |         76.648 |     1.041 |  61.58 ms (  6.3x) |  64.93 ms (  6.5x)
+16     |     2.366 |       12.191 |         0.124 |         13.356 |     1.041 |   9.83 ms (  5.2x) |  10.99 ms (  5.6x)
+64     |     1.799 |       18.006 |         0.034 |         19.081 |     1.041 |  16.21 ms ( 10.0x) |  17.28 ms ( 10.6x)
+
+the models alone (forward pass only, no RDKit, no tokenising), ms per molecule
+batch  |   student | PeptideCLM-2 | teacher cached | student faster than PeptideCLM-2
+1      |    10.136 |       73.114 |         2.307 |  62.98 ms (  7.2x)
+16     |     0.823 |       12.160 |         0.124 |  11.34 ms ( 14.8x)
+64     |     0.257 |       17.975 |         0.034 |  17.72 ms ( 70.0x)
+* the chain leaves out PepLand (it needs DGL), so it is a lower bound of the teacher's cost for a new molecule. The teacher on cached views is cheap, but its three
+  input vectors must exist: PeptideCLM-2, ECFP and PepLand have to be run once per molecule, which is what the chain adds up.
+
+======================================================================================================================
+CPU (fp32, 8 threads) | 64 molecules per pass, 4 timed passes | batches [1, 16]
+tokens per molecule: student median 19, p95 78, max 102 | PeptideCLM-2 median 60, p95 195, max 497
+CPU parts, ms per molecule: normalise (RDKit) 1.1955 | tokenise student 0.0480 (one by one) 0.0259 (batch call) | tokenise PeptideCLM-2 0.1733 / 0.0379 | ECFP parse+fingerprint 0.8591 (fingerprint only 0.2588)
+   student  batch 1   forward    7.9488 ms per molecule
+   student  batch 16  forward    3.3653 ms per molecule
+   teacher  batch 1   forward    4.5244 ms per molecule
+   teacher  batch 16  forward    0.4474 ms per molecule
+   pclm     batch 1   forward  297.2232 ms per molecule
+   pclm     batch 16  forward  443.4044 ms per molecule
+
+per molecule, in ms (student = normalise + tokenise + forward; PeptideCLM-2 = tokenise + forward; teacher cached = forward only; chain = ECFP + PeptideCLM-2 + fusion network)
+batch  |   student | PeptideCLM-2 | teacher cached | teacher chain* |      ECFP | student faster than PeptideCLM-2 | than the chain
+1      |     9.192 |      297.396 |         4.524 |        302.780 |     0.859 | 288.20 ms ( 32.4x) | 293.59 ms ( 32.9x)
+16     |     4.587 |      443.442 |         0.447 |        444.749 |     0.859 | 438.86 ms ( 96.7x) | 440.16 ms ( 97.0x)
+
+the models alone (forward pass only, no RDKit, no tokenising), ms per molecule
+batch  |   student | PeptideCLM-2 | teacher cached | student faster than PeptideCLM-2
+1      |     7.949 |      297.223 |         4.524 | 289.27 ms ( 37.4x)
+16     |     3.365 |      443.404 |         0.447 | 440.04 ms (131.8x)
+* the chain leaves out PepLand (it needs DGL), so it is a lower bound of the teacher's cost for a new molecule. The teacher on cached views is cheap, but its three
+  input vectors must exist: PeptideCLM-2, ECFP and PepLand have to be run once per molecule, which is what the chain adds up.

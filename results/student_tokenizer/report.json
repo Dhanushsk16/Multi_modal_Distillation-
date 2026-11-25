@@ -1,0 +1,130 @@
+{
+ "args": {
+  "pool": "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/data/corpus/pool.parquet",
+  "vocab": [
+   1024,
+   2048,
+   4096
+  ],
+  "n_train": 200000,
+  "n_heldout": 50000,
+  "nc_frac": 0.4,
+  "min_atom_count": 20,
+  "min_frequency": 100,
+  "max_token_len": 0,
+  "seed": 0,
+  "bench": [
+   "CellPPD",
+   "THPep",
+   "AmpHGT",
+   "PAMPA",
+   "PepMSND",
+   "PL_cCPP",
+   "PL_cSol",
+   "PL_ncCPP",
+   "PL_cBinding",
+   "PL_ncBinding"
+  ],
+  "tok_dir": "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_tokenizer",
+  "out": "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/student_tokenizer",
+  "report_only": false
+ },
+ "sample": {
+  "pool_rows": 3400449,
+  "pool_noncanonical_share": 0.1883,
+  "train": 200000,
+  "train_noncanonical": 80000,
+  "held_out": 50000,
+  "held_out_noncanonical": 9417
+ },
+ "learn_seconds": {
+  "1024": 32.7,
+  "2048": 34.4,
+  "4096": 33.7
+ },
+ "peak_memory_mb": 6800.67578125,
+ "total_seconds": 172.6,
+ "tokenizers_version": "0.22.2",
+ "learned": {
+  "C_atombpe_v1024": {
+   "vocab_size_requested": 1024,
+   "vocab_size": 1024,
+   "n_train": 200000,
+   "min_atom_count": 20,
+   "min_frequency": 100,
+   "max_token_length": null,
+   "n_atoms": 33,
+   "atoms_seen": 129,
+   "atoms_below_min_count": 96
+  },
+  "C_atombpe_v2048": {
+   "vocab_size_requested": 2048,
+   "vocab_size": 2048,
+   "n_train": 200000,
+   "min_atom_count": 20,
+   "min_frequency": 100,
+   "max_token_length": null,
+   "n_atoms": 33,
+   "atoms_seen": 129,
+   "atoms_below_min_count": 96
+  },
+  "C_atombpe_v4096": {
+   "vocab_size_requested": 4096,
+   "vocab_size": 4096,
+   "n_train": 200000,
+   "min_atom_count": 20,
+   "min_frequency": 100,
+   "max_token_length": null,
+   "n_atoms": 33,
+   "atoms_seen": 129,
+   "atoms_below_min_count": 96
+  }
+ },
+ "max_length_needed": [
+  {
+   "tokenizer": "A_released",
+   "pool_99": 259,
+   "pool_99.9": 297,
+   "pool_100": 409,
+   "bench_99": 526,
+   "bench_99.9": 568,
+   "bench_100": 649
+  },
+  {
+   "tokenizer": "B_fixed",
+   "pool_99": 259,
+   "pool_99.9": 297,
+   "pool_100": 410,
+   "bench_99": 527,
+   "bench_99.9": 572,
+   "bench_100": 653
+  },
+  {
+   "tokenizer": "C_atombpe_v1024",
+   "pool_99": 51,
+   "pool_99.9": 94,
+   "pool_100": 273,
+   "bench_99": 78,
+   "bench_99.9": 106,
+   "bench_100": 224
+  },
+  {
+   "tokenizer": "C_atombpe_v2048",
+   "pool_99": 42,
+   "pool_99.9": 78,
+   "pool_100": 217,
+   "bench_99": 71,
+   "bench_99.9": 103,
+   "bench_100": 224
+  },
+  {
+   "tokenizer": "C_atombpe_v4096",
+   "pool_99": 36,
+   "pool_99.9": 68,
+   "pool_100": 187,
+   "bench_99": 65,
+   "bench_99.9": 101,
+   "bench_100": 211
+  }
+ ]
+}

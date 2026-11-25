@@ -1,0 +1,326 @@
+== Thursday 19 November 2026 09:44:51 AM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261119_0944.log
+representations: ['P', 'L', 'H', 'P+L+H', 'PCA', 'teacher_v3_base', 'teacher_v3_attn'] | learners ['gbt'] | seeds 3 | select val
+workers: 4 processes x 2 threads = 8 threads (cap 8)
+   AmpHGT       all    P            gbt    seed 0 | MCC 0.841 (4s)
+   PL_cCPP      all    P            gbt    seed 0 | AUROC 0.928 (18s)
+   PL_ncCPP     all    P            gbt    seed 0 | Spearman 0.723 (19s)
+   AmpHGT       all    L            gbt    seed 0 | MCC 0.800 (16s)
+   PAMPA        all    P            gbt    seed 0 | R2 0.323 (22s)
+   AmpHGT       all    H            gbt    seed 0 | MCC 0.884 (50s)
+   PL_cCPP      all    L            gbt    seed 0 | AUROC 0.939 (74s)
+   PL_ncCPP     all    L            gbt    seed 0 | Spearman 0.736 (77s)
+   PAMPA        all    L            gbt    seed 0 | R2 0.106 (86s)
+   AmpHGT       all    P+L+H        gbt    seed 0 | MCC 0.871 (60s)
+   AmpHGT       all    PCA          gbt    seed 0 | MCC 0.717 (20s)
+   AmpHGT       all    teacher_v3_base gbt    seed 0 | MCC 0.826 (18s)
+   AmpHGT       all    teacher_v3_attn gbt    seed 0 | MCC 0.829 (17s)
+   AmpHGT       all    P            gbt    seed 1 | MCC 0.837 (4s)
+   PL_cCPP      all    H            gbt    seed 0 | AUROC 0.952 (108s)
+   AmpHGT       all    L            gbt    seed 1 | MCC 0.791 (16s)
+   PL_ncCPP     all    H            gbt    seed 0 | Spearman 0.752 (127s)
+   AmpHGT       all    H            gbt    seed 1 | MCC 0.867 (27s)
+   PAMPA        all    H            gbt    seed 0 | R2 0.364 (157s)
+   AmpHGT       all    P+L+H        gbt    seed 1 | MCC 0.873 (91s)
+   AmpHGT       all    PCA          gbt    seed 1 | MCC 0.610 (18s)
+   AmpHGT       all    teacher_v3_base gbt    seed 1 | MCC 0.818 (18s)
+   AmpHGT       all    teacher_v3_attn gbt    seed 1 | MCC 0.818 (18s)
+   AmpHGT       all    P            gbt    seed 2 | MCC 0.836 (4s)
+   AmpHGT       all    L            gbt    seed 2 | MCC 0.801 (20s)
+   AmpHGT       all    H            gbt    seed 2 | MCC 0.867 (41s)
+   PL_cCPP      all    P+L+H        gbt    seed 0 | AUROC 0.944 (301s)
+   AmpHGT       all    P+L+H        gbt    seed 2 | MCC 0.876 (98s)
+   PL_ncCPP     all    P+L+H        gbt    seed 0 | Spearman 0.749 (335s)
+   AmpHGT       all    PCA          gbt    seed 2 | MCC 0.724 (20s)
+   PL_cCPP      all    PCA          gbt    seed 0 | AUROC 0.933 (70s)
+   AmpHGT       all    teacher_v3_base gbt    seed 2 | MCC 0.849 (19s)
+   AmpHGT       all    teacher_v3_attn gbt    seed 2 | MCC 0.827 (19s)
+   PL_ncCPP     all    PCA          gbt    seed 0 | Spearman 0.729 (66s)
+   PL_cCPP      all    teacher_v3_base gbt    seed 0 | AUROC 0.944 (67s)
+   PAMPA        all    P+L+H        gbt    seed 0 | R2 0.321 (386s)
+== AmpHGT done (678 s)
+   PL_ncCPP     all    teacher_v3_base gbt    seed 0 | Spearman 0.727 (66s)
+   PL_cBinding  all    P            gbt    seed 0 | Spearman 0.362 (15s)
+   PL_cCPP      all    teacher_v3_attn gbt    seed 0 | AUROC 0.943 (66s)
+   PL_cCPP      all    P            gbt    seed 1 | AUROC 0.928 (17s)
+   PAMPA        all    PCA          gbt    seed 0 | R2 0.316 (72s)
+   PL_cBinding  all    L            gbt    seed 0 | Spearman 0.426 (55s)
+   PL_ncCPP     all    teacher_v3_attn gbt    seed 0 | Spearman 0.726 (65s)
+   PL_ncCPP     all    P            gbt    seed 1 | Spearman 0.723 (20s)
+   PL_cCPP      all    L            gbt    seed 1 | AUROC 0.939 (64s)
+   PAMPA        all    teacher_v3_base gbt    seed 0 | R2 0.298 (76s)
+   PL_cBinding  all    H            gbt    seed 0 | Spearman 0.408 (61s)
+   PL_ncCPP     all    L            gbt    seed 1 | Spearman 0.736 (69s)
+   PAMPA        all    teacher_v3_attn gbt    seed 0 | R2 0.286 (79s)
+   PL_cCPP      all    H            gbt    seed 1 | AUROC 0.952 (96s)
+   PAMPA        all    P            gbt    seed 1 | R2 0.323 (22s)
+   PL_ncCPP     all    H            gbt    seed 1 | Spearman 0.752 (116s)
+   PAMPA        all    L            gbt    seed 1 | R2 0.106 (80s)
+   PL_cBinding  all    P+L+H        gbt    seed 0 | Spearman 0.429 (208s)
+   PL_cBinding  all    PCA          gbt    seed 0 | Spearman 0.433 (58s)
+   PAMPA        all    H            gbt    seed 1 | R2 0.364 (135s)
+   PL_cCPP      all    P+L+H        gbt    seed 1 | AUROC 0.944 (251s)
+   PL_cBinding  all    teacher_v3_base gbt    seed 0 | Spearman 0.445 (61s)
+   PL_cBinding  all    teacher_v3_attn gbt    seed 0 | Spearman 0.427 (61s)
+   PL_cCPP      all    PCA          gbt    seed 1 | AUROC 0.933 (68s)
+   PL_cBinding  all    P            gbt    seed 1 | Spearman 0.362 (17s)
+   PL_ncCPP     all    P+L+H        gbt    seed 1 | Spearman 0.749 (295s)
+   PL_cCPP      all    teacher_v3_base gbt    seed 1 | AUROC 0.944 (67s)
+   PL_cBinding  all    L            gbt    seed 1 | Spearman 0.426 (57s)
+   PL_ncCPP     all    PCA          gbt    seed 1 | Spearman 0.729 (66s)
+   PL_cBinding  all    H            gbt    seed 1 | Spearman 0.408 (60s)
+   PL_cCPP      all    teacher_v3_attn gbt    seed 1 | AUROC 0.943 (67s)
+   PL_cCPP      all    P            gbt    seed 2 | AUROC 0.928 (17s)
+   PL_ncCPP     all    teacher_v3_base gbt    seed 1 | Spearman 0.727 (71s)
+   PL_cCPP      all    L            gbt    seed 2 | AUROC 0.939 (65s)
+   PAMPA        all    P+L+H        gbt    seed 1 | R2 0.321 (342s)
+   PL_ncCPP     all    teacher_v3_attn gbt    seed 1 | Spearman 0.726 (74s)
+   PL_ncCPP     all    P            gbt    seed 2 | Spearman 0.723 (20s)
+   PL_cCPP      all    H            gbt    seed 2 | AUROC 0.952 (94s)
+   PAMPA        all    PCA          gbt    seed 1 | R2 0.316 (73s)
+   PL_cBinding  all    P+L+H        gbt    seed 1 | Spearman 0.429 (209s)
+   PL_ncCPP     all    L            gbt    seed 2 | Spearman 0.736 (70s)
+   PL_cBinding  all    PCA          gbt    seed 1 | Spearman 0.433 (56s)
+   PAMPA        all    teacher_v3_base gbt    seed 1 | R2 0.298 (75s)
+   PL_cBinding  all    teacher_v3_base gbt    seed 1 | Spearman 0.445 (59s)
+   PL_ncCPP     all    H            gbt    seed 2 | Spearman 0.752 (114s)
+   PAMPA        all    teacher_v3_attn gbt    seed 1 | R2 0.286 (74s)
+   PAMPA        all    P            gbt    seed 2 | R2 0.323 (22s)
+   PL_cBinding  all    teacher_v3_attn gbt    seed 1 | Spearman 0.427 (60s)
+   PL_cBinding  all    P            gbt    seed 2 | Spearman 0.362 (16s)
+   PL_cCPP      all    P+L+H        gbt    seed 2 | AUROC 0.944 (237s)
+   PAMPA        all    L            gbt    seed 2 | R2 0.106 (73s)
+   PL_cBinding  all    L            gbt    seed 2 | Spearman 0.426 (57s)
+   PL_cCPP      all    PCA          gbt    seed 2 | AUROC 0.933 (67s)
+   PL_cBinding  all    H            gbt    seed 2 | Spearman 0.408 (62s)
+   PL_cCPP      all    teacher_v3_base gbt    seed 2 | AUROC 0.944 (68s)
+   PAMPA        all    H            gbt    seed 2 | R2 0.364 (129s)
+   PL_cCPP      all    teacher_v3_attn gbt    seed 2 | AUROC 0.943 (66s)
+   PL_ncCPP     all    P+L+H        gbt    seed 2 | Spearman 0.749 (297s)
+   PL_ncCPP     all    PCA          gbt    seed 2 | Spearman 0.729 (67s)
+   PL_cBinding  all    P+L+H        gbt    seed 2 | Spearman 0.429 (203s)
+   PL_ncCPP     all    teacher_v3_base gbt    seed 2 | Spearman 0.727 (67s)
+== PL_cCPP done (2111 s)
+   PL_cBinding  all    PCA          gbt    seed 2 | Spearman 0.433 (55s)
+   CellPPD      all    P            gbt    seed 0 | MCC 0.801 (3s)
+   CellPPD      all    L            gbt    seed 0 | MCC 0.881 (8s)
+   CellPPD      all    H            gbt    seed 0 | MCC 0.927 (14s)
+   PL_cBinding  all    teacher_v3_base gbt    seed 2 | Spearman 0.445 (58s)
+   CellPPD      all    P+L+H        gbt    seed 0 | MCC 0.920 (28s)
+   PL_ncCPP     all    teacher_v3_attn gbt    seed 2 | Spearman 0.726 (68s)
+   CellPPD      all    PCA          gbt    seed 0 | MCC 0.882 (7s)
+   CellPPD      all    teacher_v3_base gbt    seed 0 | MCC 0.894 (7s)
+   CellPPD      all    teacher_v3_attn gbt    seed 0 | MCC 0.888 (7s)
+   CellPPD      all    P            gbt    seed 1 | MCC 0.801 (3s)
+   CellPPD      all    L            gbt    seed 1 | MCC 0.881 (8s)
+   CellPPD      all    H            gbt    seed 1 | MCC 0.927 (13s)
+   PL_cBinding  all    teacher_v3_attn gbt    seed 2 | Spearman 0.427 (57s)
+   CellPPD      all    P+L+H        gbt    seed 1 | MCC 0.920 (28s)
+   CellPPD      all    PCA          gbt    seed 1 | MCC 0.882 (7s)
+   PAMPA        all    P+L+H        gbt    seed 2 | R2 0.321 (339s)
+   CellPPD      all    teacher_v3_base gbt    seed 1 | MCC 0.894 (7s)
+   CellPPD      all    teacher_v3_attn gbt    seed 1 | MCC 0.888 (7s)
+   CellPPD      all    P            gbt    seed 2 | MCC 0.801 (3s)
+   CellPPD      all    L            gbt    seed 2 | MCC 0.881 (8s)
+   CellPPD      all    H            gbt    seed 2 | MCC 0.927 (13s)
+   CellPPD      all    P+L+H        gbt    seed 2 | MCC 0.920 (28s)
+   CellPPD      all    PCA          gbt    seed 2 | MCC 0.882 (7s)
+   PAMPA        all    PCA          gbt    seed 2 | R2 0.316 (73s)
+   CellPPD      all    teacher_v3_base gbt    seed 2 | MCC 0.894 (7s)
+   CellPPD      all    teacher_v3_attn gbt    seed 2 | MCC 0.888 (7s)
+== PL_cBinding done (1672 s)
+== PL_ncCPP done (2351 s)
+== CellPPD done (244 s)
+   THPep        all    P            gbt    seed 0 | MCC 0.522 (1s)
+   THPep        all    L            gbt    seed 0 | MCC 0.693 (4s)
+   THPep        all    H            gbt    seed 0 | MCC 0.792 (5s)
+   PL_cSol      all    P            gbt    seed 0 | AUROC 0.626 (14s)
+   PepMSND      all    P            gbt    seed 0 | MCC 0.514 (17s)
+   THPep        all    P+L+H        gbt    seed 0 | MCC 0.742 (12s)
+   THPep        all    PCA          gbt    seed 0 | MCC 0.734 (4s)
+   THPep        all    teacher_v3_base gbt    seed 0 | MCC 0.679 (4s)
+   THPep        all    teacher_v3_attn gbt    seed 0 | MCC 0.774 (4s)
+   THPep        all    P            gbt    seed 1 | MCC 0.522 (1s)
+   PAMPA        all    teacher_v3_base gbt    seed 2 | R2 0.298 (75s)
+   THPep        all    L            gbt    seed 1 | MCC 0.693 (4s)
+   THPep        all    H            gbt    seed 1 | MCC 0.792 (5s)
+   THPep        all    P+L+H        gbt    seed 1 | MCC 0.742 (12s)
+   PL_cSol      all    L            gbt    seed 0 | AUROC 0.680 (47s)
+   THPep        all    PCA          gbt    seed 1 | MCC 0.734 (4s)
+   THPep        all    teacher_v3_base gbt    seed 1 | MCC 0.679 (4s)
+   PepMSND      all    L            gbt    seed 0 | MCC 0.550 (51s)
+   THPep        all    teacher_v3_attn gbt    seed 1 | MCC 0.774 (4s)
+   THPep        all    P            gbt    seed 2 | MCC 0.522 (1s)
+   THPep        all    L            gbt    seed 2 | MCC 0.693 (4s)
+   THPep        all    H            gbt    seed 2 | MCC 0.792 (5s)
+   THPep        all    P+L+H        gbt    seed 2 | MCC 0.742 (13s)
+   THPep        all    PCA          gbt    seed 2 | MCC 0.734 (4s)
+   THPep        all    teacher_v3_base gbt    seed 2 | MCC 0.679 (4s)
+   THPep        all    teacher_v3_attn gbt    seed 2 | MCC 0.774 (4s)
+== THPep done (116 s)
+   PAMPA        all    teacher_v3_attn gbt    seed 2 | R2 0.286 (76s)
+   PL_ncBinding all    P            gbt    seed 0 | Spearman 0.495 (4s)
+   PL_ncBinding all    L            gbt    seed 0 | Spearman 0.347 (12s)
+   PL_cSol      all    H            gbt    seed 0 | AUROC 0.713 (73s)
+   PL_ncBinding all    H            gbt    seed 0 | Spearman 0.384 (13s)
+   PepMSND      all    H            gbt    seed 0 | MCC 0.574 (93s)
+   PL_ncBinding all    P+L+H        gbt    seed 0 | Spearman 0.503 (36s)
+   PL_ncBinding all    PCA          gbt    seed 0 | Spearman 0.449 (12s)
+   PL_ncBinding all    teacher_v3_base gbt    seed 0 | Spearman 0.432 (11s)
+   PL_ncBinding all    teacher_v3_attn gbt    seed 0 | Spearman 0.378 (12s)
+   PL_ncBinding all    P            gbt    seed 1 | Spearman 0.495 (4s)
+   PL_ncBinding all    L            gbt    seed 1 | Spearman 0.347 (12s)
+   PL_ncBinding all    H            gbt    seed 1 | Spearman 0.384 (13s)
+   PL_ncBinding all    P+L+H        gbt    seed 1 | Spearman 0.503 (35s)
+   PL_ncBinding all    PCA          gbt    seed 1 | Spearman 0.449 (12s)
+   PL_ncBinding all    teacher_v3_base gbt    seed 1 | Spearman 0.432 (11s)
+   PL_ncBinding all    teacher_v3_attn gbt    seed 1 | Spearman 0.378 (11s)
+   PL_ncBinding all    P            gbt    seed 2 | Spearman 0.495 (4s)
+== PAMPA done (2683 s)
+   PL_ncBinding all    L            gbt    seed 2 | Spearman 0.347 (12s)
+   PL_cSol      all    P+L+H        gbt    seed 0 | AUROC 0.701 (195s)
+   PL_ncBinding all    H            gbt    seed 2 | Spearman 0.384 (12s)
+   PL_ncBinding all    P+L+H        gbt    seed 2 | Spearman 0.503 (33s)
+   PepMSND      all    P+L+H        gbt    seed 0 | MCC 0.541 (217s)
+   PL_cSol      all    PCA          gbt    seed 0 | AUROC 0.709 (48s)
+   PL_ncBinding all    PCA          gbt    seed 2 | Spearman 0.449 (12s)
+   PL_ncBinding all    teacher_v3_base gbt    seed 2 | Spearman 0.432 (11s)
+   PL_ncBinding all    teacher_v3_attn gbt    seed 2 | Spearman 0.378 (11s)
+   PepMSND      all    PCA          gbt    seed 0 | MCC 0.517 (49s)
+   PL_cSol      all    teacher_v3_base gbt    seed 0 | AUROC 0.691 (48s)
+== PL_ncBinding done (318 s)
+   PL_cSol      all    teacher_v3_attn gbt    seed 0 | AUROC 0.694 (49s)
+   PepMSND      all    teacher_v3_base gbt    seed 0 | MCC 0.503 (50s)
+   PL_cSol      all    P            gbt    seed 1 | AUROC 0.626 (15s)
+   PepMSND      all    teacher_v3_attn gbt    seed 0 | MCC 0.497 (50s)
+   PL_cSol      all    L            gbt    seed 1 | AUROC 0.680 (48s)
+   PepMSND      all    P            gbt    seed 1 | MCC 0.514 (17s)
+   PepMSND      all    L            gbt    seed 1 | MCC 0.550 (49s)
+   PL_cSol      all    H            gbt    seed 1 | AUROC 0.713 (70s)
+   PepMSND      all    H            gbt    seed 1 | MCC 0.574 (90s)
+   PL_cSol      all    P+L+H        gbt    seed 1 | AUROC 0.701 (186s)
+   PL_cSol      all    PCA          gbt    seed 1 | AUROC 0.709 (48s)
+   PL_cSol      all    teacher_v3_base gbt    seed 1 | AUROC 0.691 (48s)
+   PepMSND      all    P+L+H        gbt    seed 1 | MCC 0.541 (207s)
+   PL_cSol      all    teacher_v3_attn gbt    seed 1 | AUROC 0.694 (48s)
+   PepMSND      all    PCA          gbt    seed 1 | MCC 0.517 (49s)
+   PL_cSol      all    P            gbt    seed 2 | AUROC 0.626 (15s)
+   PepMSND      all    teacher_v3_base gbt    seed 1 | MCC 0.503 (50s)
+   PL_cSol      all    L            gbt    seed 2 | AUROC 0.680 (48s)
+   PepMSND      all    teacher_v3_attn gbt    seed 1 | MCC 0.497 (49s)
+   PepMSND      all    P            gbt    seed 2 | MCC 0.514 (17s)
+   PL_cSol      all    H            gbt    seed 2 | AUROC 0.713 (69s)
+   PepMSND      all    L            gbt    seed 2 | MCC 0.550 (50s)
+   PepMSND      all    H            gbt    seed 2 | MCC 0.574 (90s)
+   PL_cSol      all    P+L+H        gbt    seed 2 | AUROC 0.701 (182s)
+   PL_cSol      all    PCA          gbt    seed 2 | AUROC 0.709 (48s)
+   PL_cSol      all    teacher_v3_base gbt    seed 2 | AUROC 0.691 (48s)
+   PL_cSol      all    teacher_v3_attn gbt    seed 2 | AUROC 0.694 (48s)
+   PepMSND      all    P+L+H        gbt    seed 2 | MCC 0.541 (204s)
+   PepMSND      all    PCA          gbt    seed 2 | MCC 0.517 (49s)
+   PepMSND      all    teacher_v3_base gbt    seed 2 | MCC 0.503 (50s)
+== PL_cSol done (1523 s)
+   PepMSND      all    teacher_v3_attn gbt    seed 2 | MCC 0.497 (50s)
+== PepMSND done (1670 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            CellPPD  THPep  PepMSND  PAMPA  AmpHGT  AVERAGE
+H                             0.927  0.792    0.574  0.364   0.873    0.674
+L                             0.881  0.693    0.550  0.106   0.797    0.616
+P                             0.801  0.522    0.514  0.323   0.838    0.613
+P+L+H                         0.920  0.742    0.541  0.321   0.873    0.672
+PCA                           0.882  0.734    0.517  0.316   0.684    0.638
+v3_attn                       0.888  0.774    0.497  0.286   0.825    0.644
+v3_base                       0.894  0.679    0.503  0.298   0.831    0.645
+REF (chosen on validation)    0.927  0.792    0.560  0.307   0.873    0.666
+BEST single (on test)         0.927  0.792    0.574  0.364   0.873    0.687
+
+                            PL_cCPP  PL_cSol  PL_ncCPP  PL_cBinding  PL_ncBinding  AVERAGE
+H                             0.952    0.713     0.752        0.408         0.384    0.674
+L                             0.939    0.680     0.736        0.426         0.347    0.616
+P                             0.928    0.626     0.723        0.362         0.495    0.613
+P+L+H                         0.944    0.701     0.749        0.429         0.503    0.672
+PCA                           0.933    0.709     0.729        0.433         0.449    0.638
+v3_attn                       0.943    0.694     0.726        0.427         0.378    0.644
+v3_base                       0.944    0.691     0.727        0.445         0.432    0.645
+REF (chosen on validation)    0.950    0.709     0.752        0.425         0.368    0.666
+BEST single (on test)         0.952    0.713     0.752        0.426         0.495    0.687
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_noPAMPA = the same average without PAMPA; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner     rep  n   diff     95% interval  diff_noPAMPA interval_noPAMPA W/L/T worse99.5
+   REF     gbt   P+L+H 10  0.006  [-0.013, 0.024]         0.005  [-0.016, 0.024] 1/2/7         0
+   REF     gbt     PCA 10 -0.028 [-0.043, -0.008]        -0.032 [-0.049, -0.010] 0/4/6         3
+   REF     gbt v3_base 10 -0.022 [-0.043, -0.005]        -0.023 [-0.046, -0.005] 0/2/8         2
+   REF     gbt v3_attn 10 -0.022 [-0.042, -0.003]        -0.023 [-0.045, -0.000] 0/5/5         2
+     H     gbt   P+L+H 10 -0.002  [-0.020, 0.016]         0.003  [-0.018, 0.023] 1/3/6         2
+     H     gbt     PCA 10 -0.035 [-0.050, -0.017]        -0.034 [-0.050, -0.014] 0/5/5         4
+     H     gbt v3_base 10 -0.029 [-0.049, -0.012]        -0.025 [-0.048, -0.006] 1/5/4         3
+     H     gbt v3_attn 10 -0.030 [-0.050, -0.010]        -0.025 [-0.047, -0.003] 0/6/4         4
+  BEST     gbt   P+L+H 10 -0.014                         -0.011                                 
+  BEST     gbt     PCA 10 -0.048                         -0.048                                 
+  BEST     gbt v3_base 10 -0.042                         -0.040                                 
+  BEST     gbt v3_attn 10 -0.043                         -0.039                                 
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 7 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+         avg_rank  avg_rank_noPAMPA
+H             2.0               2.1
+P+L+H         2.4               2.3
+v3_base       4.1               4.0
+PCA           4.1               4.1
+v3_attn       4.8               4.7
+L             5.2               5.0
+P             5.4               5.8
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+teacher learner  vs_REF  vs_PCA   vs_H  worse99.5 PASS  vs_REF_noPAMPA  vs_PCA_noPAMPA  worse_noPAMPA PASS_noPAMPA
+v3_attn     gbt  -0.022   0.005 -0.030        2.0   no          -0.023           0.009            2.0           no
+v3_attn     ALL  -0.022   0.005 -0.030        2.0   no          -0.023           0.009            2.0           no
+v3_base     gbt  -0.022   0.006 -0.029        2.0   no          -0.023           0.009            2.0           no
+v3_base     ALL  -0.022   0.006 -0.029        2.0   no          -0.023           0.009            2.0           no
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF, PCA, 99.5% intervals)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                           H      L      P  P+L+H    PCA  v3_attn
+benchmark    subset                                              
+AmpHGT       modified  0.875  0.800  0.841  0.876  0.686    0.828
+             standard  0.000  0.000  0.000  0.000  0.000    0.000
+CellPPD      modified  0.965  0.911  0.911  0.982  0.930    0.912
+             standard  0.891  0.846  0.702  0.868  0.835    0.857
+PAMPA        modified  0.364  0.106  0.323  0.321  0.316    0.286
+PL_cBinding  modified  0.427  0.454  0.394  0.456  0.455    0.463
+             standard  0.330  0.320  0.271  0.338  0.326    0.279
+PL_cCPP      standard  0.952  0.939  0.929  0.944  0.934    0.944
+PL_cSol      modified  0.711  0.679  0.626  0.700  0.707    0.691
+PL_ncBinding modified  0.314  0.284  0.447  0.428  0.387    0.306
+             standard  0.736  0.713  0.730  0.780  0.757    0.690
+PL_ncCPP     modified  0.752  0.736  0.723  0.749  0.729    0.726
+PepMSND      modified  0.628  0.612  0.592  0.599  0.565    0.549
+             standard  0.489  0.456  0.412  0.454  0.424    0.401
+THPep        standard  0.792  0.693  0.522  0.742  0.734    0.774
+
+                       v3_base
+benchmark    subset           
+AmpHGT       modified    0.835
+             standard    0.000
+CellPPD      modified    0.912
+             standard    0.868
+PAMPA        modified    0.298
+PL_cBinding  modified    0.460
+             standard    0.382
+PL_cCPP      standard    0.945
+PL_cSol      modified    0.690
+PL_ncBinding modified    0.369
+             standard    0.707
+PL_ncCPP     modified    0.727
+PepMSND      modified    0.508
+             standard    0.438
+THPep        standard    0.679
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/v3_attn_gbt
+== done 10:55 (exit status 0)

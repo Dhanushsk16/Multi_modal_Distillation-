@@ -1,0 +1,16 @@
+benchmark,subset,H,L,P,teacher_abl_base_s1,teacher_abl_base_s2,teacher_abl_base_s3
+AmpHGT,modified,0.886,0.802,0.844,0.875,0.831,0.871
+AmpHGT,standard,0.0,0.0,0.0,0.0,0.0,0.0
+CellPPD,modified,0.965,0.911,0.911,0.894,0.947,0.912
+CellPPD,standard,0.891,0.846,0.702,0.892,0.904,0.844
+PAMPA,modified,0.364,0.106,0.323,0.267,0.249,0.267
+PL_cBinding,modified,0.427,0.454,0.394,0.469,0.477,0.494
+PL_cBinding,standard,0.33,0.32,0.271,0.373,0.318,0.351
+PL_cCPP,standard,0.952,0.939,0.929,0.945,0.945,0.944
+PL_cSol,modified,0.711,0.679,0.626,0.712,0.705,0.715
+PL_ncBinding,modified,0.314,0.284,0.447,0.39,0.345,0.354
+PL_ncBinding,standard,0.736,0.713,0.73,0.791,0.707,0.645
+PL_ncCPP,modified,0.752,0.736,0.723,0.729,0.73,0.728
+PepMSND,modified,0.628,0.612,0.592,0.586,0.629,0.571
+PepMSND,standard,0.489,0.456,0.412,0.498,0.366,0.435
+THPep,standard,0.792,0.693,0.522,0.756,0.72,0.775

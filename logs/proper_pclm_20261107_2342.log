@@ -1,0 +1,7 @@
+== Saturday 07 November 2026 11:42:06 PM IST | stage pclm | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/proper_pclm_20261107_2342.log
+GPU in use by:
+shivanhu       29:14 python tinygpq/train_cv.py --variant tinyh2gnet --phi 0 --seed 123 --input rgb --out-root /mnt/wwn-0x5000c500e64c5cc0/shivanhu/tinyh2gnet_replication/direction5_fullb0/outputs --aug --inner-patients 2
+shivanhu       13:58 python tinygpq/train_cv.py --variant tinyh2gnet --target-params 316000 --seed 99 --input cmyk --aug --inner-patients 2
+not starting (FORCE=1 to override)
+
+== done 23:42

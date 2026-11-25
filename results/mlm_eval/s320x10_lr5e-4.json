@@ -1,0 +1,27 @@
+{
+ "name": "s320x10_lr5e-4",
+ "params_M": 10.53,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.13,
+ "all": {
+  "loss": 0.3513,
+  "acc": 0.869,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.5738,
+  "acc": 0.8259,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.2847,
+  "acc": 0.8845,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 1.2072,
+  "acc": 0.6692,
+  "masked_tokens": 54596
+ }
+}

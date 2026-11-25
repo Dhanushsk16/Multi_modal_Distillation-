@@ -1,0 +1,2 @@
+benchmark,mode,seed,n,coverage,MCC,AUROC,ACC,F1,head_esm,n_esm,head_noesm,n_noesm,epochs,best_epoch,hit_cap,fits
+CellPPD,ft,0,1464,1.0,0.8337966824563375,0.9749777777777778,0.9166666666666666,0.9152542372881356,0.7829996450322347,174,0.8755941675530624,126,3.0,2.5,2,2

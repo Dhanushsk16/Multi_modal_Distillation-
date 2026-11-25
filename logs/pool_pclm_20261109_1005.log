@@ -1,0 +1,112 @@
+== Monday 09 November 2026 10:05:29 AM IST | stage pclm | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/pool_pclm_20261109_1005.log
+
+== pclm pooling, main benchmarks (10:05)
+check: masked mean of the token vectors vs the model's mean_pool, min cosine 1.00000
+extracted 9201 molecules, 571264 tokens, 1.2 GB fp16, 0.2 min, unusable 0
+CellPPD       mean     done (4s) | MCC 0.834 over 3 seed(s), 19 epochs
+CellPPD       max      done (8s) | MCC 0.825 over 3 seed(s), 40 epochs
+CellPPD       meanmax  done (5s) | MCC 0.818 over 3 seed(s), 24 epochs
+CellPPD       attn     done (4s) | MCC 0.806 over 3 seed(s), 11 epochs
+THPep         mean     done (1s) | MCC 0.739 over 3 seed(s), 15 epochs
+THPep         max      done (3s) | MCC 0.726 over 3 seed(s), 35 epochs
+THPep         meanmax  done (2s) | MCC 0.771 over 3 seed(s), 23 epochs
+THPep         attn     done (2s) | MCC 0.707 over 3 seed(s), 18 epochs
+PepMSND       mean     done (22s) | MCC 0.512 over 3 seed(s), 19 epochs
+PepMSND       max      done (39s) | MCC 0.362 over 3 seed(s), 33 epochs
+PepMSND       meanmax  done (41s) | MCC 0.432 over 3 seed(s), 33 epochs
+PepMSND       attn     done (34s) | MCC 0.443 over 3 seed(s), 18 epochs
+PAMPA         mean     done (117s) | Spearman 0.417 over 3 seed(s), 28 epochs
+PAMPA         max      done (150s) | Spearman 0.366 over 3 seed(s), 31 epochs
+PAMPA         meanmax  done (167s) | Spearman 0.386 over 3 seed(s), 33 epochs
+PAMPA         attn     done (251s) | Spearman 0.366 over 3 seed(s), 35 epochs
+
+=== headline: MCC (classification) / Spearman (regression), mean +- std over seeds ===
+pooling              attn             max            mean         meanmax
+benchmark                                                                
+CellPPD    0.806 +- 0.036  0.825 +- 0.003  0.834 +- 0.018  0.818 +- 0.019
+PAMPA      0.366 +- 0.048  0.366 +- 0.010  0.417 +- 0.027  0.386 +- 0.017
+PepMSND    0.443 +- 0.038  0.362 +- 0.068  0.512 +- 0.007  0.432 +- 0.033
+THPep      0.707 +- 0.021  0.726 +- 0.031  0.739 +- 0.035  0.771 +- 0.029
+
+=== AUROC (classification), mean over seeds ===
+pooling     attn    max   mean  meanmax
+benchmark                              
+CellPPD    0.967  0.973  0.972    0.968
+PepMSND    0.813  0.772  0.843    0.812
+THPep      0.933  0.924  0.939    0.933
+
+=== R2 (regression), mean over seeds ===
+pooling     attn    max   mean  meanmax
+benchmark                              
+PAMPA     -0.035  0.065 -0.266    0.056
+
+=== gain over 'mean' (paired by seed): mean, and seeds with a positive gain ===
+                   attn           max       meanmax
+benchmark                                          
+CellPPD    -0.028 (0/3)  -0.008 (1/3)  -0.016 (2/3)
+PAMPA      -0.051 (0/3)  -0.052 (0/3)  -0.032 (1/3)
+PepMSND    -0.070 (0/3)  -0.150 (0/3)  -0.080 (0/3)
+THPep      -0.032 (0/3)  -0.012 (1/3)  +0.033 (3/3)
+(a gain under about 0.03 is inside the noise of these single splits)
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pool_pclm_main
+
+== pclm pooling, PepLand's five tasks (10:19)
+check: masked mean of the token vectors vs the model's mean_pool, min cosine 1.00000
+extracted 12567 molecules, 1307418 tokens, 2.7 GB fp16, 0.5 min, unusable 0
+PL_cCPP       mean     done (28s) | MCC 0.701 over 3 seed(s), 18 epochs
+PL_cCPP       max      done (53s) | MCC 0.626 over 3 seed(s), 32 epochs
+PL_cCPP       meanmax  done (55s) | MCC 0.669 over 3 seed(s), 32 epochs
+PL_cCPP       attn     done (44s) | MCC 0.669 over 3 seed(s), 17 epochs
+PL_cSol       mean     done (20s) | MCC 0.235 over 3 seed(s), 12 epochs
+PL_cSol       max      done (21s) | MCC 0.000 over 3 seed(s), 11 epochs
+PL_cSol       meanmax  done (46s) | MCC 0.247 over 3 seed(s), 28 epochs
+PL_cSol       attn     done (51s) | MCC 0.272 over 3 seed(s), 22 epochs
+PL_ncCPP      mean     done (116s) | Spearman 0.727 over 3 seed(s), 28 epochs
+PL_ncCPP      max      done (151s) | Spearman 0.587 over 3 seed(s), 36 epochs
+PL_ncCPP      meanmax  done (144s) | Spearman 0.626 over 3 seed(s), 34 epochs
+PL_ncCPP      attn     done (151s) | Spearman 0.708 over 3 seed(s), 33 epochs
+PL_cBinding   mean     done (14s) | Spearman 0.392 over 3 seed(s), 15 epochs
+PL_cBinding   max      done (34s) | Spearman 0.398 over 3 seed(s), 34 epochs
+PL_cBinding   meanmax  done (29s) | Spearman 0.398 over 3 seed(s), 28 epochs
+PL_cBinding   attn     done (25s) | Spearman 0.380 over 3 seed(s), 18 epochs
+PL_ncBinding  mean     done (3s) | Spearman 0.375 over 3 seed(s), 24 epochs
+PL_ncBinding  max      done (4s) | Spearman 0.283 over 3 seed(s), 26 epochs
+PL_ncBinding  meanmax  done (4s) | Spearman 0.321 over 3 seed(s), 26 epochs
+PL_ncBinding  attn     done (5s) | Spearman 0.342 over 3 seed(s), 22 epochs
+
+=== headline: MCC (classification) / Spearman (regression), mean +- std over seeds ===
+pooling                 attn             max            mean         meanmax
+benchmark                                                                   
+PL_cBinding   0.380 +- 0.025  0.398 +- 0.004  0.392 +- 0.008  0.398 +- 0.004
+PL_cCPP       0.669 +- 0.013  0.626 +- 0.007  0.701 +- 0.012  0.669 +- 0.014
+PL_cSol       0.272 +- 0.043  0.000 +- 0.000  0.235 +- 0.017  0.247 +- 0.017
+PL_ncBinding  0.342 +- 0.109  0.283 +- 0.066  0.375 +- 0.027  0.321 +- 0.008
+PL_ncCPP      0.708 +- 0.011  0.587 +- 0.011  0.727 +- 0.001  0.626 +- 0.005
+
+=== AUROC (classification), mean over seeds ===
+pooling     attn    max   mean  meanmax
+benchmark                              
+PL_cCPP    0.914  0.896  0.925    0.912
+PL_cSol    0.689  0.604  0.675    0.674
+
+=== R2 (regression), mean over seeds ===
+pooling        attn    max   mean  meanmax
+benchmark                                 
+PL_cBinding   0.153  0.164  0.169    0.171
+PL_ncBinding  0.027  0.043 -0.067    0.015
+PL_ncCPP      0.400  0.253  0.429    0.305
+
+=== gain over 'mean' (paired by seed): mean, and seeds with a positive gain ===
+                      attn           max       meanmax
+benchmark                                             
+PL_cBinding   -0.012 (1/3)  +0.006 (2/3)  +0.006 (2/3)
+PL_cCPP       -0.031 (0/3)  -0.074 (0/3)  -0.032 (0/3)
+PL_cSol       +0.037 (2/3)  -0.235 (0/3)  +0.012 (2/3)
+PL_ncBinding  -0.034 (2/3)  -0.093 (0/3)  -0.054 (0/3)
+PL_ncCPP      -0.019 (0/3)  -0.140 (0/3)  -0.101 (0/3)
+(a gain under about 0.03 is inside the noise of these single splits)
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pool_pclm_pl
+
+== done 10:37

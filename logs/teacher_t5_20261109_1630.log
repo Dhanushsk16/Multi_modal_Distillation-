@@ -1,0 +1,4 @@
+== Monday 09 November 2026 04:30:17 PM IST | teacher 't5' | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_t5_20261109_1630.log
+GPU in use by:
+shivanhu       15:26 python tinygpq/train_cv.py --variant pq_pca_deep --phi 0 --seed 99 --out-root /mnt/wwn-0x5000c500e64c5cc0/shivanhu/tinyh2gnet_replication/ladder_fullb0/outputs --aug --inner-patients 2
+not starting (FORCE=1 to override)

@@ -1,0 +1,63 @@
+[INFO] Species/Environment one-hot dimension: 4 | train 571, test 64
+[INFO] padded length: train 438, test 262 tokens
+Traceback (most recent call last):
+  File "/home/dhanushsk/code/peptidefusion/src/repro/pepmsnd_port.py", line 192, in <module>
+    main()
+  File "/home/dhanushsk/code/peptidefusion/src/repro/pepmsnd_port.py", line 167, in main
+    lo = net(enc_tr["input_ids"][p].to(dev), enc_tr["attention_mask"][p].to(dev), m_tr[p].to(dev))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/code/peptidefusion/src/repro/pepmsnd_port.py", line 98, in forward
+    h = get_last_hidden_state(self.backbone(input_ids=input_ids, attention_mask=attention_mask))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/cache/huggingface/modules/transformers_modules/peptideclm_hyphen_2_hyphen_mlm_hyphen_large/ChemPepMTR.py", line 305, in forward
+    return self.model(kwargs.get("input_ids"), mask=kwargs.get("attention_mask"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/cache/huggingface/modules/transformers_modules/peptideclm_hyphen_2_hyphen_mlm_hyphen_large/ChemPepMTR.py", line 263, in forward
+    x = self.transformer(x, mask=mask, input_pos=input_pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/cache/huggingface/modules/transformers_modules/peptideclm_hyphen_2_hyphen_mlm_hyphen_large/ChemPepMTR.py", line 239, in forward
+    x = block(x, input_pos=input_pos, mask=mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/cache/huggingface/modules/transformers_modules/peptideclm_hyphen_2_hyphen_mlm_hyphen_large/ChemPepMTR.py", line 225, in forward
+    x = x + self.ffn(self.ffn_norm(x))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhanushsk/miniconda3/envs/peptide/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/cache/huggingface/modules/transformers_modules/peptideclm_hyphen_2_hyphen_mlm_hyphen_large/ChemPepMTR.py", line 169, in forward
+    output = self.linear2(F.silu(x1) * x2)
+                          ~~~~~~~~~~~^~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 110.00 MiB. GPU 0 has a total capacity of 47.53 GiB of which 72.12 MiB is free. Process 1463 has 260.00 MiB memory in use. Process 3895169 has 13.73 GiB memory in use. Including non-PyTorch memory, this process has 33.44 GiB memory in use. Of the allocated memory 32.65 GiB is allocated by PyTorch, and 499.23 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

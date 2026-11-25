@@ -1,0 +1,150 @@
+14:51:32 == stage kan | student st6f | epoch 2 (name st6f_e02) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_eval_kan_st6f_e02_20261123_1451.log
+student st6f_e02: weights of epoch 2, 10.821M parameters, feature z | label st6f_e02 | selection: the TEST fold picks the epoch (the authors' protocol, optimistic)
+recipe (the authors'): AdamW, student lr 1e-05 / head lr 0.001, student frozen for the first 3 epochs, batch 32, <= 120 epochs, patience 20 on val_mcc_best, seeds [103], folds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test
+fold  1: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  2: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  3: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  4: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  5: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  6: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  7: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  8: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold  9: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+fold 10: train 571 rows (0 unreadable), test 64 rows (0 unreadable)
+student st6f_e02: weights of epoch 2, 10.821M parameters, feature z | label st6f_e02 | selection: the TEST fold picks the epoch (the authors' protocol, optimistic)
+recipe (the authors'): AdamW, student lr 1e-05 / head lr 0.001, student frozen for the first 3 epochs, batch 32, <= 120 epochs, patience 20 on val_mcc_best, seeds [103], folds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test
+[INFO] fold 1: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold1/preds_fold1.csv (best epoch 3, val_mcc_best 0.7297, test-fold set)
+seed 103 fold 1: 64 test molecules, best epoch 3, 16s
+[INFO] fold 2: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold2/preds_fold2.csv (best epoch 14, val_mcc_best 0.7874, test-fold set)
+seed 103 fold 2: 64 test molecules, best epoch 14, 22s
+[INFO] fold 3: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold3/preds_fold3.csv (best epoch 4, val_mcc_best 0.7635, test-fold set)
+seed 103 fold 3: 64 test molecules, best epoch 4, 16s
+[INFO] fold 4: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold4/preds_fold4.csv (best epoch 13, val_mcc_best 0.5697, test-fold set)
+seed 103 fold 4: 64 test molecules, best epoch 13, 22s
+[INFO] fold 5: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold5/preds_fold5.csv (best epoch 1, val_mcc_best 0.6700, test-fold set)
+seed 103 fold 5: 64 test molecules, best epoch 1, 15s
+[INFO] fold 6: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold6/preds_fold6.csv (best epoch 4, val_mcc_best 0.7333, test-fold set)
+seed 103 fold 6: 64 test molecules, best epoch 4, 17s
+[INFO] fold 7: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold7/preds_fold7.csv (best epoch 38, val_mcc_best 0.8135, test-fold set)
+seed 103 fold 7: 64 test molecules, best epoch 38, 40s
+[INFO] fold 8: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold8/preds_fold8.csv (best epoch 6, val_mcc_best 0.5730, test-fold set)
+seed 103 fold 8: 64 test molecules, best epoch 6, 17s
+[INFO] fold 9: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold9/preds_fold9.csv (best epoch 23, val_mcc_best 0.7543, test-fold set)
+seed 103 fold 9: 64 test molecules, best epoch 23, 28s
+[INFO] fold 10: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_test/st6f_e02/seed103/fold10/preds_fold10.csv (best epoch 4, val_mcc_best 0.5440, test-fold set)
+seed 103 fold 10: 64 test molecules, best epoch 4, 15s
+
+=== PepMSND, 10 cluster folds, st6f_e02 | mean +- sd over 1 seed(s) ===
+  MCC_pooled       0.592 +- 0.000
+  MCC_foldmean     0.596 +- 0.000
+  AUROC            0.854 +- 0.000
+  MCC_oracle_thr   0.682 +- 0.000
+published, for comparison (their protocols, PeptideCLM-2 fine-tuned; the authors' epoch choice uses the test fold):
+  PepMSND paper, its full model with KAN (its own protocol)      0.726
+  PeptideCLM-2 MLM + KAN (journal paper)                         0.729
+  PeptideCLM-2 Hybrid + KAN                                      0.741
+  PeptideCLM-2 MTR + KAN                                         0.749
+  PeptideCLM-2 without KAN (read off its Fig. 5B, about)         0.600
+student st6f_e02: weights of epoch 2, 10.821M parameters, feature z | label st6f_e02 | selection: 10% of the training rows pick the epoch (no test leak)
+recipe (the authors'): AdamW, student lr 1e-05 / head lr 0.001, student frozen for the first 3 epochs, batch 32, <= 120 epochs, patience 20 on val_mcc_best, seeds [103], folds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner
+[INFO] fold 1: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold1/preds_fold1.csv (best epoch 5, val_mcc_best 0.5590, inner set)
+seed 103 fold 1: 64 test molecules, best epoch 5, 14s
+[INFO] fold 2: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold2/preds_fold2.csv (best epoch 8, val_mcc_best 0.6185, inner set)
+seed 103 fold 2: 64 test molecules, best epoch 8, 14s
+[INFO] fold 3: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold3/preds_fold3.csv (best epoch 3, val_mcc_best 0.7911, inner set)
+seed 103 fold 3: 64 test molecules, best epoch 3, 12s
+[INFO] fold 4: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold4/preds_fold4.csv (best epoch 26, val_mcc_best 0.8567, inner set)
+seed 103 fold 4: 64 test molecules, best epoch 26, 23s
+[INFO] fold 5: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold5/preds_fold5.csv (best epoch 12, val_mcc_best 0.7436, inner set)
+seed 103 fold 5: 64 test molecules, best epoch 12, 16s
+[INFO] fold 6: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold6/preds_fold6.csv (best epoch 10, val_mcc_best 0.7590, inner set)
+seed 103 fold 6: 64 test molecules, best epoch 10, 15s
+[INFO] fold 7: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold7/preds_fold7.csv (best epoch 22, val_mcc_best 0.5590, inner set)
+seed 103 fold 7: 64 test molecules, best epoch 22, 21s
+[INFO] fold 8: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold8/preds_fold8.csv (best epoch 14, val_mcc_best 0.7277, inner set)
+seed 103 fold 8: 64 test molecules, best epoch 14, 17s
+[INFO] fold 9: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold9/preds_fold9.csv (best epoch 9, val_mcc_best 0.7393, inner set)
+seed 103 fold 9: 64 test molecules, best epoch 9, 15s
+[INFO] fold 10: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02/seed103/fold10/preds_fold10.csv (best epoch 15, val_mcc_best 0.7679, inner set)
+seed 103 fold 10: 64 test molecules, best epoch 15, 18s
+
+=== PepMSND, 10 cluster folds, st6f_e02 | mean +- sd over 1 seed(s) ===
+  MCC_pooled       0.560 +- 0.000
+  MCC_foldmean     0.559 +- 0.000
+  AUROC            0.847 +- 0.000
+  MCC_oracle_thr   0.555 +- 0.000
+published, for comparison (their protocols, PeptideCLM-2 fine-tuned; the authors' epoch choice uses the test fold):
+  PepMSND paper, its full model with KAN (its own protocol)      0.726
+  PeptideCLM-2 MLM + KAN (journal paper)                         0.729
+  PeptideCLM-2 Hybrid + KAN                                      0.741
+  PeptideCLM-2 MTR + KAN                                         0.749
+  PeptideCLM-2 without KAN (read off its Fig. 5B, about)         0.600
+student st6f_e02: weights of epoch 2, 10.821M parameters, feature z | label st6f_e02_frozen | selection: 10% of the training rows pick the epoch (no test leak)
+recipe (the authors'): AdamW, student lr 1e-05 / head lr 0.001, student frozen for the first 100000 epochs, batch 32, <= 120 epochs, patience 20 on val_mcc_best, seeds [103], folds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner
+[INFO] fold 1: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold1/preds_fold1.csv (best epoch 10, val_mcc_best 0.5419, inner set)
+seed 103 fold 1: 64 test molecules, best epoch 10, 11s
+[INFO] fold 2: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold2/preds_fold2.csv (best epoch 33, val_mcc_best 0.6585, inner set)
+seed 103 fold 2: 64 test molecules, best epoch 33, 16s
+[INFO] fold 3: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold3/preds_fold3.csv (best epoch 3, val_mcc_best 0.7911, inner set)
+seed 103 fold 3: 64 test molecules, best epoch 3, 7s
+[INFO] fold 4: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold4/preds_fold4.csv (best epoch 15, val_mcc_best 0.8567, inner set)
+seed 103 fold 4: 64 test molecules, best epoch 15, 11s
+[INFO] fold 5: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold5/preds_fold5.csv (best epoch 4, val_mcc_best 0.7779, inner set)
+seed 103 fold 5: 64 test molecules, best epoch 4, 8s
+[INFO] fold 6: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold6/preds_fold6.csv (best epoch 4, val_mcc_best 0.7385, inner set)
+seed 103 fold 6: 64 test molecules, best epoch 4, 8s
+[INFO] fold 7: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold7/preds_fold7.csv (best epoch 14, val_mcc_best 0.6172, inner set)
+seed 103 fold 7: 64 test molecules, best epoch 14, 11s
+[INFO] fold 8: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold8/preds_fold8.csv (best epoch 3, val_mcc_best 0.7097, inner set)
+seed 103 fold 8: 64 test molecules, best epoch 3, 8s
+[INFO] fold 9: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold9/preds_fold9.csv (best epoch 23, val_mcc_best 0.7370, inner set)
+seed 103 fold 9: 64 test molecules, best epoch 23, 13s
+[INFO] fold 10: train 571, test 64, KAN input dim 140 (descriptors only)
+[INFO] saved /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/pepmsnd_ft_kan_student_inner/st6f_e02_frozen/seed103/fold10/preds_fold10.csv (best epoch 15, val_mcc_best 0.7294, inner set)
+seed 103 fold 10: 64 test molecules, best epoch 15, 10s
+
+=== PepMSND, 10 cluster folds, st6f_e02_frozen | mean +- sd over 1 seed(s) ===
+  MCC_pooled       0.567 +- 0.000
+  MCC_foldmean     0.562 +- 0.000
+  AUROC            0.846 +- 0.000
+  MCC_oracle_thr   0.532 +- 0.000
+published, for comparison (their protocols, PeptideCLM-2 fine-tuned; the authors' epoch choice uses the test fold):
+  PepMSND paper, its full model with KAN (its own protocol)      0.726
+  PeptideCLM-2 MLM + KAN (journal paper)                         0.729
+  PeptideCLM-2 Hybrid + KAN                                      0.741
+  PeptideCLM-2 MTR + KAN                                         0.749
+  PeptideCLM-2 without KAN (read off its Fig. 5B, about)         0.600
+14:59:53 == kan finished with exit status 0

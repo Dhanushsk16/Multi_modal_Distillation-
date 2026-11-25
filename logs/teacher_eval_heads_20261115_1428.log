@@ -1,0 +1,57 @@
+== Sunday 15 November 2026 02:28:27 PM IST | stage heads | teacher t9 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_heads_20261115_1428.log
+
+== PepLand's head on teacher_t9, PeptideCLM-2's suite (14:28)
+CellPPD       teacher_t9 done (14s) | MCC 0.833
+THPep         teacher_t9 done (5s) | MCC 0.747
+PepMSND       teacher_t9 done (59s) | MCC 0.505
+PAMPA         teacher_t9 done (272s) | R2 0.213
+AmpHGT        teacher_t9 done (94s) | MCC 0.799
+
+=== PepLand-style head: MCC (classification) / R2 (regression), mean over seeds ===
+rep        teacher_t9
+benchmark            
+AmpHGT          0.781
+CellPPD         0.842
+PAMPA           0.216
+PepMSND         0.495
+THPep           0.755
+
+=== AUROC ===
+rep        teacher_t9
+benchmark            
+AmpHGT          0.955
+CellPPD         0.968
+PepMSND         0.814
+THPep           0.960
+
+=== accuracy ===
+rep        teacher_t9
+benchmark            
+AmpHGT          0.891
+CellPPD         0.921
+PepMSND         0.755
+THPep           0.896
+
+=== F1 ===
+rep        teacher_t9
+benchmark            
+AmpHGT          0.896
+CellPPD         0.921
+PepMSND         0.694
+THPep           0.827
+
+=== Pearson r ===
+rep        teacher_t9
+benchmark            
+PAMPA           0.543
+
+=== Spearman ===
+rep        teacher_t9
+benchmark            
+PAMPA           0.515
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/head_main_teacher_t9
+missing /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_t9.npz
+(PepLand's suite skipped: run the pl-features stage first)
+
+== stage heads finished, exit code 1 (14:36)

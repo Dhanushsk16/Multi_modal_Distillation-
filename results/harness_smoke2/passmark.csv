@@ -1,0 +1,3 @@
+teacher,learner,mean_diff_vs_REF,mean_diff_vs_PCA,mean_diff_vs_H,clearly_worse_benchmarks_99.5,PASS,checked
+teacher_abl_base_s1,linear,0.13813644097467725,0.0016901403836683537,-0.04502757850018181,1.0,no,"REF, PCA, 99.5% intervals"
+teacher_abl_base_s1,ALL,0.13813644097467725,0.0016901403836683537,-0.04502757850018181,1.0,no,"REF, PCA, 99.5% intervals"

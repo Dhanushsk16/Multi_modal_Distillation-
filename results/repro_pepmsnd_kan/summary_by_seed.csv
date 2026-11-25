@@ -1,0 +1,2 @@
+model,seed,folds,MCC pooled,MCC fold mean,AUROC pooled,AUROC fold mean,MCC best-thr fold mean (oracle)
+mtr-large,103,2,0.6183424369453207,0.6220720766138278,0.8947916666666667,0.8987525731711777,0.7840296384346452

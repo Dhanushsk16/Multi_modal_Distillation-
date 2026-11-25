@@ -1,0 +1,27 @@
+{
+ "name": "s512x4",
+ "params_M": 10.92,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.1,
+ "all": {
+  "loss": 0.386,
+  "acc": 0.857,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.6832,
+  "acc": 0.7953,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.306,
+  "acc": 0.8755,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 1.4126,
+  "acc": 0.6198,
+  "masked_tokens": 54596
+ }
+}

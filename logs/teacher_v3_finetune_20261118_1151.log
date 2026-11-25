@@ -1,0 +1,129 @@
+== Wednesday 18 November 2026 11:51:30 AM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261118_1151.log
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_v3_base_pepland | latent statistics: yes
+teacher v3_base: inputs ['pepland', 'pclm', 'ecfp'], latent 1024-d, 35.3M parameters | variants ['ft'] | benchmarks ['PL_cCPP', 'PL_cSol', 'PL_ncCPP', 'PL_cBinding', 'PL_ncBinding']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 3
+   PL_cCPP ft seed 0 fold 1/5 (466 molecules, 5 models) 43s
+   PL_cCPP ft seed 0 fold 2/5 (466 molecules, 5 models) 83s
+   PL_cCPP ft seed 0 fold 3/5 (464 molecules, 5 models) 121s
+   PL_cCPP ft seed 0 fold 4/5 (464 molecules, 5 models) 161s
+   PL_cCPP ft seed 0 fold 5/5 (464 molecules, 5 models) 200s
+   PL_cCPP ft seed 1 fold 1/5 (466 molecules, 5 models) 239s
+   PL_cCPP ft seed 1 fold 2/5 (466 molecules, 5 models) 280s
+   PL_cCPP ft seed 1 fold 3/5 (464 molecules, 5 models) 321s
+   PL_cCPP ft seed 1 fold 4/5 (464 molecules, 5 models) 360s
+   PL_cCPP ft seed 1 fold 5/5 (464 molecules, 5 models) 400s
+   PL_cCPP ft seed 2 fold 1/5 (466 molecules, 5 models) 438s
+   PL_cCPP ft seed 2 fold 2/5 (466 molecules, 5 models) 476s
+   PL_cCPP ft seed 2 fold 3/5 (464 molecules, 5 models) 513s
+   PL_cCPP ft seed 2 fold 4/5 (464 molecules, 5 models) 550s
+   PL_cCPP ft seed 2 fold 5/5 (464 molecules, 5 models) 589s
+PL_cCPP  ft       done (589s) | MCC 0.731 (pooled 0.731) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 25 fits
+   PL_cSol ft seed 0 fold 1/5 (272 molecules, 5 models) 24s
+   PL_cSol ft seed 0 fold 2/5 (272 molecules, 5 models) 50s
+   PL_cSol ft seed 0 fold 3/5 (271 molecules, 5 models) 74s
+   PL_cSol ft seed 0 fold 4/5 (271 molecules, 5 models) 100s
+   PL_cSol ft seed 0 fold 5/5 (271 molecules, 5 models) 124s
+   PL_cSol ft seed 1 fold 1/5 (272 molecules, 5 models) 149s
+   PL_cSol ft seed 1 fold 2/5 (272 molecules, 5 models) 173s
+   PL_cSol ft seed 1 fold 3/5 (271 molecules, 5 models) 197s
+   PL_cSol ft seed 1 fold 4/5 (271 molecules, 5 models) 220s
+   PL_cSol ft seed 1 fold 5/5 (271 molecules, 5 models) 243s
+   PL_cSol ft seed 2 fold 1/5 (272 molecules, 5 models) 266s
+   PL_cSol ft seed 2 fold 2/5 (272 molecules, 5 models) 288s
+   PL_cSol ft seed 2 fold 3/5 (271 molecules, 5 models) 311s
+   PL_cSol ft seed 2 fold 4/5 (271 molecules, 5 models) 333s
+   PL_cSol ft seed 2 fold 5/5 (271 molecules, 5 models) 356s
+PL_cSol  ft       done (356s) | MCC 0.314 (pooled 0.313) | epochs run 13, best at 3, hit the 100-epoch cap in 0 of 25 fits
+   PL_ncCPP ft seed 0 fold 1/5 (1467 molecules, 5 models) 232s
+   PL_ncCPP ft seed 0 fold 2/5 (1467 molecules, 5 models) 449s
+   PL_ncCPP ft seed 0 fold 3/5 (1467 molecules, 5 models) 661s
+   PL_ncCPP ft seed 0 fold 4/5 (1467 molecules, 5 models) 881s
+   PL_ncCPP ft seed 0 fold 5/5 (1466 molecules, 5 models) 1054s
+   PL_ncCPP ft seed 1 fold 1/5 (1467 molecules, 5 models) 1298s
+   PL_ncCPP ft seed 1 fold 2/5 (1467 molecules, 5 models) 1495s
+   PL_ncCPP ft seed 1 fold 3/5 (1467 molecules, 5 models) 1713s
+   PL_ncCPP ft seed 1 fold 4/5 (1467 molecules, 5 models) 1897s
+   PL_ncCPP ft seed 1 fold 5/5 (1466 molecules, 5 models) 2155s
+   PL_ncCPP ft seed 2 fold 1/5 (1467 molecules, 5 models) 2373s
+   PL_ncCPP ft seed 2 fold 2/5 (1467 molecules, 5 models) 2595s
+   PL_ncCPP ft seed 2 fold 3/5 (1467 molecules, 5 models) 2803s
+   PL_ncCPP ft seed 2 fold 4/5 (1467 molecules, 5 models) 3001s
+   PL_ncCPP ft seed 2 fold 5/5 (1466 molecules, 5 models) 3203s
+PL_ncCPP ft       done (3203s) | R2 0.467 (pooled 0.467) | epochs run 29, best at 19, hit the 100-epoch cap in 0 of 25 fits
+   PL_cBinding ft seed 0 fold 1/5 (362 molecules, 5 models) 51s
+   PL_cBinding ft seed 0 fold 2/5 (342 molecules, 5 models) 109s
+   PL_cBinding ft seed 0 fold 3/5 (358 molecules, 5 models) 163s
+   PL_cBinding ft seed 0 fold 4/5 (355 molecules, 5 models) 220s
+   PL_cBinding ft seed 0 fold 5/5 (384 molecules, 5 models) 253s
+   PL_cBinding ft seed 1 fold 1/5 (362 molecules, 5 models) 294s
+   PL_cBinding ft seed 1 fold 2/5 (342 molecules, 5 models) 372s
+   PL_cBinding ft seed 1 fold 3/5 (358 molecules, 5 models) 416s
+   PL_cBinding ft seed 1 fold 4/5 (355 molecules, 5 models) 460s
+   PL_cBinding ft seed 1 fold 5/5 (384 molecules, 5 models) 504s
+   PL_cBinding ft seed 2 fold 1/5 (362 molecules, 5 models) 546s
+   PL_cBinding ft seed 2 fold 2/5 (342 molecules, 5 models) 595s
+   PL_cBinding ft seed 2 fold 3/5 (358 molecules, 5 models) 635s
+   PL_cBinding ft seed 2 fold 4/5 (355 molecules, 5 models) 664s
+   PL_cBinding ft seed 2 fold 5/5 (384 molecules, 5 models) 704s
+PL_cBinding ft       done (704s) | R2 0.222 (pooled 0.221) | epochs run 20, best at 10, hit the 100-epoch cap in 0 of 25 fits
+   PL_ncBinding ft seed 0 fold 1/5 (54 molecules, 5 models) 16s
+   PL_ncBinding ft seed 0 fold 2/5 (54 molecules, 5 models) 34s
+   PL_ncBinding ft seed 0 fold 3/5 (63 molecules, 5 models) 45s
+   PL_ncBinding ft seed 0 fold 4/5 (55 molecules, 5 models) 62s
+   PL_ncBinding ft seed 0 fold 5/5 (73 molecules, 5 models) 73s
+   PL_ncBinding ft seed 1 fold 1/5 (54 molecules, 5 models) 91s
+   PL_ncBinding ft seed 1 fold 2/5 (54 molecules, 5 models) 104s
+   PL_ncBinding ft seed 1 fold 3/5 (63 molecules, 5 models) 118s
+   PL_ncBinding ft seed 1 fold 4/5 (55 molecules, 5 models) 133s
+   PL_ncBinding ft seed 1 fold 5/5 (73 molecules, 5 models) 143s
+   PL_ncBinding ft seed 2 fold 1/5 (54 molecules, 5 models) 159s
+   PL_ncBinding ft seed 2 fold 2/5 (54 molecules, 5 models) 171s
+   PL_ncBinding ft seed 2 fold 3/5 (63 molecules, 5 models) 181s
+   PL_ncBinding ft seed 2 fold 4/5 (55 molecules, 5 models) 198s
+   PL_ncBinding ft seed 2 fold 5/5 (73 molecules, 5 models) 208s
+PL_ncBinding ft       done (208s) | R2 0.178 (pooled 0.190) | epochs run 19, best at 9, hit the 100-epoch cap in 0 of 25 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode             ft
+benchmark          
+PL_cBinding   0.214
+PL_cCPP       0.729
+PL_cSol       0.315
+PL_ncBinding  0.183
+PL_ncCPP      0.466
+
+=== the same on the POOLED predictions of all folds (cluster-CV benchmarks only) ===
+mode             ft
+benchmark          
+PL_cBinding   0.213
+PL_cCPP       0.729
+PL_cSol       0.312
+PL_ncBinding  0.194
+PL_ncCPP      0.467
+
+=== AUROC (classification) ===
+mode          ft
+benchmark       
+PL_cCPP    0.935
+PL_cSol    0.720
+
+=== test molecules that are standard chains (ESM-2 vector exists) / modified chains: MCC or R2 ===
+                    n_esm  head_esm  n_noesm  head_noesm
+benchmark    mode                                       
+PL_cBinding  ft     429.0     0.162   1372.0       0.228
+PL_cCPP      ft    2319.0     0.729      5.0         NaN
+PL_cSol      ft       9.0       NaN   1348.0       0.311
+PL_ncBinding ft      33.0     0.553    266.0       0.096
+PL_ncCPP     ft       0.0       NaN   7334.0       0.467
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                    run  best  capped  fits
+benchmark    mode                          
+PL_cBinding  ft    22.9  12.9       0    75
+PL_cCPP      ft    14.7   4.7       0    75
+PL_cSol      ft    13.4   3.4       0    75
+PL_ncBinding ft    21.7  11.7       0    75
+PL_ncCPP     ft    29.5  19.5       0    75
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_v3_base_pepland
+== done 13:16

@@ -1,0 +1,27 @@
+{
+ "name": "mlm-small",
+ "params_M": 31.67,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.22,
+ "all": {
+  "loss": 0.5927,
+  "acc": 0.7998,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.6277,
+  "acc": 0.787,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.56,
+  "acc": 0.8066,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 1.0191,
+  "acc": 0.7119,
+  "masked_tokens": 54596
+ }
+}

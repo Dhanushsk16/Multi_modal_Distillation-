@@ -1,0 +1,27 @@
+{
+ "name": "s256x15",
+ "params_M": 10.07,
+ "max_tokens": 16384,
+ "seed": 0,
+ "minutes": 0.15,
+ "all": {
+  "loss": 0.3535,
+  "acc": 0.8685,
+  "masked_tokens": 776146
+ },
+ "lipid": {
+  "loss": 0.5964,
+  "acc": 0.8144,
+  "masked_tokens": 4445
+ },
+ "peptide": {
+  "loss": 0.2848,
+  "acc": 0.8845,
+  "masked_tokens": 717105
+ },
+ "small_molecule": {
+  "loss": 1.2351,
+  "acc": 0.6623,
+  "masked_tokens": 54596
+ }
+}

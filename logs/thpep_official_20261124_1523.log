@@ -1,0 +1,392 @@
+15:23:41 == THPep, the authors' three splits | representations v3_base st6f_e02 | learners linear kernel gbt mlp | learner seeds 5 | threads 8 (4 workers) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/thpep_official_20261124_1523.log
+THPep_train + THPep_test: 609 rows, 609 unique SMILES
+THPep_o101: 609 rows (train 487, test 122 with 35 positives) | SMILES not in our feature set: 0 | label disagreements: 0
+THPep_o202: 609 rows (train 487, test 122 with 35 positives) | SMILES not in our feature set: 0 | label disagreements: 0
+THPep_o303: 609 rows (train 487, test 122 with 35 positives) | SMILES not in our feature set: 0 | label disagreements: 0
+OK: the three official splits use exactly the molecules (and labels) of the existing THPep features
+15:23:42 part 1: harness (frozen embeddings, sklearn learners)
+== Tuesday 24 November 2026 03:23:42 PM IST | stage harness | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_harness_20261124_1523.log
+representations: ['P', 'L', 'H', 'teacher_v3_base', 'teacher_st6f_e02'] | learners ['linear', 'kernel', 'gbt', 'mlp'] | seeds 5 | select val
+workers: 3 processes x 2 threads = 6 threads (cap 8)
+   THPep_o101   all    P            linear seed 0 | MCC 0.441 (1s)
+   THPep_o303   all    P            linear seed 0 | MCC 0.511 (1s)
+   THPep_o202   all    P            linear seed 0 | MCC 0.731 (1s)
+   THPep_o101   all    L            linear seed 0 | MCC 0.507 (0s)
+   THPep_o303   all    L            linear seed 0 | MCC 0.511 (0s)
+   THPep_o202   all    L            linear seed 0 | MCC 0.625 (0s)
+   THPep_o101   all    H            linear seed 0 | MCC 0.527 (0s)
+   THPep_o303   all    H            linear seed 0 | MCC 0.622 (0s)
+   THPep_o202   all    H            linear seed 0 | MCC 0.688 (1s)
+   THPep_o101   all    teacher_v3_base linear seed 0 | MCC 0.689 (0s)
+   THPep_o303   all    teacher_v3_base linear seed 0 | MCC 0.621 (0s)
+   THPep_o202   all    teacher_v3_base linear seed 0 | MCC 0.710 (0s)
+   THPep_o101   all    teacher_st6f_e02 linear seed 0 | MCC 0.666 (0s)
+   THPep_o303   all    teacher_st6f_e02 linear seed 0 | MCC 0.668 (0s)
+   THPep_o101   all    P            kernel seed 0 | MCC 0.540 (0s)
+   THPep_o202   all    teacher_st6f_e02 linear seed 0 | MCC 0.710 (0s)
+   THPep_o303   all    P            kernel seed 0 | MCC 0.437 (0s)
+   THPep_o101   all    L            kernel seed 0 | MCC 0.535 (0s)
+   THPep_o202   all    P            kernel seed 0 | MCC 0.645 (0s)
+   THPep_o303   all    L            kernel seed 0 | MCC 0.702 (0s)
+   THPep_o101   all    H            kernel seed 0 | MCC 0.645 (0s)
+   THPep_o202   all    L            kernel seed 0 | MCC 0.732 (0s)
+   THPep_o303   all    H            kernel seed 0 | MCC 0.688 (0s)
+   THPep_o101   all    teacher_v3_base kernel seed 0 | MCC 0.671 (0s)
+   THPep_o202   all    H            kernel seed 0 | MCC 0.731 (0s)
+   THPep_o303   all    teacher_v3_base kernel seed 0 | MCC 0.711 (0s)
+   THPep_o101   all    teacher_st6f_e02 kernel seed 0 | MCC 0.613 (0s)
+   THPep_o202   all    teacher_v3_base kernel seed 0 | MCC 0.775 (0s)
+   THPep_o303   all    teacher_st6f_e02 kernel seed 0 | MCC 0.817 (0s)
+   THPep_o202   all    teacher_st6f_e02 kernel seed 0 | MCC 0.754 (0s)
+   THPep_o101   all    P            gbt    seed 0 | MCC 0.279 (1s)
+   THPep_o303   all    P            gbt    seed 0 | MCC 0.404 (1s)
+   THPep_o202   all    P            gbt    seed 0 | MCC 0.622 (1s)
+   THPep_o101   all    L            gbt    seed 0 | MCC 0.657 (4s)
+   THPep_o303   all    L            gbt    seed 0 | MCC 0.559 (4s)
+   THPep_o202   all    L            gbt    seed 0 | MCC 0.648 (4s)
+   THPep_o101   all    H            gbt    seed 0 | MCC 0.674 (7s)
+   THPep_o303   all    H            gbt    seed 0 | MCC 0.708 (7s)
+   THPep_o202   all    H            gbt    seed 0 | MCC 0.710 (8s)
+   THPep_o101   all    teacher_v3_base gbt    seed 0 | MCC 0.579 (4s)
+   THPep_o303   all    teacher_v3_base gbt    seed 0 | MCC 0.670 (4s)
+   THPep_o202   all    teacher_v3_base gbt    seed 0 | MCC 0.711 (5s)
+   THPep_o101   all    teacher_st6f_e02 gbt    seed 0 | MCC 0.645 (4s)
+   THPep_o303   all    teacher_st6f_e02 gbt    seed 0 | MCC 0.710 (4s)
+   THPep_o101   all    P            gbt    seed 1 | MCC 0.279 (1s)
+   THPep_o202   all    teacher_st6f_e02 gbt    seed 0 | MCC 0.690 (5s)
+   THPep_o303   all    P            gbt    seed 1 | MCC 0.404 (1s)
+   THPep_o202   all    P            gbt    seed 1 | MCC 0.622 (1s)
+   THPep_o101   all    L            gbt    seed 1 | MCC 0.657 (4s)
+   THPep_o303   all    L            gbt    seed 1 | MCC 0.559 (4s)
+   THPep_o202   all    L            gbt    seed 1 | MCC 0.648 (4s)
+   THPep_o101   all    H            gbt    seed 1 | MCC 0.674 (8s)
+   THPep_o303   all    H            gbt    seed 1 | MCC 0.708 (8s)
+   THPep_o202   all    H            gbt    seed 1 | MCC 0.710 (8s)
+   THPep_o101   all    teacher_v3_base gbt    seed 1 | MCC 0.579 (4s)
+   THPep_o303   all    teacher_v3_base gbt    seed 1 | MCC 0.670 (4s)
+   THPep_o202   all    teacher_v3_base gbt    seed 1 | MCC 0.711 (5s)
+   THPep_o101   all    teacher_st6f_e02 gbt    seed 1 | MCC 0.645 (4s)
+   THPep_o303   all    teacher_st6f_e02 gbt    seed 1 | MCC 0.710 (4s)
+   THPep_o101   all    P            gbt    seed 2 | MCC 0.279 (1s)
+   THPep_o303   all    P            gbt    seed 2 | MCC 0.404 (1s)
+   THPep_o202   all    teacher_st6f_e02 gbt    seed 1 | MCC 0.690 (5s)
+   THPep_o202   all    P            gbt    seed 2 | MCC 0.622 (1s)
+   THPep_o101   all    L            gbt    seed 2 | MCC 0.657 (4s)
+   THPep_o303   all    L            gbt    seed 2 | MCC 0.559 (4s)
+   THPep_o202   all    L            gbt    seed 2 | MCC 0.648 (4s)
+   THPep_o101   all    H            gbt    seed 2 | MCC 0.674 (7s)
+   THPep_o303   all    H            gbt    seed 2 | MCC 0.708 (7s)
+   THPep_o202   all    H            gbt    seed 2 | MCC 0.710 (7s)
+   THPep_o101   all    teacher_v3_base gbt    seed 2 | MCC 0.579 (4s)
+   THPep_o303   all    teacher_v3_base gbt    seed 2 | MCC 0.670 (4s)
+   THPep_o202   all    teacher_v3_base gbt    seed 2 | MCC 0.711 (5s)
+   THPep_o101   all    teacher_st6f_e02 gbt    seed 2 | MCC 0.645 (4s)
+   THPep_o101   all    P            gbt    seed 3 | MCC 0.279 (1s)
+   THPep_o303   all    teacher_st6f_e02 gbt    seed 2 | MCC 0.710 (4s)
+   THPep_o303   all    P            gbt    seed 3 | MCC 0.404 (1s)
+   THPep_o202   all    teacher_st6f_e02 gbt    seed 2 | MCC 0.690 (5s)
+   THPep_o101   all    L            gbt    seed 3 | MCC 0.657 (4s)
+   THPep_o202   all    P            gbt    seed 3 | MCC 0.622 (1s)
+   THPep_o303   all    L            gbt    seed 3 | MCC 0.559 (4s)
+   THPep_o202   all    L            gbt    seed 3 | MCC 0.648 (4s)
+   THPep_o101   all    H            gbt    seed 3 | MCC 0.674 (7s)
+   THPep_o303   all    H            gbt    seed 3 | MCC 0.708 (8s)
+   THPep_o101   all    teacher_v3_base gbt    seed 3 | MCC 0.579 (4s)
+   THPep_o202   all    H            gbt    seed 3 | MCC 0.710 (7s)
+   THPep_o303   all    teacher_v3_base gbt    seed 3 | MCC 0.670 (4s)
+   THPep_o101   all    teacher_st6f_e02 gbt    seed 3 | MCC 0.645 (4s)
+   THPep_o202   all    teacher_v3_base gbt    seed 3 | MCC 0.711 (5s)
+   THPep_o101   all    P            gbt    seed 4 | MCC 0.279 (1s)
+   THPep_o303   all    teacher_st6f_e02 gbt    seed 3 | MCC 0.710 (4s)
+   THPep_o303   all    P            gbt    seed 4 | MCC 0.404 (1s)
+   THPep_o202   all    teacher_st6f_e02 gbt    seed 3 | MCC 0.690 (4s)
+   THPep_o101   all    L            gbt    seed 4 | MCC 0.657 (4s)
+   THPep_o202   all    P            gbt    seed 4 | MCC 0.622 (1s)
+   THPep_o303   all    L            gbt    seed 4 | MCC 0.559 (4s)
+   THPep_o202   all    L            gbt    seed 4 | MCC 0.648 (4s)
+   THPep_o101   all    H            gbt    seed 4 | MCC 0.674 (7s)
+   THPep_o303   all    H            gbt    seed 4 | MCC 0.708 (8s)
+   THPep_o101   all    teacher_v3_base gbt    seed 4 | MCC 0.579 (4s)
+   THPep_o202   all    H            gbt    seed 4 | MCC 0.710 (8s)
+   THPep_o101   all    teacher_st6f_e02 gbt    seed 4 | MCC 0.645 (4s)
+   THPep_o303   all    teacher_v3_base gbt    seed 4 | MCC 0.670 (4s)
+   THPep_o101   all    P            mlp    seed 0 | MCC 0.378 (0s)
+   THPep_o101   all    L            mlp    seed 0 | MCC 0.629 (0s)
+   THPep_o101   all    H            mlp    seed 0 | MCC 0.645 (1s)
+   THPep_o101   all    teacher_v3_base mlp    seed 0 | MCC 0.720 (0s)
+   THPep_o101   all    teacher_st6f_e02 mlp    seed 0 | MCC 0.674 (0s)
+   THPep_o101   all    P            mlp    seed 1 | MCC 0.343 (0s)
+   THPep_o101   all    L            mlp    seed 1 | MCC 0.462 (0s)
+   THPep_o101   all    H            mlp    seed 1 | MCC 0.579 (0s)
+   THPep_o202   all    teacher_v3_base gbt    seed 4 | MCC 0.711 (5s)
+   THPep_o101   all    teacher_v3_base mlp    seed 1 | MCC 0.690 (0s)
+   THPep_o101   all    teacher_st6f_e02 mlp    seed 1 | MCC 0.710 (0s)
+   THPep_o101   all    P            mlp    seed 2 | MCC 0.362 (0s)
+   THPep_o101   all    L            mlp    seed 2 | MCC 0.657 (0s)
+   THPep_o101   all    H            mlp    seed 2 | MCC 0.622 (1s)
+   THPep_o303   all    teacher_st6f_e02 gbt    seed 4 | MCC 0.710 (4s)
+   THPep_o303   all    P            mlp    seed 0 | MCC 0.436 (0s)
+   THPep_o101   all    teacher_v3_base mlp    seed 2 | MCC 0.569 (0s)
+   THPep_o303   all    L            mlp    seed 0 | MCC 0.638 (0s)
+   THPep_o101   all    teacher_st6f_e02 mlp    seed 2 | MCC 0.591 (0s)
+   THPep_o101   all    P            mlp    seed 3 | MCC 0.362 (0s)
+   THPep_o101   all    L            mlp    seed 3 | MCC 0.487 (0s)
+   THPep_o303   all    H            mlp    seed 0 | MCC 0.616 (1s)
+   THPep_o303   all    teacher_v3_base mlp    seed 0 | MCC 0.634 (0s)
+   THPep_o303   all    teacher_st6f_e02 mlp    seed 0 | MCC 0.657 (0s)
+   THPep_o101   all    H            mlp    seed 3 | MCC 0.625 (1s)
+   THPep_o303   all    P            mlp    seed 1 | MCC 0.522 (0s)
+   THPep_o101   all    teacher_v3_base mlp    seed 3 | MCC 0.685 (0s)
+   THPep_o303   all    L            mlp    seed 1 | MCC 0.657 (0s)
+   THPep_o101   all    teacher_st6f_e02 mlp    seed 3 | MCC 0.593 (0s)
+   THPep_o101   all    P            mlp    seed 4 | MCC 0.412 (0s)
+   THPep_o303   all    H            mlp    seed 1 | MCC 0.657 (0s)
+   THPep_o101   all    L            mlp    seed 4 | MCC 0.576 (0s)
+   THPep_o303   all    teacher_v3_base mlp    seed 1 | MCC 0.625 (0s)
+   THPep_o101   all    H            mlp    seed 4 | MCC 0.611 (0s)
+   THPep_o303   all    teacher_st6f_e02 mlp    seed 1 | MCC 0.652 (0s)
+   THPep_o202   all    teacher_st6f_e02 gbt    seed 4 | MCC 0.690 (5s)
+   THPep_o202   all    P            mlp    seed 0 | MCC 0.685 (0s)
+   THPep_o303   all    P            mlp    seed 2 | MCC 0.576 (0s)
+   THPep_o101   all    teacher_v3_base mlp    seed 4 | MCC 0.734 (0s)
+   THPep_o202   all    L            mlp    seed 0 | MCC 0.616 (0s)
+   THPep_o303   all    L            mlp    seed 2 | MCC 0.692 (0s)
+   THPep_o101   all    teacher_st6f_e02 mlp    seed 4 | MCC 0.593 (0s)
+   THPep_o303   all    H            mlp    seed 2 | MCC 0.618 (0s)
+   THPep_o202   all    H            mlp    seed 0 | MCC 0.756 (1s)
+   THPep_o303   all    teacher_v3_base mlp    seed 2 | MCC 0.629 (0s)
+   THPep_o202   all    teacher_v3_base mlp    seed 0 | MCC 0.817 (0s)
+   THPep_o303   all    teacher_st6f_e02 mlp    seed 2 | MCC 0.679 (0s)
+   THPep_o303   all    P            mlp    seed 3 | MCC 0.430 (0s)
+   THPep_o202   all    teacher_st6f_e02 mlp    seed 0 | MCC 0.797 (0s)
+   THPep_o202   all    P            mlp    seed 1 | MCC 0.712 (0s)
+   THPep_o303   all    L            mlp    seed 3 | MCC 0.616 (0s)
+   THPep_o202   all    L            mlp    seed 1 | MCC 0.734 (0s)
+   THPep_o303   all    H            mlp    seed 3 | MCC 0.604 (0s)
+   THPep_o303   all    teacher_v3_base mlp    seed 3 | MCC 0.599 (0s)
+   THPep_o202   all    H            mlp    seed 1 | MCC 0.775 (0s)
+   THPep_o303   all    teacher_st6f_e02 mlp    seed 3 | MCC 0.679 (0s)
+   THPep_o202   all    teacher_v3_base mlp    seed 1 | MCC 0.732 (0s)
+   THPep_o303   all    P            mlp    seed 4 | MCC 0.439 (0s)
+   THPep_o202   all    teacher_st6f_e02 mlp    seed 1 | MCC 0.775 (0s)
+   THPep_o303   all    L            mlp    seed 4 | MCC 0.504 (0s)
+   THPep_o202   all    P            mlp    seed 2 | MCC 0.710 (0s)
+   THPep_o202   all    L            mlp    seed 2 | MCC 0.797 (0s)
+   THPep_o303   all    H            mlp    seed 4 | MCC 0.495 (1s)
+   THPep_o202   all    H            mlp    seed 2 | MCC 0.622 (1s)
+   THPep_o303   all    teacher_v3_base mlp    seed 4 | MCC 0.583 (0s)
+   THPep_o202   all    teacher_v3_base mlp    seed 2 | MCC 0.756 (0s)
+   THPep_o202   all    teacher_st6f_e02 mlp    seed 2 | MCC 0.826 (0s)
+   THPep_o303   all    teacher_st6f_e02 mlp    seed 4 | MCC 0.697 (0s)
+   THPep_o202   all    P            mlp    seed 3 | MCC 0.715 (0s)
+   THPep_o202   all    L            mlp    seed 3 | MCC 0.670 (0s)
+   THPep_o202   all    H            mlp    seed 3 | MCC 0.731 (1s)
+   THPep_o202   all    teacher_v3_base mlp    seed 3 | MCC 0.715 (0s)
+   THPep_o202   all    teacher_st6f_e02 mlp    seed 3 | MCC 0.712 (0s)
+   THPep_o202   all    P            mlp    seed 4 | MCC 0.551 (0s)
+   THPep_o202   all    L            mlp    seed 4 | MCC 0.737 (0s)
+   THPep_o202   all    H            mlp    seed 4 | MCC 0.688 (0s)
+   THPep_o202   all    teacher_v3_base mlp    seed 4 | MCC 0.734 (0s)
+   THPep_o202   all    teacher_st6f_e02 mlp    seed 4 | MCC 0.734 (0s)
+== THPep_o101 done (136 s)
+== THPep_o303 done (140 s)
+== THPep_o202 done (142 s)
+
+=== all usable items: primary metric, mean over learners and seeds (rows: representation; columns: benchmark) ===
+                            THPep_o101  THPep_o202  THPep_o303  AVERAGE
+H                                0.616       0.711       0.654    0.660
+L                                0.565       0.679       0.599    0.614
+P                                0.408       0.668       0.458    0.511
+st6f_e02                         0.639       0.730       0.717    0.695
+v3_base                          0.655       0.737       0.654    0.682
+REF (chosen on validation)       0.593       0.711       0.564    0.622
+BEST single (on test)            0.616       0.711       0.654    0.660
+
+
+=== HEADLINE (all): average over benchmarks of (score - score of the comparison) ===
+(versus REF = best single input among PepLand / PeptideCLM-2 / ECFP, chosen per benchmark on validation data;
+ versus H = ECFP alone; versus BEST = the best single input ON THE TEST DATA, a strict bar without interval;
+ diff_wo = the same average without nothing; interval = paired bootstrap over test items;
+ W/L/T = benchmarks above / below / around 0 at 95%; worse99.5 = benchmarks entirely below 0 at 99.5%; ALL = mean over learners)
+versus learner      rep  n   diff 95% interval  diff_wo interval_wo W/L/T worse99.5
+   REF  linear  v3_base  3  0.105                 0.105                            
+   REF  linear st6f_e02  3  0.113                 0.113                            
+   REF  kernel  v3_base  3  0.114                 0.114                            
+   REF  kernel st6f_e02  3  0.123                 0.123                            
+   REF     gbt  v3_base  3 -0.038                -0.038                            
+   REF     gbt st6f_e02  3 -0.010                -0.010                            
+   REF     mlp  v3_base  3  0.057                 0.057                            
+   REF     mlp st6f_e02  3  0.066                 0.066                            
+   REF     ALL  v3_base  3  0.059                 0.059                            
+   REF     ALL st6f_e02  3  0.073                 0.073                            
+     H  linear  v3_base  3  0.061                 0.061                            
+     H  linear st6f_e02  3  0.069                 0.069                            
+     H  kernel  v3_base  3  0.031                 0.031                            
+     H  kernel st6f_e02  3  0.039                 0.039                            
+     H     gbt  v3_base  3 -0.044                -0.044                            
+     H     gbt st6f_e02  3 -0.016                -0.016                            
+     H     mlp  v3_base  3  0.039                 0.039                            
+     H     mlp st6f_e02  3  0.048                 0.048                            
+     H     ALL  v3_base  3  0.021                 0.021                            
+     H     ALL st6f_e02  3  0.035                 0.035                            
+  BEST  linear  v3_base  3  0.046                 0.046                            
+  BEST  linear st6f_e02  3  0.054                 0.054                            
+  BEST  kernel  v3_base  3  0.026                 0.026                            
+  BEST  kernel st6f_e02  3  0.035                 0.035                            
+  BEST     gbt  v3_base  3 -0.044                -0.044                            
+  BEST     gbt st6f_e02  3 -0.016                -0.016                            
+  BEST     mlp  v3_base  3  0.031                 0.031                            
+  BEST     mlp st6f_e02  3  0.041                 0.041                            
+  BEST     ALL  v3_base  3  0.015                 0.015                            
+  BEST     ALL st6f_e02  3  0.028                 0.028                            
+(the single inputs are left out here; headline.csv keeps every row and the 99.5% intervals)
+
+=== AVERAGE RANK of the 5 inputs over the benchmarks (1 = best; lower is better; scale-free) ===
+          avg_rank
+st6f_e02       1.7
+v3_base        1.7
+H              2.7
+L              4.0
+P              5.0
+
+=== PASS MARK (teachers, all usable items) ===
+(pass = average difference to the reference single input >= 0, at least the PCA baseline, no benchmark clearly worse at 99.5%)
+ teacher learner  vs_REF  vs_PCA   vs_H  worse99.5 PASS  vs_REF_wo  vs_PCA_wo  worse_wo PASS_wo
+st6f_e02  linear   0.113     NaN  0.069        NaN  yes      0.113        NaN       NaN     yes
+st6f_e02  kernel   0.123     NaN  0.039        NaN  yes      0.123        NaN       NaN     yes
+st6f_e02     gbt  -0.010     NaN -0.016        NaN   no     -0.010        NaN       NaN      no
+st6f_e02     mlp   0.066     NaN  0.048        NaN  yes      0.066        NaN       NaN     yes
+st6f_e02     ALL   0.073     NaN  0.035        NaN  yes      0.073        NaN       NaN     yes
+ v3_base  linear   0.105     NaN  0.061        NaN  yes      0.105        NaN       NaN     yes
+ v3_base  kernel   0.114     NaN  0.031        NaN  yes      0.114        NaN       NaN     yes
+ v3_base     gbt  -0.038     NaN -0.044        NaN   no     -0.038        NaN       NaN      no
+ v3_base     mlp   0.057     NaN  0.039        NaN  yes      0.057        NaN       NaN     yes
+ v3_base     ALL   0.059     NaN  0.021        NaN  yes      0.059        NaN       NaN     yes
+(vs_X = average difference over benchmarks to X; worse99.5 = benchmarks clearly worse than the reference; checked: REF)
+
+=== standard (E present) against modified items, primary metric, mean over learners and seeds ===
+                         H      L      P  st6f_e02  v3_base
+benchmark  subset                                          
+THPep_o101 standard  0.635  0.595  0.353     0.639    0.638
+THPep_o202 standard  0.712  0.679  0.655     0.730    0.733
+THPep_o303 standard  0.653  0.593  0.447     0.700    0.646
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_all
+== done 15:30 (exit status 0)
+15:30:56 part 2a: fine-tuning the teacher v3_base (ft + frozen head), 3 seed(s) per split
+== Tuesday 24 November 2026 03:30:56 PM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261124_1530.log
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_teacher | latent statistics: yes
+teacher v3_base: inputs ['pepland', 'pclm', 'ecfp'], latent 1024-d, 35.3M parameters | variants ['ft', 'frozen'] | benchmarks ['THPep_o101', 'THPep_o202', 'THPep_o303']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 3
+THPep_o101: 609 usable molecules (100.0% of the file), standard chains 100.0% | frozen embedding std per dimension 0.760
+THPep_o101 ft       done (5s) | MCC 0.674 | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o101 frozen   done (0s) | MCC 0.693 | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202: 609 usable molecules (100.0% of the file), standard chains 100.0% | frozen embedding std per dimension 0.760
+THPep_o202 ft       done (5s) | MCC 0.821 | epochs run 16, best at 6, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202 frozen   done (1s) | MCC 0.797 | epochs run 17, best at 7, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303: 609 usable molecules (100.0% of the file), standard chains 100.0% | frozen embedding std per dimension 0.760
+THPep_o303 ft       done (5s) | MCC 0.648 | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303 frozen   done (0s) | MCC 0.657 | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 1 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode        frozen     ft
+benchmark                
+THPep_o101   0.681  0.664
+THPep_o202   0.792  0.786
+THPep_o303   0.632  0.617
+
+=== AUROC (classification) ===
+mode        frozen     ft
+benchmark                
+THPep_o101   0.946  0.944
+THPep_o202   0.965  0.967
+THPep_o303   0.913  0.916
+
+=== test molecules that are standard chains (ESM-2 vector exists) / modified chains: MCC or R2 ===
+                   n_esm  head_esm  n_noesm  head_noesm
+benchmark  mode                                        
+THPep_o101 frozen  122.0     0.681      0.0         NaN
+           ft      122.0     0.664      0.0         NaN
+THPep_o202 frozen  122.0     0.792      0.0         NaN
+           ft      122.0     0.786      0.0         NaN
+THPep_o303 frozen  122.0     0.632      0.0         NaN
+           ft      122.0     0.617      0.0         NaN
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                    run  best  capped  fits
+benchmark  mode                            
+THPep_o101 frozen  14.3   4.3       0     3
+           ft      14.0   4.0       0     3
+THPep_o202 frozen  16.7   6.7       0     3
+           ft      16.3   6.3       0     3
+THPep_o303 frozen  15.0   5.0       0     3
+           ft      15.3   5.3       0     3
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_teacher
+== done 15:31 (exit status 0)
+15:31:21 part 2b: fine-tuning the student st6f epoch 2 (ft + frozen head), 3 seed(s) per split
+15:31:21 == stage ft | student st6f | epoch 2 (name st6f_e02) | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_eval_ft_st6f_e02_20261124_1531.log
+student st6f_e02: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/student_distill/st6f/epoch_02.pt | weights of epoch 2 | 10.821M parameters | feature z (1024-d) | modes ['ft', 'frozen'] | benchmarks ['THPep_o101', 'THPep_o202', 'THPep_o303']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1, hidden 1024 | lr: head 0.001, student 1e-05 (ft) | inner folds 5 (max models 5) | seeds 3 | device cuda
+results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_student
+THPep_o101: 609 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+THPep_o101   ft      done (7s) | MCC 0.587 (mean of folds 0.587) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o101   frozen  done (1s) | MCC 0.576 (mean of folds 0.576) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202: 609 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+THPep_o202   ft      done (8s) | MCC 0.712 (mean of folds 0.712) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o202   frozen  done (1s) | MCC 0.754 (mean of folds 0.754) | epochs run 19, best at 9, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303: 609 usable molecules (100.0% of the file, 0 the normaliser could not parse)
+THPep_o303   ft      done (7s) | MCC 0.693 (mean of folds 0.693) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+THPep_o303   frozen  done (1s) | MCC 0.690 (mean of folds 0.690) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 1 fits
+
+=== primary metric on the pooled predictions (mean over seeds) ===
+mode          metric  frozen     ft
+THPep_o101       MCC   0.597  0.594
+THPep_o202       MCC   0.739  0.726
+THPep_o303       MCC   0.688  0.664
+AVERAGE (all)    NaN   0.675  0.661
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_ft_student
+15:31:49 == ft finished with exit status 0
+15:31:49 == SUMMARY
+=== PART 1. FROZEN embeddings + sklearn learners: test MCC on the authors' three splits (122 test molecules each) ===
+             rep learner  o101  o202  o303  mean    sd  n_splits
+               H     gbt 0.674 0.710 0.708 0.698 0.020         3
+               H  kernel 0.645 0.731 0.688 0.688 0.043         3
+               H  linear 0.527 0.688 0.622 0.612 0.081         3
+               H     mlp 0.616 0.715 0.598 0.643 0.063         3
+               L     gbt 0.657 0.648 0.559 0.621 0.054         3
+               L  kernel 0.535 0.732 0.702 0.656 0.106         3
+               L  linear 0.507 0.625 0.511 0.548 0.067         3
+               L     mlp 0.562 0.711 0.621 0.631 0.075         3
+               P     gbt 0.279 0.622 0.404 0.435 0.174         3
+               P  kernel 0.540 0.645 0.437 0.541 0.104         3
+               P  linear 0.441 0.731 0.511 0.561 0.151         3
+               P     mlp 0.372 0.675 0.480 0.509 0.154         3
+teacher_st6f_e02     gbt 0.645 0.690 0.710 0.682 0.033         3
+teacher_st6f_e02  kernel 0.613 0.754 0.817 0.728 0.104         3
+teacher_st6f_e02  linear 0.666 0.710 0.668 0.681 0.025         3
+teacher_st6f_e02     mlp 0.632 0.769 0.673 0.691 0.070         3
+ teacher_v3_base     gbt 0.579 0.711 0.670 0.653 0.068         3
+ teacher_v3_base  kernel 0.671 0.775 0.711 0.719 0.053         3
+ teacher_v3_base  linear 0.689 0.710 0.621 0.673 0.046         3
+ teacher_v3_base     mlp 0.680 0.751 0.614 0.681 0.068         3
+
+--- best learner per representation (by the 3-split mean; chosen on the test scores, so optimistic) ---
+             rep learner  mean    sd
+               H     gbt 0.698 0.020
+               L  kernel 0.656 0.106
+               P  linear 0.561 0.151
+teacher_st6f_e02  kernel 0.728 0.104
+ teacher_v3_base  kernel 0.719 0.053
+
+=== PART 2. FINE-TUNING: test MCC on the authors' three splits (mean over the fine-tuning seeds, then over the splits) ===
+    ft = trained end to end with the labels | frozen = weights fixed, the same new head | last column: against the best sklearn learner of part 1 on the same embedding
+           model   mode  o101  o202  o303  mean    sd  seeds_per_split  best_epoch  best_frozen_learner_mean  minus_best_frozen_learner
+ teacher v3_base frozen 0.681 0.792 0.632 0.701 0.082                3       5.333                     0.719                     -0.017
+ teacher v3_base     ft 0.664 0.786 0.617 0.689 0.087                3       5.222                     0.719                     -0.030
+student st6f_e02 frozen 0.597 0.739 0.688 0.675 0.072                3       5.444                     0.728                     -0.053
+student st6f_e02     ft 0.594 0.726 0.664 0.661 0.066                3       4.444                     0.728                     -0.066
+
+Paper (PeptideCLM-2 MLM, fine-tuned, 3 seeds): 0.756 +- 0.019 at the best threshold on each test set; 0.693 at the usual threshold (recomputed from the authors' predictions).
+saved: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/thpep_official_all/thpep_official_summary.csv

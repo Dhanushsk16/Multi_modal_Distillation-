@@ -1,0 +1,11 @@
+22:09:09 == stage ladder | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_ladder_20261122_2209.log
+22:09:09 === train st1 | --first 5 --epochs 60 --patience 8 --seed 1 --targets latent
+22:09:12 rows: 499,988 usable of 500,000 (5 shards) | train 494,988, validation 5,000 | standard (ESM present) 76.0% / 75.1% | 2 s
+22:09:12 tokens per molecule: mean 20.2, max 192 | vocabulary 1024 | P is imitated on 100.0% of the training molecules (<= 30 residues)
+22:09:12 random spellings: 8 per molecule, mean 30.7 tokens against 20.2 canonical | augmentation: read in a random spelling with probability 0.00 | consistency loss weight 0 on 25% of each batch
+22:09:12 student: 10.821M parameters at inference (embedding 0.328M, blocks 9.180M, pooling + output 1.313M) | training-only 0.00M (discarded)
+22:09:13 steps per epoch 241 (batch 2048: 1024 standard + 1024 modified) | 60 epochs | lr 5.0e-04 | targets ['latent'] | rel on ['latent'] | nce 0 rel 0 | balance none | drop 0.00 | mlm 0.00 | random spelling p 0.00 consist 0
+22:13:21 epoch   1/60 | 249 s (41996 tokens/s) | lr 1.67e-04 | train: a_latent 0.5388 | val crit 0.3524 (best 0.3524, no gain 0/8) | std cos_latent 0.658 r2_latent 0.392 spell 0.097 | mod cos_latent 0.637 r2_latent 0.276 spell 0.619
+22:17:30 epoch   2/60 | 249 s (41925 tokens/s) | lr 3.33e-04 | train: a_latent 0.2961 | val crit 0.2576 (best 0.2576, no gain 0/8) | std cos_latent 0.743 r2_latent 0.511 spell 0.086 | mod cos_latent 0.742 r2_latent 0.414 spell 0.568
+22:21:40 epoch   3/60 | 249 s (41924 tokens/s) | lr 5.00e-04 | train: a_latent 0.2420 | val crit 0.2183 (best 0.2183, no gain 0/8) | std cos_latent 0.785 r2_latent 0.577 spell 0.080 | mod cos_latent 0.779 r2_latent 0.483 spell 0.542
+22:25:51 epoch   4/60 | 249 s (41928 tokens/s) | lr 5.00e-04 | train: a_latent 0.2173 | val crit 0.2008 (best 0.2008, no gain 0/8) | std cos_latent 0.803 r2_latent 0.609 spell 0.082 | mod cos_latent 0.795 r2_latent 0.519 spell 0.526

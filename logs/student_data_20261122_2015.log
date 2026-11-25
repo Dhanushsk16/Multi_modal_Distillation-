@@ -1,0 +1,10 @@
+20:15:30 == stage data | log /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/student_data_20261122_2015.log
+tokenizer C_atombpe_v1024 (1024 tokens) | 5 shards | 8 random spellings per molecule -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/corpus/student_atombpe_v1024
+shard   0 | rows 0..100000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 43 s
+shard   1 | rows 100000..200000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 85 s
+shard   2 | rows 200000..300000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 127 s
+shard   3 | rows 300000..400000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.7 | 170 s
+shard   4 | rows 400000..500000 | tokens/molecule mean 20.2 max 128 | random spelling mean 30.6 | 213 s
+done: 500,000 molecules | cut at 128 tokens: 188 (0.038%) | [UNK] tokens: 0
+random spellings: mean tokens 30.7 against 20.2 canonical (1.52x) | replaced by the canonical one (longer than 192): 379 | parsed back and compared: 8000, NOT the same molecule: 0
+20:19:06 == done (exit status 0)

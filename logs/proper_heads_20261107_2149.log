@@ -1,0 +1,125 @@
+== Saturday 07 November 2026 09:49:06 PM IST | stage heads | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/proper_heads_20261107_2149.log
+
+== heads A: PeptideCLM-2's suite, head on PepLand / PeptideCLM-2 / ECFP (21:49)
+CellPPD       pepland  done (15s) | MCC 0.840
+CellPPD       pclm     done (14s) | MCC 0.867
+CellPPD       ecfp     done (14s) | MCC 0.860
+THPep         pepland  done (6s) | MCC 0.535
+THPep         pclm     done (6s) | MCC 0.776
+THPep         ecfp     done (6s) | MCC 0.782
+PepMSND       pepland  done (72s) | MCC 0.487
+PepMSND       pclm     done (72s) | MCC 0.547
+PepMSND       ecfp     done (72s) | MCC 0.552
+PAMPA         pepland  done (278s) | R2 0.256
+PAMPA         pclm     done (270s) | R2 -0.074
+PAMPA         ecfp     done (267s) | R2 0.265
+AmpHGT        pepland  done (94s) | MCC 0.799
+AmpHGT        pclm     done (94s) | MCC 0.828
+AmpHGT        ecfp     done (94s) | MCC 0.745
+
+=== PepLand-style head: MCC (classification) / R2 (regression), mean over seeds ===
+rep         ecfp   pclm  pepland
+benchmark                       
+AmpHGT     0.751  0.816    0.796
+CellPPD    0.856  0.854    0.834
+PAMPA      0.257 -0.152    0.264
+PepMSND    0.530  0.528    0.481
+THPep      0.793  0.774    0.585
+
+=== AUROC ===
+rep         ecfp   pclm  pepland
+benchmark                       
+AmpHGT     0.932  0.965    0.954
+CellPPD    0.982  0.975    0.978
+PepMSND    0.842  0.846    0.818
+THPep      0.958  0.939    0.879
+
+=== accuracy ===
+rep         ecfp   pclm  pepland
+benchmark                       
+AmpHGT     0.876  0.907    0.898
+CellPPD    0.928  0.927    0.917
+PepMSND    0.770  0.770    0.748
+THPep      0.915  0.902    0.836
+
+=== F1 ===
+rep         ecfp   pclm  pepland
+benchmark                       
+AmpHGT     0.882  0.915    0.905
+CellPPD    0.927  0.926    0.915
+PepMSND    0.721  0.724    0.688
+THPep      0.852  0.841    0.691
+
+=== Pearson r ===
+rep         ecfp   pclm  pepland
+benchmark                       
+PAMPA      0.558  0.426    0.531
+
+=== Spearman ===
+rep         ecfp   pclm  pepland
+benchmark                       
+PAMPA      0.536  0.408    0.502
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/head_main
+
+== heads B: PepLand's suite (22:12)
+PL_cCPP       pepland  done (114s) | MCC 0.696
+PL_cCPP       pclm     done (113s) | MCC 0.721
+PL_cCPP       ecfp     done (112s) | MCC 0.689
+PL_cSol       pepland  done (69s) | MCC 0.187
+PL_cSol       pclm     done (68s) | MCC 0.240
+PL_cSol       ecfp     done (49s) | MCC 0.293
+PL_ncCPP      pepland  done (234s) | R2 0.380
+PL_ncCPP      pclm     done (234s) | R2 0.431
+PL_ncCPP      ecfp     done (233s) | R2 0.444
+PL_cBinding   pepland  done (114s) | R2 0.068
+PL_cBinding   pclm     done (117s) | R2 0.171
+PL_cBinding   ecfp     done (116s) | R2 0.163
+PL_ncBinding  pepland  done (21s) | R2 -0.019
+PL_ncBinding  pclm     done (21s) | R2 -0.057
+PL_ncBinding  ecfp     done (21s) | R2 0.144
+
+=== PepLand-style head: MCC (classification) / R2 (regression), mean over seeds ===
+rep            ecfp   pclm  pepland
+benchmark                          
+PL_cBinding   0.134  0.147    0.021
+PL_cCPP       0.694  0.721    0.691
+PL_cSol       0.286  0.241    0.181
+PL_ncBinding  0.113 -0.043   -0.075
+PL_ncCPP      0.442  0.433    0.377
+
+=== AUROC ===
+rep         ecfp   pclm  pepland
+benchmark                       
+PL_cCPP    0.923  0.929    0.910
+PL_cSol    0.730  0.679    0.635
+
+=== accuracy ===
+rep         ecfp   pclm  pepland
+benchmark                       
+PL_cCPP    0.847  0.860    0.845
+PL_cSol    0.661  0.644    0.617
+
+=== F1 ===
+rep         ecfp   pclm  pepland
+benchmark                       
+PL_cCPP    0.848  0.860    0.843
+PL_cSol    0.727  0.724    0.704
+
+=== Pearson r ===
+rep            ecfp   pclm  pepland
+benchmark                          
+PL_cBinding   0.424  0.440    0.337
+PL_ncBinding  0.477  0.450    0.339
+PL_ncCPP      0.666  0.658    0.616
+
+=== Spearman ===
+rep            ecfp   pclm  pepland
+benchmark                          
+PL_cBinding   0.419  0.405    0.350
+PL_ncBinding  0.437  0.396    0.370
+PL_ncCPP      0.742  0.729    0.691
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/head_pepland
+
+== done 22:39

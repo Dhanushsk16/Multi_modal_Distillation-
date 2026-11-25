@@ -1,0 +1,585 @@
+== Monday 16 November 2026 09:29:06 AM IST | stage all | teacher t10 | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_eval_all_20261116_0929.log
+
+== frozen: teacher_t10 on PeptideCLM-2's five benchmarks (09:29)
+representations: ['teacher_t10']
+CellPPD  teacher_t10 done (22.7s) | mlp MCC 0.808
+THPep    teacher_t10 done (9.1s) | mlp MCC 0.583
+PepMSND  teacher_t10 done (128.7s) | mlp MCC 0.482
+PAMPA    teacher_t10 done (214.5s) | mlp R2 0.051
+AmpHGT   teacher_t10 done (87.7s) | mlp MCC 0.822
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+AmpHGT    gbt            0.800
+          linear         0.793
+          mlp            0.753
+CellPPD   gbt            0.828
+          linear         0.780
+          mlp            0.823
+PAMPA     gbt            0.145
+          linear        -0.182
+          mlp           -0.003
+PepMSND   gbt            0.553
+          linear         0.489
+          mlp            0.484
+THPep     gbt            0.742
+          linear         0.764
+          mlp            0.702
+
+=== AUROC (classification), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+AmpHGT    gbt            0.960
+          linear         0.960
+          mlp            0.946
+CellPPD   gbt            0.973
+          linear         0.951
+          mlp            0.965
+PepMSND   gbt            0.861
+          linear         0.800
+          mlp            0.808
+THPep     gbt            0.941
+          linear         0.955
+          mlp            0.933
+
+=== accuracy (classification), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+AmpHGT    gbt            0.898
+          linear         0.895
+          mlp            0.873
+CellPPD   gbt            0.913
+          linear         0.890
+          mlp            0.911
+PepMSND   gbt            0.783
+          linear         0.752
+          mlp            0.748
+THPep     gbt            0.893
+          linear         0.902
+          mlp            0.874
+
+=== F1 (classification), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+AmpHGT    gbt            0.908
+          linear         0.904
+          mlp            0.873
+CellPPD   gbt            0.916
+          linear         0.891
+          mlp            0.913
+PepMSND   gbt            0.734
+          linear         0.693
+          mlp            0.700
+THPep     gbt            0.817
+          linear         0.833
+          mlp            0.790
+
+=== Pearson r (regression), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PAMPA     gbt            0.503
+          linear         0.374
+          mlp            0.506
+
+=== Spearman (regression), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PAMPA     gbt            0.475
+          linear         0.342
+          mlp            0.481
+
+=== RMSE (regression, lower is better), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PAMPA     gbt            0.690
+          linear         0.795
+          mlp            0.734
+
+=== POOLED R2 over all folds (PAMPA: the authors' metric), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PAMPA     gbt            0.245
+          linear        -0.023
+          mlp            0.104
+
+=== POOLED MCC over all folds (cluster-CV benchmarks), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PepMSND   gbt            0.553
+          linear         0.489
+          mlp            0.484
+
+AmpHGT test restricted to <=30 residues (MCC):
+rep      teacher_t10
+learner             
+gbt            0.481
+linear         0.467
+mlp            0.474
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/teacher_t10_gate
+== /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/esm.npz exists: skipped
+
+== teacher t10 embeds PepLand's suite (09:37)
+benchmark molecules with a esm view: 2699 of 12567 (21.5%); the others use the mask token
+benchmark embeddings: 12567 molecules, 1024-d, usable 12567 (100.0%) -> /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite/teacher_t10.npz
+
+== pl-frozen: teacher_t10 on PepLand's five tasks (09:37)
+representations: ['teacher_t10']
+PL_cCPP  teacher_t10 done (136.4s) | mlp MCC 0.717
+PL_cSol  teacher_t10 done (129.4s) | mlp MCC 0.198
+PL_ncCPP teacher_t10 done (175.4s) | mlp R2 0.389
+PL_cBinding teacher_t10 done (118.6s) | mlp R2 0.134
+PL_ncBinding teacher_t10 done (33.1s) | mlp R2 -0.844
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over seeds ===
+rep                   teacher_t10
+benchmark    learner             
+PL_cBinding  gbt            0.202
+             linear         0.147
+             mlp            0.118
+PL_cCPP      gbt            0.745
+             linear         0.704
+             mlp            0.725
+PL_cSol      gbt            0.221
+             linear         0.270
+             mlp            0.223
+PL_ncBinding gbt            0.192
+             linear        -0.039
+             mlp           -0.811
+PL_ncCPP     gbt            0.389
+             linear         0.362
+             mlp            0.381
+
+=== AUROC (classification), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PL_cCPP   gbt            0.944
+          linear         0.926
+          mlp            0.934
+PL_cSol   gbt            0.675
+          linear         0.685
+          mlp            0.671
+
+=== accuracy (classification), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PL_cCPP   gbt            0.873
+          linear         0.852
+          mlp            0.862
+PL_cSol   gbt            0.634
+          linear         0.660
+          mlp            0.630
+
+=== F1 (classification), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PL_cCPP   gbt            0.872
+          linear         0.852
+          mlp            0.862
+PL_cSol   gbt            0.714
+          linear         0.756
+          mlp            0.699
+
+=== Pearson r (regression), mean over seeds ===
+rep                   teacher_t10
+benchmark    learner             
+PL_cBinding  gbt            0.466
+             linear         0.409
+             mlp            0.423
+PL_ncBinding gbt            0.490
+             linear         0.376
+             mlp            0.340
+PL_ncCPP     gbt            0.630
+             linear         0.607
+             mlp            0.627
+
+=== Spearman (regression), mean over seeds ===
+rep                   teacher_t10
+benchmark    learner             
+PL_cBinding  gbt            0.425
+             linear         0.395
+             mlp            0.403
+PL_ncBinding gbt            0.461
+             linear         0.406
+             mlp            0.344
+PL_ncCPP     gbt            0.729
+             linear         0.685
+             mlp            0.696
+
+=== RMSE (regression, lower is better), mean over seeds ===
+rep                   teacher_t10
+benchmark    learner             
+PL_cBinding  gbt            1.393
+             linear         1.442
+             mlp            1.466
+PL_ncBinding gbt            1.614
+             linear         1.832
+             mlp            2.358
+PL_ncCPP     gbt            0.836
+             linear         0.854
+             mlp            0.841
+
+=== POOLED R2 over all folds (PAMPA: the authors' metric), mean over seeds ===
+rep                   teacher_t10
+benchmark    learner             
+PL_cBinding  gbt            0.202
+             linear         0.146
+             mlp            0.117
+PL_ncBinding gbt            0.208
+             linear        -0.013
+             mlp           -0.842
+PL_ncCPP     gbt            0.390
+             linear         0.363
+             mlp            0.382
+
+=== POOLED MCC over all folds (cluster-CV benchmarks), mean over seeds ===
+rep                teacher_t10
+benchmark learner             
+PL_cCPP   gbt            0.745
+          linear         0.703
+          mlp            0.725
+PL_cSol   gbt            0.221
+          linear         0.271
+          mlp            0.223
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/teacher_t10_pl_gate
+
+== PepLand's head on teacher_t10, PeptideCLM-2's suite (09:47)
+CellPPD       teacher_t10 done (16s) | MCC 0.760
+THPep         teacher_t10 done (7s) | MCC 0.770
+PepMSND       teacher_t10 done (79s) | MCC 0.515
+PAMPA         teacher_t10 done (277s) | R2 0.142
+AmpHGT        teacher_t10 done (94s) | MCC 0.844
+
+=== PepLand-style head: MCC (classification) / R2 (regression), mean over seeds ===
+rep        teacher_t10
+benchmark             
+AmpHGT           0.829
+CellPPD          0.823
+PAMPA            0.147
+PepMSND          0.495
+THPep            0.762
+
+=== AUROC ===
+rep        teacher_t10
+benchmark             
+AmpHGT           0.969
+CellPPD          0.960
+PepMSND          0.823
+THPep            0.955
+
+=== accuracy ===
+rep        teacher_t10
+benchmark             
+AmpHGT           0.914
+CellPPD          0.911
+PepMSND          0.754
+THPep            0.899
+
+=== F1 ===
+rep        teacher_t10
+benchmark             
+AmpHGT           0.921
+CellPPD          0.913
+PepMSND          0.697
+THPep            0.833
+
+=== Pearson r ===
+rep        teacher_t10
+benchmark             
+PAMPA            0.553
+
+=== Spearman ===
+rep        teacher_t10
+benchmark             
+PAMPA            0.532
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/head_main_teacher_t10
+
+== PepLand's head on teacher_t10, PepLand's suite (09:55)
+PL_cCPP       teacher_t10 done (93s) | MCC 0.732
+PL_cSol       teacher_t10 done (52s) | MCC 0.252
+PL_ncCPP      teacher_t10 done (234s) | R2 0.427
+PL_cBinding   teacher_t10 done (122s) | R2 0.127
+PL_ncBinding  teacher_t10 done (29s) | R2 -0.110
+
+=== PepLand-style head: MCC (classification) / R2 (regression), mean over seeds ===
+rep           teacher_t10
+benchmark                
+PL_cBinding         0.107
+PL_cCPP             0.730
+PL_cSol             0.257
+PL_ncBinding       -0.070
+PL_ncCPP            0.430
+
+=== AUROC ===
+rep        teacher_t10
+benchmark             
+PL_cCPP          0.935
+PL_cSol          0.686
+
+=== accuracy ===
+rep        teacher_t10
+benchmark             
+PL_cCPP          0.865
+PL_cSol          0.652
+
+=== F1 ===
+rep        teacher_t10
+benchmark             
+PL_cCPP          0.865
+PL_cSol          0.733
+
+=== Pearson r ===
+rep           teacher_t10
+benchmark                
+PL_cBinding         0.414
+PL_ncBinding        0.425
+PL_ncCPP            0.657
+
+=== Spearman ===
+rep           teacher_t10
+benchmark                
+PL_cBinding         0.395
+PL_ncBinding        0.404
+PL_ncCPP            0.730
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/head_pepland_teacher_t10
+== finetune: stopping at 06:45 (1240 min from now); run the same line again to continue
+
+== finetune: PeptideCLM-2's suite (10:04)
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_t10
+teacher t10: views ['pclm', 'pepland', 'esm'], optional ['esm'], fill token, latent 1024-d | variants ['frozen', 'ft'] | benchmarks ['CellPPD', 'THPep', 'PepMSND', 'PAMPA', 'AmpHGT']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 1
+CellPPD: 1464 usable molecules (100.0% of the file), ESM present for 57.2% | frozen embedding std per dimension 0.118
+CellPPD  frozen   done (12s) | MCC 0.673 | epochs run 63, best at 53, hit the 100-epoch cap in 2 of 5 fits
+CellPPD  ft       done (32s) | MCC 0.787 | epochs run 21, best at 11, hit the 100-epoch cap in 0 of 5 fits
+THPep: 609 usable molecules (100.0% of the file), ESM present for 100.0% | frozen embedding std per dimension 0.180
+THPep    frozen   done (3s) | MCC 0.786 | epochs run 28, best at 18, hit the 100-epoch cap in 0 of 5 fits
+THPep    ft       done (17s) | MCC 0.764 | epochs run 21, best at 11, hit the 100-epoch cap in 0 of 5 fits
+PepMSND: 640 usable molecules (100.0% of the file), ESM present for 60.6% | frozen embedding std per dimension 0.210
+   PepMSND frozen seed 0 fold 1/10 (64 molecules, 5 models) 4s
+   PepMSND frozen seed 0 fold 2/10 (64 molecules, 5 models) 8s
+   PepMSND frozen seed 0 fold 3/10 (64 molecules, 5 models) 12s
+   PepMSND frozen seed 0 fold 4/10 (64 molecules, 5 models) 17s
+   PepMSND frozen seed 0 fold 5/10 (64 molecules, 5 models) 20s
+   PepMSND frozen seed 0 fold 6/10 (64 molecules, 5 models) 24s
+   PepMSND frozen seed 0 fold 7/10 (64 molecules, 5 models) 28s
+   PepMSND frozen seed 0 fold 8/10 (64 molecules, 5 models) 32s
+   PepMSND frozen seed 0 fold 9/10 (64 molecules, 5 models) 35s
+   PepMSND frozen seed 0 fold 10/10 (64 molecules, 5 models) 38s
+PepMSND  frozen   done (38s) | MCC 0.495 (pooled 0.494) | epochs run 39, best at 29, hit the 100-epoch cap in 0 of 50 fits
+   PepMSND ft seed 0 fold 1/10 (64 molecules, 5 models) 20s
+   PepMSND ft seed 0 fold 2/10 (64 molecules, 5 models) 41s
+   PepMSND ft seed 0 fold 3/10 (64 molecules, 5 models) 62s
+   PepMSND ft seed 0 fold 4/10 (64 molecules, 5 models) 81s
+   PepMSND ft seed 0 fold 5/10 (64 molecules, 5 models) 102s
+   PepMSND ft seed 0 fold 6/10 (64 molecules, 5 models) 121s
+   PepMSND ft seed 0 fold 7/10 (64 molecules, 5 models) 141s
+   PepMSND ft seed 0 fold 8/10 (64 molecules, 5 models) 160s
+   PepMSND ft seed 0 fold 9/10 (64 molecules, 5 models) 179s
+   PepMSND ft seed 0 fold 10/10 (64 molecules, 5 models) 199s
+PepMSND  ft       done (199s) | MCC 0.519 (pooled 0.519) | epochs run 24, best at 14, hit the 100-epoch cap in 0 of 50 fits
+PAMPA: 6701 usable molecules (100.0% of the file), ESM present for 0.0% | frozen embedding std per dimension 0.048
+   PAMPA frozen seed 0 fold 1/6 (1546 molecules, 5 models) 14s
+   PAMPA frozen seed 0 fold 2/6 (1465 molecules, 5 models) 32s
+   PAMPA frozen seed 0 fold 3/6 (1455 molecules, 5 models) 51s
+   PAMPA frozen seed 0 fold 4/6 (1206 molecules, 5 models) 64s
+   PAMPA frozen seed 0 fold 5/6 (535 molecules, 5 models) 79s
+   PAMPA frozen seed 0 fold 6/6 (494 molecules, 5 models) 100s
+PAMPA    frozen   done (101s) | R2 0.078 (pooled 0.191) | epochs run 24, best at 14, hit the 100-epoch cap in 0 of 30 fits
+   PAMPA ft seed 0 fold 1/6 (1546 molecules, 5 models) 117s
+   PAMPA ft seed 0 fold 2/6 (1465 molecules, 5 models) 274s
+   PAMPA ft seed 0 fold 3/6 (1455 molecules, 5 models) 483s
+   PAMPA ft seed 0 fold 4/6 (1206 molecules, 5 models) 711s
+   PAMPA ft seed 0 fold 5/6 (535 molecules, 5 models) 924s
+   PAMPA ft seed 0 fold 6/6 (494 molecules, 5 models) 1161s
+PAMPA    ft       done (1161s) | R2 0.206 (pooled 0.301) | epochs run 32, best at 22, hit the 100-epoch cap in 0 of 30 fits
+AmpHGT: 16900 usable molecules (100.0% of the file), ESM present for 13.4% | frozen embedding std per dimension 0.151
+AmpHGT   frozen   done (21s) | MCC 0.798 | epochs run 61, best at 51, hit the 100-epoch cap in 0 of 1 fits
+AmpHGT   ft       done (56s) | MCC 0.698 | epochs run 22, best at 12, hit the 100-epoch cap in 0 of 1 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode       frozen     ft
+benchmark               
+AmpHGT      0.798  0.698
+CellPPD     0.673  0.787
+PAMPA       0.078  0.206
+PepMSND     0.495  0.519
+THPep       0.786  0.764
+
+=== the same on the POOLED predictions of all folds (cluster-CV benchmarks only; PAMPA pooled R2 = the authors' metric) ===
+mode       frozen     ft
+benchmark               
+PAMPA       0.191  0.301
+PepMSND     0.494  0.519
+
+=== AUROC (classification) ===
+mode       frozen     ft
+benchmark               
+AmpHGT      0.967  0.935
+CellPPD     0.925  0.954
+PepMSND     0.817  0.822
+THPep       0.948  0.943
+
+=== test molecules WITH an ESM view (canonical) / WITHOUT (the p_E fill): MCC or R2 ===
+                  n_esm  head_esm  n_noesm  head_noesm
+benchmark mode                                        
+AmpHGT    frozen   13.0     0.000   5135.0       0.801
+          ft       13.0     0.000   5135.0       0.701
+CellPPD   frozen  174.0     0.606    126.0       0.694
+          ft      174.0     0.706    126.0       0.859
+PAMPA     frozen    0.0       NaN   6701.0       0.191
+          ft        0.0       NaN   6701.0       0.301
+PepMSND   frozen  388.0     0.422    252.0       0.504
+          ft      388.0     0.440    252.0       0.538
+THPep     frozen  122.0     0.786      0.0         NaN
+          ft      122.0     0.764      0.0         NaN
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                   run  best  capped  fits
+benchmark mode                            
+AmpHGT    frozen  61.0  51.0       0     1
+          ft      22.0  12.0       0     1
+CellPPD   frozen  62.8  53.4       2     5
+          ft      21.4  11.4       0     5
+PAMPA     frozen  23.8  13.8       0    30
+          ft      32.1  22.1       0    30
+PepMSND   frozen  39.4  29.4       0    50
+          ft      24.1  14.1       0    50
+THPep     frozen  28.4  18.4       0     5
+          ft      21.4  11.4       0     5
+
+AmpHGT test restricted to <=30 residues (MCC):
+mode
+frozen    0.498
+ft        0.382
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_t10
+
+== finetune: PepLand's suite (10:31)
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/pepland_suite | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_t10_pepland
+teacher t10: views ['pclm', 'pepland', 'esm'], optional ['esm'], fill token, latent 1024-d | variants ['frozen', 'ft'] | benchmarks ['PL_cCPP', 'PL_cSol', 'PL_ncCPP', 'PL_cBinding', 'PL_ncBinding']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 1
+PL_cCPP: 2324 usable molecules (100.0% of the file), ESM present for 99.8% | frozen embedding std per dimension 0.210
+   PL_cCPP frozen seed 0 fold 1/5 (466 molecules, 5 models) 16s
+   PL_cCPP frozen seed 0 fold 2/5 (466 molecules, 5 models) 29s
+   PL_cCPP frozen seed 0 fold 3/5 (464 molecules, 5 models) 38s
+   PL_cCPP frozen seed 0 fold 4/5 (464 molecules, 5 models) 48s
+   PL_cCPP frozen seed 0 fold 5/5 (464 molecules, 5 models) 59s
+PL_cCPP  frozen   done (59s) | MCC 0.699 (pooled 0.699) | epochs run 43, best at 33, hit the 100-epoch cap in 0 of 25 fits
+   PL_cCPP ft seed 0 fold 1/5 (466 molecules, 5 models) 44s
+   PL_cCPP ft seed 0 fold 2/5 (466 molecules, 5 models) 93s
+   PL_cCPP ft seed 0 fold 3/5 (464 molecules, 5 models) 139s
+   PL_cCPP ft seed 0 fold 4/5 (464 molecules, 5 models) 191s
+   PL_cCPP ft seed 0 fold 5/5 (464 molecules, 5 models) 241s
+PL_cCPP  ft       done (241s) | MCC 0.723 (pooled 0.723) | epochs run 21, best at 11, hit the 100-epoch cap in 0 of 25 fits
+PL_cSol: 1357 usable molecules (100.0% of the file), ESM present for 0.7% | frozen embedding std per dimension 0.090
+   PL_cSol frozen seed 0 fold 1/5 (272 molecules, 5 models) 5s
+   PL_cSol frozen seed 0 fold 2/5 (272 molecules, 5 models) 9s
+   PL_cSol frozen seed 0 fold 3/5 (271 molecules, 5 models) 13s
+   PL_cSol frozen seed 0 fold 4/5 (271 molecules, 5 models) 17s
+   PL_cSol frozen seed 0 fold 5/5 (271 molecules, 5 models) 21s
+PL_cSol  frozen   done (21s) | MCC 0.277 (pooled 0.274) | epochs run 24, best at 14, hit the 100-epoch cap in 0 of 25 fits
+   PL_cSol ft seed 0 fold 1/5 (272 molecules, 5 models) 27s
+   PL_cSol ft seed 0 fold 2/5 (272 molecules, 5 models) 58s
+   PL_cSol ft seed 0 fold 3/5 (271 molecules, 5 models) 88s
+   PL_cSol ft seed 0 fold 4/5 (271 molecules, 5 models) 115s
+   PL_cSol ft seed 0 fold 5/5 (271 molecules, 5 models) 143s
+PL_cSol  ft       done (143s) | MCC 0.260 (pooled 0.258) | epochs run 20, best at 10, hit the 100-epoch cap in 0 of 25 fits
+PL_ncCPP: 7334 usable molecules (100.0% of the file), ESM present for 0.0% | frozen embedding std per dimension 0.048
+   PL_ncCPP frozen seed 0 fold 1/5 (1467 molecules, 5 models) 32s
+   PL_ncCPP frozen seed 0 fold 2/5 (1467 molecules, 5 models) 69s
+   PL_ncCPP frozen seed 0 fold 3/5 (1467 molecules, 5 models) 99s
+   PL_ncCPP frozen seed 0 fold 4/5 (1467 molecules, 5 models) 139s
+   PL_ncCPP frozen seed 0 fold 5/5 (1466 molecules, 5 models) 170s
+PL_ncCPP frozen   done (170s) | R2 0.232 (pooled 0.232) | epochs run 46, best at 37, hit the 100-epoch cap in 4 of 25 fits
+   PL_ncCPP ft seed 0 fold 1/5 (1467 molecules, 5 models) 281s
+   PL_ncCPP ft seed 0 fold 2/5 (1467 molecules, 5 models) 578s
+   PL_ncCPP ft seed 0 fold 3/5 (1467 molecules, 5 models) 807s
+   PL_ncCPP ft seed 0 fold 4/5 (1467 molecules, 5 models) 1072s
+   PL_ncCPP ft seed 0 fold 5/5 (1466 molecules, 5 models) 1454s
+PL_ncCPP ft       done (1454s) | R2 0.444 (pooled 0.445) | epochs run 46, best at 36, hit the 100-epoch cap in 0 of 25 fits
+PL_cBinding: 1801 usable molecules (100.0% of the file), ESM present for 23.8% | frozen embedding std per dimension 0.180
+   PL_cBinding frozen seed 0 fold 1/5 (362 molecules, 5 models) 5s
+   PL_cBinding frozen seed 0 fold 2/5 (342 molecules, 5 models) 13s
+   PL_cBinding frozen seed 0 fold 3/5 (358 molecules, 5 models) 18s
+   PL_cBinding frozen seed 0 fold 4/5 (355 molecules, 5 models) 21s
+   PL_cBinding frozen seed 0 fold 5/5 (384 molecules, 5 models) 29s
+PL_cBinding frozen   done (29s) | R2 0.168 (pooled 0.167) | epochs run 35, best at 25, hit the 100-epoch cap in 0 of 25 fits
+   PL_cBinding ft seed 0 fold 1/5 (362 molecules, 5 models) 45s
+   PL_cBinding ft seed 0 fold 2/5 (342 molecules, 5 models) 93s
+   PL_cBinding ft seed 0 fold 3/5 (358 molecules, 5 models) 138s
+   PL_cBinding ft seed 0 fold 4/5 (355 molecules, 5 models) 182s
+   PL_cBinding ft seed 0 fold 5/5 (384 molecules, 5 models) 235s
+PL_cBinding ft       done (235s) | R2 0.175 (pooled 0.174) | epochs run 27, best at 17, hit the 100-epoch cap in 0 of 25 fits
+PL_ncBinding: 299 usable molecules (100.0% of the file), ESM present for 11.0% | frozen embedding std per dimension 0.147
+   PL_ncBinding frozen seed 0 fold 1/5 (54 molecules, 5 models) 1s
+   PL_ncBinding frozen seed 0 fold 2/5 (54 molecules, 5 models) 3s
+   PL_ncBinding frozen seed 0 fold 3/5 (63 molecules, 5 models) 4s
+   PL_ncBinding frozen seed 0 fold 4/5 (55 molecules, 5 models) 5s
+   PL_ncBinding frozen seed 0 fold 5/5 (73 molecules, 5 models) 6s
+PL_ncBinding frozen   done (6s) | R2 0.083 (pooled 0.106) | epochs run 33, best at 23, hit the 100-epoch cap in 0 of 25 fits
+   PL_ncBinding ft seed 0 fold 1/5 (54 molecules, 5 models) 12s
+   PL_ncBinding ft seed 0 fold 2/5 (54 molecules, 5 models) 31s
+   PL_ncBinding ft seed 0 fold 3/5 (63 molecules, 5 models) 46s
+   PL_ncBinding ft seed 0 fold 4/5 (55 molecules, 5 models) 61s
+   PL_ncBinding ft seed 0 fold 5/5 (73 molecules, 5 models) 76s
+PL_ncBinding ft       done (76s) | R2 0.098 (pooled 0.112) | epochs run 35, best at 25, hit the 100-epoch cap in 0 of 25 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode          frozen     ft
+benchmark                  
+PL_cBinding    0.168  0.175
+PL_cCPP        0.699  0.723
+PL_cSol        0.277  0.260
+PL_ncBinding   0.083  0.098
+PL_ncCPP       0.232  0.444
+
+=== the same on the POOLED predictions of all folds (cluster-CV benchmarks only; PAMPA pooled R2 = the authors' metric) ===
+mode          frozen     ft
+benchmark                  
+PL_cBinding    0.167  0.174
+PL_cCPP        0.699  0.723
+PL_cSol        0.274  0.258
+PL_ncBinding   0.106  0.112
+PL_ncCPP       0.232  0.445
+
+=== AUROC (classification) ===
+mode       frozen     ft
+benchmark               
+PL_cCPP     0.924  0.934
+PL_cSol     0.684  0.689
+
+=== test molecules WITH an ESM view (canonical) / WITHOUT (the p_E fill): MCC or R2 ===
+                      n_esm  head_esm  n_noesm  head_noesm
+benchmark    mode                                         
+PL_cBinding  frozen   429.0     0.156   1372.0       0.168
+             ft       429.0     0.164   1372.0       0.174
+PL_cCPP      frozen  2319.0     0.699      5.0         NaN
+             ft      2319.0     0.725      5.0         NaN
+PL_cSol      frozen     9.0       NaN   1348.0       0.273
+             ft         9.0       NaN   1348.0       0.256
+PL_ncBinding frozen    33.0     0.356    266.0       0.026
+             ft        33.0     0.442    266.0       0.017
+PL_ncCPP     frozen     0.0       NaN   7334.0       0.232
+             ft         0.0       NaN   7334.0       0.445
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                      run  best  capped  fits
+benchmark    mode                            
+PL_cBinding  frozen  34.8  24.8       0    25
+             ft      27.1  17.1       0    25
+PL_cCPP      frozen  43.1  33.1       0    25
+             ft      21.2  11.2       0    25
+PL_cSol      frozen  24.4  14.4       0    25
+             ft      20.3  10.3       0    25
+PL_ncBinding frozen  32.6  22.6       0    25
+             ft      35.2  25.2       0    25
+PL_ncCPP     frozen  45.6  37.0       4    25
+             ft      45.9  35.9       0    25
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_t10_pepland
+
+== stage all finished, exit code 0 (11:12)

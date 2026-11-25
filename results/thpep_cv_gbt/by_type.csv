@@ -1,0 +1,4 @@
+benchmark,subset,H,L,P,P+L+H,PCA,teacher_v3_base
+THPep_cv0,standard,0.735,0.604,0.514,0.64,0.681,0.658
+THPep_cv1,standard,0.733,0.64,0.523,0.669,0.656,0.707
+THPep_cv2,standard,0.719,0.623,0.492,0.64,0.648,0.708

@@ -1,0 +1,64 @@
+pepland: 2 shards for this process, 1 to do
+2026/11/15 01:49:48 WARNING mlflow.pytorch: Stored model version '1.11.0' does not match installed PyTorch version '2.2.2+cpu'
+loading model from : /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/checkpoints/pepland_model
+Warning Unfound fragments C#CCCCC
+Warning Unfound fragments CCCCCN=[N+]=[N-]
+Warning Unfound fragments O=CNC=O
+Warning Unfound fragments O=CNC=O
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments C=CCCCCC
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NCCCN
+Warning Unfound fragments NCCCCC[NH3+]
+Warning Unfound fragments O[C@H]1COC[C@@H]1O
+Warning Unfound fragments O[C@H]1COC[C@@H]1O
+Warning Unfound fragments O[C@H]1COC[C@@H]1O
+Warning Unfound fragments OC1[C@H](O)COC[C@H]1O
+Warning Unfound fragments O[C@@H]1CCOC[C@H]1O
+Warning Unfound fragments OC1[C@H](O)COC[C@H]1O
+Warning Unfound fragments N[C@H]1COCC[C@@H]1O
+Warning Unfound fragments O[C@@H]1[C@@H](O)[C@@H](O)CC[C@H]1O
+Warning Unfound fragments CCCCCCCCCCCCC
+Warning Unfound fragments CCCC[C@H](C)CC
+Warning Unfound fragments CCC(C)O
+Warning Unfound fragments C=CN
+Warning Unfound fragments O[C@@H]1CCOC[C@H]1O
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments C1CNCN1
+Warning Unfound fragments [NH3+]CCCCCC=O
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments NC(N)=[NH2+]
+Warning Unfound fragments [NH3+]CCCCCC=O
+Warning Unfound fragments CCCN=C(N)N
+Warning Unfound fragments NCCCN
+Warning Unfound fragments NCCCCC[NH3+]
+check: pepland cache code vs the benchmark features on 96 molecules | cosine median 1.00000, min 1.00000 | failed 0 | 10 s | PASS
+  pepland shard 38: resuming at molecule 21,632 of 31,668
+  pepland shard 38: 22,144/31,668 molecules | 259 ms/molecule | about 41 min to go
+  pepland shard 38: 22,656/31,668 molecules | 263 ms/molecule | about 40 min to go
+  pepland shard 38: 23,168/31,668 molecules | 263 ms/molecule | about 37 min to go
+  pepland shard 38: 23,616/31,668 molecules | 264 ms/molecule | about 35 min to go
+  pepland shard 38: 24,128/31,668 molecules | 265 ms/molecule | about 33 min to go
+  pepland shard 38: 24,576/31,668 molecules | 266 ms/molecule | about 31 min to go
+  pepland shard 38: 25,088/31,668 molecules | 266 ms/molecule | about 29 min to go
+  pepland shard 38: 25,536/31,668 molecules | 267 ms/molecule | about 27 min to go
+  pepland shard 38: 26,048/31,668 molecules | 266 ms/molecule | about 25 min to go
+  pepland shard 38: 26,496/31,668 molecules | 267 ms/molecule | about 23 min to go
+  pepland shard 38: 26,944/31,668 molecules | 267 ms/molecule | about 21 min to go
+  pepland shard 38: 27,392/31,668 molecules | 268 ms/molecule | about 19 min to go
+  pepland shard 38: 27,904/31,668 molecules | 268 ms/molecule | about 17 min to go
+  pepland shard 38: 28,352/31,668 molecules | 268 ms/molecule | about 15 min to go
+  pepland shard 38: 28,800/31,668 molecules | 268 ms/molecule | about 13 min to go
+  pepland shard 38: 29,248/31,668 molecules | 268 ms/molecule | about 11 min to go
+  pepland shard 38: 29,696/31,668 molecules | 268 ms/molecule | about 9 min to go
+  pepland shard 38: 30,144/31,668 molecules | 269 ms/molecule | about 7 min to go
+  pepland shard 38: 30,592/31,668 molecules | 269 ms/molecule | about 5 min to go
+  pepland shard 38: 31,040/31,668 molecules | 269 ms/molecule | about 3 min to go
+  pepland shard 38: 31,488/31,668 molecules | 269 ms/molecule | about 1 min to go
+pepland shard  38 | 31,668 molecules | failed 0 | 45.1 min (run total 45.1 min, 1 shards done)
+pepland: 1 shards written, 0 molecules failed, 45.1 min

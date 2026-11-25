@@ -1,0 +1,28 @@
+== Wednesday 18 November 2026 10:43:34 AM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261118_1043.log
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_smoke | latent statistics: yes
+teacher v3_base: inputs ['pepland', 'pclm', 'ecfp'], latent 1024-d, 35.3M parameters | variants ['ft'] | benchmarks ['CellPPD']
+recipe: AdamW wd 0.001, batch 64, <= 3 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 2 | seeds 1
+CellPPD  ft       done (4s) | MCC 0.834 | epochs run 3, best at 2, hit the 3-epoch cap in 2 of 2 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode          ft
+benchmark       
+CellPPD    0.834
+
+=== AUROC (classification) ===
+mode          ft
+benchmark       
+CellPPD    0.975
+
+=== test molecules that are standard chains (ESM-2 vector exists) / modified chains: MCC or R2 ===
+                n_esm  head_esm  n_noesm  head_noesm
+benchmark mode                                      
+CellPPD   ft    174.0     0.783    126.0       0.876
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                run  best  capped  fits
+benchmark mode                         
+CellPPD   ft    3.0   2.5       2     2
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_smoke
+== done 10:43

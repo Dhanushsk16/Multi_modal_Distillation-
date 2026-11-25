@@ -1,0 +1,105 @@
+== Wednesday 18 November 2026 10:50:48 AM IST | stage finetune | log: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/logs/teacher_v3_finetune_20261118_1050.log
+features: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/features/single_modality | results: /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_v3_base | latent statistics: yes
+teacher v3_base: inputs ['pepland', 'pclm', 'ecfp'], latent 1024-d, 35.3M parameters | variants ['ft'] | benchmarks ['CellPPD', 'THPep', 'PepMSND', 'PAMPA', 'AmpHGT']
+recipe: AdamW wd 0.001, batch 64, <= 100 epochs, patience 10, warm-up 10% + linear decay, clip 1.0, head dropout 0.1 | lr: head 0.001, teacher 1e-05 (ft), from scratch 0.001 | inner folds 5 | seeds 3
+CellPPD  ft       done (87s) | MCC 0.888 | epochs run 17, best at 7, hit the 100-epoch cap in 0 of 5 fits
+THPep    ft       done (45s) | MCC 0.809 | epochs run 15, best at 5, hit the 100-epoch cap in 0 of 5 fits
+   PepMSND ft seed 0 fold 1/10 (64 molecules, 5 models) 16s
+   PepMSND ft seed 0 fold 2/10 (64 molecules, 5 models) 32s
+   PepMSND ft seed 0 fold 3/10 (64 molecules, 5 models) 48s
+   PepMSND ft seed 0 fold 4/10 (64 molecules, 5 models) 64s
+   PepMSND ft seed 0 fold 5/10 (64 molecules, 5 models) 81s
+   PepMSND ft seed 0 fold 6/10 (64 molecules, 5 models) 96s
+   PepMSND ft seed 0 fold 7/10 (64 molecules, 5 models) 113s
+   PepMSND ft seed 0 fold 8/10 (64 molecules, 5 models) 128s
+   PepMSND ft seed 0 fold 9/10 (64 molecules, 5 models) 145s
+   PepMSND ft seed 0 fold 10/10 (64 molecules, 5 models) 161s
+   PepMSND ft seed 1 fold 1/10 (64 molecules, 5 models) 177s
+   PepMSND ft seed 1 fold 2/10 (64 molecules, 5 models) 193s
+   PepMSND ft seed 1 fold 3/10 (64 molecules, 5 models) 209s
+   PepMSND ft seed 1 fold 4/10 (64 molecules, 5 models) 225s
+   PepMSND ft seed 1 fold 5/10 (64 molecules, 5 models) 241s
+   PepMSND ft seed 1 fold 6/10 (64 molecules, 5 models) 258s
+   PepMSND ft seed 1 fold 7/10 (64 molecules, 5 models) 275s
+   PepMSND ft seed 1 fold 8/10 (64 molecules, 5 models) 292s
+   PepMSND ft seed 1 fold 9/10 (64 molecules, 5 models) 308s
+   PepMSND ft seed 1 fold 10/10 (64 molecules, 5 models) 324s
+   PepMSND ft seed 2 fold 1/10 (64 molecules, 5 models) 341s
+   PepMSND ft seed 2 fold 2/10 (64 molecules, 5 models) 357s
+   PepMSND ft seed 2 fold 3/10 (64 molecules, 5 models) 374s
+   PepMSND ft seed 2 fold 4/10 (64 molecules, 5 models) 392s
+   PepMSND ft seed 2 fold 5/10 (64 molecules, 5 models) 409s
+   PepMSND ft seed 2 fold 6/10 (64 molecules, 5 models) 426s
+   PepMSND ft seed 2 fold 7/10 (64 molecules, 5 models) 443s
+   PepMSND ft seed 2 fold 8/10 (64 molecules, 5 models) 460s
+   PepMSND ft seed 2 fold 9/10 (64 molecules, 5 models) 477s
+   PepMSND ft seed 2 fold 10/10 (64 molecules, 5 models) 494s
+PepMSND  ft       done (494s) | MCC 0.501 (pooled 0.501) | epochs run 14, best at 4, hit the 100-epoch cap in 0 of 50 fits
+   PAMPA ft seed 0 fold 1/6 (1546 molecules, 5 models) 143s
+   PAMPA ft seed 0 fold 2/6 (1465 molecules, 5 models) 286s
+   PAMPA ft seed 0 fold 3/6 (1455 molecules, 5 models) 404s
+   PAMPA ft seed 0 fold 4/6 (1206 molecules, 5 models) 599s
+   PAMPA ft seed 0 fold 5/6 (535 molecules, 5 models) 821s
+   PAMPA ft seed 0 fold 6/6 (494 molecules, 5 models) 998s
+   PAMPA ft seed 1 fold 1/6 (1546 molecules, 5 models) 1173s
+   PAMPA ft seed 1 fold 2/6 (1465 molecules, 5 models) 1340s
+   PAMPA ft seed 1 fold 3/6 (1455 molecules, 5 models) 1465s
+   PAMPA ft seed 1 fold 4/6 (1206 molecules, 5 models) 1654s
+   PAMPA ft seed 1 fold 5/6 (535 molecules, 5 models) 1803s
+   PAMPA ft seed 1 fold 6/6 (494 molecules, 5 models) 1997s
+   PAMPA ft seed 2 fold 1/6 (1546 molecules, 5 models) 2127s
+   PAMPA ft seed 2 fold 2/6 (1465 molecules, 5 models) 2257s
+   PAMPA ft seed 2 fold 3/6 (1455 molecules, 5 models) 2366s
+   PAMPA ft seed 2 fold 4/6 (1206 molecules, 5 models) 2512s
+   PAMPA ft seed 2 fold 5/6 (535 molecules, 5 models) 2689s
+   PAMPA ft seed 2 fold 6/6 (494 molecules, 5 models) 2862s
+PAMPA    ft       done (2862s) | R2 0.186 (pooled 0.254) | epochs run 22, best at 12, hit the 100-epoch cap in 0 of 30 fits
+AmpHGT   ft       done (144s) | MCC 0.698 | epochs run 16, best at 6, hit the 100-epoch cap in 0 of 1 fits
+
+=== headline: MCC (classification) / R2 (PAMPA), mean over folds and seeds ===
+mode          ft
+benchmark       
+AmpHGT     0.724
+CellPPD    0.882
+PAMPA      0.215
+PepMSND    0.496
+THPep      0.796
+
+=== the same on the POOLED predictions of all folds (cluster-CV benchmarks only) ===
+mode          ft
+benchmark       
+PAMPA      0.283
+PepMSND    0.495
+
+=== AUROC (classification) ===
+mode          ft
+benchmark       
+AmpHGT     0.947
+CellPPD    0.990
+PepMSND    0.845
+THPep      0.974
+
+=== test molecules that are standard chains (ESM-2 vector exists) / modified chains: MCC or R2 ===
+                n_esm  head_esm  n_noesm  head_noesm
+benchmark mode                                      
+AmpHGT    ft     13.0     0.000   5135.0       0.727
+CellPPD   ft    174.0     0.849    126.0       0.907
+PAMPA     ft      0.0       NaN   6701.0       0.283
+PepMSND   ft    388.0     0.381    252.0       0.560
+THPep     ft    122.0     0.796      0.0         NaN
+
+=== convergence: epochs run / epoch of the best validation loss (means), and fits that hit the epoch cap ===
+                 run  best  capped  fits
+benchmark mode                          
+AmpHGT    ft    15.3   5.3       0     3
+CellPPD   ft    16.5   6.5       0    15
+PAMPA     ft    23.5  13.5       0    90
+PepMSND   ft    14.1   4.1       0   150
+THPep     ft    14.9   4.9       0    15
+
+AmpHGT test restricted to <=30 residues (MCC):
+mode
+ft    0.394
+
+wrote /mnt/wwn-0x5000c500e64c5cc0/dhanushsk/BTPData/results/finetune_v3_base
+== done 11:51
