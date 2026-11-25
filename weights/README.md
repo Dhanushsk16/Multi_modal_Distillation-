@@ -10,7 +10,7 @@ Every network trained in this project (**see [`MODELS.md`](MODELS.md) for the fu
 | `teacher/v3_base/best.pt` | The fusion teacher (35,270,444 parameters in training; 24,990,208 at inference once the decoders and the view-dropout vectors are dropped). | 141 MB |
 | `teacher/v3_base/latent_stats.npz` | Per-dimension statistics with which the teacher's latent is standardised. | small |
 
-The `.pt` files are **not stored in git** (the teacher is above GitHub's 100 MB file limit); they are in the Zenodo record [10.5281/zenodo.24507677](https://doi.org/10.5281/zenodo.24507677) (the main README explains how to restore them). `SHA256SUMS.txt` lists the checksums of all files, so a download can be verified (`sha256sum -c SHA256SUMS.txt`, or `certutil -hashfile <file> SHA256` on Windows).
+The `.pt` files are **not stored in git** (the teacher is above GitHub's 100 MB file limit); they are in the Zenodo record [10.5281/zenodo.24525473](https://doi.org/10.5281/zenodo.24525473) (the main README explains how to restore them). `SHA256SUMS.txt` lists the checksums of all files, so a download can be verified (`sha256sum -c SHA256SUMS.txt`, or `certutil -hashfile <file> SHA256` on Windows).
 
 ## Using the student
 
